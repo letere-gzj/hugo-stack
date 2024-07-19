@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Categories on 演示站点</title>
+        <title>Categories on 莱特雷</title>
         <link>https://example.com/categories/</link>
-        <description>Recent content in Categories on 演示站点</description>
+        <description>Recent content in Categories on 莱特雷</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 19 Jul 2024 13:55:11 +0800</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MongoDB</title>
+        <link>https://example.com/categories/mongodb/</link>
+        <pubDate>Fri, 19 Jul 2024 13:55:11 +0800</pubDate>
+        
+        <guid>https://example.com/categories/mongodb/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Test</title>
         <link>https://example.com/categories/test/</link>
         <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Text on 演示站点</title>
+        <title>Text on 莱特雷</title>
         <link>https://example.com/tags/text/</link>
-        <description>Recent content in Text on 演示站点</description>
+        <description>Recent content in Text on 莱特雷</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
