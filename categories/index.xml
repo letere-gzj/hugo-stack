@@ -13,55 +13,7 @@
         <pubDate>Mon, 22 Jul 2024 15:44:59 +0800</pubDate>
         
         <guid>https://example.com/categories/%E6%95%99%E7%A8%8B/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>MongoDB</title>
-        <link>https://example.com/categories/mongodb/</link>
-        <pubDate>Fri, 19 Jul 2024 13:55:11 +0800</pubDate>
-        
-        <guid>https://example.com/categories/mongodb/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Test</title>
-        <link>https://example.com/categories/test/</link>
-        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/categories/test/</guid>
-        <description>&lt;img src="https://example.com/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
-        </item>
-        <item>
-        <title>测试</title>
-        <link>https://example.com/categories/%E6%B5%8B%E8%AF%95/</link>
-        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/categories/%E6%B5%8B%E8%AF%95/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Syntax</title>
-        <link>https://example.com/categories/syntax/</link>
-        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/categories/syntax/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Themes</title>
-        <link>https://example.com/categories/themes/</link>
-        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/categories/themes/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Test With Whitespaces</title>
-        <link>https://example.com/categories/test-with-whitespaces/</link>
-        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/categories/test-with-whitespaces/</guid>
-        <description></description>
+        <description>&lt;img src="https://example.com/categories/%E6%95%99%E7%A8%8B/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post 教程" /&gt;</description>
         </item>
         
     </channel>
