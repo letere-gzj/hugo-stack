@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on 莱特雷-letere</title>
-        <link>https://example.com/tags/</link>
+        <link>https://letere-gzj.github.io/tags/</link>
         <description>Recent content in Tags on 莱特雷-letere</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>莱特雷-letere</copyright><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>莱特雷-letere</copyright><atom:link href="https://letere-gzj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

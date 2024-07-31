@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>教程 on 莱特雷-letere</title>
-        <link>https://example.com/categories/%E6%95%99%E7%A8%8B/</link>
+        <link>https://letere-gzj.github.io/categories/%E6%95%99%E7%A8%8B/</link>
         <description>Recent content in 教程 on 莱特雷-letere</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>莱特雷-letere</copyright>
-        <lastBuildDate>Mon, 22 Jul 2024 15:44:59 +0800</lastBuildDate><atom:link href="https://example.com/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Jul 2024 15:44:59 +0800</lastBuildDate><atom:link href="https://letere-gzj.github.io/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【教程】Hugo &#43; Github 免费部署自己的博客</title>
-        <link>https://example.com/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
+        <link>https://letere-gzj.github.io/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Mon, 22 Jul 2024 15:44:59 +0800</pubDate>
         
-        <guid>https://example.com/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
-        <description>&lt;img src="https://example.com/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/sample2.png" alt="Featured image of post 【教程】Hugo &#43; Github 免费部署自己的博客" /&gt;&lt;hr&gt;
+        <guid>https://letere-gzj.github.io/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
+        <description>&lt;img src="https://letere-gzj.github.io/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/sample2.png" alt="Featured image of post 【教程】Hugo &#43; Github 免费部署自己的博客" /&gt;&lt;hr&gt;
 &lt;h2 id=&#34;1-环境准备&#34;&gt;1 环境准备
 &lt;/h2&gt;&lt;h3 id=&#34;11-git下载&#34;&gt;1.1 Git下载
 &lt;/h3&gt;&lt;ul&gt;
