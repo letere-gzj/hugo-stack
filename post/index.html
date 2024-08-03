@@ -351,10 +351,8 @@
         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-music"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M13 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M9 17v-13h10v13" /><path d="M9 8h10" /></svg>
     </div>
     <h2 class="widget-title section-title">音乐</h2>
-    
-        
-	    <div id="aplayer"></div>
-    
+	
+	<div id="aplayer"></div>
 </section>
 
 <script>
@@ -384,8 +382,39 @@
 		listFolded: false,
 		listMaxHeight: '160px',
 		lrcType: 3,
+		mutex: true,
 	    audio: audios
 	});
+	
+	
+
+	window.onload = () => {
+		const playInfo = JSON.parse(localStorage.getItem("playInfo"));
+		
+		if (!playInfo) {
+			return;
+		}
+		ap.switchAudio(playInfo.playIndex);
+		setTimeout(() => {
+			ap.seek(playInfo.currentTime);
+			
+			if (!playInfo.paused) {
+				ap.play()
+			}
+		}, 100);
+		console.log(playInfo)
+	};
+	
+	
+
+	window.onbeforeunload = () => {
+		const playInfo = {
+			playIndex: ap.playIndex,
+			paused: ap.paused,
+			currentTime: ap.audio.currentTime
+		};
+		localStorage.setItem("playInfo", JSON.stringify(playInfo));
+	};
 </script>
 
 
