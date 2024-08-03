@@ -402,7 +402,8 @@
     bottom: 0;
     height: 33%;
     background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0)), to(hsla(0, 0%, 100%, .8)));
-    background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, hsla(0, 0%, 100%, .8));
+    /* background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, hsla(0, 0%, 100%, .8)); */
+	background: linear-gradient(180deg, hsla(198, 100%, 60%, 0), hsla(198, 100%, 60%, .6));
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ffffff", endColorstr="#ccffffff", GradientType=0)
 }
 

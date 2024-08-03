@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head>
-	<meta name="generator" content="Hugo 0.130.0"><meta charset='utf-8'>
+	<meta name="generator" content="Hugo 0.131.0"><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="演示说明">
 <title>莱特雷-letere</title>
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.bcdc5a2dc9c5440925bde6696de517a32b138405098aa20f13329d326f2b4e4c.css"><meta property='og:title' content="莱特雷-letere">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.63e980d8afbfea0364a800d68a14ebbc7420700fa37383c4eb7bd83ef321a213.css"><meta property='og:title' content="莱特雷-letere">
 <meta property='og:description' content="演示说明">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/'>
 <meta property='og:site_name' content='莱特雷-letere'>
@@ -61,7 +61,7 @@
                     
                     
                         
-                        <img src="/hugo-stack/img/avatar_huee3898509ca0b14ab824115394d3d001_53126_300x0_resize_q75_box.jpg" width="300"
+                        <img src="/hugo-stack/img/avatar_hu6786984924540402544.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -315,6 +315,7 @@
                 <script src="js/APlayer.min.js"></script>
 <script src="js/Meting.min.js"></script>
 
+
 <script>
 	
 	
@@ -351,10 +352,42 @@
         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-music"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M13 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M9 17v-13h10v13" /><path d="M9 8h10" /></svg>
     </div>
     <h2 class="widget-title section-title">音乐</h2>
-    <div class="tagCloud-tags">
-        <meting-js server="netease" type="playlist" id="129627424" list-max-height=195px theme="#272822"></meting-js>
-    </div>
+    
+        
+	    <div id="aplayer"></div>
+    
 </section>
+
+<script>
+	const musicDir = 'music/';
+	const songs = [
+		'查无此字-林奕匡', 
+		'最后祝福-黄宗泽', 
+		'乖乖报到-MC 张天赋',
+		'摄氏零度-张敬轩',
+		'爱別等-洪卓立',
+		'还记得-周柏豪',
+		'这个故事教训我们-李克勤'
+		];
+	let audios = [];
+	songs.forEach((item) => {
+		const songInfo = item.split('-');
+		audios.push({
+			name: songInfo[0],
+			artist: songInfo[1],
+			url: musicDir + songInfo[0] + '/song.mp3',
+			cover: musicDir + songInfo[0] + '/cover.jpg',
+			lrc: musicDir + songInfo[0] + '/lyric.lrc'
+		});
+	})
+	const ap = new APlayer({
+	    container: document.getElementById('aplayer'),
+		listFolded: false,
+		listMaxHeight: '160px',
+		lrcType: 3,
+	    audio: audios
+	});
+</script>
 
 
             
@@ -375,8 +408,8 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/hugo-stack/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">
-                <img src="/hugo-stack/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2_hub5957a51aaba2994884d78adabc81a6a_1565072_800x0_resize_box_3.png"
-                        srcset="/hugo-stack/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2_hub5957a51aaba2994884d78adabc81a6a_1565072_800x0_resize_box_3.png 800w, /hugo-stack/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2_hub5957a51aaba2994884d78adabc81a6a_1565072_1600x0_resize_box_3.png 1600w"
+                <img src="/hugo-stack/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2_hu15659886782863631030.png"
+                        srcset="/hugo-stack/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2_hu15659886782863631030.png 800w, /hugo-stack/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2_hu16618256510194238678.png 1600w"
                         width="800" 
                         height="366" 
                         loading="lazy"
