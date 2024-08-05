@@ -357,6 +357,7 @@
 </section>
 
 <script>
+	
 	const musicDir = 'music/';
 	const songs = [
 		'查无此字-林奕匡', 
@@ -378,6 +379,7 @@
 			lrc: musicDir + songInfo[0] + '/lyric.lrc'
 		});
 	})
+	
 	const ap = new APlayer({
 	    container: document.getElementById('aplayer'),
 		listFolded: false,
@@ -386,7 +388,7 @@
 		mutex: true,
 	    audio: audios
 	});
-	
+
 	
 
 	window.onload = () => {
@@ -403,9 +405,8 @@
 				ap.play()
 			}
 		}, 100);
-		console.log(playInfo)
 	};
-	
+
 	
 
 	window.onbeforeunload = () => {
@@ -505,8 +506,6 @@
 <footer class="site-footer">
     <section class="copyright">
         &copy; 
-        
-            2020 - 
         
         2024 莱特雷-letere
     </section>
