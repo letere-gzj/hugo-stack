@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/404.html'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.5fa6092506e7be3e21e7dce94fff8d45cf88f4d0b65ed4476aacaced4fcda06e.css"><meta property='og:title' content="404 Page not found">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.5b853cf8a57c5ac2dcb538a464dd3bdc37997c1778bd7465233cfaf033af8669.css"><meta property='og:title' content="404 Page not found">
 <meta property='og:description' content="演示说明">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/404.html'>
 <meta property='og:site_name' content='莱特雷-letere'>
@@ -266,6 +266,82 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
+	<script src=https://letere-gzj.github.io/hugo-stack/js/APlayer.min.js></script>
+
+
+
+
+<div class="demo">
+	<div id="aplayer"/>
+</div>
+<script>
+	
+	const musicDir = "https://letere-gzj.github.io/hugo-stack/" + '/music/';
+	const songs = [
+		'查无此字-林奕匡', 
+		'最后祝福-黄宗泽', 
+		'乖乖报到-MC 张天赋',
+		'摄氏零度-张敬轩',
+		'爱別等-洪卓立',
+		'还记得-周柏豪',
+		'这个故事教训我们-李克勤'
+		];
+	let audios = [];
+	songs.forEach((item) => {
+		const songInfo = item.split('-');
+		audios.push({
+			name: songInfo[0],
+			artist: songInfo[1],
+			url: musicDir + songInfo[0] + '/song.mp3',
+			cover: musicDir + songInfo[0] + '/cover.jpg',
+			lrc: musicDir + songInfo[0] + '/lyric.lrc'
+		});
+	})
+
+	
+	const ap = new APlayer({
+		container: document.getElementById('aplayer'),
+		listFolded: false,
+		listMaxHeight: '160px',
+		lrcType: 3,
+		mutex: true,
+		fixed: true,
+		audio: audios
+	});
+
+	
+
+	window.onload = () => {
+		const playInfo = JSON.parse(localStorage.getItem("playInfo"));
+		
+		if (!playInfo) {
+			return;
+		}
+		ap.switchAudio(playInfo.playIndex);
+		setTimeout(() => {
+			ap.seek(playInfo.currentTime);
+			
+			if (!playInfo.paused) {
+				ap.play()
+			}
+		}, 100);
+	};
+
+	
+
+	window.onbeforeunload = () => {
+		const playInfo = {
+			playIndex: ap.list.index,
+			paused: ap.paused,
+			currentTime: ap.audio.currentTime
+		};
+		localStorage.setItem("playInfo", JSON.stringify(playInfo));
+	};
+</script>
+
+
+
 
     </body>
 </html>
