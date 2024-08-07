@@ -49,7 +49,10 @@
         this.useCDN)
       ) {
         this.modelList || (await this.loadModelList());
-        const o = e(this.modelList.models[t]);
+        // const o = e(this.modelList.models[t]);
+		// 记录上次加载的模型
+		const idx = localStorage.getItem("modelTexturesId")
+		const o = this.modelList.models[t][idx ? idx : 0]
         loadlive2d("live2d", `${this.cdnPath}model/${o}/index.json`);
       } else
         loadlive2d("live2d", `${this.apiPath}get/?id=${t}-${s}`),
@@ -59,9 +62,13 @@
       const t = localStorage.getItem("modelId"),
         s = localStorage.getItem("modelTexturesId");
       if (this.useCDN) {
+		// 顺序切换皮肤
         this.modelList || (await this.loadModelList());
-        const s = e(this.modelList.models[t]);
-        loadlive2d("live2d", `${this.cdnPath}model/${s}/index.json`),
+		const nextIndex = (parseInt(s) + 1) % this.modelList.models[t].length;
+		const modelName = this.modelList.models[t][nextIndex]
+		localStorage.setItem("modelTexturesId", nextIndex);
+        // const s = e(this.modelList.models[t]);
+        loadlive2d("live2d", `${this.cdnPath}model/${modelName}/index.json`),
           o("我的新衣服好看嘛？", 4e3, 10);
       } else
         fetch(`${this.apiPath}rand_textures/?id=${t}-${s}`)
@@ -265,7 +272,7 @@
       (function () {
         let e = localStorage.getItem("modelId"),
           o = localStorage.getItem("modelTexturesId");
-        null === e && ((e = 1), (o = 53)),
+        null === e && ((e = 0), (o = 0)),
           i.loadModel(e, o),
           fetch(t.waifuPath)
             .then((e) => e.json())

@@ -5,26 +5,26 @@
 	color: #fff;
 	cursor: pointer;
 	font-size: 12px;
-	left: 0;
-	margin-left: -100px;
+	right: 0;
+	margin-right: -100px;
 	padding: 5px 2px 5px 5px;
 	position: fixed;
 	transition: margin-left 1s;
 	width: 60px;
-	writing-mode: vertical-rl;
+	writing-mode: vertical-lr;
 }
 
 #waifu-toggle.waifu-toggle-active {
-	margin-left: -50px;
+	margin-right: -40px;
 }
 
 #waifu-toggle.waifu-toggle-active:hover {
-	margin-left: -30px;
+	margin-right: -20px;
 }
 
 #waifu {
 	bottom: -1000px;
-	right: 20px;
+	right: 10px;
 	line-height: 0;
 	margin-bottom: -10px;
 	position: fixed;
