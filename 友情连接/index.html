@@ -500,7 +500,9 @@
     }());
 </script>
 
+
 	<script src=https://letere-gzj.github.io/hugo-stack/js/APlayer.min.js></script>
+
 
 
 
@@ -576,56 +578,13 @@
 
 
 
-<script>
-	
-	
-	
-	
-	
-	
-	const live2d_path = "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
-	
-	
-	
-	function loadExternalResource(url, type) {
-		return new Promise((resolve, reject) => {
-			let tag;
-	
-			if (type === "css") {
-				tag = document.createElement("link");
-				tag.rel = "stylesheet";
-				tag.href = url;
-			}
-			else if (type === "js") {
-				tag = document.createElement("script");
-				tag.src = url;
-			}
-			if (tag) {
-				tag.onload = () => resolve(url);
-				tag.onerror = () => reject(url);
-				document.head.appendChild(tag);
-			}
-		});
-	}
-	
-	
-	if (screen.width >= 768) {
-		Promise.all([
-			loadExternalResource("https://letere-gzj.github.io/hugo-stack/waifu/waifu.css", "css"),
-			loadExternalResource("https://letere-gzj.github.io/hugo-stack/waifu/live2d.min.js", "js"),
-			loadExternalResource("https://letere-gzj.github.io/hugo-stack/waifu/waifu-tips.js", "js")
-		]).then(() => {
-			
-			initWidget({
-				waifuPath: "https://letere-gzj.github.io/hugo-stack/waifu/waifu-tips.json",
-				
-				
-				cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
-				tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
-			});
-		});
-	}
-</script>
+
+
+    <script src=https://letere-gzj.github.io/hugo-stack/background/sakura.js></script>
+
+
+
+
 
     </body>
 </html>
