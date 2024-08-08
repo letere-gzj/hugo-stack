@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.a2e976719ec52bad8304ff142d18e27d90c9179560a39106aaeb5d6f7e6b99ed.css"><meta property='og:title' content="更新计划">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.85cc0b4317b2f01fbe0ac56196bf1ed88db515029b47320f88a7fc080a35929c.css"><meta property='og:title' content="更新计划">
 <meta property='og:description' content="功能 完成时间 备注 引入 pjax ，实现音乐播放器不中断功能 不着急，现在的将就用 引入2D虚拟人物到widget，放在右侧边栏 美化背景，引入动态背景">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/'>
 <meta property='og:site_name' content='莱特雷-letere'>
@@ -431,12 +431,100 @@
         document.head.appendChild(customFont);
     }());
 </script>
+<div id="custom-footer">
+	<script>
+	
+	
+	
+	
+	
+	
+	function loadExternalResource(url, type) {
+		return new Promise((resolve, reject) => {
+			let tag;
+	
+			if (type === "css") {
+				tag = document.createElement("link");
+				tag.rel = "stylesheet";
+				tag.href = url;
+			}
+			else if (type === "js") {
+				tag = document.createElement("script");
+				tag.src = url;
+			}
+			if (tag) {
+				tag.onload = () => resolve(url);
+				tag.onerror = () => reject(url);
+				document.head.appendChild(tag);
+			}
+		});
+	}
+	
+	
+	if (screen.width >= 768) {
+		Promise.all([
+			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/waifu.css", "css"),
+			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/live2d.min.js", "js"),
+			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/waifu-tips.js", "js")
+		]).then(() => {
+			
+			initWidget({
+				waifuPath: "https://letere-gzj.github.io/hugo-stack/live2d/waifu-tips.json",
+				
+				cdnPath: "https://letere-gzj.github.io/hugo-stack/" + "live2d_api/",
+				tools: ["switch-texture", "quit"]
+			});
+		});
+	}
+</script>
+
+	
+    <script src=https://letere-gzj.github.io/hugo-stack/background/sakura.js></script>
 
 
+
+
+	<script src="https://cdn.jsdelivr.net/npm/pjax/pjax.js"></script>
+<script>
+var pjax = new Pjax({
+  elements: "a",
+  
+  selectors: [
+    "title",
+    
+    "main",
+	
+	
+	"aside"
+  ],
+  cacheBust: false,
+  debug: false
+})
+
+pjax._handleResponse = pjax.handleResponse;
+
+pjax.handleResponse = function(responseText, request, href, options) {
+	
+	console.log(request)
+	console.log(href)
+	console.log(options)
+	let doc = new DOMParser().parseFromString(responseText, 'text/html');
+	console.log(doc.body.className)
+	let className = doc.body.className;
+	document.body.setAttribute("class", className)
+  
+    pjax._handleResponse(responseText, request, href, options);
+  
+  
+  
+}
+
+function updateBodyClass = (htmlText) => {
+	
+}
+</script>
+	
 	<script src=https://letere-gzj.github.io/hugo-stack/js/APlayer.min.js></script>
-
-
-
 
 
 <div class="demo">
@@ -510,58 +598,7 @@
 
 
 
-<script>
-	
-	
-	
-	
-	
-	
-	function loadExternalResource(url, type) {
-		return new Promise((resolve, reject) => {
-			let tag;
-	
-			if (type === "css") {
-				tag = document.createElement("link");
-				tag.rel = "stylesheet";
-				tag.href = url;
-			}
-			else if (type === "js") {
-				tag = document.createElement("script");
-				tag.src = url;
-			}
-			if (tag) {
-				tag.onload = () => resolve(url);
-				tag.onerror = () => reject(url);
-				document.head.appendChild(tag);
-			}
-		});
-	}
-	
-	
-	if (screen.width >= 768) {
-		Promise.all([
-			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/waifu.css", "css"),
-			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/live2d.min.js", "js"),
-			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/waifu-tips.js", "js")
-		]).then(() => {
-			
-			initWidget({
-				waifuPath: "https://letere-gzj.github.io/hugo-stack/live2d/waifu-tips.json",
-				
-				cdnPath: "https://letere-gzj.github.io/hugo-stack/" + "live2d_api/",
-				tools: ["switch-texture", "quit"]
-			});
-		});
-	}
-</script>
-
-
-    <script src=https://letere-gzj.github.io/hugo-stack/background/sakura.js></script>
-
-
-
-
+</div>
 
     </body>
 </html>

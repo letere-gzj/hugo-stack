@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>莱特雷-letere</title>
-        <link>https://letere-gzj.github.io/hugo-stack/</link>
-        <description>Recent content on 莱特雷-letere</description>
+        <title>Hugo on 莱特雷-letere</title>
+        <link>https://letere-gzj.github.io/hugo-stack/tags/hugo/</link>
+        <description>Recent content in Hugo on 莱特雷-letere</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>莱特雷-letere</copyright>
-        <lastBuildDate>Mon, 22 Jul 2024 15:44:59 +0800</lastBuildDate><atom:link href="https://letere-gzj.github.io/hugo-stack/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Jul 2024 15:44:59 +0800</lastBuildDate><atom:link href="https://letere-gzj.github.io/hugo-stack/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【Hugo】Hugo &#43; Github 免费部署自己的博客</title>
         <link>https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Mon, 22 Jul 2024 15:44:59 +0800</pubDate>
@@ -511,66 +511,6 @@
 &gt;&lt;/p&gt;
 &lt;hr&gt;
 </description>
-        </item>
-        <item>
-        <title>归档</title>
-        <link>https://letere-gzj.github.io/hugo-stack/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://letere-gzj.github.io/hugo-stack/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>更新计划</title>
-        <link>https://letere-gzj.github.io/hugo-stack/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://letere-gzj.github.io/hugo-stack/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/</guid>
-        <description>&lt;hr&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;功能&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;完成时间&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;备注&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;引入 &lt;strong&gt;pjax&lt;/strong&gt; ，实现音乐播放器不中断功能&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;不着急，现在的将就用&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;引入2D虚拟人物到widget，放在右侧边栏&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;美化背景，引入动态背景&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-</description>
-        </item>
-        <item>
-        <title>搜索</title>
-        <link>https://letere-gzj.github.io/hugo-stack/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://letere-gzj.github.io/hugo-stack/search/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>友情连接</title>
-        <link>https://letere-gzj.github.io/hugo-stack/%E5%8F%8B%E6%83%85%E8%BF%9E%E6%8E%A5/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://letere-gzj.github.io/hugo-stack/%E5%8F%8B%E6%83%85%E8%BF%9E%E6%8E%A5/</guid>
-        <description></description>
         </item>
         
     </channel>

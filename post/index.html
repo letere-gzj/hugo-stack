@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/post/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.a2e976719ec52bad8304ff142d18e27d90c9179560a39106aaeb5d6f7e6b99ed.css"><meta property='og:title' content="Posts">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.85cc0b4317b2f01fbe0ac56196bf1ed88db515029b47320f88a7fc080a35929c.css"><meta property='og:title' content="Posts">
 <meta property='og:description' content="演示说明">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/post/'>
 <meta property='og:site_name' content='莱特雷-letere'>
@@ -338,6 +338,10 @@
 
     <div class="tagCloud-tags">
         
+            <a href="/hugo-stack/tags/hugo/" class="font_size_1">
+                Hugo
+            </a>
+        
     </div>
 </section>
             
@@ -365,18 +369,18 @@
     <section class="article-list--compact">
         
             <article>
-    <a href="/hugo-stack/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">
+    <a href="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">
         <div class="article-details">
-            <h2 class="article-title">【教程】Hugo &#43; Github 免费部署自己的博客</h2>
+            <h2 class="article-title">【Hugo】Hugo &#43; Github 免费部署自己的博客</h2>
             <footer class="article-time">
                 <time datetime='2024-07-22T15:44:59&#43;08:00'>2024-07-22</time>
             </footer>
         </div>
             <div class="article-image">
-                <img src="/hugo-stack/p/%E6%95%99%E7%A8%8Bhugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2_hu14931377072575281322.png" 
+                <img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2_hu14931377072575281322.png" 
                         width="120"
                         height="120" 
-                        alt="【教程】Hugo &#43; Github 免费部署自己的博客"
+                        alt="【Hugo】Hugo &#43; Github 免费部署自己的博客"
                         loading="lazy">
                 
             </div>
@@ -417,12 +421,100 @@
         document.head.appendChild(customFont);
     }());
 </script>
+<div id="custom-footer">
+	<script>
+	
+	
+	
+	
+	
+	
+	function loadExternalResource(url, type) {
+		return new Promise((resolve, reject) => {
+			let tag;
+	
+			if (type === "css") {
+				tag = document.createElement("link");
+				tag.rel = "stylesheet";
+				tag.href = url;
+			}
+			else if (type === "js") {
+				tag = document.createElement("script");
+				tag.src = url;
+			}
+			if (tag) {
+				tag.onload = () => resolve(url);
+				tag.onerror = () => reject(url);
+				document.head.appendChild(tag);
+			}
+		});
+	}
+	
+	
+	if (screen.width >= 768) {
+		Promise.all([
+			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/waifu.css", "css"),
+			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/live2d.min.js", "js"),
+			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/waifu-tips.js", "js")
+		]).then(() => {
+			
+			initWidget({
+				waifuPath: "https://letere-gzj.github.io/hugo-stack/live2d/waifu-tips.json",
+				
+				cdnPath: "https://letere-gzj.github.io/hugo-stack/" + "live2d_api/",
+				tools: ["switch-texture", "quit"]
+			});
+		});
+	}
+</script>
+
+	
+    <script src=https://letere-gzj.github.io/hugo-stack/background/sakura.js></script>
 
 
+
+
+	<script src="https://cdn.jsdelivr.net/npm/pjax/pjax.js"></script>
+<script>
+var pjax = new Pjax({
+  elements: "a",
+  
+  selectors: [
+    "title",
+    
+    "main",
+	
+	
+	"aside"
+  ],
+  cacheBust: false,
+  debug: false
+})
+
+pjax._handleResponse = pjax.handleResponse;
+
+pjax.handleResponse = function(responseText, request, href, options) {
+	
+	console.log(request)
+	console.log(href)
+	console.log(options)
+	let doc = new DOMParser().parseFromString(responseText, 'text/html');
+	console.log(doc.body.className)
+	let className = doc.body.className;
+	document.body.setAttribute("class", className)
+  
+    pjax._handleResponse(responseText, request, href, options);
+  
+  
+  
+}
+
+function updateBodyClass = (htmlText) => {
+	
+}
+</script>
+	
 	<script src=https://letere-gzj.github.io/hugo-stack/js/APlayer.min.js></script>
-
-
-
 
 
 <div class="demo">
@@ -496,58 +588,7 @@
 
 
 
-<script>
-	
-	
-	
-	
-	
-	
-	function loadExternalResource(url, type) {
-		return new Promise((resolve, reject) => {
-			let tag;
-	
-			if (type === "css") {
-				tag = document.createElement("link");
-				tag.rel = "stylesheet";
-				tag.href = url;
-			}
-			else if (type === "js") {
-				tag = document.createElement("script");
-				tag.src = url;
-			}
-			if (tag) {
-				tag.onload = () => resolve(url);
-				tag.onerror = () => reject(url);
-				document.head.appendChild(tag);
-			}
-		});
-	}
-	
-	
-	if (screen.width >= 768) {
-		Promise.all([
-			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/waifu.css", "css"),
-			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/live2d.min.js", "js"),
-			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/waifu-tips.js", "js")
-		]).then(() => {
-			
-			initWidget({
-				waifuPath: "https://letere-gzj.github.io/hugo-stack/live2d/waifu-tips.json",
-				
-				cdnPath: "https://letere-gzj.github.io/hugo-stack/" + "live2d_api/",
-				tools: ["switch-texture", "quit"]
-			});
-		});
-	}
-</script>
-
-
-    <script src=https://letere-gzj.github.io/hugo-stack/background/sakura.js></script>
-
-
-
-
+</div>
 
     </body>
 </html>
