@@ -465,18 +465,18 @@
 
 
 
-	<script src="https://cdn.jsdelivr.net/npm/pjax/pjax.js"></script>
+	
+	<script src=https://letere-gzj.github.io/hugo-stack/js/pjax.min.js></script>
+
+
 <script>
 var pjax = new Pjax({
   elements: "a",
   
   selectors: [
     "title",
-    
     "main",
-	
-	
-	"aside"
+	".sidebar.left-sidebar.sticky"
   ],
   cacheBust: false,
   debug: false
@@ -485,23 +485,29 @@ var pjax = new Pjax({
 pjax._handleResponse = pjax.handleResponse;
 
 pjax.handleResponse = function(responseText, request, href, options) {
+	if (request.responseText.match("<html")) {
+		updateContent(responseText)
+		pjax._handleResponse(responseText, request, href, options);
+	} else {
 	
-	console.log(request)
-	console.log(href)
-	console.log(options)
-	let doc = new DOMParser().parseFromString(responseText, 'text/html');
-	console.log(doc.body.className)
-	let className = doc.body.className;
-	document.body.setAttribute("class", className)
-  
-    pjax._handleResponse(responseText, request, href, options);
-  
-  
-  
+	}
 }
 
-function updateBodyClass = (htmlText) => {
+function updateContent(htmlText) {
+	let doc = new DOMParser().parseFromString(htmlText, 'text/html');
 	
+	let bodyClass = doc.body.className;
+	document.body.setAttribute("class", bodyClass)
+	
+	let oldRightBars = document.getElementsByClassName("right-sidebar");
+	if(oldRightBars.length !== 0) {
+		console.log("remove")
+		oldRightBars[0].remove()
+	}
+	let newRightBars = doc.getElementsByClassName("sidebar right-sidebar sticky");
+	if(newRightBars.length !== 0) {
+		document.getElementsByClassName("main-container")[0].appendChild(newRightBars[0]);
+	}
 }
 </script>
 	
