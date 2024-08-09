@@ -419,7 +419,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/hugo-stack/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/hugo-stack/ts/main.js" defer></script><script type="text/javascript" src="/hugo-stack/ts/custom.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
@@ -489,45 +489,52 @@
 
 
 <script>
-var pjax = new Pjax({
-  elements: "a",
-  
-  selectors: [
-    "title",
-    "main",
-	".sidebar.left-sidebar.sticky"
-  ],
-  cacheBust: false,
-  debug: false
-})
+	var pjax = new Pjax({
+		elements: "a, form",
+		
+		selectors: [
+			"title",
+			"main",
+			"#main-menu",
+			"#right-bar"
+		],
+		cacheBust: false
+	})
 
-pjax._handleResponse = pjax.handleResponse;
+	
+	pjax._handleResponse = pjax.handleResponse;
+	pjax.handleResponse = function(responseText, request, href, options) {
+		if (request.responseText.match("<html")) {
+			let newDoc = new DOMParser().parseFromString(responseText, 'text/html');
+			
+			updateContent(newDoc)
+			
+			let rightBar = newDoc.getElementById("right-bar");
+			if (!rightBar) {
+				rightBar = newDoc.createElement("aside");
+				rightBar.setAttribute("id", "right-bar");
+				newDoc.getElementsByClassName("main-container")[0].appendChild(rightBar)
+			}
+			
+			responseText = newDoc.documentElement.outerHTML
+			pjax._handleResponse(responseText, request, href, options);
+		} else {
+			
+		}
+	}
 
-pjax.handleResponse = function(responseText, request, href, options) {
-	if (request.responseText.match("<html")) {
-		updateContent(responseText)
-		pjax._handleResponse(responseText, request, href, options);
-	} else {
 	
+	function updateContent(newDoc) {
+		
+		let bodyClass = newDoc.body.className;
+		document.body.setAttribute("class", bodyClass)
 	}
-}
 
-function updateContent(htmlText) {
-	let doc = new DOMParser().parseFromString(htmlText, 'text/html');
 	
-	let bodyClass = doc.body.className;
-	document.body.setAttribute("class", bodyClass)
-	
-	let oldRightBars = document.getElementsByClassName("right-sidebar");
-	if(oldRightBars.length !== 0) {
-		console.log("remove")
-		oldRightBars[0].remove()
-	}
-	let newRightBars = doc.getElementsByClassName("sidebar right-sidebar sticky");
-	if(newRightBars.length !== 0) {
-		document.getElementsByClassName("main-container")[0].appendChild(newRightBars[0]);
-	}
-}
+	document.addEventListener('pjax:complete', () => {
+		
+		window.Stack.init();
+	})
 </script>
 	
 	<script src=https://letere-gzj.github.io/hugo-stack/js/APlayer.min.js></script>
