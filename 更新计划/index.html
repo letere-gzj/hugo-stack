@@ -488,6 +488,13 @@
 	<script src=https://letere-gzj.github.io/hugo-stack/js/pjax.min.js></script>
 
 
+<script src=https://letere-gzj.github.io/hugo-stack/js/topbar.js></script>
+
+
+<div class="js-Pjax">
+    
+</div>
+
 <script>
 	var pjax = new Pjax({
 		elements: "a, form",
@@ -496,7 +503,8 @@
 			"title",
 			"main",
 			"#main-menu",
-			"#right-bar"
+			"#right-bar",
+			".js-Pjax"
 		],
 		cacheBust: false
 	})
@@ -531,9 +539,25 @@
 	}
 
 	
+	topbar.config({
+		barColors    : {
+			'0'        : 'rgba(255,  255, 255, .7)',
+			'1.0'      : 'rgba(0, 149, 234,  1)'
+		}
+	})
+
+	
+	document.addEventListener('pjax:send', () => {
+		
+		topbar.show();
+	})
+
+	
 	document.addEventListener('pjax:complete', () => {
 		
 		window.Stack.init();
+		
+		topbar.hide();
 	})
 </script>
 	

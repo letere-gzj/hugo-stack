@@ -358,6 +358,60 @@
 	<script src=https://letere-gzj.github.io/hugo-stack/js/pjax.min.js></script>
 
 
+<script src=https://letere-gzj.github.io/hugo-stack/js/topbar.js></script>
+
+
+<div class="js-Pjax">
+    
+        <script>
+                    (function() {
+                        let comment = document.querySelector("#comment")
+                        if (comment) {
+                            addCommentScript(comment)
+                        }
+                    })(document)
+
+                    
+                    function addCommentScript(comment) {
+                        let script = document.createElement('script');
+                        script.src = 'https://giscus.app/client.js';
+                        script.crossOrigin = 'anonymous';
+                        script.setAttribute('data-repo',"letere-gzj/hugo-stack");
+                        script.setAttribute('data-repo-id',"R_kgDOMXeWfg");
+                        script.setAttribute('data-category',"Announcements"); 
+                        script.setAttribute('data-category-id',"DIC_kwDOMXeWfs4CheU8"); 
+                        script.setAttribute('data-mapping',"pathname");
+                        script.setAttribute('data-strict', 0 );
+                        script.setAttribute('data-reactions-enabled', 1 );
+                        script.setAttribute('data-emit-metadata', 0 );
+                        script.setAttribute('data-input-position',"top");
+                        script.setAttribute('data-theme',"light");
+                        script.setAttribute('data-lang',"zh-CN");
+                        script.setAttribute('data-loading', 'lazy')
+                        script.async = true;
+                        comment.appendChild(script);
+                        initGiscus();
+                    }
+
+                    function initGiscus() {
+                        addEventListener("message", (e) => {
+                            if (event.origin !== "https://giscus.app") return;
+                            handler();
+                        });
+                        window.addEventListener("onColorSchemeChange", handler);
+
+                        function handler() {
+                            if (document.documentElement.dataset.scheme === "light") {
+                                setGiscusTheme('light');
+                            } else {
+                                setGiscusTheme('dark_dimmed');
+                            }
+                        }
+                    };
+                </script>
+    
+</div>
+
 <script>
 	var pjax = new Pjax({
 		elements: "a, form",
@@ -366,7 +420,8 @@
 			"title",
 			"main",
 			"#main-menu",
-			"#right-bar"
+			"#right-bar",
+			".js-Pjax"
 		],
 		cacheBust: false
 	})
@@ -401,9 +456,25 @@
 	}
 
 	
+	topbar.config({
+		barColors    : {
+			'0'        : 'rgba(255,  255, 255, .7)',
+			'1.0'      : 'rgba(0, 149, 234,  1)'
+		}
+	})
+
+	
+	document.addEventListener('pjax:send', () => {
+		
+		topbar.show();
+	})
+
+	
 	document.addEventListener('pjax:complete', () => {
 		
 		window.Stack.init();
+		
+		topbar.hide();
 	})
 </script>
 	
