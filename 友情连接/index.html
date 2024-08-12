@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/%E5%8F%8B%E6%83%85%E8%BF%9E%E6%8E%A5/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.85cc0b4317b2f01fbe0ac56196bf1ed88db515029b47320f88a7fc080a35929c.css"><meta property='og:title' content="友情连接">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.423812e5c3eb60deefb696f0d01192dc97b72d89d8906ec463091e7c5cbc387b.css"><meta property='og:title' content="友情连接">
 <meta property='og:description' content="">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/%E5%8F%8B%E6%83%85%E8%BF%9E%E6%8E%A5/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2024-08-12T07:37:46&#43;00:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="友情连接">
 <meta name="twitter:description" content=""><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
@@ -266,6 +266,8 @@
     
 
     
+
+    
 </div>
 
 </header>
@@ -278,9 +280,10 @@
 
 
     <footer class="article-footer">
+
     
 
-    </footer>
+</footer>
 
 
     
@@ -377,6 +380,67 @@
                     <div class="article-image">
                         <img src="/hugo-stack/%E5%8F%8B%E6%83%85%E8%BF%9E%E6%8E%A5/tabler-icons.svg" loading="lazy">
                     </div>
+                
+            </a>
+        </article>
+    
+        <article>
+            <a href="https://aplayer.js.org/#/zh-Hans/" target="_blank" rel="noopener">
+                <div class="article-details">
+                    <h2 class="article-title">Aplayer</h2>
+                    <footer class="article-time">
+                        
+                            博客引入的音乐播放器组件
+                        
+                    </footer>
+                </div>
+        
+                
+                    
+                    
+                        
+                    
+                    <div class="article-image">
+                        <img src="/hugo-stack/%E5%8F%8B%E6%83%85%E8%BF%9E%E6%8E%A5/aplayer-logo.png" loading="lazy">
+                    </div>
+                
+            </a>
+        </article>
+    
+        <article>
+            <a href="https://github.com/MoOx/pjax" target="_blank" rel="noopener">
+                <div class="article-details">
+                    <h2 class="article-title">PJAX（MoOx）</h2>
+                    <footer class="article-time">
+                        
+                            无刷新加载页面数据技术（不带JQuery）
+                        
+                    </footer>
+                </div>
+        
+                
+                    
+                    
+                        
+                    
+                    <div class="article-image">
+                        <img src="/hugo-stack/%E5%8F%8B%E6%83%85%E8%BF%9E%E6%8E%A5/pjax-logo.png" loading="lazy">
+                    </div>
+                
+            </a>
+        </article>
+    
+        <article>
+            <a href="https://github.com/stevenjoezhang/live2d-widget" target="_blank" rel="noopener">
+                <div class="article-details">
+                    <h2 class="article-title">Live 2D</h2>
+                    <footer class="article-time">
+                        
+                            本博客live2d看板娘所引用的组件
+                        
+                    </footer>
+                </div>
+        
                 
             </a>
         </article>
@@ -556,7 +620,7 @@
 	<script src=https://letere-gzj.github.io/hugo-stack/js/pjax.min.js></script>
 
 
-<script src=https://letere-gzj.github.io/hugo-stack/js/topbar.js></script>
+	<script src=https://letere-gzj.github.io/hugo-stack/js/topbar.js></script>
 
 
 <div class="js-Pjax">
@@ -570,8 +634,7 @@
 		selectors: [
 			"title",
 			"main",
-			"#main-menu",
-			"#right-bar",
+			".main-container",
 			".js-Pjax"
 		],
 		cacheBust: false
@@ -583,27 +646,13 @@
 		if (request.responseText.match("<html")) {
 			let newDoc = new DOMParser().parseFromString(responseText, 'text/html');
 			
-			updateContent(newDoc)
+			let bodyClass = newDoc.body.className;
+			document.body.setAttribute("class", bodyClass)
 			
-			let rightBar = newDoc.getElementById("right-bar");
-			if (!rightBar) {
-				rightBar = newDoc.createElement("aside");
-				rightBar.setAttribute("id", "right-bar");
-				newDoc.getElementsByClassName("main-container")[0].appendChild(rightBar)
-			}
-			
-			responseText = newDoc.documentElement.outerHTML
 			pjax._handleResponse(responseText, request, href, options);
 		} else {
 			
 		}
-	}
-
-	
-	function updateContent(newDoc) {
-		
-		let bodyClass = newDoc.body.className;
-		document.body.setAttribute("class", bodyClass)
 	}
 
 	

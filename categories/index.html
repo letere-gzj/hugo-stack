@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/categories/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.85cc0b4317b2f01fbe0ac56196bf1ed88db515029b47320f88a7fc080a35929c.css"><meta property='og:title' content="Categories">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.423812e5c3eb60deefb696f0d01192dc97b72d89d8906ec463091e7c5cbc387b.css"><meta property='og:title' content="Categories">
 <meta property='og:description' content="演示说明">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/categories/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-07-22T15:44:59&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-08-12T07:37:46&#43;00:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="Categories">
 <meta name="twitter:description" content="演示说明"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' /><link rel="alternate" type="application/rss&#43;xml" href="https://letere-gzj.github.io/hugo-stack/categories/index.xml">
@@ -241,7 +241,7 @@
     </ol>
 </aside>
 
-    <aside class="sidebar right-sidebar sticky" id="right-bar">
+    <aside class="sidebar right-sidebar sticky">
         
             
                 <form action="/hugo-stack/search/" class="search-form widget" >
@@ -373,7 +373,7 @@
         <div class="article-details">
             <h2 class="article-title">教程</h2>
             <footer class="article-time">
-                <time datetime='2024-07-22T15:44:59&#43;08:00'>2024-07-22</time>
+                <time datetime='0001-01-01T00:00:00Z'>0001-01-01</time>
             </footer>
         </div>
             <div class="article-image">
@@ -478,7 +478,7 @@
 	<script src=https://letere-gzj.github.io/hugo-stack/js/pjax.min.js></script>
 
 
-<script src=https://letere-gzj.github.io/hugo-stack/js/topbar.js></script>
+	<script src=https://letere-gzj.github.io/hugo-stack/js/topbar.js></script>
 
 
 <div class="js-Pjax">
@@ -539,8 +539,7 @@
 		selectors: [
 			"title",
 			"main",
-			"#main-menu",
-			"#right-bar",
+			".main-container",
 			".js-Pjax"
 		],
 		cacheBust: false
@@ -552,27 +551,13 @@
 		if (request.responseText.match("<html")) {
 			let newDoc = new DOMParser().parseFromString(responseText, 'text/html');
 			
-			updateContent(newDoc)
+			let bodyClass = newDoc.body.className;
+			document.body.setAttribute("class", bodyClass)
 			
-			let rightBar = newDoc.getElementById("right-bar");
-			if (!rightBar) {
-				rightBar = newDoc.createElement("aside");
-				rightBar.setAttribute("id", "right-bar");
-				newDoc.getElementsByClassName("main-container")[0].appendChild(rightBar)
-			}
-			
-			responseText = newDoc.documentElement.outerHTML
 			pjax._handleResponse(responseText, request, href, options);
 		} else {
 			
 		}
-	}
-
-	
-	function updateContent(newDoc) {
-		
-		let bodyClass = newDoc.body.className;
-		document.body.setAttribute("class", bodyClass)
 	}
 
 	

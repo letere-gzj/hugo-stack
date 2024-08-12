@@ -6,8 +6,7 @@
         <description>Recent content on 莱特雷-letere</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>莱特雷-letere</copyright>
-        <lastBuildDate>Mon, 22 Jul 2024 15:44:59 +0800</lastBuildDate><atom:link href="https://letere-gzj.github.io/hugo-stack/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>莱特雷-letere</copyright><atom:link href="https://letere-gzj.github.io/hugo-stack/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【Hugo】Hugo &#43; Github 免费部署自己的博客</title>
         <link>https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Mon, 22 Jul 2024 15:44:59 +0800</pubDate>
@@ -537,14 +536,14 @@
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;引入 &lt;strong&gt;pjax&lt;/strong&gt; ，实现音乐播放器不中断功能&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;del&gt;引入 &lt;strong&gt;pjax&lt;/strong&gt; ，实现音乐播放器不中断功能&lt;/del&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2024.08.11&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;不着急，现在的将就用&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;引入2D虚拟人物到widget，放在右侧边栏&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;del&gt;引入2D虚拟人物到widget，放在右侧边栏&lt;/del&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2024.08.10&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;改成全页面引用，非widget&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;美化背景，引入动态背景&lt;/td&gt;
