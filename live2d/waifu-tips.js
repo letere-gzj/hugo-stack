@@ -176,29 +176,7 @@
               }, 2e4));
         }, 1e3),
         o(
-          (function (e) {
-            if ("/" === location.pathname)
-              for (let { hour: t, text: o } of e) {
-                const e = new Date(),
-                  s = t.split("-")[0],
-                  n = t.split("-")[1] || s;
-                if (s <= e.getHours() && e.getHours() <= n) return o;
-              }
-            const t = `欢迎阅读<span>「${
-              document.title.split(" - ")[0]
-            }」</span>`;
-            let o;
-            if ("" !== document.referrer) {
-              const e = new URL(document.referrer),
-                s = e.hostname.split(".")[1],
-                n = { baidu: "百度", so: "360搜索", google: "谷歌搜索" };
-              return location.hostname === e.hostname
-                ? t
-                : ((o = s in n ? n[s] : e.hostname),
-                  `Hello！来自 <span>${o}</span> 的朋友<br>${t}`);
-            }
-            return t;
-          })(t.time),
+          getWaifuWelcome(t.time),
           7e3,
           11
         ),
@@ -305,3 +283,49 @@
         : i(e);
   };
 })();
+
+function getWaifuWelcome(e) {
+  if ("/" === location.pathname)
+    for (let { hour: t, text: o } of e) {
+      const e = new Date(),
+          s = t.split("-")[0],
+          n = t.split("-")[1] || s;
+      if (s <= e.getHours() && e.getHours() <= n) return o;
+    }
+  const t = `欢迎阅读<span>「${
+      document.title.split(" - ")[0]
+  }」</span>`;
+  let o;
+  if ("" !== document.referrer) {
+    const e = new URL(document.referrer),
+        s = e.hostname.split(".")[1],
+        n = { baidu: "百度", so: "360搜索", google: "谷歌搜索" };
+    return location.hostname === e.hostname
+        ? t
+        : ((o = s in n ? n[s] : e.hostname),
+            `Hello！来自 <span>${o}</span> 的朋友<br>${t}`);
+  }
+  return t;
+}
+
+/**
+ * 展示live2d提示
+ */
+let t;
+function showWaifuTips(o, s, n) {
+  if (
+      !o ||
+      (sessionStorage.getItem("waifu-text") &&
+          sessionStorage.getItem("waifu-text") > n)
+  )
+    return;
+  t && (clearTimeout(t), (t = null)),
+      sessionStorage.setItem("waifu-text", n);
+  const i = document.getElementById("waifu-tips");
+  (i.innerHTML = o),
+      i.classList.add("waifu-tips-active"),
+      (t = setTimeout(() => {
+        sessionStorage.removeItem("waifu-text"),
+            i.classList.remove("waifu-tips-active");
+      }, s));
+}
