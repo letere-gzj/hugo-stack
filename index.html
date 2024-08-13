@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head>
-	<meta name="generator" content="Hugo 0.132.0"><meta charset='utf-8'>
+	<meta name="generator" content="Hugo 0.132.1"><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="演示说明">
 <title>莱特雷-letere</title>
 
@@ -11,7 +11,7 @@
 <meta property='og:description' content="演示说明">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-08-13T09:44:05&#43;00:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-08-13T16:41:46&#43;00:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="莱特雷-letere">
 <meta name="twitter:description" content="演示说明"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' /><link rel="alternate" type="application/rss&#43;xml" href="https://letere-gzj.github.io/hugo-stack/index.xml">
@@ -522,6 +522,36 @@
 				cdnPath: "https://letere-gzj.github.io/hugo-stack/" + "live2d_api/",
 				tools: ["switch-texture", "quit"]
 			});
+
+            let isDown = false;
+            let waifuLeft;
+            let mouseLeft;
+            let waifu = document.getElementById("waifu");
+            waifu.onmousedown = function (e) {
+                isDown = true;
+                waifuLeft = waifu.offsetLeft;
+                mouseLeft = e.clientX;
+                waifu.style.cursor = "move";
+            }
+
+            window.onmousemove = function (e) {
+                if (!isDown) {
+                    return;
+                }
+                let left = waifuLeft + (e.clientX - mouseLeft);
+                if (left < 0) {
+                    left = 0;
+                }
+                if (left > window.innerWidth - 300) {
+                    left = window.innerWidth - 300
+                }
+                waifu.style.left = left  + "px";
+            }
+
+            window.onmouseup = function (e) {
+                isDown = false;
+                waifu.style.cursor = "default";
+            }
 		});
 	}
 </script>
