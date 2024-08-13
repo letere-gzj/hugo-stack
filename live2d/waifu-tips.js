@@ -322,6 +322,9 @@ function showWaifuTips(o, s, n) {
   t && (clearTimeout(t), (t = null)),
       sessionStorage.setItem("waifu-text", n);
   const i = document.getElementById("waifu-tips");
+  if (!i) {
+    return;
+  }
   (i.innerHTML = o),
       i.classList.add("waifu-tips-active"),
       (t = setTimeout(() => {

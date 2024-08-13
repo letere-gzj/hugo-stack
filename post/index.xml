@@ -243,7 +243,7 @@
 &lt;/h2&gt;&lt;h3 id=&#34;31-常规部署&#34;&gt;3.1 常规部署
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;（1）前往【&lt;a class=&#34;link&#34; href=&#34;https://github.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Github官网&lt;/a&gt;】，创建仓库 &lt;strong&gt;{github用户名}/github.io&lt;/strong&gt;&lt;/li&gt;
+    &gt;Github官网&lt;/a&gt;】，创建仓库 &lt;strong&gt;{github用户名}.github.io&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/github%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA.png&#34;
 	width=&#34;683&#34;
@@ -258,7 +258,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;（2）前往&lt;code&gt;Setting -&amp;gt; Pages -&amp;gt; Branch&lt;/code&gt;选择main分支，然后保存，会自动开启 &lt;strong&gt;https://{github用户名}/github.io&lt;/strong&gt; 的地址，这地址也是以后访问博客的地址&lt;/li&gt;
+&lt;li&gt;（2）前往&lt;code&gt;Setting -&amp;gt; Pages -&amp;gt; Branch&lt;/code&gt;选择main分支，然后保存，会自动开启 &lt;strong&gt;https://{github用户名}.github.io&lt;/strong&gt; 的地址，这地址也是以后访问博客的地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubPage%E5%90%AF%E5%8A%A8.png&#34;
 	width=&#34;872&#34;
@@ -309,7 +309,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;（5）上传成功后访问 &lt;strong&gt;https://{github用户名}/github.io&lt;/strong&gt;，成功搭建属于自己的Hugo博客&lt;/li&gt;
+&lt;li&gt;（5）上传成功后访问 &lt;strong&gt;https://{github用户名}.github.io&lt;/strong&gt;，成功搭建属于自己的Hugo博客&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;32-github-action自动部署&#34;&gt;3.2 Github Action自动部署

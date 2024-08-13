@@ -10,7 +10,7 @@
 <meta property='og:description' content="使用hugo工具生成静态页面，然后在github上部署静态页面，来免费搭建自己的博客">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-07-22T15:44:59&#43;08:00'/><meta property='article:modified_time' content='2024-08-12T14:49:26&#43;00:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-07-22T15:44:59&#43;08:00'/><meta property='article:modified_time' content='2024-08-13T09:44:05&#43;00:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2.png' />
 <meta name="twitter:title" content="【Hugo】Hugo + Github 免费部署自己的博客">
 <meta name="twitter:description" content="使用hugo工具生成静态页面，然后在github上部署静态页面，来免费搭建自己的博客"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2.png' />
@@ -354,7 +354,7 @@
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2024-08-12
+                    2024-08-13
                 </time>
             </div>
 
@@ -614,7 +614,7 @@
 </h2><h3 id="31-常规部署">3.1 常规部署
 </h3><ul>
 <li>（1）前往【<a class="link" href="https://github.com"  target="_blank" rel="noopener"
-    >Github官网</a>】，创建仓库 <strong>{github用户名}/github.io</strong></li>
+    >Github官网</a>】，创建仓库 <strong>{github用户名}.github.io</strong></li>
 </ul>
 <p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/github%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA.png"
 	width="683"
@@ -629,7 +629,7 @@
 	
 ></p>
 <ul>
-<li>（2）前往<code>Setting -&gt; Pages -&gt; Branch</code>选择main分支，然后保存，会自动开启 <strong>https://{github用户名}/github.io</strong> 的地址，这地址也是以后访问博客的地址</li>
+<li>（2）前往<code>Setting -&gt; Pages -&gt; Branch</code>选择main分支，然后保存，会自动开启 <strong>https://{github用户名}.github.io</strong> 的地址，这地址也是以后访问博客的地址</li>
 </ul>
 <p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubPage%E5%90%AF%E5%8A%A8.png"
 	width="872"
@@ -680,7 +680,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>（5）上传成功后访问 <strong>https://{github用户名}/github.io</strong>，成功搭建属于自己的Hugo博客</li>
+<li>（5）上传成功后访问 <strong>https://{github用户名}.github.io</strong>，成功搭建属于自己的Hugo博客</li>
 </ul>
 <hr>
 <h3 id="32-github-action自动部署">3.2 Github Action自动部署
@@ -1114,7 +1114,35 @@
 </script>
 
 	
-    <script src=https://letere-gzj.github.io/hugo-stack/background/sakura.js></script>
+
+
+
+
+
+
+
+
+
+
+
+    <script src=https://letere-gzj.github.io/hugo-stack/background/particles/particles.js></script>
+
+
+    <link rel="stylesheet" href=https://letere-gzj.github.io/hugo-stack/background/particles/style.css>
+
+
+<div id="particles-js"></div>
+
+<script>
+    
+
+    particlesJS.load('particles-js', "https://letere-gzj.github.io/hugo-stack/background/particles/particlesjs-config.json", function() {
+        console.log('particles.js loaded - callback');
+    });
+</script>
+
+
+
 
 
 
