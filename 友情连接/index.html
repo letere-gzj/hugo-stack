@@ -10,7 +10,7 @@
 <meta property='og:description' content="">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/%E5%8F%8B%E6%83%85%E8%BF%9E%E6%8E%A5/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2024-08-13T16:41:46&#43;00:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2024-08-14T10:00:57&#43;00:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="友情连接">
 <meta name="twitter:description" content=""><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
@@ -390,7 +390,7 @@
                     <h2 class="article-title">Aplayer</h2>
                     <footer class="article-time">
                         
-                            博客引入的音乐播放器组件
+                            本博客使用的音乐播放器组件
                         
                     </footer>
                 </div>
@@ -436,7 +436,7 @@
                     <h2 class="article-title">Live 2D</h2>
                     <footer class="article-time">
                         
-                            本博客live2d看板娘所引用的组件
+                            本博客使用的live2d看板娘组件
                         
                     </footer>
                 </div>
@@ -471,6 +471,29 @@
                     
                     <div class="article-image">
                         <img src="/hugo-stack/%E5%8F%8B%E6%83%85%E8%BF%9E%E6%8E%A5/100font.ico" loading="lazy">
+                    </div>
+                
+            </a>
+        </article>
+    
+        <article>
+            <a href="https://github.com/VincentGarreau/particles.js" target="_blank" rel="noopener">
+                <div class="article-details">
+                    <h2 class="article-title">particles.js</h2>
+                    <footer class="article-time">
+                        
+                            本博客使用的动态背景组件
+                        
+                    </footer>
+                </div>
+        
+                
+                    
+                    
+                        
+                    
+                    <div class="article-image">
+                        <img src="/hugo-stack/%E5%8F%8B%E6%83%85%E8%BF%9E%E6%8E%A5/particles-logo.png" loading="lazy">
                     </div>
                 
             </a>
@@ -600,12 +623,12 @@
 	
 	
 	
-	
+
 	
 	function loadExternalResource(url, type) {
 		return new Promise((resolve, reject) => {
 			let tag;
-	
+
 			if (type === "css") {
 				tag = document.createElement("link");
 				tag.rel = "stylesheet";
@@ -622,7 +645,7 @@
 			}
 		});
 	}
-	
+
 	
 	if (screen.width >= 768) {
 		Promise.all([
@@ -637,36 +660,6 @@
 				cdnPath: "https://letere-gzj.github.io/hugo-stack/" + "live2d_api/",
 				tools: ["switch-texture", "quit"]
 			});
-
-            let isDown = false;
-            let waifuLeft;
-            let mouseLeft;
-            let waifu = document.getElementById("waifu");
-            waifu.onmousedown = function (e) {
-                isDown = true;
-                waifuLeft = waifu.offsetLeft;
-                mouseLeft = e.clientX;
-                waifu.style.cursor = "move";
-            }
-
-            window.onmousemove = function (e) {
-                if (!isDown) {
-                    return;
-                }
-                let left = waifuLeft + (e.clientX - mouseLeft);
-                if (left < 0) {
-                    left = 0;
-                }
-                if (left > window.innerWidth - 300) {
-                    left = window.innerWidth - 300
-                }
-                waifu.style.left = left  + "px";
-            }
-
-            window.onmouseup = function (e) {
-                isDown = false;
-                waifu.style.cursor = "default";
-            }
 		});
 	}
 </script>
@@ -740,7 +733,8 @@
 			
 			pjax._handleResponse(responseText, request, href, options);
 		} else {
-			
+			window.open(href)
+			topbar.hide();
 		}
 	}
 
@@ -768,6 +762,7 @@
 		showWaifuTips(getWaifuWelcome(), 7e3, 11);
 	})
 </script>
+
 	
 	<script src=https://letere-gzj.github.io/hugo-stack/js/APlayer.min.js></script>
 

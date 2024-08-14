@@ -10,7 +10,7 @@
 <meta property='og:description' content="演示说明">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/post/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-08-13T16:41:46&#43;00:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-08-14T10:00:57&#43;00:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="Posts">
 <meta name="twitter:description" content="演示说明"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' /><link rel="alternate" type="application/rss&#43;xml" href="https://letere-gzj.github.io/hugo-stack/post/index.xml">
@@ -286,7 +286,7 @@
                     <a href="/hugo-stack/archives/#2024">
                         
                             <span class="year">2024</span>
-                            <span class="count">1</span>
+                            <span class="count">2</span>
                         
                     </a> 
                 </div>
@@ -313,7 +313,7 @@
 
     <div class="tagCloud-tags">
         
-            <a href="/hugo-stack/categories/%E6%95%99%E7%A8%8B/" class="font_size_1">
+            <a href="/hugo-stack/categories/%E6%95%99%E7%A8%8B/" class="font_size_2">
                 教程
             </a>
         
@@ -338,7 +338,7 @@
 
     <div class="tagCloud-tags">
         
-            <a href="/hugo-stack/tags/hugo/" class="font_size_1">
+            <a href="/hugo-stack/tags/hugo/" class="font_size_2">
                 Hugo
             </a>
         
@@ -359,7 +359,7 @@
 
         <div class="section-card">
             <div class="section-details">
-                <h3 class="section-count">1 个页面</h3>
+                <h3 class="section-count">2 个页面</h3>
                 <h1 class="section-term">Posts</h1>
                 
             </div>
@@ -367,6 +367,17 @@
     </header>
     
     <section class="article-list--compact">
+        
+            <article>
+    <a href="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/">
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】Aplayer &#43; PJAX 引入音乐播放放器并实现音乐不中断功能</h2>
+            <footer class="article-time">
+                <time datetime='2024-08-14T14:50:54&#43;08:00'>2024-08-14</time>
+            </footer>
+        </div>
+    </a>
+</article>
         
             <article>
     <a href="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">
@@ -427,12 +438,12 @@
 	
 	
 	
-	
+
 	
 	function loadExternalResource(url, type) {
 		return new Promise((resolve, reject) => {
 			let tag;
-	
+
 			if (type === "css") {
 				tag = document.createElement("link");
 				tag.rel = "stylesheet";
@@ -449,7 +460,7 @@
 			}
 		});
 	}
-	
+
 	
 	if (screen.width >= 768) {
 		Promise.all([
@@ -464,36 +475,6 @@
 				cdnPath: "https://letere-gzj.github.io/hugo-stack/" + "live2d_api/",
 				tools: ["switch-texture", "quit"]
 			});
-
-            let isDown = false;
-            let waifuLeft;
-            let mouseLeft;
-            let waifu = document.getElementById("waifu");
-            waifu.onmousedown = function (e) {
-                isDown = true;
-                waifuLeft = waifu.offsetLeft;
-                mouseLeft = e.clientX;
-                waifu.style.cursor = "move";
-            }
-
-            window.onmousemove = function (e) {
-                if (!isDown) {
-                    return;
-                }
-                let left = waifuLeft + (e.clientX - mouseLeft);
-                if (left < 0) {
-                    left = 0;
-                }
-                if (left > window.innerWidth - 300) {
-                    left = window.innerWidth - 300
-                }
-                waifu.style.left = left  + "px";
-            }
-
-            window.onmouseup = function (e) {
-                isDown = false;
-                waifu.style.cursor = "default";
-            }
 		});
 	}
 </script>
@@ -614,7 +595,8 @@
 			
 			pjax._handleResponse(responseText, request, href, options);
 		} else {
-			
+			window.open(href)
+			topbar.hide();
 		}
 	}
 
@@ -642,6 +624,7 @@
 		showWaifuTips(getWaifuWelcome(), 7e3, 11);
 	})
 </script>
+
 	
 	<script src=https://letere-gzj.github.io/hugo-stack/js/APlayer.min.js></script>
 

@@ -10,7 +10,7 @@
 <meta property='og:description' content="功能 完成时间 备注 引入 pjax ，实现音乐播放器不中断功能 2024.08.11 不着急，现在的将就用 引入2D虚拟人物到widget，放在右侧边栏 2024.08.10 改成全页面引用，非wid">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2024-08-13T16:41:46&#43;00:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2024-08-14T10:00:57&#43;00:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="更新计划">
 <meta name="twitter:description" content="功能 完成时间 备注 引入 pjax ，实现音乐播放器不中断功能 2024.08.11 不着急，现在的将就用 引入2D虚拟人物到widget，放在右侧边栏 2024.08.10 改成全页面引用，非wid"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
@@ -445,12 +445,12 @@
 	
 	
 	
-	
+
 	
 	function loadExternalResource(url, type) {
 		return new Promise((resolve, reject) => {
 			let tag;
-	
+
 			if (type === "css") {
 				tag = document.createElement("link");
 				tag.rel = "stylesheet";
@@ -467,7 +467,7 @@
 			}
 		});
 	}
-	
+
 	
 	if (screen.width >= 768) {
 		Promise.all([
@@ -482,36 +482,6 @@
 				cdnPath: "https://letere-gzj.github.io/hugo-stack/" + "live2d_api/",
 				tools: ["switch-texture", "quit"]
 			});
-
-            let isDown = false;
-            let waifuLeft;
-            let mouseLeft;
-            let waifu = document.getElementById("waifu");
-            waifu.onmousedown = function (e) {
-                isDown = true;
-                waifuLeft = waifu.offsetLeft;
-                mouseLeft = e.clientX;
-                waifu.style.cursor = "move";
-            }
-
-            window.onmousemove = function (e) {
-                if (!isDown) {
-                    return;
-                }
-                let left = waifuLeft + (e.clientX - mouseLeft);
-                if (left < 0) {
-                    left = 0;
-                }
-                if (left > window.innerWidth - 300) {
-                    left = window.innerWidth - 300
-                }
-                waifu.style.left = left  + "px";
-            }
-
-            window.onmouseup = function (e) {
-                isDown = false;
-                waifu.style.cursor = "default";
-            }
 		});
 	}
 </script>
@@ -585,7 +555,8 @@
 			
 			pjax._handleResponse(responseText, request, href, options);
 		} else {
-			
+			window.open(href)
+			topbar.hide();
 		}
 	}
 
@@ -613,6 +584,7 @@
 		showWaifuTips(getWaifuWelcome(), 7e3, 11);
 	})
 </script>
+
 	
 	<script src=https://letere-gzj.github.io/hugo-stack/js/APlayer.min.js></script>
 

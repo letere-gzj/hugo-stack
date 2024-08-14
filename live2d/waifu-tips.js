@@ -256,6 +256,8 @@
             .then((e) => e.json())
             .then(c);
       })();
+    // 初始化鼠标点击拖拽事件
+    initWaifuMouseEvent();
   }
   window.initWidget = function (e, t) {
     "string" == typeof e && (e = { waifuPath: e, apiPath: t }),
@@ -331,4 +333,37 @@ function showWaifuTips(o, s, n) {
         sessionStorage.removeItem("waifu-text"),
             i.classList.remove("waifu-tips-active");
       }, s));
+}
+
+/**
+ * live2d鼠标监听事件初始化
+ */
+function initWaifuMouseEvent() {
+  let waifu = document.getElementById("waifu");
+  let isDown = false;
+  let waifuLeft;
+  let mouseLeft;
+  // 鼠标点击监听
+  waifu.onmousedown = function (e) {
+    isDown = true;
+    waifuLeft = waifu.offsetLeft;
+    mouseLeft = e.clientX;
+  }
+  // 鼠标移动监听
+  window.onmousemove = function (e) {
+    if (!isDown) {
+      return;
+    }
+    let currentLeft = waifuLeft + (e.clientX - mouseLeft);
+    if (currentLeft < 0) {
+      currentLeft = 0;
+    } else if (currentLeft > window.innerWidth - 300) {
+      currentLeft = window.innerWidth - 300
+    }
+    waifu.style.left = currentLeft  + "px";
+  }
+  // 鼠标点击松开监听
+  window.onmouseup = function (e) {
+    isDown = false;
+  }
 }
