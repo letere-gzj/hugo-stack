@@ -1562,10 +1562,10 @@
         </item>
         <item>
         <title>更新计划</title>
-        <link>https://letere-gzj.github.io/hugo-stack/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/</link>
+        <link>https://letere-gzj.github.io/hugo-stack/update_list/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/</guid>
+        <guid>https://letere-gzj.github.io/hugo-stack/update_list/</guid>
         <description>&lt;hr&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1597,6 +1597,11 @@
 &lt;td style=&#34;text-align:left&#34;&gt;鼠标素材来源自【&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1KF411D7Y3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;B站up主&lt;/a&gt;】&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;live2D文本适配Stack主题&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
@@ -1604,10 +1609,10 @@
         </item>
         <item>
         <title>技术链接</title>
-        <link>https://letere-gzj.github.io/hugo-stack/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</link>
+        <link>https://letere-gzj.github.io/hugo-stack/link/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</guid>
+        <guid>https://letere-gzj.github.io/hugo-stack/link/</guid>
         <description></description>
         </item>
         <item>
