@@ -165,9 +165,12 @@
         }
     }
 
-    let messageTimer;
-    function showMessage(text, timeout, priority) {
-        if (!text || (sessionStorage.getItem("waifu-text") && sessionStorage.getItem("waifu-text") > priority)) return;
+    function showMessageCoverOrNot(text, timeout, priority, isCover) {
+        let currentPriority = sessionStorage.getItem("waifu-text");
+        if (!text || (currentPriority && currentPriority > priority)) return;
+        if (currentPriority && parseInt(currentPriority) === priority && !isCover) {
+            return;
+        }
         if (messageTimer) {
             clearTimeout(messageTimer);
             messageTimer = null;
@@ -181,6 +184,11 @@
             sessionStorage.removeItem("waifu-text");
             tips.classList.remove("waifu-tips-active");
         }, timeout);
+    }
+
+    let messageTimer;
+    function showMessage(text, timeout, priority) {
+        showMessageCoverOrNot(text, timeout, priority, true);
     }
 
     /**
@@ -258,6 +266,13 @@
             window.addEventListener("mouseover", event => {
                 for (let { selector, text } of result.mouseover) {
                     if (event.target.matches(selector)) {
+                        // 音乐播放器特殊处理
+                        if (selector === '.aplayer-pic') {
+                            text = ap.paused ? text[0] : text[1];
+                            text = randomSelection(text);
+                            showMessageCoverOrNot(text, 4000, 9, false);
+                            return;
+                        }
                         text = randomSelection(text);
                         text = text.replace("{text}", event.target.innerText);
                         showMessage(text, 4000, 8);

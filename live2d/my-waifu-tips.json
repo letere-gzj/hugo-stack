@@ -45,6 +45,9 @@
     "selector": "a[href='/hugo-stack/search/']",
     "text": ["找不到想看的内容？搜索看看吧！", "在找什么东西呢，需要帮忙吗？"]
   }, {
+    "selector": "input[name='keyword']",
+    "text": ["点击输入想找的内容吧！"]
+  }, {
     "selector": "a[href='/hugo-stack/update_list/']",
     "text": ["想知道这博客是怎么搭的吗？", "看看主人偷偷更了啥！"]
   }, {
@@ -96,20 +99,29 @@
     "selector": "a[href^='mailto']",
     "text": ["邮件我会及时回复的！", "点击就可以发送邮件啦～"]
   }, {
-    "selector": "a[href^='/tags/']",
+    "selector": "a[href^='/hugo-stack/tags/']",
     "text": ["要去看看 <span>{text}</span> 标签么？", "点它可以查看此标签下的所有文章哟！"]
   }, {
-    "selector": "a[href^='/categories/']",
+    "selector": "a[href^='/hugo-stack/categories/']",
     "text": ["要去看看 <span>{text}</span> 分类么？", "点它可以查看此分类下的所有文章哟！"]
   }, {
+    "selector": "a[href^='/hugo-stack/archives/']",
+    "text": ["要去看看这年都写了哪些文章吗？"]
+  },{
     "selector": ".post-title-link",
     "text": ["要看看 <span>{text}</span> 这篇文章吗？"]
+  }, {
+    "selector": ".links article a",
+    "text": ["要去看看 <span>{text}</span> 么？", "去 <span>{text}</span> 逛逛吧。", "到 <span>{text}</span> 看看吧。"]
   }, {
     "selector": ".article-list .article-title a",
     "text": ["点击来阅读全文哦。"]
   }, {
     "selector": ".article-list--compact article a",
     "text": ["点击来阅读全文哦。"]
+  }, {
+    "selector": "#TableOfContents a",
+    "text": ["要定位到<span>【{text}】</span>的内容吗？"]
   }, {
     "selector": "a[itemprop='discussionUrl']",
     "text": ["要去看看评论吗？"]
@@ -156,6 +168,9 @@
     "selector": ".need-share-button_facebook",
     "text": ["emmm…FB 好像也是不存在的东西？"]
   }, {
+    "selector": ".page-link",
+    "text": ["前往 <span>第{text}页</span> 看看吧！"]
+  }, {
     "selector": ".post-nav-item a[rel='next']",
     "text": ["来看看下一篇文章吧。", "点它可以看下一篇文章哦！", "要翻到下一篇文章吗？"]
   }, {
@@ -197,6 +212,12 @@
   }, {
     "selector": ".vcontent",
     "text": ["哇，快看看这个精彩评论！", "如果有疑问，请尽快留言哦～"]
+  }, {
+    "selector": ".aplayer-pic",
+    "text": [["听听音乐放松一下吧！"], ["已经听够了吗？那就暂停吧！"]]
+  }, {
+    "selector": ".aplayer-list li",
+    "text": ["要听 <span>{text}</span> 吗？"]
   }],
   "click": [{
     "selector": "#live2d",
