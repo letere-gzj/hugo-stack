@@ -39,6 +39,9 @@
     "selector": "a[href='/hugo-stack/']",
     "text": ["点击前往首页，想回到上一页可以使用浏览器的后退功能哦。", "点它就可以回到首页啦！", "回首页看看吧。"]
   }, {
+    "selector": "a[href='/hugo-stack/categories-tags/']",
+    "text": ["分类和标签都整理在这了哦！", "看看都有哪些分类和标签吧！"]
+  }, {
     "selector": "a[href='/hugo-stack/archives/']",
     "text": ["翻页比较麻烦吗，那就来看看文章归档吧。", "文章目录都整理在这里啦！"]
   }, {
@@ -48,7 +51,7 @@
     "selector": "input[name='keyword']",
     "text": ["点击输入想找的内容吧！"]
   }, {
-    "selector": "a[href='/hugo-stack/update_list/']",
+    "selector": "a[href='/hugo-stack/update-list/']",
     "text": ["想知道这博客是怎么搭的吗？", "看看主人偷偷更了啥！"]
   }, {
     "selector": "a[href='/hugo-stack/link/']",
