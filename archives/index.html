@@ -270,6 +270,8 @@
     
     
 
+    <section class="article-content">太棒了！目前共计 2 篇日志。继续加油。</section>
+
     
         
         <div class="archives-group" id="2024">
@@ -358,6 +360,7 @@
 	
 	
 	
+    
 
 	
 	function loadExternalResource(url, type) {
@@ -383,6 +386,7 @@
 
 	
 	if (screen.width >= 768) {
+        console.log("https://letere-gzj.github.io/hugo-stack/live2d/asteroids.js")
 		Promise.all([
 			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/waifu.css", "css"),
 			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/live2d.min.js", "js"),
@@ -393,7 +397,8 @@
 				waifuPath: "https://letere-gzj.github.io/hugo-stack/live2d/my-waifu-tips.json",
 				
 				cdnPath: "https://letere-gzj.github.io/hugo-stack/" + "live2d_api/",
-				tools: ["switch-texture", "quit"]
+				tools: ["hitokoto", "asteroids", "switch-texture", "quit"],
+                gamePath: "https://letere-gzj.github.io/hugo-stack/live2d/asteroids.js"
 			});
 		});
 	}
