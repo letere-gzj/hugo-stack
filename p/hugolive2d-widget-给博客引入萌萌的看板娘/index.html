@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" TODO：bilibili视频（不摸的话）\n1. 基础引入 【Live2d-widget文档】 （1）查看官方文档，引入对应的js脚本到layouts\\partials\\footer\\custom.html中(详情看引入音乐播放器的文章) 1 2 &lt;!-- 【custom.html】 --&gt; &lt;script src=&#34;https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js&#34;&gt;&lt;/script&gt; （2）成功在左下角引入了live2d看板娘 ">
+<title>【Hugo】Live2d-widget 给博客引入萌萌的看板娘</title>
+
+<link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/'>
+
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.50c33d584dd03529ca46f1d96bce598b57486240ef30a94d5cbd309109187400.css"><meta property='og:title' content="【Hugo】Live2d-widget 给博客引入萌萌的看板娘">
+<meta property='og:description' content=" TODO：bilibili视频（不摸的话）\n1. 基础引入 【Live2d-widget文档】 （1）查看官方文档，引入对应的js脚本到layouts\\partials\\footer\\custom.html中(详情看引入音乐播放器的文章) 1 2 &lt;!-- 【custom.html】 --&gt; &lt;script src=&#34;https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js&#34;&gt;&lt;/script&gt; （2）成功在左下角引入了live2d看板娘 ">
+<meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/'>
+<meta property='og:site_name' content='莱特雷-letere'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:published_time' content='2024-09-19T17:17:34&#43;08:00'/><meta property='article:modified_time' content='2024-09-21T13:01:42&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta name="twitter:title" content="【Hugo】Live2d-widget 给博客引入萌萌的看板娘">
+<meta name="twitter:description" content=" TODO：bilibili视频（不摸的话）\n1. 基础引入 【Live2d-widget文档】 （1）查看官方文档，引入对应的js脚本到layouts\\partials\\footer\\custom.html中(详情看引入音乐播放器的文章) 1 2 &lt;!-- 【custom.html】 --&gt; &lt;script src=&#34;https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js&#34;&gt;&lt;/script&gt; （2）成功在左下角引入了live2d看板娘 "><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/hugo-stack/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/hugo-stack/img/avatar_hu6786984924540402544.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🤔</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/hugo-stack">莱特雷-letere</a></h1>
+            <h2 class="site-description">欢迎来到我的网站，此博客由【Hugo &#43; Stack】来进行搭建，主要分享个人生活和学习笔记</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/402971365'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-bilibili" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" />
+  <path d="M8 3l2 3" />
+  <path d="M16 3l-2 3" />
+  <path d="M9 13v-2" />
+  <path d="M15 11v2" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/letere-gzj'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://letere-gzj.github.io'
+                        target="_blank"
+                        title="Hexo_Blog"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-hexo"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /><path d="M9 8v8" /><path d="M15 8v8" /><path d="M9 12h6" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/hugo-stack/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/categories-tags/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-tags"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 8v4.172a2 2 0 0 0 .586 1.414l5.71 5.71a2.41 2.41 0 0 0 3.408 0l3.592 -3.592a2.41 2.41 0 0 0 0 -3.408l-5.71 -5.71a2 2 0 0 0 -1.414 -.586h-4.172a2 2 0 0 0 -2 2z" /><path d="M18 19l1.592 -1.592a4.82 4.82 0 0 0 0 -6.816l-4.592 -4.592" /><path d="M7 10h-.01" /></svg>
+                
+                <span>分类&amp;标签</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/update-list/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-list"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l11 0" /><path d="M9 12l11 0" /><path d="M9 18l11 0" /><path d="M5 6l0 .01" /><path d="M5 12l0 .01" /><path d="M5 18l0 .01" /></svg>
+                
+                <span>更新计划</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>技术链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-基础引入">1. 基础引入</a></li>
+    <li><a href="#2-自定义适配">2. 自定义适配</a>
+      <ul>
+        <li><a href="#21-抽离autoloadjs">2.1 抽离autoload.js</a></li>
+        <li><a href="#22-调整css样式">2.2 调整css样式</a></li>
+        <li><a href="#23-调整看板娘提示语">2.3 调整看板娘提示语</a></li>
+        <li><a href="#24-自定义模型">2.4 自定义模型</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/hugo-stack/categories/%E6%95%99%E7%A8%8B/" style="background-color: #2a9d8f; color: #fff;">
+                教程
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/">【Hugo】Live2d-widget 给博客引入萌萌的看板娘</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2024-09-19</time>
+            </div>
+        |
+            <div class="article-lastmod">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
+                <time>
+                    2024-09-21
+                </time>
+            </div>
+
+        <div>
+            |
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
+            <time class="article-time--reading">
+                1363 字
+            </time>
+        </div>
+    </footer>
+    
+
+    
+
+    
+    <section class="article-tags">
+        
+            <a href="/hugo-stack/tags/hugo/" style="background-color: #fe53bc; color: #fff;">Hugo</a>
+        
+    </section>
+
+
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <hr>
+<p>TODO：bilibili视频（不摸的话）</p>
+<hr>
+<h2 id="1-基础引入">1. 基础引入
+</h2><ul>
+<li>【<a class="link" href="https://github.com/stevenjoezhang/live2d-widget"  target="_blank" rel="noopener"
+    >Live2d-widget文档</a>】</li>
+<li>（1）查看官方文档，引入对应的js脚本到<code>layouts\partials\footer\custom.html</code>中(详情看引入音乐播放器的文章)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 【custom.html】 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>（2）成功在左下角引入了live2d看板娘</li>
+</ul>
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/live2d%E5%BC%95%E5%85%A51.png"
+	width="855"
+	height="579"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/live2d%E5%BC%95%E5%85%A51_hu11699885325694569873.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/live2d%E5%BC%95%E5%85%A51_hu9350893187745269249.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="147"
+		data-flex-basis="354px"
+	
+></p>
+<hr>
+<h2 id="2-自定义适配">2. 自定义适配
+</h2><ul>
+<li>看板娘是已经引入好了，但是显示在左下角，跟我当前的主题非常的不搭，需要对看板娘进行自定义，来适配主题</li>
+</ul>
+<h3 id="21-抽离autoloadjs">2.1 抽离autoload.js
+</h3><ul>
+<li>(1) 前往【<a class="link" href="https://github.com/stevenjoezhang/live2d-widget"  target="_blank" rel="noopener"
+    >Live2d-widget文档</a>】，把 <strong>waifu-tips.json</strong> 和 <strong>waifu.css</strong>下载，并放到<code>assets/waifu</code>文件夹中(自己新建)</li>
+</ul>
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs1.png"
+	width="948"
+	height="654"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs1_hu4116551679071180038.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs1_hu1504599173053339036.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="144"
+		data-flex-basis="347px"
+	
+>
+<img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs2.png"
+	width="614"
+	height="185"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs2_hu7757436184522422918.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs2_hu4325862114188955926.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="331"
+		data-flex-basis="796px"
+	
+></p>
+<ul>
+<li>(2) 把之前引入的 <strong>autoload.js</strong> 删掉，把下面代码引入到 <strong>custom.html</strong> 中</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 【custom.html】 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 获取博客本地资源地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">cssPath</span> <span class="o">=</span> <span class="p">{{</span> <span class="p">(</span><span class="nx">resources</span><span class="p">.</span><span class="nx">Get</span> <span class="s2">&#34;waifu/waifu.css&#34;</span><span class="p">).</span><span class="nx">Permalink</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">tipsJsonPath</span> <span class="o">=</span> <span class="p">{{</span> <span class="p">(</span><span class="nx">resources</span><span class="p">.</span><span class="nx">Get</span> <span class="s2">&#34;waifu/waifu-tips.json&#34;</span><span class="p">).</span><span class="nx">Permalink</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// live2d_path 参数建议使用绝对路径
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">live2d_path</span> <span class="o">=</span> <span class="s2">&#34;https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 封装异步加载资源的方法
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">function</span> <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nx">tag</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&#34;css&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">tag</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;link&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">tag</span><span class="p">.</span><span class="nx">rel</span> <span class="o">=</span> <span class="s2">&#34;stylesheet&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">tag</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&#34;js&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">tag</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;script&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">tag</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">tag</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">tag</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">tag</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">reject</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">document</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">tag</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 加载 waifu.css live2d.min.js waifu-tips.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;=</span> <span class="mi">768</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">cssPath</span><span class="p">,</span> <span class="s2">&#34;css&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">live2d_path</span> <span class="o">+</span> <span class="s2">&#34;live2d.min.js&#34;</span><span class="p">,</span> <span class="s2">&#34;js&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">live2d_path</span> <span class="o">+</span> <span class="s2">&#34;waifu-tips.js&#34;</span><span class="p">,</span> <span class="s2">&#34;js&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">]).</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 配置选项的具体用法见 README.md
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">initWidget</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">waifuPath</span><span class="o">:</span> <span class="nx">tipsJsonPath</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">cdnPath</span><span class="o">:</span> <span class="s2">&#34;https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">tools</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;hitokoto&#34;</span><span class="p">,</span> <span class="s2">&#34;asteroids&#34;</span><span class="p">,</span> <span class="s2">&#34;switch-model&#34;</span><span class="p">,</span> <span class="s2">&#34;switch-texture&#34;</span><span class="p">,</span> <span class="s2">&#34;photo&#34;</span><span class="p">,</span> <span class="s2">&#34;info&#34;</span><span class="p">,</span> <span class="s2">&#34;quit&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="22-调整css样式">2.2 调整css样式
+</h3><ul>
+<li>(1) 修改<code>assets/waifu/waifu.css</code>，将看板娘移动到右侧，更加适配Stack主题</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* 【waifu.css】 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">waifu-toggle</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">...</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* left: 0; */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">right</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* margin-left: -100px; */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">-90</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* writing-mode: vertical-rl; */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">writing-mode</span><span class="p">:</span> <span class="kc">vertical</span><span class="o">-</span><span class="n">lr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">waifu-toggle</span><span class="p">.</span><span class="nc">waifu-toggle-active</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* margin-left: -50px; */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">-40</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">waifu-toggle</span><span class="p">.</span><span class="nc">waifu-toggle-active</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* margin-left: -30px; */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">-20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">waifu</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">...</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* left: 0; */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">right</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">waifu-tool</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">...</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* right: -10px; */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">260</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>(2) 这样看板娘就成功移动到右下角了</li>
+</ul>
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4css1.png"
+	width="629"
+	height="401"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4css1_hu18120271209873172884.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4css1_hu15247650076209271601.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="156"
+		data-flex-basis="376px"
+	
+></p>
+<hr>
+<h3 id="23-调整看板娘提示语">2.3 调整看板娘提示语
+</h3><ul>
+<li>
+<p>(1) 修改<code>assets/waifu/waifu-tips.json</code>，修改里面的css选择器，来适配页面内容元素，这边以<strong>复制按钮</strong>为例</p>
+</li>
+<li>
+<p>(2) 查看<strong>复制按钮</strong>的元素，属性为<code>class=&quot;copyCodeButton&quot;</code></p>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD1.png"
+	width="995"
+	height="374"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD1_hu12524649210065853399.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD1_hu18406233360388810405.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="266"
+		data-flex-basis="638px"
+	
+></p>
+<ul>
+<li>(3) 修改<code>assets/waifu/waifu-tips.json</code>，新增or修改对应的文本，修改对应的css选择器</li>
+</ul>
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD2.png"
+	width="698"
+	height="547"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD2_hu2463675216799207983.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD2_hu10702125778130372780.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="127"
+		data-flex-basis="306px"
+	
+></p>
+<ul>
+<li>(4) 这样当我们鼠标移动到对应的元素之后，看板娘就会有对应的提示语</li>
+</ul>
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3.png"
+	width="582"
+	height="419"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3_hu15530165900002074098.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3_hu13598954427321087150.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="138"
+		data-flex-basis="333px"
+	
+></p>
+<hr>
+<h3 id="24-自定义模型">2.4 自定义模型
+</h3><ul>
+<li>
+<p>(1) 前往【<a class="link" href="https://github.com/fghrsh/live2d_api"  target="_blank" rel="noopener"
+    >live2d_api</a>】，下载代码，这仓库中的文件就是 <strong>live2d-widget</strong> 的所使用的模型</p>
+</li>
+<li>
+<p>(2) 修改<code>model_list.json</code>文件，来添加or删除live2d模型（若有属于自己的live2d模型，请将模型放到<code>model</code>文件夹下）</p>
+</li>
+<li>
+<p>(3) 引入live2d文件可以本地引入(具体看音乐播放器文章)，这次演示用cdn的形式引入，cdn使用的是【<a class="link" href="https://www.jsdelivr.com/"  target="_blank" rel="noopener"
+    >jsDelivr</a>】</p>
+</li>
+<li>
+<p>(4) cdn引入不需要php文件，将多余的php文件删掉，只保留 <strong>model</strong> 和 <strong>model_list.json</strong></p>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1.png"
+	width="575"
+	height="223"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu3026801339791019489.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu7082330083530701100.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="257"
+		data-flex-basis="618px"
+	
+></p>
+<ul>
+<li>(5) github新建一个公有(public)仓库，将代码上传到仓库上，打标签(Tags)并发布(Releases)一个版本</li>
+</ul>
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B2.png"
+	width="1278"
+	height="488"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B2_hu10531032458095924358.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B2_hu4094684735325559998.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="261"
+		data-flex-basis="628px"
+	
+></p>
+<ul>
+<li>(6) 修改<code>layouts/partials/footer/custom.html</code>文件中的cdnPath</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;=</span> <span class="mi">768</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">            <span class="p">...</span>
+</span></span><span class="line"><span class="cl">        <span class="p">]).</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">initWidget</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="p">...</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 有文件夹就在后面拼文件夹路径
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">cdnPath</span><span class="o">:</span> <span class="s2">&#34;https://cdn.jsdelivr.net/gh/{用户名}/{仓库名}@{标签名}/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="p">...</span>
+</span></span><span class="line"><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>(7) 这样就成功通过cdn的形式引入自己的live2d模型文件</li>
+</ul>
+<hr>
+
+</section>
+
+
+    <footer class="article-footer">
+
+    
+
+</footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/">
+
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/cover.a0ef3134a444d2fa7a5e76e2af2f70ce_hu15528814248431698573.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】Aplayer &#43; PJAX 引入音乐播放放器并实现音乐不中断功能"
+                        
+                        data-hash="md5-oO8xNKRE0vp6Xnbiry9wzg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】Aplayer &#43; PJAX 引入音乐播放放器并实现音乐不中断功能
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">
+
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2.27481dd80f235da3bb222c51d2d09c36_hu15959188276720576554.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】Hugo &#43; Github 免费部署自己的博客"
+                        
+                        data-hash="md5-J0gd2A8jXaO7IixR0tCcNg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】Hugo &#43; Github 免费部署自己的博客
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div id="comment">
+        <script
+    src="https://giscus.app/client.js"
+    data-repo="letere-gzj/hugo-stack"
+    data-repo-id="R_kgDOMXeWfg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOMXeWfs4CheU8"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+    </div>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 莱特雷-letere
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/hugo-stack/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<div id="custom-footer">
+	<script>
+	
+	
+	
+	
+    
+
+	
+	function loadExternalResource(url, type) {
+		return new Promise((resolve, reject) => {
+			let tag;
+
+			if (type === "css") {
+				tag = document.createElement("link");
+				tag.rel = "stylesheet";
+				tag.href = url;
+			}
+			else if (type === "js") {
+				tag = document.createElement("script");
+				tag.src = url;
+			}
+			if (tag) {
+				tag.onload = () => resolve(url);
+				tag.onerror = () => reject(url);
+				document.head.appendChild(tag);
+			}
+		});
+	}
+
+	
+	if (screen.width >= 768) {
+        console.log("https://letere-gzj.github.io/hugo-stack/live2d/asteroids.js")
+		Promise.all([
+			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/waifu.css", "css"),
+			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/live2d.min.js", "js"),
+			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/my-waifu-tips.js", "js")
+		]).then(() => {
+			
+			initWidget({
+				waifuPath: "https://letere-gzj.github.io/hugo-stack/live2d/my-waifu-tips.json",
+				
+				cdnPath: "https://letere-gzj.github.io/hugo-stack/" + "live2d_api/",
+				tools: ["hitokoto", "asteroids", "switch-texture", "quit"],
+                gamePath: "https://letere-gzj.github.io/hugo-stack/live2d/asteroids.js"
+			});
+		});
+	}
+</script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+    <script src=https://letere-gzj.github.io/hugo-stack/background/particles/particles.js></script>
+
+
+    <link rel="stylesheet" href=https://letere-gzj.github.io/hugo-stack/background/particles/style.css>
+
+
+<div id="particles-js"></div>
+
+<script>
+    
+
+    particlesJS.load('particles-js', "https://letere-gzj.github.io/hugo-stack/background/particles/particlesjs-config.json", function() {
+        console.log('particles.js loaded - callback');
+    });
+</script>
+
+
+
+
+
+
+
+	
+	<script src=https://letere-gzj.github.io/hugo-stack/js/pjax.min.js></script>
+
+
+	<script src=https://letere-gzj.github.io/hugo-stack/js/topbar.js></script>
+
+
+<script>
+	var pjax = new Pjax({
+		elements: "a, form",
+		
+		selectors: [
+			"title",
+			".main-container",
+			".js-Pjax"
+		],
+		cacheBust: false
+	})
+
+	
+	pjax._handleResponse = pjax.handleResponse;
+	pjax.handleResponse = function(responseText, request, href, options) {
+		if (request.responseText.match("<html")) {
+			let newDoc = new DOMParser().parseFromString(responseText, 'text/html');
+			
+			let bodyClass = newDoc.body.className;
+			document.body.setAttribute("class", bodyClass)
+			
+			pjax._handleResponse(responseText, request, href, options);
+		} else {
+			window.open(href)
+			topbar.hide();
+		}
+	}
+
+	
+	topbar.config({
+		barColors: {
+			'0': 'rgba(255,  255, 255, 1)',
+			'1.0': 'rgba(0, 149, 234,  1)'
+		}
+	})
+
+	
+	document.addEventListener('pjax:send', () => {
+		
+		topbar.show();
+	})
+
+	
+	document.addEventListener('pjax:complete', () => {
+		
+		window.Stack.init();
+		
+		topbar.hide();
+		
+		showWaifuWelcome();
+	})
+</script>
+
+	
+	<script src=https://letere-gzj.github.io/hugo-stack/js/APlayer.min.js></script>
+
+
+<div class="demo">
+	<div id="aplayer"/>
+</div>
+<script>
+	
+	const musicDir = "https://letere-gzj.github.io/hugo-stack/" + 'music/';
+	const songs = [
+		'查无此字-林奕匡',
+		'最后祝福-黄宗泽',
+		'乖乖报到-MC 张天赋',
+		'摄氏零度-张敬轩',
+		'爱别等-洪卓立',
+		'还记得-周柏豪',
+		'这个故事教训我们-李克勤'
+	];
+	let audios = [];
+	songs.forEach((item) => {
+		const songInfo = item.split('-');
+		audios.push({
+			name: songInfo[0],
+			artist: songInfo[1],
+			url: musicDir + item + '/song.mp3',
+			cover: musicDir + item + '/cover.jpg',
+			lrc: musicDir + item + '/lyric.lrc'
+		});
+	})
+
+	
+	const ap = new APlayer({
+		container: document.getElementById('aplayer'),
+		listFolded: false,
+		listMaxHeight: '160px',
+		lrcType: 3,
+		mutex: true,
+		fixed: true,
+		audio: audios
+	});
+
+	
+
+	window.onload = () => {
+		const playInfo = JSON.parse(localStorage.getItem("playInfo"));
+		
+		if (!playInfo) {
+			return;
+		}
+		ap.list.switch(playInfo.index);
+		setTimeout(() => {
+			ap.seek(playInfo.currentTime);
+			
+			if (!playInfo.paused) {
+				ap.play()
+			}
+		}, 500);
+	};
+
+	
+
+	window.onbeforeunload = () => {
+		const playInfo = {
+			index: ap.list.index,
+			paused: ap.paused,
+			currentTime: ap.audio.currentTime
+		};
+		localStorage.setItem("playInfo", JSON.stringify(playInfo));
+	};
+</script>
+
+
+
+
+	
+    <style>
+        @font-face {
+            font-family: 'ChildFunSans';
+            src: url(https://letere-gzj.github.io/hugo-stack/front/ChildFunSans-Demo.ttf) format('truetype');
+        }
+
+        :root {
+            --article-font-family: "ChildFunSans", var(--base-font-family);
+            --zh-font-family: "ChildFunSans";
+        }
+    </style>
+
+	<div class="js-Pjax"><script>
+            (function() {
+                let comment = document.querySelector("#comment")
+                if (comment) {
+                    addCommentScript(comment)
+                }
+            })(document)
+
+            
+            function addCommentScript(comment) {
+                let script = document.createElement('script');
+                script.src = 'https://giscus.app/client.js';
+                script.crossOrigin = 'anonymous';
+                script.setAttribute('data-repo',"letere-gzj/hugo-stack");
+                script.setAttribute('data-repo-id',"R_kgDOMXeWfg");
+                script.setAttribute('data-category',"Announcements"); 
+                script.setAttribute('data-category-id',"DIC_kwDOMXeWfs4CheU8"); 
+                script.setAttribute('data-mapping',"pathname");
+                script.setAttribute('data-strict', 0 );
+                script.setAttribute('data-reactions-enabled', 1 );
+                script.setAttribute('data-emit-metadata', 0 );
+                script.setAttribute('data-input-position',"top");
+                script.setAttribute('data-theme',"light");
+                script.setAttribute('data-lang',"zh-CN");
+                script.setAttribute('data-loading', 'lazy')
+                script.async = true;
+                comment.appendChild(script);
+                initGiscus();
+            }
+
+            function initGiscus() {
+                addEventListener("message", (e) => {
+                    if (event.origin !== "https://giscus.app") return;
+                    handler();
+                });
+                window.addEventListener("onColorSchemeChange", handler);
+
+                function handler() {
+                    if (document.documentElement.dataset.scheme === "light") {
+                        setGiscusTheme('light');
+                    } else {
+                        setGiscusTheme('dark_dimmed');
+                    }
+                }
+            };
+        </script></div>
+
+</div>
+
+    </body>
+</html>
