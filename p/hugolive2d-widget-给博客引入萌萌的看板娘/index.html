@@ -10,10 +10,10 @@
 <meta property='og:description' content=" TODO：bilibili视频（不摸的话）\n1. 基础引入 【Live2d-widget文档】 （1）查看官方文档，引入对应的js脚本到layouts\\partials\\footer\\custom.html中(详情看引入音乐播放器的文章) 1 2 &lt;!-- 【custom.html】 --&gt; &lt;script src=&#34;https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js&#34;&gt;&lt;/script&gt; （2）成功在左下角引入了live2d看板娘 ">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:published_time' content='2024-09-19T17:17:34&#43;08:00'/><meta property='article:modified_time' content='2024-09-21T13:01:42&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:published_time' content='2024-09-19T17:17:34&#43;08:00'/><meta property='article:modified_time' content='2024-09-21T17:10:39&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/cover.png' />
 <meta name="twitter:title" content="【Hugo】Live2d-widget 给博客引入萌萌的看板娘">
 <meta name="twitter:description" content=" TODO：bilibili视频（不摸的话）\n1. 基础引入 【Live2d-widget文档】 （1）查看官方文档，引入对应的js脚本到layouts\\partials\\footer\\custom.html中(详情看引入音乐播放器的文章) 1 2 &lt;!-- 【custom.html】 --&gt; &lt;script src=&#34;https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js&#34;&gt;&lt;/script&gt; （2）成功在左下角引入了live2d看板娘 "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+    <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/cover.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -297,6 +297,12 @@
         <li><a href="#24-自定义模型">2.4 自定义模型</a></li>
       </ul>
     </li>
+    <li><a href="#3-优化">3 优化</a>
+      <ul>
+        <li><a href="#31-多皮肤切换修复">3.1 多皮肤切换修复</a></li>
+        <li><a href="#32-拖拽看板娘">3.2 拖拽看板娘</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         </div>
@@ -308,8 +314,20 @@
 
 
             <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/">
+                <img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/cover_hu13232774557383858670.png"
+                        srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/cover_hu13232774557383858670.png 800w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/cover_hu16740847764044889372.png 1600w"
+                        width="800" 
+                        height="250" 
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】Live2d-widget 给博客引入萌萌的看板娘" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
     
@@ -360,7 +378,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                1363 字
+                2003 字
             </time>
         </div>
     </footer>
@@ -438,8 +456,8 @@
 		data-flex-grow="144"
 		data-flex-basis="347px"
 	
->
-<img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs2.png"
+></p>
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs2.png"
 	width="614"
 	height="185"
 	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs2_hu7757436184522422918.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs2_hu4325862114188955926.png 1024w"
@@ -680,16 +698,16 @@
 <ul>
 <li>(4) 这样当我们鼠标移动到对应的元素之后，看板娘就会有对应的提示语</li>
 </ul>
-<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3.png"
-	width="582"
-	height="419"
-	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3_hu15530165900002074098.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3_hu13598954427321087150.png 1024w"
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3.gif"
+	width="2560"
+	height="1440"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3_hu7929714314688086124.gif 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3_hu15904829133514768322.gif 1024w"
 	loading="lazy"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="138"
-		data-flex-basis="333px"
+		data-flex-grow="177"
+		data-flex-basis="426px"
 	
 ></p>
 <hr>
@@ -780,6 +798,219 @@
 <li>(7) 这样就成功通过cdn的形式引入自己的live2d模型文件</li>
 </ul>
 <hr>
+<h2 id="3-优化">3 优化
+</h2><h3 id="31-多皮肤切换修复">3.1 多皮肤切换修复
+</h3><ul>
+<li>
+<p>（1）某些模型是具有多皮肤的(例如22, 33之类的)，但切换皮肤按钮不生效，是因为cdn形式引入是不适配皮肤切换的</p>
+</li>
+<li>
+<p>（2）这边对cdn引入方式的皮肤切换功能做了适配，下载我修改过的 <strong>live2d.min.jd</strong> ，放到<code>assets/waifu</code>下，通过本地的形式引入</p>
+<ul>
+<li><a class="link" href="live2d.min.js" >live2d.min.js</a>（<kbd>Ctrl</kbd>+<kbd>S</kbd>保存）</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 【custom.html】 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">live2dJsPath</span> <span class="o">=</span> <span class="p">{{</span> <span class="p">(</span><span class="nx">resources</span><span class="p">.</span><span class="nx">Get</span> <span class="s2">&#34;waifu/live2d.min.js&#34;</span><span class="p">).</span><span class="nx">Permalink</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;=</span> <span class="mi">768</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">            <span class="p">...</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">live2dJsPath</span><span class="p">,</span> <span class="s2">&#34;js&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="p">...</span>
+</span></span><span class="line"><span class="cl">        <span class="p">]).</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="p">...</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>(3) 这样就能切换这些看板娘的皮肤了</li>
+</ul>
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E7%9A%AE%E8%82%A4%E5%88%87%E6%8D%A2.gif"
+	width="2560"
+	height="1440"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E7%9A%AE%E8%82%A4%E5%88%87%E6%8D%A2_hu15709790727812461766.gif 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E7%9A%AE%E8%82%A4%E5%88%87%E6%8D%A2_hu9660268217645380957.gif 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<hr>
+<h3 id="32-拖拽看板娘">3.2 拖拽看板娘
+</h3><ul>
+<li>
+<p>(1) 有时候看板娘在右下角可能有点碍事，阻碍到我们点击一些页面内容，给看板娘添加拖拽功能，将她拖走</p>
+</li>
+<li>
+<p>(2) 将下面的代码复制进<code>layouts\partials\footer\custom.html</code></p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 【custom.html】 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;=</span> <span class="mi">768</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">            <span class="p">...</span>
+</span></span><span class="line"><span class="cl">        <span class="p">]).</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="p">...</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 初始化看板娘鼠标监听事件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">initWaifuMouseEvent</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">initWaifuMouseEvent</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">waifu</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;waifu&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">isDown</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">waifuLeft</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">mouseLeft</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">waifuTop</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">mouseTop</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 鼠标点击监听
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">waifu</span><span class="p">.</span><span class="nx">onmousedown</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">isDown</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 记录x轴
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">waifuLeft</span> <span class="o">=</span> <span class="nx">waifu</span><span class="p">.</span><span class="nx">offsetLeft</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">mouseLeft</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">clientX</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 记录y轴
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">waifuTop</span> <span class="o">=</span> <span class="nx">waifu</span><span class="p">.</span><span class="nx">offsetTop</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">mouseTop</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">clientY</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 鼠标移动监听
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nb">window</span><span class="p">.</span><span class="nx">onmousemove</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isDown</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// x轴移动
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">currentLeft</span> <span class="o">=</span> <span class="nx">waifuLeft</span> <span class="o">+</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">clientX</span> <span class="o">-</span> <span class="nx">mouseLeft</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">currentLeft</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">currentLeft</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">currentLeft</span> <span class="o">&gt;</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span> <span class="o">-</span> <span class="mi">300</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">currentLeft</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span> <span class="o">-</span> <span class="mi">300</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">waifu</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="nx">currentLeft</span>  <span class="o">+</span> <span class="s2">&#34;px&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// y轴移动
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">currentTop</span> <span class="o">=</span> <span class="nx">waifuTop</span> <span class="o">+</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">clientY</span> <span class="o">-</span> <span class="nx">mouseTop</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">currentTop</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">currentTop</span> <span class="o">=</span> <span class="mi">30</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">currentTop</span> <span class="o">&gt;</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span> <span class="o">-</span> <span class="mi">290</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">currentTop</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span> <span class="o">-</span> <span class="mi">290</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">waifu</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">top</span> <span class="o">=</span> <span class="nx">currentTop</span> <span class="o">+</span> <span class="s2">&#34;px&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 鼠标点击松开监听
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nb">window</span><span class="p">.</span><span class="nx">onmouseup</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">isDown</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>(3) 这样就可以随意拖拽看板娘了（如果是没有腿的模型，建议把y轴移动的代码注释掉）</li>
+</ul>
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E7%9C%8B%E6%9D%BF%E5%A8%98%E6%8B%96%E6%8B%BD.gif"
+	width="2560"
+	height="1440"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E7%9C%8B%E6%9D%BF%E5%A8%98%E6%8B%96%E6%8B%BD_hu1407825209830676737.gif 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E7%9C%8B%E6%9D%BF%E5%A8%98%E6%8B%96%E6%8B%BD_hu3220978026979702407.gif 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
 
 </section>
 

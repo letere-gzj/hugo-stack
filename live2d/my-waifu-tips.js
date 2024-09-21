@@ -323,24 +323,39 @@
             let isDown = false;
             let waifuLeft;
             let mouseLeft;
+            let waifuTop;
+            let mouseTop;
             // 鼠标点击监听
             waifu.onmousedown = function (e) {
                 isDown = true;
+                // 记录x轴
                 waifuLeft = waifu.offsetLeft;
                 mouseLeft = e.clientX;
+                // 记录y轴
+                waifuTop = waifu.offsetTop;
+                mouseTop = e.clientY;
             }
             // 鼠标移动监听
             window.onmousemove = function (e) {
                 if (!isDown) {
                     return;
                 }
+                // x轴移动
                 let currentLeft = waifuLeft + (e.clientX - mouseLeft);
                 if (currentLeft < 0) {
                     currentLeft = 0;
                 } else if (currentLeft > window.innerWidth - 300) {
-                    currentLeft = window.innerWidth - 300
+                    currentLeft = window.innerWidth - 300;
                 }
                 waifu.style.left = currentLeft  + "px";
+                // y轴移动
+                // let currentTop = waifuTop + (e.clientY - mouseTop);
+                // if (currentTop < 30) {
+                //     currentTop = 30
+                // } else if (currentTop > window.innerHeight - 290) {
+                //     currentTop = window.innerHeight - 290
+                // }
+                // waifu.style.top = currentTop + "px";
             }
             // 鼠标点击松开监听
             window.onmouseup = function (e) {
