@@ -13,7 +13,25 @@
         
         <guid>https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/</guid>
         <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/cover.png" alt="Featured image of post 【Hugo】Live2d-widget 给博客引入萌萌的看板娘" /&gt;&lt;hr&gt;
-&lt;p&gt;TODO：bilibili视频（不摸的话）&lt;/p&gt;
+
+
+
+
+
+
+    
+
+
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1FjtUevED2&amp;autoplay=0&#34;
+            scrolling=&#34;no&#34;
+            frameborder=&#34;no&#34;
+            framespacing=&#34;0&#34;
+            allowfullscreen=&#34;true&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;hr&gt;
 &lt;h2 id=&#34;1-基础引入&#34;&gt;1. 基础引入
 &lt;/h2&gt;&lt;ul&gt;
