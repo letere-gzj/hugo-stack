@@ -10,7 +10,7 @@
 <meta property='og:description' content="通过Live2d-widget引入live2d模型，并修改自定义参数来适配自己的主题">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:published_time' content='2024-09-19T17:17:34&#43;08:00'/><meta property='article:modified_time' content='2024-09-23T09:26:25&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/cover.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:published_time' content='2024-09-19T17:17:34&#43;08:00'/><meta property='article:modified_time' content='2024-09-25T17:45:26&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/cover.png' />
 <meta name="twitter:title" content="【Hugo】Live2d-widget 给博客引入萌萌的看板娘">
 <meta name="twitter:description" content="通过Live2d-widget引入live2d模型，并修改自定义参数来适配自己的主题"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/cover.png' />
@@ -297,7 +297,12 @@
         <li><a href="#21-抽离autoloadjs">2.1 抽离autoload.js</a></li>
         <li><a href="#22-调整css样式">2.2 调整css样式</a></li>
         <li><a href="#23-调整看板娘提示语">2.3 调整看板娘提示语</a></li>
-        <li><a href="#24-自定义模型">2.4 自定义模型</a></li>
+        <li><a href="#24-自定义模型">2.4 自定义模型</a>
+          <ul>
+            <li><a href="#241-引入cdn">2.4.1 引入cdn</a></li>
+            <li><a href="#242-bug修复">2.4.2 bug修复</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#3-优化">3 优化</a>
@@ -377,7 +382,7 @@
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2024-09-23
+                    2024-09-25
                 </time>
             </div>
 
@@ -385,7 +390,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                1982 字
+                2307 字
             </time>
         </div>
     </footer>
@@ -462,9 +467,129 @@
 ></p>
 <hr>
 <h2 id="2-自定义适配">2. 自定义适配
-</h2><ul>
-<li>看板娘是已经引入好了，但是显示在左下角，跟我当前的主题非常的不搭，需要对看板娘进行自定义，来适配主题</li>
-</ul>
+</h2><style type="text/css">
+     
+    .notice {
+        --title-color: #fff;
+        --title-background-color: #6be;
+        --content-color: #444;
+        --content-background-color: #e7f2fa;
+    }
+
+    .notice.info {
+        --title-background-color: #fb7;
+        --content-background-color: #fec;
+    }
+
+    .notice.tip {
+        --title-background-color: #5a5;
+        --content-background-color: #efe;
+    }
+
+    .notice.warning {
+        --title-background-color: #c33;
+        --content-background-color: #fee;
+    }
+
+     
+    @media (prefers-color-scheme:dark) {
+        .notice {
+            --title-color: #fff;
+            --title-background-color: #069;
+            --content-color: #ddd;
+            --content-background-color: #023;
+        }
+
+        .notice.info {
+            --title-background-color: #a50;
+            --content-background-color: #420;
+        }
+
+        .notice.tip {
+            --title-background-color: #363;
+            --content-background-color: #121;
+        }
+
+        .notice.warning {
+            --title-background-color: #800;
+            --content-background-color: #400;
+        }
+    }
+
+    body.dark .notice {
+        --title-color: #fff;
+        --title-background-color: #069;
+        --content-color: #ddd;
+        --content-background-color: #023;
+    }
+
+    body.dark .notice.info {
+        --title-background-color: #a50;
+        --content-background-color: #420;
+    }
+
+    body.dark .notice.tip {
+        --title-background-color: #363;
+        --content-background-color: #121;
+    }
+
+    body.dark .notice.warning {
+        --title-background-color: #800;
+        --content-background-color: #400;
+    }
+
+     
+    .notice {
+        padding: 18px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        border-radius: 4px;
+        color: var(--content-color);
+        background: var(--content-background-color);
+    }
+
+    .notice p:last-child {
+        margin-bottom: 0
+    }
+
+     
+    .notice-title {
+        margin: -18px -18px 12px;
+        padding: 4px 18px;
+        border-radius: 4px 4px 0 0;
+        font-weight: 700;
+        color: var(--title-color);
+        background: var(--title-background-color);
+    }
+
+     
+    .icon-notice {
+        display: inline-flex;
+        align-self: center;
+        margin-right: 8px;
+    }
+
+    .icon-notice img,
+    .icon-notice svg {
+        height: 1em;
+        width: 1em;
+        fill: currentColor;
+    }
+
+    .icon-notice img,
+    .icon-notice.baseline svg {
+        top: .125em;
+        position: relative;
+    }
+</style><div class="notice note" >
+    <p class="notice-title">
+        <span class="icon-notice baseline">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 128 300 300">
+  <path d="M150 128c82.813 0 150 67.188 150 150 0 82.813-67.188 150-150 150C67.187 428 0 360.812 0 278c0-82.813 67.188-150 150-150Zm25 243.555v-37.11c0-3.515-2.734-6.445-6.055-6.445h-37.5c-3.515 0-6.445 2.93-6.445 6.445v37.11c0 3.515 2.93 6.445 6.445 6.445h37.5c3.32 0 6.055-2.93 6.055-6.445Zm-.39-67.188 3.515-121.289c0-1.367-.586-2.734-1.953-3.516-1.172-.976-2.93-1.562-4.688-1.562h-42.968c-1.758 0-3.516.586-4.688 1.563-1.367.78-1.953 2.148-1.953 3.515l3.32 121.29c0 2.734 2.93 4.882 6.64 4.882h36.134c3.515 0 6.445-2.148 6.64-4.883Z"/>
+</svg>
+
+        </span>注释</p><p>看板娘是已经引入好了，但是显示在左下角，跟我当前的主题非常的不搭，需要对看板娘进行自定义，来适配主题</p></div>
+
 <h3 id="21-抽离autoloadjs">2.1 抽离autoload.js
 </h3><ul>
 <li>(1) 前往【<a class="link" href="https://github.com/stevenjoezhang/live2d-widget"  target="_blank" rel="noopener"
@@ -737,7 +862,8 @@
 ></p>
 <hr>
 <h3 id="24-自定义模型">2.4 自定义模型
-</h3><ul>
+</h3><h4 id="241-引入cdn">2.4.1 引入cdn
+</h4><ul>
 <li>
 <p>(1) 前往【<a class="link" href="https://github.com/fghrsh/live2d_api"  target="_blank" rel="noopener"
     >live2d_api</a>】，下载代码，这仓库中的文件就是 <strong>live2d-widget</strong> 的所使用的模型</p>
@@ -821,6 +947,114 @@
 </div>
 </div><ul>
 <li>(7) 这样就成功通过cdn的形式引入自己的live2d模型文件</li>
+</ul>
+<hr>
+<h4 id="242-bug修复">2.4.2 bug修复
+</h4><div class="notice info" >
+    <p class="notice-title">
+        <span class="icon-notice baseline">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="92 59.5 300 300">
+  <path d="M292 303.25V272c0-3.516-2.734-6.25-6.25-6.25H267v-100c0-3.516-2.734-6.25-6.25-6.25h-62.5c-3.516 0-6.25 2.734-6.25 6.25V197c0 3.516 2.734 6.25 6.25 6.25H217v62.5h-18.75c-3.516 0-6.25 2.734-6.25 6.25v31.25c0 3.516 2.734 6.25 6.25 6.25h87.5c3.516 0 6.25-2.734 6.25-6.25Zm-25-175V97c0-3.516-2.734-6.25-6.25-6.25h-37.5c-3.516 0-6.25 2.734-6.25 6.25v31.25c0 3.516 2.734 6.25 6.25 6.25h37.5c3.516 0 6.25-2.734 6.25-6.25Zm125 81.25c0 82.813-67.188 150-150 150-82.813 0-150-67.188-150-150 0-82.813 67.188-150 150-150 82.813 0 150 67.188 150 150Z"/>
+</svg>
+
+        </span>信息</p><p>如果你 <strong>model_list.json</strong> 中的 <strong>live2d模型分组</strong> 只有一组的时候，会存在bug，导致加载不出模型，需要进行修复</p></div>
+
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BBug1.png"
+	width="511"
+	height="306"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BBug1_hu09ad7505257144f542c2f55e88430490_13129_480x0_resize_box_3.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BBug1_hu09ad7505257144f542c2f55e88430490_13129_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug2.png"
+	width="770"
+	height="273"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug2_hu6992f5b794a767c695c52660675b6b86_37920_480x0_resize_box_3.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug2_hu6992f5b794a767c695c52660675b6b86_37920_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="282"
+		data-flex-basis="676px"
+	
+></p>
+<ul>
+<li>(1) 前往【<a class="link" href="https://github.com/stevenjoezhang/live2d-widget"  target="_blank" rel="noopener"
+    >Live2d-widget</a>】，下载 <strong>waifu-tips.js</strong>，并放到<code>assets/waifu</code>文件夹下，修改 <strong>custom.html</strong> 来引入</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 【custom.html】 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">tipsJsPath</span> <span class="o">=</span> <span class="p">{{</span> <span class="p">(</span><span class="nx">resources</span><span class="p">.</span><span class="nx">Get</span> <span class="s2">&#34;waifu/waifu-tips.js&#34;</span><span class="p">).</span><span class="nx">Permalink</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;=</span> <span class="mi">768</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">            <span class="p">...</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">live2dJsPath</span><span class="p">,</span> <span class="s2">&#34;js&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">]).</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="p">...</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>(2) 修改 <strong>waifu-tips.js</strong> 文件，全局搜索<code>e=1,o=53</code>，将内容改为<code>e=0,o=0</code>，这两个值是默认模型和默认皮肤，所以一旦模型分组小于2的时候，就会找不到模型(代码顺序从0开始数)</li>
+</ul>
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug3.png"
+	width="812"
+	height="596"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug3_hu709896897cd5179d03f20f1c8830b6e2_30679_480x0_resize_box_3.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug3_hu709896897cd5179d03f20f1c8830b6e2_30679_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="136"
+		data-flex-basis="326px"
+	
+></p>
+<ul>
+<li>(3) 打开浏览器，按<kbd>F12</kbd>打开控制台，清理 <strong>localStorage(本地存储)</strong> 中的数据</li>
+</ul>
+<p><img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug4.png"
+	width="766"
+	height="378"
+	srcset="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug4_huc0705214debf92063cfdfb4908282a21_38698_480x0_resize_box_3.png 480w, /hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug4_huc0705214debf92063cfdfb4908282a21_38698_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="202"
+		data-flex-basis="486px"
+	
+></p>
+<ul>
+<li>(4) 这样加载模型默认加载第0个模型，bug就修复了</li>
 </ul>
 <hr>
 <h2 id="3-优化">3 优化
@@ -1036,6 +1270,7 @@
 		data-flex-basis="426px"
 	
 ></p>
+<hr>
 
 </section>
 
@@ -1312,7 +1547,6 @@
 
 	
 	if (screen.width >= 768) {
-        console.log("https://letere-gzj.github.io/hugo-stack/live2d/asteroids.js")
 		Promise.all([
 			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/waifu.css", "css"),
 			loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/live2d.min.js", "js"),
