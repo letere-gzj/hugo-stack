@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.647b0ad664b88a52ddc331b7fe25b4781ef4713b7c8e594e026060fb856bf614.css"><meta property='og:title' content="Category: 教程 - 莱特雷-letere">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.f25f5e15a8710bdbdd7993077a41a7750c9a3e411b6cb4d6451b943bb446e649.css"><meta property='og:title' content="Category: 教程 - 莱特雷-letere">
 <meta property='og:description' content="记录问题or需求的解决方案，以及操作步骤">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-09-25T17:45:26&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/cover.png' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-09-27T17:58:40&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/cover.png' />
 <meta name="twitter:title" content="Category: 教程 - 莱特雷-letere">
 <meta name="twitter:description" content="记录问题or需求的解决方案，以及操作步骤"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/cover.png' /><link rel="alternate" type="application/rss&#43;xml" href="https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/index.xml">
@@ -637,6 +637,8 @@
 		topbar.hide();
 		
 		showWaifuWelcome();
+		
+		initTocHide();
 	})
 </script>
 
@@ -774,6 +776,48 @@
                 }
             };
         </script></div>
+
+	<script>
+    function initTocHide() {
+        let elements = document.querySelectorAll("#TableOfContents a");
+        let ulMap = new Map();
+        let parentNameMap = new Map();
+        elements.forEach((element) => {
+            let parentLi = element.parentElement;
+            if (parentLi.children.length > 1) {
+                console.log(parentLi.children)
+                ulMap.set(parentLi.firstChild.text, parentLi.children[1])
+            }
+            let parentUl = parentLi.parentElement
+            if (parentUl.localName === "ul") {
+                parentNameMap.set(parentLi.firstChild.text, parentUl.parentElement.firstChild.text)
+            }
+        })
+        elements.forEach((element) => {
+            element.addEventListener("click", (event) => {
+                
+                let elementsByClassName = document.querySelectorAll(".open");
+                if (elementsByClassName.length > 0) {
+                    elementsByClassName.forEach((a) => {
+                        a.classList.remove("open")
+                    })
+                }
+                
+                let parentName = element.text
+                do {
+                    let ul = ulMap.get(parentName);
+                    if (ul !== undefined) {
+                        ul.classList.add("open");
+                    }
+                    
+                    parentName = parentNameMap.get(parentName);
+                } while (parentName !== undefined)
+            })
+        })
+    }
+    initTocHide()
+    window.initTocHide = initTocHide
+</script>
 
 </div>
 

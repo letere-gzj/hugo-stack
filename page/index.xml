@@ -68,7 +68,12 @@
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;del&gt;将 &lt;strong&gt;分类&lt;/strong&gt; 和 &lt;strong&gt;标签&lt;/strong&gt; 单独整理为一个模块&lt;/del&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;2024.09.05&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;实现&lt;strong&gt;文章目录&lt;/strong&gt;的折叠展开&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;基本实现，代码待优化&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
