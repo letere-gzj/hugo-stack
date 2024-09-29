@@ -663,7 +663,7 @@
 &lt;p&gt;（1）某些模型是具有多皮肤的(例如22, 33之类的)，但切换皮肤按钮不生效，是因为cdn形式引入是不适配皮肤切换的&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;（2）这边对cdn引入方式的皮肤切换功能做了适配，下载我修改过的 &lt;strong&gt;live2d.min.jd&lt;/strong&gt; ，放到&lt;code&gt;assets/waifu&lt;/code&gt;下，通过本地的形式引入&lt;/p&gt;
+&lt;p&gt;（2）这边对cdn引入方式的皮肤切换功能做了适配，下载我修改过的 &lt;strong&gt;live2d.min.js&lt;/strong&gt; ，放到&lt;code&gt;assets/waifu&lt;/code&gt;下，通过本地的形式引入&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;live2d.min.js&#34; &gt;live2d.min.js&lt;/a&gt;（&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;S&lt;/kbd&gt;保存）&lt;/li&gt;
 &lt;/ul&gt;
@@ -2500,7 +2500,7 @@
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;实现&lt;strong&gt;文章目录&lt;/strong&gt;的折叠展开&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;del&gt;实现&lt;strong&gt;文章目录&lt;/strong&gt;的折叠展开&lt;/del&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;2024.09.29&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;基本实现，代码待优化&lt;/td&gt;
 &lt;/tr&gt;

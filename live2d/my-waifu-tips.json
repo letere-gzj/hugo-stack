@@ -81,10 +81,10 @@
     "selector": ".site-state",
     "text": ["这是文章的统计信息～", "要不要点进去看看？"]
   }, {
-    "selector": ".feed-link a",
+    "selector": "a[title='RSS'] svg",
     "text": ["这里可以使用 RSS 订阅呢！", "利用 feed 订阅器，就能快速知道博客有没有更新了呢。"]
   }, {
-    "selector": ".cc-opacity, .post-copyright-author",
+    "selector": ".article-copyright",
     "text": ["要记得规范转载哦。", "所有文章均采用 CC BY-NC-SA 4.0 许可协议～", "转载前要先注意下文章的版权协议呢。"]
   }, {
     "selector": ".links-of-author",

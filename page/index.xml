@@ -71,7 +71,7 @@
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;实现&lt;strong&gt;文章目录&lt;/strong&gt;的折叠展开&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;del&gt;实现&lt;strong&gt;文章目录&lt;/strong&gt;的折叠展开&lt;/del&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;2024.09.29&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;基本实现，代码待优化&lt;/td&gt;
 &lt;/tr&gt;
