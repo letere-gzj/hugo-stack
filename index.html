@@ -7,11 +7,11 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.f25f5e15a8710bdbdd7993077a41a7750c9a3e411b6cb4d6451b943bb446e649.css"><meta property='og:title' content="莱特雷-letere">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.647b0ad664b88a52ddc331b7fe25b4781ef4713b7c8e594e026060fb856bf614.css"><meta property='og:title' content="莱特雷-letere">
 <meta property='og:description' content="演示说明">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-09-27T17:58:40&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-09-29T13:51:36&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="莱特雷-letere">
 <meta name="twitter:description" content="演示说明"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' /><link rel="alternate" type="application/rss&#43;xml" href="https://letere-gzj.github.io/hugo-stack/index.xml">
@@ -966,43 +966,49 @@
             };
         </script></div>
 
-	<script>
+	<style>
+    #TableOfContents > ul {
+        ul {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
     function initTocHide() {
-        let elements = document.querySelectorAll("#TableOfContents a");
-        let ulMap = new Map();
-        let parentNameMap = new Map();
-        elements.forEach((element) => {
-            let parentLi = element.parentElement;
-            if (parentLi.children.length > 1) {
-                console.log(parentLi.children)
-                ulMap.set(parentLi.firstChild.text, parentLi.children[1])
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
             }
-            let parentUl = parentLi.parentElement
-            if (parentUl.localName === "ul") {
-                parentNameMap.set(parentLi.firstChild.text, parentUl.parentElement.firstChild.text)
+            
+            let elementsByClassName = document.querySelectorAll(".open");
+            if (elementsByClassName.length > 0) {
+                elementsByClassName.forEach((ul) => {
+                    ul.classList.remove("open")
+                })
             }
-        })
-        elements.forEach((element) => {
-            element.addEventListener("click", (event) => {
-                
-                let elementsByClassName = document.querySelectorAll(".open");
-                if (elementsByClassName.length > 0) {
-                    elementsByClassName.forEach((a) => {
-                        a.classList.remove("open")
-                    })
-                }
-                
-                let parentName = element.text
-                do {
-                    let ul = ulMap.get(parentName);
-                    if (ul !== undefined) {
-                        ul.classList.add("open");
-                    }
-                    
-                    parentName = parentNameMap.get(parentName);
-                } while (parentName !== undefined)
-            })
-        })
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && ul.localName === 'ul')
+        });
     }
     initTocHide()
     window.initTocHide = initTocHide

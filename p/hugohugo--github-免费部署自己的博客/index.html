@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.f25f5e15a8710bdbdd7993077a41a7750c9a3e411b6cb4d6451b943bb446e649.css"><meta property='og:title' content="【Hugo】Hugo + Github 免费部署自己的博客">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.647b0ad664b88a52ddc331b7fe25b4781ef4713b7c8e594e026060fb856bf614.css"><meta property='og:title' content="【Hugo】Hugo + Github 免费部署自己的博客">
 <meta property='og:description' content="使用hugo工具生成静态页面，然后在github上部署静态页面，来免费搭建自己的博客">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/'>
 <meta property='og:site_name' content='莱特雷-letere'>
@@ -1432,43 +1432,49 @@
             };
         </script></div>
 
-	<script>
+	<style>
+    #TableOfContents > ul {
+        ul {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
     function initTocHide() {
-        let elements = document.querySelectorAll("#TableOfContents a");
-        let ulMap = new Map();
-        let parentNameMap = new Map();
-        elements.forEach((element) => {
-            let parentLi = element.parentElement;
-            if (parentLi.children.length > 1) {
-                console.log(parentLi.children)
-                ulMap.set(parentLi.firstChild.text, parentLi.children[1])
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
             }
-            let parentUl = parentLi.parentElement
-            if (parentUl.localName === "ul") {
-                parentNameMap.set(parentLi.firstChild.text, parentUl.parentElement.firstChild.text)
+            
+            let elementsByClassName = document.querySelectorAll(".open");
+            if (elementsByClassName.length > 0) {
+                elementsByClassName.forEach((ul) => {
+                    ul.classList.remove("open")
+                })
             }
-        })
-        elements.forEach((element) => {
-            element.addEventListener("click", (event) => {
-                
-                let elementsByClassName = document.querySelectorAll(".open");
-                if (elementsByClassName.length > 0) {
-                    elementsByClassName.forEach((a) => {
-                        a.classList.remove("open")
-                    })
-                }
-                
-                let parentName = element.text
-                do {
-                    let ul = ulMap.get(parentName);
-                    if (ul !== undefined) {
-                        ul.classList.add("open");
-                    }
-                    
-                    parentName = parentNameMap.get(parentName);
-                } while (parentName !== undefined)
-            })
-        })
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && ul.localName === 'ul')
+        });
     }
     initTocHide()
     window.initTocHide = initTocHide
