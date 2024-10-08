@@ -7,7 +7,102 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>莱特雷-letere</copyright>
-        <lastBuildDate>Thu, 19 Sep 2024 17:17:34 +0800</lastBuildDate><atom:link href="https://letere-gzj.github.io/hugo-stack/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 08 Oct 2024 11:10:25 +0800</lastBuildDate><atom:link href="https://letere-gzj.github.io/hugo-stack/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【Hugo】Stack主题自定义修改</title>
+        <link>https://letere-gzj.github.io/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/</link>
+        <pubDate>Tue, 08 Oct 2024 11:10:25 +0800</pubDate>
+        
+        <guid>https://letere-gzj.github.io/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/</guid>
+        <description>&lt;hr&gt;
+&lt;p&gt;TODO：bilibili视频，可能做，可能不做，内容比较杂，不太好做视频&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-修改字体&#34;&gt;1 修改字体
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;(1) 前往【&lt;a class=&#34;link&#34; href=&#34;https://www.100font.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;100font&lt;/a&gt;】，下载自己想要的字体，这边演示&lt;strong&gt;缝合像素字体&lt;/strong&gt;，字体文件为 &lt;strong&gt;fusion-pixel-10px-monospaced-zh_hans.ttf&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91.png&#34;
+	width=&#34;1152&#34;
+	height=&#34;579&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91_huc10cdb641ff06c462c9bb3100f408649_87646_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91_huc10cdb641ff06c462c9bb3100f408649_87646_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;477px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(2) 把字体文件放入&lt;code&gt;assets/font&lt;/code&gt;下(文件夹自己创建)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92.png&#34;
+	width=&#34;502&#34;
+	height=&#34;188&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92_huf7f36c5c9eed22dc93ad1e79a53575e1_7283_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92_huf7f36c5c9eed22dc93ad1e79a53575e1_7283_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;267&#34;
+		data-flex-basis=&#34;640px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(3) 将以下代码修改并复制到&lt;code&gt;layouts/partials/footer/custom.html&lt;/code&gt;文件中(文件不存在就自己创建)
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;字体名&lt;/strong&gt;：给字体命名一个别名，随便填写就好，保持统一就行&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;字体文件名&lt;/strong&gt;：字体文件的全名，带后缀名的，也就是 &lt;strong&gt;xxx.ttf&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;font-face&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;font-family&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;字体名&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;(resources.Get&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#34;font/字体文件名&amp;#34;).Permalink&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;truetype&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;root&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;--base-font-family&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;字体名&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;--code-font-family&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;字体名&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;(4) 这样博客字体就修改好了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93.png&#34;
+	width=&#34;1522&#34;
+	height=&#34;877&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93_huf890bead26bdf7feea3bb634ef11d54f_557123_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93_huf890bead26bdf7feea3bb634ef11d54f_557123_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;173&#34;
+		data-flex-basis=&#34;416px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
         <title>【Hugo】Live2d-widget 给博客引入萌萌的看板娘</title>
         <link>https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/</link>
         <pubDate>Thu, 19 Sep 2024 17:17:34 +0800</pubDate>
