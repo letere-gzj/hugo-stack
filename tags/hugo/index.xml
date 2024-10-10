@@ -101,7 +101,7 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;2-修改鼠标样式&#34;&gt;2 修改鼠标样式
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;(1) 准备好鼠标样式图片(默认，手指，文本&amp;hellip;)，图片大小建议控制在 &lt;strong&gt;32px&lt;/strong&gt; 左右，将图片放入&lt;code&gt;static/mouse&lt;/code&gt;文件夹下(文件夹自己创建)&lt;/li&gt;
+&lt;li&gt;(1) 准备好鼠标样式图片(默认，指针，文本&amp;hellip;)，图片大小建议控制在 &lt;strong&gt;32px&lt;/strong&gt; 左右，将图片放入&lt;code&gt;static/mouse&lt;/code&gt;文件夹下(文件夹自己创建)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/normal.png&#34;
 	width=&#34;32&#34;
@@ -123,7 +123,7 @@
 	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/click_hu04cfbde0d41cbaa1bfb557ca67784221_940_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/click_hu04cfbde0d41cbaa1bfb557ca67784221_940_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;手指光标&#34;
+		alt=&#34;指针光标&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -237,7 +237,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;button&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hover&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;copyCodeButton&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hover&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mh&#34;&gt;#dark&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mode-toggle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;cursor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;url(../mouse/手指光标图片名)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;cursor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;url(../mouse/指针光标图片名)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;ni&#34;&gt;auto&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
