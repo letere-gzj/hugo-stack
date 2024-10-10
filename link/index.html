@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/link/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.647b0ad664b88a52ddc331b7fe25b4781ef4713b7c8e594e026060fb856bf614.css"><meta property='og:title' content="技术链接">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.fb587cea354ea7585e0e25cc35a90d85db3729023c1580e900c18c2c381fc72a.css"><meta property='og:title' content="技术链接">
 <meta property='og:description' content="">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/link/'>
 <meta property='og:site_name' content='莱特雷-letere'>
@@ -858,6 +858,8 @@
 		showWaifuWelcome();
 		
 		initTocHide();
+		
+		initScrollTop();
 	})
 </script>
 
@@ -1045,6 +1047,71 @@
     }
     initTocHide()
     window.initTocHide = initTocHide
+</script>
+
+	<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    }
+
+    [data-scheme="light"] {
+        #backTopBtn {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-light.svg);
+        }
+
+        #backTopBtn:hover {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-light2.svg);
+        }
+    }
+
+    [data-scheme="dark"] {
+        #backTopBtn {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-dark.svg);
+        }
+
+        #backTopBtn:hover {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-dark2.svg);
+        }
+    }
+</style>
+
+<div id="backTopBtn" onclick="backToTop()"></div>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        let btn = document.getElementById("backTopBtn");
+        btn.style.left = rightSideBar.offsetLeft + "px";
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+    window.initScrollTop = initScrollTop;
 </script>
 
 </div>

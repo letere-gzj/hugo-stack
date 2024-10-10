@@ -7,11 +7,11 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.647b0ad664b88a52ddc331b7fe25b4781ef4713b7c8e594e026060fb856bf614.css"><meta property='og:title' content="莱特雷-letere">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.fb587cea354ea7585e0e25cc35a90d85db3729023c1580e900c18c2c381fc72a.css"><meta property='og:title' content="莱特雷-letere">
 <meta property='og:description' content="演示说明">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-10-09T09:48:46&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-10-10T17:45:42&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="莱特雷-letere">
 <meta name="twitter:description" content="演示说明"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' /><link rel="alternate" type="application/rss&#43;xml" href="https://letere-gzj.github.io/hugo-stack/index.xml">
@@ -420,7 +420,7 @@
     
         
         <h3 class="article-subtitle">
-            收录一些Stack主题比较杂碎的自定义修改
+            收录一些Stack主题比较杂的自定义修改
         </h3>
         
     </div>
@@ -447,7 +447,7 @@
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2024-10-09
+                    2024-10-10
                 </time>
             </div>
 
@@ -920,6 +920,8 @@
 		showWaifuWelcome();
 		
 		initTocHide();
+		
+		initScrollTop();
 	})
 </script>
 
@@ -1107,6 +1109,71 @@
     }
     initTocHide()
     window.initTocHide = initTocHide
+</script>
+
+	<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    }
+
+    [data-scheme="light"] {
+        #backTopBtn {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-light.svg);
+        }
+
+        #backTopBtn:hover {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-light2.svg);
+        }
+    }
+
+    [data-scheme="dark"] {
+        #backTopBtn {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-dark.svg);
+        }
+
+        #backTopBtn:hover {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-dark2.svg);
+        }
+    }
+</style>
+
+<div id="backTopBtn" onclick="backToTop()"></div>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        let btn = document.getElementById("backTopBtn");
+        btn.style.left = rightSideBar.offsetLeft + "px";
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+    window.initScrollTop = initScrollTop;
 </script>
 
 </div>

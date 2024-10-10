@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/tags/hugo/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.647b0ad664b88a52ddc331b7fe25b4781ef4713b7c8e594e026060fb856bf614.css"><meta property='og:title' content="Tag: Hugo - 莱特雷-letere">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.fb587cea354ea7585e0e25cc35a90d85db3729023c1580e900c18c2c381fc72a.css"><meta property='og:title' content="Tag: Hugo - 莱特雷-letere">
 <meta property='og:description' content="世界上最快的网站建设框架(官网自称)">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/tags/hugo/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-10-09T09:48:46&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/tags/hugo/cover.png' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-10-10T17:45:42&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/tags/hugo/cover.png' />
 <meta name="twitter:title" content="Tag: Hugo - 莱特雷-letere">
 <meta name="twitter:description" content="世界上最快的网站建设框架(官网自称)"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/tags/hugo/cover.png' /><link rel="alternate" type="application/rss&#43;xml" href="https://letere-gzj.github.io/hugo-stack/tags/hugo/index.xml">
@@ -664,6 +664,8 @@
 		showWaifuWelcome();
 		
 		initTocHide();
+		
+		initScrollTop();
 	})
 </script>
 
@@ -851,6 +853,71 @@
     }
     initTocHide()
     window.initTocHide = initTocHide
+</script>
+
+	<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    }
+
+    [data-scheme="light"] {
+        #backTopBtn {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-light.svg);
+        }
+
+        #backTopBtn:hover {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-light2.svg);
+        }
+    }
+
+    [data-scheme="dark"] {
+        #backTopBtn {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-dark.svg);
+        }
+
+        #backTopBtn:hover {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-dark2.svg);
+        }
+    }
+</style>
+
+<div id="backTopBtn" onclick="backToTop()"></div>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        let btn = document.getElementById("backTopBtn");
+        btn.style.left = rightSideBar.offsetLeft + "px";
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+    window.initScrollTop = initScrollTop;
 </script>
 
 </div>
