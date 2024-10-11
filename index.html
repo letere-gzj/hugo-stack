@@ -1143,8 +1143,6 @@
     }
 </style>
 
-<div id="backTopBtn" onclick="backToTop()"></div>
-
 <script>
     
 
@@ -1153,8 +1151,11 @@
         if (!rightSideBar) {
             return;
         }
-        let btn = document.getElementById("backTopBtn");
-        btn.style.left = rightSideBar.offsetLeft + "px";
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
         
         window.onscroll = function() {
             
