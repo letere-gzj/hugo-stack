@@ -135,7 +135,7 @@
     "selector": ".container a[href^='http'], .nav-link .nav-text",
     "text": ["要去看看 <span>{text}</span> 么？", "去 <span>{text}</span> 逛逛吧。", "到 <span>{text}</span> 看看吧。"]
   }, {
-    "selector": ".back-to-top",
+    "selector": "#backTopBtn",
     "text": ["点它就可以回到顶部啦！", "又回到最初的起点～", "要回到开始的地方么？"]
   }, {
     "selector": ".reward-container",
