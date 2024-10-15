@@ -4,20 +4,17 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="通过Aplayer引入音乐播放器，再使用PJAX不刷新加载技术，实现页面切换不中断音乐播放">
 <title>【Hugo】Aplayer &#43; PJAX 引入音乐播放放器并实现音乐不中断功能</title>
 
-<link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/'>
+<link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-player/'>
 
 <link rel="stylesheet" href="/hugo-stack/scss/style.min.fb587cea354ea7585e0e25cc35a90d85db3729023c1580e900c18c2c381fc72a.css"><meta property='og:title' content="【Hugo】Aplayer + PJAX 引入音乐播放放器并实现音乐不中断功能">
 <meta property='og:description' content="通过Aplayer引入音乐播放器，再使用PJAX不刷新加载技术，实现页面切换不中断音乐播放">
-<meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/'>
+<meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-player/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-08-14T14:50:54&#43;08:00'/><meta property='article:modified_time' content='2024-08-31T14:51:40&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/cover.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-08-14T14:50:54&#43;08:00'/><meta property='article:modified_time' content='2024-10-15T17:28:21&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-player/cover.png' />
 <meta name="twitter:title" content="【Hugo】Aplayer + PJAX 引入音乐播放放器并实现音乐不中断功能">
 <meta name="twitter:description" content="通过Aplayer引入音乐播放器，再使用PJAX不刷新加载技术，实现页面切换不中断音乐播放"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/cover.png' />
+    <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-player/cover.png' />
     <link rel="shortcut icon" href="/hugo-stack/favicon.ico?v=2" />
-
-  
-
 
     </head>
     <body class="
@@ -62,7 +59,7 @@
                     
                     
                         
-                        <img src="/hugo-stack/img/avatar_huee3898509ca0b14ab824115394d3d001_53126_300x0_resize_q75_box.jpg" width="300"
+                        <img src="/hugo-stack/img/avatar_hu6786984924540402544.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -137,7 +134,7 @@
             
                 <li>
                     <a 
-                        href='https://letere-gzj.github.io/hugo-stack/index.xml'
+                        href='/hugo-stack/index.xml'
                         target="_blank"
                         title="RSS"
                         rel="me"
@@ -333,9 +330,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/">
-                <img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/cover_hu3bdb93e927831fe7f324359a8bb5454d_631317_800x0_resize_box_3.png"
-                        srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/cover_hu3bdb93e927831fe7f324359a8bb5454d_631317_800x0_resize_box_3.png 800w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/cover_hu3bdb93e927831fe7f324359a8bb5454d_631317_1600x0_resize_box_3.png 1600w"
+            <a href="/hugo-stack/p/hugo/custom-player/">
+                <img src="/hugo-stack/p/hugo/custom-player/cover_hu454567211822913746.png"
+                        srcset="/hugo-stack/p/hugo/custom-player/cover_hu454567211822913746.png 800w, /hugo-stack/p/hugo/custom-player/cover_hu11112295512375788358.png 1600w"
                         width="800" 
                         height="250" 
                         loading="lazy"
@@ -358,7 +355,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/">【Hugo】Aplayer &#43; PJAX 引入音乐播放放器并实现音乐不中断功能</a>
+            <a href="/hugo-stack/p/hugo/custom-player/">【Hugo】Aplayer &#43; PJAX 引入音乐播放放器并实现音乐不中断功能</a>
         </h2>
     
         
@@ -390,7 +387,7 @@
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2024-08-31
+                    2024-10-15
                 </time>
             </div>
 
@@ -450,10 +447,10 @@
 </li>
 <li>
 <p>（1）在博客主目录中创建文件<code>layouts\partials\footer\custom.html</code>，此文件为Stack主题作者留给我们加入自定义组件用的文件(可以查看主题源码同路径文件找到)
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51.png"
 	width="746"
 	height="258"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51_hu8a003c99b23e6ae0da3c96b373118f13_15549_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51_hu8a003c99b23e6ae0da3c96b373118f13_15549_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51_hu10317444502684034872.png 480w, /hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51_hu17426180531872676584.png 1024w"
 	loading="lazy"
 	
 	
@@ -495,10 +492,10 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52.png"
+</div><p><img src="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52.png"
 	width="918"
 	height="250"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52_hua2056a1c8a6a92a52da78c72e07b3779_12032_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52_hua2056a1c8a6a92a52da78c72e07b3779_12032_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52_hu3693182200761264452.png 480w, /hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52_hu1493159388977510959.png 1024w"
 	loading="lazy"
 	
 	
@@ -526,10 +523,10 @@
 </span></span><span class="line"><span class="cl"><span class="p">});</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53.png"
+</div><p><img src="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53.png"
 	width="454"
 	height="143"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53_hu460ee99490feb84c3a6eb564f52112fd_6105_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53_hu460ee99490feb84c3a6eb564f52112fd_6105_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53_hu13505605207614654053.png 480w, /hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53_hu16720848264225798807.png 1024w"
 	loading="lazy"
 	
 	
@@ -598,10 +595,10 @@
 </span></span><span class="line"><span class="cl"><span class="p">});</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54.png"
+</div><p><img src="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54.png"
 	width="612"
 	height="387"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54_hucfdd435e322e5eb9ccccbab02730614e_32523_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54_hucfdd435e322e5eb9ccccbab02730614e_32523_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54_hu10176643709612842252.png 480w, /hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54_hu7197864985454459645.png 1024w"
 	loading="lazy"
 	
 	
@@ -626,10 +623,10 @@
 </li>
 <li>
 <p>（3）在博客主目录中创建文件<code>assets\scss\custom.scss</code>，此文件为Stack主题作者留给我们加入自定义样式用的文件(可以查看主题源码同路径文件找到)
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21.png"
 	width="551"
 	height="274"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21_hufa26ad2fc3bcdfb6bee291f9c8b4224e_15855_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21_hufa26ad2fc3bcdfb6bee291f9c8b4224e_15855_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21_hu12775702124180168874.png 480w, /hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21_hu15542514798368264731.png 1024w"
 	loading="lazy"
 	
 	
@@ -674,10 +671,10 @@
 </span></span><span class="line"><span class="cl"><span class="c">&lt;!-- &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;&gt; --&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22.png"
+</div><p><img src="/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22.png"
 	width="468"
 	height="323"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22_hu27c1336ddcc9b47cf95b5e48df613ac8_23089_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22_hu27c1336ddcc9b47cf95b5e48df613ac8_23089_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22_hu4274941461021639034.png 480w, /hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22_hu13976550532823293038.png 1024w"
 	loading="lazy"
 	
 	
@@ -699,10 +696,10 @@
 <li><strong>list.index</strong>：歌曲序号</li>
 <li><strong>audio.currentTime</strong>：播放时长</li>
 <li><strong>paused</strong> ：播放状态（是否暂停）
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61.png"
 	width="802"
 	height="434"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61_hu6b7c0a2e6f69946e6961d61729ae8249_65105_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61_hu6b7c0a2e6f69946e6961d61729ae8249_65105_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61_hu12558172965125632703.png 480w, /hugo-stack/p/hugo/custom-player/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61_hu14637747725732503343.png 1024w"
 	loading="lazy"
 	
 	
@@ -826,10 +823,10 @@
 </li>
 <li>
 <p>（2）分析页面元素，看哪些是需要我们重新加载的，可以发现是<strong>左侧边栏</strong>，<strong>中间内容</strong>，<strong>右侧边栏</strong>
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/PJAX%E5%BC%95%E5%85%A51.png"
+<img src="/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A51.png"
 	width="1647"
 	height="758"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/PJAX%E5%BC%95%E5%85%A51_hud8007f7aefae30e8cb7899da4b86a94e_122141_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/PJAX%E5%BC%95%E5%85%A51_hud8007f7aefae30e8cb7899da4b86a94e_122141_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A51_hu13984116907559513140.png 480w, /hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A51_hu15037190329864402283.png 1024w"
 	loading="lazy"
 	
 	
@@ -841,10 +838,10 @@
 </li>
 <li>
 <p>（3）查看页面源代码，可以发现这些元素都被一个<code>&lt;div class=&quot;main-container&quot;&gt;...&lt;/div&gt;</code>包裹着，所以我们将着元素定为要刷新的对象
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/PJAX%E5%BC%95%E5%85%A52.png"
+<img src="/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A52.png"
 	width="687"
 	height="376"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/PJAX%E5%BC%95%E5%85%A52_huc75a8ba5d5ee3949e921c6b263b53c55_56157_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/PJAX%E5%BC%95%E5%85%A52_huc75a8ba5d5ee3949e921c6b263b53c55_56157_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A52_hu11515734280235833246.png 480w, /hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A52_hu10046222914869022645.png 1024w"
 	loading="lazy"
 	
 	
@@ -890,10 +887,10 @@
 </h3><ul>
 <li>
 <p>（1）随便点进其中一篇文章，可以发现文章内容的样式丢失，缺少文章该有的边框
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1.png"
 	width="1019"
 	height="784"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1_hu8a3a5e666e6b08102eb0f5ca5e01ee39_561935_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1_hu8a3a5e666e6b08102eb0f5ca5e01ee39_561935_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1_hu6496149302952570041.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1_hu13780798210921933270.png 1024w"
 	loading="lazy"
 	
 	
@@ -905,10 +902,10 @@
 </li>
 <li>
 <p>（2）通过手动刷新，对比页面元素发现，决定文章样式的是<code>&lt;body&gt;</code> 标签中的class名: <strong>article-page</strong>，存在此class名就会识别到文章该有的css
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2.png"
 	width="554"
 	height="335"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2_hueca45da68dfa5805699c38860a9b0078_39021_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2_hueca45da68dfa5805699c38860a9b0078_39021_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2_hu11435257031448315109.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2_hu16465063641175909278.png 1024w"
 	loading="lazy"
 	
 	
@@ -976,10 +973,10 @@
 </h3><ul>
 <li>
 <p>（1）当我们切换页面后，点击左下角切换主题颜色的按钮，会发现没有效果，主题颜色切换失效了
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1.png"
 	width="688"
 	height="347"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1_hue3b02119609f6d52a76e50f8c58b1a55_20302_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1_hue3b02119609f6d52a76e50f8c58b1a55_20302_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1_hu5229097294674614917.png 480w, /hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1_hu7541949670541231125.png 1024w"
 	loading="lazy"
 	
 	
@@ -991,10 +988,10 @@
 </li>
 <li>
 <p>（2）阅读Stack主题源码<code>\assets\ts\colorScheme.ts</code>发现，在脚本初始化时，会给元素绑定一个点击事件。但因为页面切换了，替换了该元素，但没有该元素重新绑定点击事件，导致点击主题切换失效
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2.png"
 	width="760"
 	height="533"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2_hufd3657f05a928b9bb2605d5d91d2c79e_34323_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2_hufd3657f05a928b9bb2605d5d91d2c79e_34323_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2_hu3659339438047739286.png 480w, /hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2_hu15612737854347973718.png 1024w"
 	loading="lazy"
 	
 	
@@ -1010,10 +1007,10 @@
 <li>阅读源码，发现<code>colorScheme.ts</code>被<code>main.ts</code>引用，在<code>main.ts</code>中执行了初始化，并且<code>main.ts</code>生成了个全局变量 <strong>Stack</strong></li>
 <li>所以在PJAX执行完后，使用全局变量 <strong>Stack</strong> ，执行里面的初始化方法，重新执行一遍脚本，来绑定点击事件</li>
 <li>阅读PJAX文档，发现官方也提供了PJAX执行完后的事件，我们执行监听这个事件，<strong>Stack</strong> 执行初始化就好
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3.png"
 	width="626"
 	height="366"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3_huf9e2df91f66833d12bd96ed8907163c6_19407_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3_huf9e2df91f66833d12bd96ed8907163c6_19407_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3_hu17510256541488001342.png 480w, /hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3_hu14342275243428319843.png 1024w"
 	loading="lazy"
 	
 	
@@ -1022,10 +1019,10 @@
 		data-flex-basis="410px"
 	
 >
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4.png"
 	width="525"
 	height="196"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4_hu7b2735220963c253150b46a21327fe30_8148_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4_hu7b2735220963c253150b46a21327fe30_8148_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4_hu5382124042963801288.png 480w, /hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4_hu11408407249359434399.png 1024w"
 	loading="lazy"
 	
 	
@@ -1067,10 +1064,10 @@
 </h3><ul>
 <li>
 <p>（1）使用文章搜索功能时，输入关键词，无任何搜索记录，搜索功能失效
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1.png"
 	width="815"
 	height="375"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1_hu2270a0eb2730af8618d4cbe193c55918_9106_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1_hu2270a0eb2730af8618d4cbe193c55918_9106_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1_hu5923900623225254529.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1_hu15213815273594980075.png 1024w"
 	loading="lazy"
 	
 	
@@ -1082,10 +1079,10 @@
 </li>
 <li>
 <p>（2）查看<code>layouts\ts\search.tsx</code>文件，发现情况和上面的<code>colorScheme.ts</code>类似，存在绑定事件
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2.png"
 	width="705"
 	height="531"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2_hub4afa07d157d0822dc57969d8359b3ac_36597_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2_hub4afa07d157d0822dc57969d8359b3ac_36597_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2_hu13957798718846057667.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2_hu2235126424913485663.png 1024w"
 	loading="lazy"
 	
 	
@@ -1097,10 +1094,10 @@
 </li>
 <li>
 <p>（3）解决思路类似上面的，把 <strong>search.tsx</strong> 初始化内容，封装为一个函数，并把函数 <strong>export</strong> 出来，由 <strong>main.ts</strong> 引入这个函数，并放到 <strong>Stack.init()</strong> 的方法中，利用此方法来重新初始化搜索脚本 - <em><strong>（以下操作请复制同路径同名文件到自己主目录下修改，不要在主题源码中修改）</strong></em>
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3.png"
 	width="967"
 	height="402"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3_hu3082f2b5d5ee351c4a51527184ce1847_55296_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3_hu3082f2b5d5ee351c4a51527184ce1847_55296_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3_hu4982972655848362456.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3_hu10575550925341558171.png 1024w"
 	loading="lazy"
 	
 	
@@ -1203,10 +1200,10 @@
 </div>
 </div><ul>
 <li>（4）<strong>tsx</strong> 类型的文件引入方式有点特殊，需要我们修改以下 <strong>main.ts</strong> 的引入方式，修改<code>layouts\partials\footer\components\script.html</code>，改法参考<code>layouts\page\search.html</code>，把<code>&quot;JSXFactory&quot; &quot;createElement&quot;</code>补充上就好
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4.png"
 	width="862"
 	height="142"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4_hu7fffb2b451a9c13d6fc22df0005eaa45_19191_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4_hu7fffb2b451a9c13d6fc22df0005eaa45_19191_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4_hu9523300484787436676.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4_hu1305163993592567261.png 1024w"
 	loading="lazy"
 	
 	
@@ -1215,10 +1212,10 @@
 		data-flex-basis="1456px"
 	
 >
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5.png"
 	width="747"
 	height="117"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5_hu1d6347dfe58b03e94a1d975de6f21202_21410_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5_hu1d6347dfe58b03e94a1d975de6f21202_21410_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5_hu16025596555305159424.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5_hu6049477854951056670.png 1024w"
 	loading="lazy"
 	
 	
@@ -1228,10 +1225,10 @@
 	
 ></li>
 </ul>
-<p><img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6.png"
+<p><img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6.png"
 	width="765"
 	height="583"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6_huc39ae5598399da7a9361d66e0f944c7a_35519_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6_huc39ae5598399da7a9361d66e0f944c7a_35519_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6_hu6878696442146111979.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6_hu2286289730422645644.png 1024w"
 	loading="lazy"
 	
 	
@@ -1249,10 +1246,10 @@
 </li>
 <li>
 <p>（2）阅读 <strong>search.tsx</strong> 源码可知，搜索内容的数据，是通过React.render，动态渲染回页面的，这些没有触发PJAX，所以PJAX没有识别到。阅读PJAX文档，官方提供给了我们重新解析数的方法，所以在React.render之后，我调用PJAX方法，重新解析页面即可
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1.png"
 	width="888"
 	height="361"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1_hu876f60418ecc3855a363539393deb164_39030_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1_hu876f60418ecc3855a363539393deb164_39030_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1_hu9574366060500127333.png 480w, /hugo-stack/p/hugo/custom-player/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1_hu2854418771149339604.png 1024w"
 	loading="lazy"
 	
 	
@@ -1306,10 +1303,10 @@
 <li>用一个<code>&lt;div class=js-Pjax&gt;&lt;/div&gt;</code>来包裹一个<code>&lt;script&gt;&lt;/script&gt;</code></li>
 <li>在<code>&lt;script&gt;</code>标签中，通过<code>document.createElement('script')</code>形式，创建对应的评论脚本内容</li>
 <li>pjax对象通过 <strong>.js-Pjax</strong> 被识别到此内容，进行脚本执行
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1.png"
 	width="870"
 	height="697"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1_huac4488ee6fd120881d98e87639f5e944_66730_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1_huac4488ee6fd120881d98e87639f5e944_66730_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1_hu5809293150230507459.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1_hu410654423696599295.png 1024w"
 	loading="lazy"
 	
 	
@@ -1383,10 +1380,10 @@
 <li>
 <p>（2）前往【<a class="link" href="https://buunguyen.github.io/topbar/"  target="_blank" rel="noopener"
     >topbar</a>】，点击下载zip包，将解压后的 <strong>topbar.min.js</strong> 放到<code>assets\js\topbar.min.js</code>
-<img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11.png"
+<img src="/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11.png"
 	width="531"
 	height="196"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11_hu135fe3a47468ac3230e9ecd62283469a_6848_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11_hu135fe3a47468ac3230e9ecd62283469a_6848_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11_hu17479662426839587091.png 480w, /hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11_hu7219304278610830220.png 1024w"
 	loading="lazy"
 	
 	
@@ -1458,10 +1455,10 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12.png"
+</div><p><img src="/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12.png"
 	width="769"
 	height="108"
-	srcset="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12_huc1b53445aa63169ed207e80bf509027b_1681_480x0_resize_box_3.png 480w, /hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12_huc1b53445aa63169ed207e80bf509027b_1681_1024x0_resize_box_3.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12_hu9200277858795958785.png 480w, /hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12_hu2188347930935890096.png 1024w"
 	loading="lazy"
 	
 	
@@ -1508,17 +1505,45 @@
         <div class="flex article-list--tile">
             
                 
+<article class="">
+    <a href="/hugo-stack/p/hugo/custom-background/">
+
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】修改博客背景并引入动态背景
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/hugo-stack/p/hugo/custom-stack-theme/">
+
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】Stack主题自定义修改
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
 <article class="has-image">
-    <a href="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">
+    <a href="/hugo-stack/p/hugo/custom-blog/">
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2.27481dd80f235da3bb222c51d2d09c36_hub5957a51aaba2994884d78adabc81a6a_1565072_250x150_fill_box_smart1_3.png"
+                <img src="/hugo-stack/p/hugo/custom-blog/%E5%B0%81%E9%9D%A2.27481dd80f235da3bb222c51d2d09c36_hu15959188276720576554.png"
                         width="250"
                         height="150"
                         loading="lazy"
                         alt="Featured image of post 【Hugo】Hugo &#43; Github 免费部署自己的博客"
-                        
+                        data-key="hugo/custom-blog" 
                         data-hash="md5-J0gd2A8jXaO7IixR0tCcNg==">
                 
             </div>
@@ -1533,45 +1558,17 @@
 
             
                 
-<article class="">
-    <a href="/hugo-stack/p/hugo%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E5%B9%B6%E5%BC%95%E5%85%A5%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/">
-
-        
-
-        <div class="article-details">
-            <h2 class="article-title">【Hugo】修改博客背景并引入动态背景
-            </h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/">
-
-        
-
-        <div class="article-details">
-            <h2 class="article-title">【Hugo】Stack主题自定义修改
-            </h2>
-        </div>
-    </a>
-</article>
-
-            
-                
 <article class="has-image">
-    <a href="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/">
+    <a href="/hugo-stack/p/hugo/custom-live2d/">
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/cover.6ace62d4616fb2a2b258ce17a1ed0e28_hu6f38436753c16635bde459b49f615bdf_652572_250x150_fill_box_smart1_3.png"
+                <img src="/hugo-stack/p/hugo/custom-live2d/cover.6ace62d4616fb2a2b258ce17a1ed0e28_hu15227522066959895952.png"
                         width="250"
                         height="150"
                         loading="lazy"
                         alt="Featured image of post 【Hugo】Live2d-widget 给博客引入萌萌的看板娘"
-                        
+                        data-key="hugo/custom-live2d" 
                         data-hash="md5-as5i1GFvsqKyWM4Xoe0OKA==">
                 
             </div>

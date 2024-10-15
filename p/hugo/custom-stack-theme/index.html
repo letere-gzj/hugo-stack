@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="使用hugo工具生成静态页面，然后在github上部署静态页面，来免费搭建自己的博客">
-<title>【Hugo】Hugo &#43; Github 免费部署自己的博客</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新">
+<title>【Hugo】Stack主题自定义修改</title>
 
-<link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/'>
+<link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.fb587cea354ea7585e0e25cc35a90d85db3729023c1580e900c18c2c381fc72a.css"><meta property='og:title' content="【Hugo】Hugo + Github 免费部署自己的博客">
-<meta property='og:description' content="使用hugo工具生成静态页面，然后在github上部署静态页面，来免费搭建自己的博客">
-<meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/'>
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.fb587cea354ea7585e0e25cc35a90d85db3729023c1580e900c18c2c381fc72a.css"><meta property='og:title' content="【Hugo】Stack主题自定义修改">
+<meta property='og:description' content="记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新">
+<meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-07-22T15:44:59&#43;08:00'/><meta property='article:modified_time' content='2024-08-30T17:45:24&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2.png' />
-<meta name="twitter:title" content="【Hugo】Hugo + Github 免费部署自己的博客">
-<meta name="twitter:description" content="使用hugo工具生成静态页面，然后在github上部署静态页面，来免费搭建自己的博客"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-10-08T11:10:25&#43;08:00'/><meta property='article:modified_time' content='2024-10-15T17:28:21&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta name="twitter:title" content="【Hugo】Stack主题自定义修改">
+<meta name="twitter:description" content="记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
     <link rel="shortcut icon" href="/hugo-stack/favicon.ico?v=2" />
-
-  
-
 
     </head>
     <body class="
@@ -62,7 +59,7 @@
                     
                     
                         
-                        <img src="/hugo-stack/img/avatar_huee3898509ca0b14ab824115394d3d001_53126_300x0_resize_q75_box.jpg" width="300"
+                        <img src="/hugo-stack/img/avatar_hu6786984924540402544.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -137,7 +134,7 @@
             
                 <li>
                     <a 
-                        href='https://letere-gzj.github.io/hugo-stack/index.xml'
+                        href='/hugo-stack/index.xml'
                         target="_blank"
                         title="RSS"
                         rel="me"
@@ -305,24 +302,9 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-环境准备">1 环境准备</a>
-      <ul>
-        <li><a href="#11-git下载">1.1 Git下载</a></li>
-        <li><a href="#12-hugo下载">1.2 Hugo下载</a></li>
-      </ul>
-    </li>
-    <li><a href="#2-搭建博客">2 搭建博客</a>
-      <ul>
-        <li><a href="#21-创建博客">2.1 创建博客</a></li>
-        <li><a href="#22-配置主题">2.2 配置主题</a></li>
-      </ul>
-    </li>
-    <li><a href="#3-github部署">3 Github部署</a>
-      <ul>
-        <li><a href="#31-常规部署">3.1 常规部署</a></li>
-        <li><a href="#32-github-action自动部署">3.2 Github Action自动部署</a></li>
-      </ul>
-    </li>
+    <li><a href="#1-修改字体">1 修改字体</a></li>
+    <li><a href="#2-修改鼠标样式">2 修改鼠标样式</a></li>
+    <li><a href="#3-显示文章更新时间">3 显示文章更新时间</a></li>
   </ul>
 </nav>
         </div>
@@ -334,20 +316,8 @@
 
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">
-                <img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2_hub5957a51aaba2994884d78adabc81a6a_1565072_800x0_resize_box_3.png"
-                        srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2_hub5957a51aaba2994884d78adabc81a6a_1565072_800x0_resize_box_3.png 800w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2_hub5957a51aaba2994884d78adabc81a6a_1565072_1600x0_resize_box_3.png 1600w"
-                        width="800" 
-                        height="366" 
-                        loading="lazy"
-                        alt="Featured image of post 【Hugo】Hugo &#43; Github 免费部署自己的博客" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
     
@@ -362,12 +332,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">【Hugo】Hugo &#43; Github 免费部署自己的博客</a>
+            <a href="/hugo-stack/p/hugo/custom-stack-theme/">【Hugo】Stack主题自定义修改</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            使用hugo工具生成静态页面，然后在github上部署静态页面，来免费搭建自己的博客
+            记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新
         </h3>
         
     </div>
@@ -388,13 +358,13 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2024-07-22</time>
+                <time class="article-time--published">2024-10-08</time>
             </div>
         |
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2024-08-30
+                    2024-10-15
                 </time>
             </div>
 
@@ -402,7 +372,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                1407 字
+                1090 字
             </time>
         </div>
     </footer>
@@ -425,371 +395,189 @@
     <section class="article-content">
     
     
-    
-
-
-
-
-
-    
-
-
-<div class="video-wrapper">
-    <iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;high_quality=1&amp;page=1&bvid=BV1bovfeaEtQ&autoplay=0"
-            scrolling="no"
-            frameborder="no"
-            framespacing="0"
-            allowfullscreen="true"
-    >
-    </iframe>
-</div>
-
+    <hr>
+<p>TODO：bilibili视频，可能做，可能不做，内容比较杂，不太好做视频</p>
 <hr>
-<h2 id="1-环境准备">1 环境准备
-</h2><h3 id="11-git下载">1.1 Git下载
-</h3><ul>
-<li>前往【<a class="link" href="https://git-scm.com"  target="_blank" rel="noopener"
-    >Git官网</a>】，下载安装程序</li>
-<li>一直点下一步，默认安装即可</li>
+<h2 id="1-修改字体">1 修改字体
+</h2><ul>
+<li>(1) 前往【<a class="link" href="https://www.100font.com/"  target="_blank" rel="noopener"
+    >100font</a>】，下载自己想要的字体，这边演示<strong>缝合像素字体</strong>，字体文件为 <strong>fusion-pixel-10px-monospaced-zh_hans.ttf</strong></li>
 </ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/git%E4%B8%8B%E8%BD%BD.png"
-	width="1045"
-	height="420"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/git%E4%B8%8B%E8%BD%BD_hu79401dc42068bcde96d34225ea349dba_146260_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/git%E4%B8%8B%E8%BD%BD_hu79401dc42068bcde96d34225ea349dba_146260_1024x0_resize_box_3.png 1024w"
+<p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91.png"
+	width="1152"
+	height="579"
+	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91_hu912993607239724154.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91_hu11079749733186030840.png 1024w"
 	loading="lazy"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="248"
-		data-flex-basis="597px"
-	
-></p>
-<hr>
-<h3 id="12-hugo下载">1.2 Hugo下载
-</h3><ul>
-<li>前往【<a class="link" href="https://github.com/gohugoio/hugo/tags"  target="_blank" rel="noopener"
-    >Hugo Github Tags</a>】，选择对应版本下载，下载后解压即可</li>
-<li>Windows下载版本：<strong>hugo_extended_xxxxx_windows_amd64.zip</strong></li>
-</ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/hugo%E4%B8%8B%E8%BD%BD.png"
-	width="1195"
-	height="264"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/hugo%E4%B8%8B%E8%BD%BD_hu72dd6cc6e4b64f7adb1c89d00878561d_48452_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/hugo%E4%B8%8B%E8%BD%BD_hu72dd6cc6e4b64f7adb1c89d00878561d_48452_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="452"
-		data-flex-basis="1086px"
-	
-></p>
-<hr>
-<h2 id="2-搭建博客">2 搭建博客
-</h2><h3 id="21-创建博客">2.1 创建博客
-</h3><ul>
-<li>（1）在<strong>hugo.exe</strong>所在文件夹的地址栏敲打cmd，然后Enter唤起命令行</li>
-</ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1%E5%90%AF%E5%8A%A8cmd.png"
-	width="627"
-	height="223"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1%E5%90%AF%E5%8A%A8cmd_hu4a644f451efd407af7ecb07006d60774_15133_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1%E5%90%AF%E5%8A%A8cmd_hu4a644f451efd407af7ecb07006d60774_15133_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="281"
-		data-flex-basis="674px"
+		data-flex-grow="198"
+		data-flex-basis="477px"
 	
 ></p>
 <ul>
-<li>（2）敲打命令<code>hugo new site xxxx</code>创建hugo文件</li>
+<li>(2) 把字体文件放入<code>assets/font</code>下(文件夹自己创建)</li>
 </ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/2newSite.png"
-	width="751"
-	height="236"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/2newSite_hu2ac10eb8c2868cf82746d459c10cfe73_9083_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/2newSite_hu2ac10eb8c2868cf82746d459c10cfe73_9083_1024x0_resize_box_3.png 1024w"
+<p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92.png"
+	width="502"
+	height="188"
+	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92_hu12516269322304933381.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92_hu18381981740631101024.png 1024w"
 	loading="lazy"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="318"
-		data-flex-basis="763px"
+		data-flex-grow="267"
+		data-flex-basis="640px"
 	
 ></p>
 <ul>
-<li>（3）敲打命名<code>cd xxxx</code>切换目录，并把<strong>hugo.exe</strong>复制到刚生成的文件夹中</li>
-</ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/3cd.png"
-	width="842"
-	height="409"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/3cd_huba9add8420bd3a7d429a1e0d0064d5f2_36003_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/3cd_huba9add8420bd3a7d429a1e0d0064d5f2_36003_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="205"
-		data-flex-basis="494px"
-	
-></p>
+<li>(3) 将以下代码修改并复制到<code>layouts/partials/footer/custom.html</code>文件中(文件不存在就自己创建)
 <ul>
-<li>（4）敲打命令<code>hugo server -D</code>启动服务，访问<a class="link" href="http://localhost:1313"  target="_blank" rel="noopener"
-    >http://localhost:1313</a>，<kbd>Ctrl</kbd>+<kbd>C</kbd>停止服务 <strong>（hugo默认是没有主题的，需要进行主题配置）</strong></li>
+<li><strong>字体名</strong>：给字体命名一个别名，随便填写就好，保持统一就行</li>
+<li><strong>字体文件名</strong>：字体文件的全名，带后缀名的，也就是 <strong>xxx.ttf</strong></li>
 </ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/4server.png"
-	width="749"
-	height="466"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/4server_hu855867dc2e6e1214f57271ac16dab21b_15372_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/4server_hu855867dc2e6e1214f57271ac16dab21b_15372_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="160"
-		data-flex-basis="385px"
-	
-></p>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/5pageNotFind.png"
-	width="535"
-	height="277"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/5pageNotFind_hu72988fb40cf519e0ba9490633b81d251_9956_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/5pageNotFind_hu72988fb40cf519e0ba9490633b81d251_9956_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="193"
-		data-flex-basis="463px"
-	
-></p>
-<hr>
-<h3 id="22-配置主题">2.2 配置主题
-</h3><ul>
-<li>（1）前往【<a class="link" href="https://themes.gohugo.io"  target="_blank" rel="noopener"
-    >Hugo Themes</a>】，查找自己喜欢的主题，进行下载</li>
-</ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.1hugo%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD.png"
-	width="1491"
-	height="645"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.1hugo%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD_hu61c2919905026c1e41ac2a34ea0a2b1e_216336_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.1hugo%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD_hu61c2919905026c1e41ac2a34ea0a2b1e_216336_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="231"
-		data-flex-basis="554px"
-	
-></p>
-<ul>
-<li>（2）这边以【<a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack/tags"  target="_blank" rel="noopener"
-    >Stack主题</a>】为例，将下载好的主题解压，放到<code>/themes</code>文件夹中</li>
-</ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.2%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%8E%8B.png"
-	width="534"
-	height="453"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.2%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%8E%8B_hude2a9ad78d081cf11bd6c89920bbf15a_30912_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.2%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%8E%8B_hude2a9ad78d081cf11bd6c89920bbf15a_30912_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="117"
-		data-flex-basis="282px"
-	
-></p>
-<ul>
-<li>（3）将<code>exampleSite</code>样例数据中的 <strong>Content</strong> 和 <strong>hugo.yaml</strong> 复制到主文件夹中，并删掉<code>hugo.toml</code>和<code>content/post/rich-content</code></li>
-</ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.3%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B61.png"
-	width="296"
-	height="251"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.3%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B61_huf1d5eb4558861d593c1c13a9eb8f39ab_5663_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.3%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B61_huf1d5eb4558861d593c1c13a9eb8f39ab_5663_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="117"
-		data-flex-basis="283px"
-	
-></p>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.4%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B62.png"
-	width="374"
-	height="244"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.4%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B62_hu64bae648a1dad6cf1141fbd7cc57ca0e_6804_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.4%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B62_hu64bae648a1dad6cf1141fbd7cc57ca0e_6804_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="153"
-		data-flex-basis="367px"
-	
-></p>
-<ul>
-<li>（4）修改 <strong>hugo.yaml</strong> 中的 <strong>theme</strong>，将他修改为跟主题文件夹同名</li>
-</ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.5%E4%B8%BB%E9%A2%98%E5%90%8D%E4%BF%AE%E6%94%B9.png"
-	width="457"
-	height="375"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.5%E4%B8%BB%E9%A2%98%E5%90%8D%E4%BF%AE%E6%94%B9_huc5e6e3d17c78110e6b9cedc719f07b4e_16393_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.5%E4%B8%BB%E9%A2%98%E5%90%8D%E4%BF%AE%E6%94%B9_huc5e6e3d17c78110e6b9cedc719f07b4e_16393_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="121"
-		data-flex-basis="292px"
-	
-></p>
-<ul>
-<li>（5）再次启动hugo服务，查看主题，具体主题配置修改 <strong>hugo.yaml</strong>，这里不细说，感兴趣可自行查找相关文章</li>
-</ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/stack%E4%B8%BB%E9%A2%98.png"
-	width="1912"
-	height="987"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/stack%E4%B8%BB%E9%A2%98_hua7031210cd158a803d00862be23a560b_398534_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/stack%E4%B8%BB%E9%A2%98_hua7031210cd158a803d00862be23a560b_398534_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="193"
-		data-flex-basis="464px"
-	
-></p>
-<hr>
-<h2 id="3-github部署">3 Github部署
-</h2><h3 id="31-常规部署">3.1 常规部署
-</h3><ul>
-<li>（1）前往【<a class="link" href="https://github.com"  target="_blank" rel="noopener"
-    >Github官网</a>】，创建仓库 <strong>{github用户名}.github.io</strong></li>
-</ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/github%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA.png"
-	width="683"
-	height="163"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/github%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA_hud73596210985cbea96f88c3736533844_18346_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/github%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA_hud73596210985cbea96f88c3736533844_18346_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="419"
-		data-flex-basis="1005px"
-	
-></p>
-<ul>
-<li>（2）前往<code>Setting -&gt; Pages -&gt; Branch</code>选择main分支，然后保存，会自动开启 <strong>https://{github用户名}.github.io</strong> 的地址，这地址也是以后访问博客的地址</li>
-</ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubPage%E5%90%AF%E5%8A%A8.png"
-	width="872"
-	height="555"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubPage%E5%90%AF%E5%8A%A8_hu3f700aa7925600d99c25f6380950f810_61121_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubPage%E5%90%AF%E5%8A%A8_hu3f700aa7925600d99c25f6380950f810_61121_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="157"
-		data-flex-basis="377px"
-	
-></p>
-<ul>
-<li>（3）回到hugo文件中，执行命令<code>hugo -D</code>，会生成 <strong>public</strong> 静态资源文件夹</li>
-</ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6.png"
-	width="698"
-	height="556"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6_huc6852b1f78249350a5843745ee9e27f8_47603_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6_huc6852b1f78249350a5843745ee9e27f8_47603_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="125"
-		data-flex-basis="301px"
-	
-></p>
-<ul>
-<li>（4）在 <strong>public</strong> 执行以下命令上传到github仓库上，第一次上传可能需要输入账号密码</li>
+</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">git init
-</span></span><span class="line"><span class="cl">git add .
-</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;first commit&#34;</span>
-</span></span><span class="line"><span class="cl">git branch -M main
-</span></span><span class="line"><span class="cl">git remote add origin {你的github仓库地址}
-</span></span><span class="line"><span class="cl">git push -u origin main
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">font-family</span><span class="o">:</span> <span class="s1">&#39;字体名&#39;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">src</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="p">{</span><span class="err">{</span> <span class="err">(resources.Get</span> <span class="err">&#34;font/字体文件名&#34;).Permalink</span> <span class="p">}}</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;truetype&#39;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="err">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">--base-font-family</span><span class="p">:</span> <span class="s1">&#39;字体名&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">--code-font-family</span><span class="p">:</span> <span class="s1">&#39;字体名&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>（5）上传成功后访问 <strong>https://{github用户名}.github.io</strong>，成功搭建属于自己的Hugo博客</li>
+<li>(4) 这样博客字体就修改好了</li>
 </ul>
+<p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93.png"
+	width="1537"
+	height="821"
+	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93_hu17417627805824578197.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93_hu13082588067879854751.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="187"
+		data-flex-basis="449px"
+	
+></p>
 <hr>
-<h3 id="32-github-action自动部署">3.2 Github Action自动部署
-</h3><ul>
-<li>
-<p>（1）Github创建一个新的仓库，用于存放Hugo的主文件</p>
+<h2 id="2-修改鼠标样式">2 修改鼠标样式
+</h2><ul>
+<li>(1) 准备好鼠标样式图片(默认，指针，文本&hellip;)，图片大小建议控制在 <strong>32px</strong> 左右，将图片放入<code>static/mouse</code>文件夹下(文件夹自己创建)
+<ul>
+<li>演示鼠标来源：【<a class="link" href="https://www.bilibili.com/video/BV1KF411D7Y3"  target="_blank" rel="noopener"
+    >B站up主</a>】</li>
+</ul>
 </li>
-<li>
-<p>（2）前往<code>Setttings -&gt; Developer Settings -&gt; Personal access tokens</code>，创建一个token(classic)</p>
-</li>
 </ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken1.png"
-	width="1462"
-	height="359"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken1_hu4766607541a74e947c83c2388882dd72_53636_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken1_hu4766607541a74e947c83c2388882dd72_53636_1024x0_resize_box_3.png 1024w"
+<p><img src="/hugo-stack/p/hugo/custom-stack-theme/normal.png"
+	width="32"
+	height="32"
+	srcset="/hugo-stack/p/hugo/custom-stack-theme/normal_hu14032668210150328343.png 480w, /hugo-stack/p/hugo/custom-stack-theme/normal_hu6292692700243705009.png 1024w"
+	loading="lazy"
+	
+		alt="默认光标"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="100"
+		data-flex-basis="240px"
+	
+>
+<img src="/hugo-stack/p/hugo/custom-stack-theme/click.png"
+	width="32"
+	height="32"
+	srcset="/hugo-stack/p/hugo/custom-stack-theme/click_hu18340230354889606981.png 480w, /hugo-stack/p/hugo/custom-stack-theme/click_hu4294076499567343567.png 1024w"
+	loading="lazy"
+	
+		alt="指针光标"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="100"
+		data-flex-basis="240px"
+	
+>
+<img src="/hugo-stack/p/hugo/custom-stack-theme/text.png"
+	width="32"
+	height="32"
+	srcset="/hugo-stack/p/hugo/custom-stack-theme/text_hu3101339259287223741.png 480w, /hugo-stack/p/hugo/custom-stack-theme/text_hu6057511031312973952.png 1024w"
+	loading="lazy"
+	
+		alt="文本光标"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="100"
+		data-flex-basis="240px"
+	
+></p>
+<p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%871.png"
+	width="498"
+	height="210"
+	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%871_hu3548677101552218964.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%871_hu3910316613496933341.png 1024w"
 	loading="lazy"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="407"
-		data-flex-basis="977px"
+		data-flex-grow="237"
+		data-flex-basis="569px"
 	
 ></p>
 <ul>
-<li>（3）token选择永不过期，并勾选 <strong>repo</strong> 和 <strong>workflow</strong> 选项</li>
+<li>(2) 修改<code>assets/scss/custom.scss</code>(文件不存在则自己创建)，将以下代码复制进去，根据主题按实际情况填写对应的css选择器</li>
 </ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken2.png"
-	width="1050"
-	height="637"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken2_huda58f9f86b34c5d074df9a9a778ea617_56016_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken2_huda58f9f86b34c5d074df9a9a778ea617_56016_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="164"
-		data-flex-basis="395px"
-	
-></p>
-<ul>
-<li>（4）为保证安全，将生成的token，保存的仓库的变量中，前往<code>Settings -&gt; Secrets and variables -&gt; Actions</code>中设置</li>
-</ul>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken3.png"
-	width="842"
-	height="312"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken3_hucc7d21bd60774f30bc8fab31a1d73b28_25059_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken3_hucc7d21bd60774f30bc8fab31a1d73b28_25059_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="269"
-		data-flex-basis="647px"
-	
-></p>
-<p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/setToken1.png"
-	width="1222"
-	height="712"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/setToken1_hu5afa2fb67f7ac9ecab12c537647b0ad8_77407_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/setToken1_hu5afa2fb67f7ac9ecab12c537647b0ad8_77407_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="171"
-		data-flex-basis="411px"
-	
-></p>
-<ul>
-<li>（5）在hugo主文件创建一个<code>.github/workflows/xxxx.yaml</code>文件，将以下内容复制进去，想具体了解更多，可查看【<a class="link" href="https://docs.github.com/zh/actions"  target="_blank" rel="noopener"
-    >Github Action文档</a>】</li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// 【鼠标样式常规写法】
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">body</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">html</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="sx">url(../mouse/默认光标图片名)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="ni">auto</span> <span class="k">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">css选择器</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="sx">url(../mouse/其他光标图片名)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="ni">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>(3) 以下是我调试好的 <strong>stack</strong> 主题的鼠标样式，同样是stack主题的可以直接复制，修改对应的图片名即可</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -821,52 +609,42 @@
 </span><span class="lnt">26
 </span><span class="lnt">27
 </span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">deploy</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 代码提交到main分支时触发github action</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">main</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Checkout</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v4</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v3</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;latest&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">extended</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build Web</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo -D</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy Web</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v4</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">PERSONAL_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.你的token变量名 }}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">EXTERNAL_REPOSITORY</span><span class="p">:</span><span class="w"> </span><span class="l">你的github名/你的仓库名</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">PUBLISH_BRANCH</span><span class="p">:</span><span class="w"> </span><span class="l">main</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">PUBLISH_DIR</span><span class="p">:</span><span class="w"> </span><span class="l">./public</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">commit_message</span><span class="p">:</span><span class="w"> </span><span class="l">auto deploy</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// 【Stack主题鼠标样式写法】
+</span></span></span><span class="line"><span class="cl"><span class="c1">// default光标图片
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">body</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">html</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nc">.article-content</span> <span class="nt">img</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="sx">url(../mouse/默认光标图片名)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="ni">auto</span> <span class="k">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// pointer光标图片
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="na">a</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span><span class="na">
+</span></span></span><span class="line"><span class="cl"><span class="na">button</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="na">copyCodeButton</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="mh">#dark</span><span class="o">-</span><span class="n">mode-toggle</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="sx">url(../mouse/指针光标图片名)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="ni">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// text光标图片
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="na">input</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="n">site-description</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="n">article-subtitle</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="n">article-content</span> <span class="n">span</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="n">article-content</span> <span class="n">li</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="n">article-content</span> <span class="n">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="sx">url(../mouse/文本光标图片名)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="ni">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>（6）在hugo主文件创建<code>.gitignore</code>文件，来避免提交不必要的文件</li>
+</div><hr>
+<h2 id="3-显示文章更新时间">3 显示文章更新时间
+</h2><ul>
+<li>(1) 在配置文件 <strong>hugo.yaml</strong> 中加入以下配置</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -877,48 +655,94 @@
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
+</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># 自动生成的文件</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">public</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">resources</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">.hugo_build.lock</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># 更新时间：优先读取git时间 -&gt; git时间不存在，就读取本地文件修改时间</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">lastmod</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="p">:</span><span class="l">git</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="p">:</span><span class="l">fileModTime</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># hugo命令</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">hugo.exe</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 允许获取Git信息		</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableGitInfo</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>（7）将hugo的主文件上传到仓库，上传成功后会触发Github Action，来自动部署你的静态页面</li>
+<li>(2) 这样就提交代码时，就会去读取git时间，来更新文章的更新时间
+<ul>
+<li><em><strong>stack主题的文章更新时间在文章底部</strong></em></li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">git init
-</span></span><span class="line"><span class="cl">git add .
-</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;first commit&#34;</span>
-</span></span><span class="line"><span class="cl">git branch -M main
-</span></span><span class="line"><span class="cl">git remote add origin {你的github仓库地址}
-</span></span><span class="line"><span class="cl">git push -u origin main
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><img src="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubActionRun.png"
-	width="1635"
-	height="398"
-	srcset="/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubActionRun_hu84c0fe2cd56b8ab4941172dc9f206338_36617_480x0_resize_box_3.png 480w, /hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubActionRun_hu84c0fe2cd56b8ab4941172dc9f206338_36617_1024x0_resize_box_3.png 1024w"
+</li>
+</ul>
+<p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B41.png"
+	width="864"
+	height="404"
+	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B41_hu6290585001422895419.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B41_hu13678536194574241382.png 1024w"
 	loading="lazy"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="410"
-		data-flex-basis="985px"
+		data-flex-grow="213"
+		data-flex-basis="513px"
+	
+></p>
+<ul>
+<li>(3) 若想在文章开头就显示更新时间，修改<code>layouts/partials/article/components/detail.html</code>，在指定位置引入以下代码</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;article-details&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;article-time&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        ...
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!-- 更新时间 --&gt;</span>
+</span></span><span class="line"><span class="cl">        {{- if ne .Lastmod .Date -}}
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;article-lastmod&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                {{ partial &#34;helper/icon&#34; &#34;clock&#34; }}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">time</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    {{ .Lastmod.Format ( or .Site.Params.dateFormat.lastUpdated &#34;Jan 02, 2006 15:04 MST&#34; ) }}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        {{- end -}}
+</span></span><span class="line"><span class="cl">        ....
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>这样就会文章开头显示修改时间</li>
+</ul>
+<p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B42.png"
+	width="876"
+	height="503"
+	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B42_hu16224586151109242004.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B42_hu8867338688542746133.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="174"
+		data-flex-basis="417px"
 	
 ></p>
 <hr>
@@ -958,17 +782,31 @@
         <div class="flex article-list--tile">
             
                 
+<article class="">
+    <a href="/hugo-stack/p/hugo/custom-background/">
+
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】修改博客背景并引入动态背景
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
 <article class="has-image">
-    <a href="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/">
+    <a href="/hugo-stack/p/hugo/custom-player/">
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/cover.a0ef3134a444d2fa7a5e76e2af2f70ce_hu3bdb93e927831fe7f324359a8bb5454d_631317_250x150_fill_box_smart1_3.png"
+                <img src="/hugo-stack/p/hugo/custom-player/cover.a0ef3134a444d2fa7a5e76e2af2f70ce_hu15528814248431698573.png"
                         width="250"
                         height="150"
                         loading="lazy"
                         alt="Featured image of post 【Hugo】Aplayer &#43; PJAX 引入音乐播放放器并实现音乐不中断功能"
-                        
+                        data-key="hugo/custom-player" 
                         data-hash="md5-oO8xNKRE0vp6Xnbiry9wzg==">
                 
             </div>
@@ -983,27 +821,24 @@
 
             
                 
-<article class="">
-    <a href="/hugo-stack/p/hugo%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E5%B9%B6%E5%BC%95%E5%85%A5%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/">
+<article class="has-image">
+    <a href="/hugo-stack/p/hugo/custom-blog/">
 
         
-
-        <div class="article-details">
-            <h2 class="article-title">【Hugo】修改博客背景并引入动态背景
-            </h2>
-        </div>
-    </a>
-</article>
-
-            
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugo/custom-blog/%E5%B0%81%E9%9D%A2.27481dd80f235da3bb222c51d2d09c36_hu15959188276720576554.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】Hugo &#43; Github 免费部署自己的博客"
+                        data-key="hugo/custom-blog" 
+                        data-hash="md5-J0gd2A8jXaO7IixR0tCcNg==">
                 
-<article class="">
-    <a href="/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/">
-
+            </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">【Hugo】Stack主题自定义修改
+            <h2 class="article-title">【Hugo】Hugo &#43; Github 免费部署自己的博客
             </h2>
         </div>
     </a>
@@ -1012,16 +847,16 @@
             
                 
 <article class="has-image">
-    <a href="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/">
+    <a href="/hugo-stack/p/hugo/custom-live2d/">
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/cover.6ace62d4616fb2a2b258ce17a1ed0e28_hu6f38436753c16635bde459b49f615bdf_652572_250x150_fill_box_smart1_3.png"
+                <img src="/hugo-stack/p/hugo/custom-live2d/cover.6ace62d4616fb2a2b258ce17a1ed0e28_hu15227522066959895952.png"
                         width="250"
                         height="150"
                         loading="lazy"
                         alt="Featured image of post 【Hugo】Live2d-widget 给博客引入萌萌的看板娘"
-                        
+                        data-key="hugo/custom-live2d" 
                         data-hash="md5-as5i1GFvsqKyWM4Xoe0OKA==">
                 
             </div>

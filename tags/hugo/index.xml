@@ -8,10 +8,10 @@
         <language>zh-cn</language>
         <copyright>莱特雷-letere</copyright><atom:link href="https://letere-gzj.github.io/hugo-stack/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【Hugo】修改博客背景并引入动态背景</title>
-        <link>https://letere-gzj.github.io/hugo-stack/p/hugo%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E5%B9%B6%E5%BC%95%E5%85%A5%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/</link>
+        <link>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/</link>
         <pubDate>Sat, 12 Oct 2024 15:59:49 +0800</pubDate>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/p/hugo%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E5%B9%B6%E5%BC%95%E5%85%A5%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/</guid>
+        <guid>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/</guid>
         <description>&lt;hr&gt;
 &lt;p&gt;TODO：bilibili视频，不摸的话&lt;/p&gt;
 &lt;hr&gt;
@@ -170,7 +170,19 @@
 &lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;2-引入动态背景&#34;&gt;2 引入动态背景
 &lt;/h2&gt;&lt;h3 id=&#34;21-樱花飞舞&#34;&gt;2.1 樱花飞舞
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/%E6%A8%B1%E8%8A%B1%E9%A3%9E%E8%88%9E.png&#34;
+	width=&#34;1912&#34;
+	height=&#34;928&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/%E6%A8%B1%E8%8A%B1%E9%A3%9E%E8%88%9E_hu7522167132941889445.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/%E6%A8%B1%E8%8A%B1%E9%A3%9E%E8%88%9E_hu15088668739798121369.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;494px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;(1) 下载【&lt;a class=&#34;link&#34; href=&#34;sakura.js&#34; &gt;sakura.js&lt;/a&gt;】(&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;S&lt;/kbd&gt; 保存)，并放到&lt;code&gt;assets/background&lt;/code&gt;文件夹下&lt;/p&gt;
 &lt;/li&gt;
@@ -188,7 +200,19 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
 &lt;h3 id=&#34;22-点线漂浮particlesjs&#34;&gt;2.2 点线漂浮(particles.js)
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/%E7%82%B9%E7%BA%BF%E6%BC%82%E6%B5%AE.png&#34;
+	width=&#34;1912&#34;
+	height=&#34;928&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/%E7%82%B9%E7%BA%BF%E6%BC%82%E6%B5%AE_hu3310392670272691925.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/%E7%82%B9%E7%BA%BF%E6%BC%82%E6%B5%AE_hu2454835628974077958.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;494px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;【&lt;a class=&#34;link&#34; href=&#34;https://github.com/VincentGarreau/particles.js&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;particles.js文档&lt;/a&gt;】&lt;/p&gt;
@@ -198,10 +222,10 @@
     &gt;配置页面&lt;/a&gt;】配置参数，参数按自己喜好即可，唯一注意要修改的参数是 &lt;strong&gt;detect_on&lt;/strong&gt;，要改成 &lt;strong&gt;window&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E5%B9%B6%E5%BC%95%E5%85%A5%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/particlesJs1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/particlesJs1.png&#34;
 	width=&#34;376&#34;
 	height=&#34;503&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E5%B9%B6%E5%BC%95%E5%85%A5%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/particlesJs1_hub88189b31ffc992fddb9bce28cc1a926_20561_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E5%B9%B6%E5%BC%95%E5%85%A5%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/particlesJs1_hub88189b31ffc992fddb9bce28cc1a926_20561_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/particlesJs1_hu12038452708687775115.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/particlesJs1_hu5363749471359449166.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -213,10 +237,10 @@
 &lt;ul&gt;
 &lt;li&gt;(2) 下载配置文件，以及 &lt;strong&gt;particles.js&lt;/strong&gt; 所需要的js文件&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E5%B9%B6%E5%BC%95%E5%85%A5%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/particlesJs2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/particlesJs2.png&#34;
 	width=&#34;747&#34;
 	height=&#34;416&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E5%B9%B6%E5%BC%95%E5%85%A5%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/particlesJs2_hu5f42e3ac7e0c4be0cb3dcdfbb0b03ffa_53550_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E5%B9%B6%E5%BC%95%E5%85%A5%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/particlesJs2_hu5f42e3ac7e0c4be0cb3dcdfbb0b03ffa_53550_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/particlesJs2_hu9516385999732281748.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/particlesJs2_hu16756179236535869173.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -233,10 +257,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E5%B9%B6%E5%BC%95%E5%85%A5%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/particlesJs3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/particlesJs3.png&#34;
 	width=&#34;582&#34;
 	height=&#34;168&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E5%B9%B6%E5%BC%95%E5%85%A5%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/particlesJs3_hu7677f9c930a40c191308708f412b7095_9841_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E5%B9%B6%E5%BC%95%E5%85%A5%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/particlesJs3_hu7677f9c930a40c191308708f412b7095_9841_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/particlesJs3_hu13583493547973518241.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/particlesJs3_hu14944181072535082711.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -295,10 +319,10 @@
         </item>
         <item>
         <title>【Hugo】Stack主题自定义修改</title>
-        <link>https://letere-gzj.github.io/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/</link>
+        <link>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/</link>
         <pubDate>Tue, 08 Oct 2024 11:10:25 +0800</pubDate>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/</guid>
+        <guid>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/</guid>
         <description>&lt;hr&gt;
 &lt;p&gt;TODO：bilibili视频，可能做，可能不做，内容比较杂，不太好做视频&lt;/p&gt;
 &lt;hr&gt;
@@ -307,10 +331,10 @@
 &lt;li&gt;(1) 前往【&lt;a class=&#34;link&#34; href=&#34;https://www.100font.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;100font&lt;/a&gt;】，下载自己想要的字体，这边演示&lt;strong&gt;缝合像素字体&lt;/strong&gt;，字体文件为 &lt;strong&gt;fusion-pixel-10px-monospaced-zh_hans.ttf&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91.png&#34;
 	width=&#34;1152&#34;
 	height=&#34;579&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91_huc10cdb641ff06c462c9bb3100f408649_87646_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91_huc10cdb641ff06c462c9bb3100f408649_87646_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91_hu912993607239724154.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91_hu11079749733186030840.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -322,10 +346,10 @@
 &lt;ul&gt;
 &lt;li&gt;(2) 把字体文件放入&lt;code&gt;assets/font&lt;/code&gt;下(文件夹自己创建)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92.png&#34;
 	width=&#34;502&#34;
 	height=&#34;188&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92_huf7f36c5c9eed22dc93ad1e79a53575e1_7283_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92_huf7f36c5c9eed22dc93ad1e79a53575e1_7283_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92_hu12516269322304933381.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92_hu18381981740631101024.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -373,10 +397,10 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;(4) 这样博客字体就修改好了&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93.png&#34;
 	width=&#34;1537&#34;
 	height=&#34;821&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93_hu0f45366821892cedfe723a5d4ab5dcbc_248230_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93_hu0f45366821892cedfe723a5d4ab5dcbc_248230_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93_hu17417627805824578197.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93_hu13082588067879854751.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -395,10 +419,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/normal.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/normal.png&#34;
 	width=&#34;32&#34;
 	height=&#34;32&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/normal_hu8405040d6c37cb33998a7d8555a9c242_953_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/normal_hu8405040d6c37cb33998a7d8555a9c242_953_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/normal_hu14032668210150328343.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/normal_hu6292692700243705009.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;默认光标&#34;
@@ -409,10 +433,10 @@
 		data-flex-basis=&#34;240px&#34;
 	
 &gt;
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/click.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/click.png&#34;
 	width=&#34;32&#34;
 	height=&#34;32&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/click_hu04cfbde0d41cbaa1bfb557ca67784221_940_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/click_hu04cfbde0d41cbaa1bfb557ca67784221_940_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/click_hu18340230354889606981.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/click_hu4294076499567343567.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;指针光标&#34;
@@ -423,10 +447,10 @@
 		data-flex-basis=&#34;240px&#34;
 	
 &gt;
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/text.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/text.png&#34;
 	width=&#34;32&#34;
 	height=&#34;32&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/text_hue24cc70609749d30e0dc9ff26ab5071a_898_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/text_hue24cc70609749d30e0dc9ff26ab5071a_898_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/text_hu3101339259287223741.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/text_hu6057511031312973952.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;文本光标&#34;
@@ -437,10 +461,10 @@
 		data-flex-basis=&#34;240px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%871.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%871.png&#34;
 	width=&#34;498&#34;
 	height=&#34;210&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%871_hu0ca4356e4daaed6f51260b678b18e248_7525_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%871_hu0ca4356e4daaed6f51260b678b18e248_7525_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%871_hu3548677101552218964.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%871_hu3910316613496933341.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -579,10 +603,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B41.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B41.png&#34;
 	width=&#34;864&#34;
 	height=&#34;404&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B41_hu49290e5f5f22bf285b581f3153835563_20327_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B41_hu49290e5f5f22bf285b581f3153835563_20327_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B41_hu6290585001422895419.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B41_hu13678536194574241382.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -637,10 +661,10 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;这样就会文章开头显示修改时间&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B42.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B42.png&#34;
 	width=&#34;876&#34;
 	height=&#34;503&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B42_hufb40aae75dd3331fa845ae51f5a48103_282716_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugostack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B42_hufb40aae75dd3331fa845ae51f5a48103_282716_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B42_hu16224586151109242004.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B42_hu8867338688542746133.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -654,11 +678,11 @@
         </item>
         <item>
         <title>【Hugo】Live2d-widget 给博客引入萌萌的看板娘</title>
-        <link>https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/</link>
+        <link>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-live2d/</link>
         <pubDate>Thu, 19 Sep 2024 17:17:34 +0800</pubDate>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/</guid>
-        <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/cover.png" alt="Featured image of post 【Hugo】Live2d-widget 给博客引入萌萌的看板娘" /&gt;&lt;hr&gt;
+        <guid>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-live2d/</guid>
+        <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/hugo/custom-live2d/cover.png" alt="Featured image of post 【Hugo】Live2d-widget 给博客引入萌萌的看板娘" /&gt;&lt;hr&gt;
 
 
 
@@ -698,10 +722,10 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;（2）成功在左下角引入了live2d看板娘&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/live2d%E5%BC%95%E5%85%A51.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/live2d%E5%BC%95%E5%85%A51.png&#34;
 	width=&#34;855&#34;
 	height=&#34;579&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/live2d%E5%BC%95%E5%85%A51_hub4a01f9f73344f0dfcf43c968bd31368_116494_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/live2d%E5%BC%95%E5%85%A51_hub4a01f9f73344f0dfcf43c968bd31368_116494_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/live2d%E5%BC%95%E5%85%A51_hu11699885325694569873.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/live2d%E5%BC%95%E5%85%A51_hu9350893187745269249.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -840,10 +864,10 @@
 &lt;li&gt;(1) 前往【&lt;a class=&#34;link&#34; href=&#34;https://github.com/stevenjoezhang/live2d-widget&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Live2d-widget文档&lt;/a&gt;】，把 &lt;strong&gt;waifu-tips.json&lt;/strong&gt; 和 &lt;strong&gt;waifu.css&lt;/strong&gt;下载，并放到&lt;code&gt;assets/waifu&lt;/code&gt;文件夹中(自己新建)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs1.png&#34;
 	width=&#34;948&#34;
 	height=&#34;654&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs1_hu658f166f8b5507a8c9efac32c7da35f9_48639_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs1_hu658f166f8b5507a8c9efac32c7da35f9_48639_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs1_hu4116551679071180038.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs1_hu1504599173053339036.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -852,10 +876,10 @@
 		data-flex-basis=&#34;347px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs2.png&#34;
 	width=&#34;614&#34;
 	height=&#34;185&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs2_hu811799b363b23c562e56ec1ca99dc8e8_12701_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E6%8A%BD%E7%A6%BBjs2_hu811799b363b23c562e56ec1ca99dc8e8_12701_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs2_hu7757436184522422918.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs2_hu4325862114188955926.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1041,10 +1065,10 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;(2) 这样看板娘就成功移动到右下角了&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4css1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4css1.png&#34;
 	width=&#34;629&#34;
 	height=&#34;401&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4css1_hu609174ef03efe279c7caa7019b395714_76347_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4css1_hu609174ef03efe279c7caa7019b395714_76347_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4css1_hu18120271209873172884.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4css1_hu15247650076209271601.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1063,10 +1087,10 @@
 &lt;p&gt;(2) 查看&lt;strong&gt;复制按钮&lt;/strong&gt;的元素，属性为&lt;code&gt;class=&amp;quot;copyCodeButton&amp;quot;&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD1.png&#34;
 	width=&#34;995&#34;
 	height=&#34;374&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD1_hu5aeee3cd7f19e80532a75a43eff567c9_68709_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD1_hu5aeee3cd7f19e80532a75a43eff567c9_68709_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD1_hu12524649210065853399.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD1_hu18406233360388810405.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1078,10 +1102,10 @@
 &lt;ul&gt;
 &lt;li&gt;(3) 修改&lt;code&gt;assets/waifu/waifu-tips.json&lt;/code&gt;，新增or修改对应的文本，修改对应的css选择器&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD2.png&#34;
 	width=&#34;698&#34;
 	height=&#34;547&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD2_hu7eb1a1db4305956cdf883d3dc4a6365a_40182_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD2_hu7eb1a1db4305956cdf883d3dc4a6365a_40182_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD2_hu2463675216799207983.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD2_hu10702125778130372780.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1093,10 +1117,10 @@
 &lt;ul&gt;
 &lt;li&gt;(4) 这样当我们鼠标移动到对应的元素之后，看板娘就会有对应的提示语&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3.gif&#34;
 	width=&#34;2560&#34;
 	height=&#34;1440&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3_huca454abf96bda823215710ad635f4c4d_16160601_480x0_resize_box_1.gif 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3_huca454abf96bda823215710ad635f4c4d_16160601_1024x0_resize_box_1.gif 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3_hu7929714314688086124.gif 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3_hu15904829133514768322.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1124,10 +1148,10 @@
 &lt;p&gt;(4) cdn引入不需要php文件，将多余的php文件删掉，只保留 &lt;strong&gt;model&lt;/strong&gt; 和 &lt;strong&gt;model_list.json&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1.png&#34;
 	width=&#34;575&#34;
 	height=&#34;223&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu95613891843cf55b4e71c738bf6fe50e_11413_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu95613891843cf55b4e71c738bf6fe50e_11413_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu3026801339791019489.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu7082330083530701100.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1139,10 +1163,10 @@
 &lt;ul&gt;
 &lt;li&gt;(5) github新建一个公有(public)仓库，将代码上传到仓库上，打标签(Tags)并发布(Releases)一个版本&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B2.png&#34;
 	width=&#34;1278&#34;
 	height=&#34;488&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B2_hu9d01505699145c2e00cafba64ed5223f_31269_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B2_hu9d01505699145c2e00cafba64ed5223f_31269_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B2_hu10531032458095924358.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B2_hu4094684735325559998.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1204,10 +1228,10 @@
 
         &lt;/span&gt;信息&lt;/p&gt;&lt;p&gt;如果你 &lt;strong&gt;model_list.json&lt;/strong&gt; 中的 &lt;strong&gt;live2d模型分组&lt;/strong&gt; 只有一组的时候，会存在bug，导致加载不出模型，需要进行修复&lt;/p&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BBug1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BBug1.png&#34;
 	width=&#34;511&#34;
 	height=&#34;306&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BBug1_hu09ad7505257144f542c2f55e88430490_13129_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BBug1_hu09ad7505257144f542c2f55e88430490_13129_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BBug1_hu12560959488098848732.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BBug1_hu5651054310968206641.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1216,10 +1240,10 @@
 		data-flex-basis=&#34;400px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug2.png&#34;
 	width=&#34;770&#34;
 	height=&#34;273&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug2_hu6992f5b794a767c695c52660675b6b86_37920_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug2_hu6992f5b794a767c695c52660675b6b86_37920_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug2_hu17123432380749284147.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug2_hu16709974159330286376.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1271,10 +1295,10 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;(2) 修改 &lt;strong&gt;waifu-tips.js&lt;/strong&gt; 文件，全局搜索&lt;code&gt;e=1,o=53&lt;/code&gt;，将内容改为&lt;code&gt;e=0,o=0&lt;/code&gt;，这两个值是默认模型和默认皮肤，所以一旦模型分组小于2的时候，就会找不到模型(代码顺序从0开始数)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug3.png&#34;
 	width=&#34;812&#34;
 	height=&#34;596&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug3_hu709896897cd5179d03f20f1c8830b6e2_30679_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug3_hu709896897cd5179d03f20f1c8830b6e2_30679_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug3_hu4291967012580399561.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug3_hu13917885585910285053.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1286,10 +1310,10 @@
 &lt;ul&gt;
 &lt;li&gt;(3) 打开浏览器，按&lt;kbd&gt;F12&lt;/kbd&gt;打开控制台，清理 &lt;strong&gt;localStorage(本地存储)&lt;/strong&gt; 中的数据&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug4.png&#34;
 	width=&#34;766&#34;
 	height=&#34;378&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug4_huc0705214debf92063cfdfb4908282a21_38698_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug4_huc0705214debf92063cfdfb4908282a21_38698_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug4_hu15516648925241172240.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug4_hu9654690787445098143.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1356,10 +1380,10 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;(3) 这样就能切换这些看板娘的皮肤了&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E7%9A%AE%E8%82%A4%E5%88%87%E6%8D%A2.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E7%9A%AE%E8%82%A4%E5%88%87%E6%8D%A2.gif&#34;
 	width=&#34;2560&#34;
 	height=&#34;1440&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E7%9A%AE%E8%82%A4%E5%88%87%E6%8D%A2_huc48d35ea9ee7bfbe584d863363aec219_30121130_480x0_resize_box_1.gif 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E7%9A%AE%E8%82%A4%E5%88%87%E6%8D%A2_huc48d35ea9ee7bfbe584d863363aec219_30121130_1024x0_resize_box_1.gif 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E7%9A%AE%E8%82%A4%E5%88%87%E6%8D%A2_hu15709790727812461766.gif 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E7%9A%AE%E8%82%A4%E5%88%87%E6%8D%A2_hu9660268217645380957.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1503,10 +1527,10 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;(3) 这样就可以随意拖拽看板娘了（如果是没有腿的模型，建议把y轴移动的代码注释掉）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E7%9C%8B%E6%9D%BF%E5%A8%98%E6%8B%96%E6%8B%BD.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E7%9C%8B%E6%9D%BF%E5%A8%98%E6%8B%96%E6%8B%BD.gif&#34;
 	width=&#34;2560&#34;
 	height=&#34;1440&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E7%9C%8B%E6%9D%BF%E5%A8%98%E6%8B%96%E6%8B%BD_hu45666b0ed523c3da11dc47f4d9261cf2_12641643_480x0_resize_box_1.gif 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugolive2d-widget-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5%E8%90%8C%E8%90%8C%E7%9A%84%E7%9C%8B%E6%9D%BF%E5%A8%98/%E7%9C%8B%E6%9D%BF%E5%A8%98%E6%8B%96%E6%8B%BD_hu45666b0ed523c3da11dc47f4d9261cf2_12641643_1024x0_resize_box_1.gif 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E7%9C%8B%E6%9D%BF%E5%A8%98%E6%8B%96%E6%8B%BD_hu1407825209830676737.gif 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/%E7%9C%8B%E6%9D%BF%E5%A8%98%E6%8B%96%E6%8B%BD_hu3220978026979702407.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1520,11 +1544,11 @@
         </item>
         <item>
         <title>【Hugo】Aplayer &#43; PJAX 引入音乐播放放器并实现音乐不中断功能</title>
-        <link>https://letere-gzj.github.io/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/</link>
+        <link>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-player/</link>
         <pubDate>Wed, 14 Aug 2024 14:50:54 +0800</pubDate>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/</guid>
-        <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/cover.png" alt="Featured image of post 【Hugo】Aplayer &#43; PJAX 引入音乐播放放器并实现音乐不中断功能" /&gt;&lt;hr&gt;
+        <guid>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-player/</guid>
+        <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/hugo/custom-player/cover.png" alt="Featured image of post 【Hugo】Aplayer &#43; PJAX 引入音乐播放放器并实现音乐不中断功能" /&gt;&lt;hr&gt;
 
 
 
@@ -1553,10 +1577,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;（1）在博客主目录中创建文件&lt;code&gt;layouts\partials\footer\custom.html&lt;/code&gt;，此文件为Stack主题作者留给我们加入自定义组件用的文件(可以查看主题源码同路径文件找到)
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51.png&#34;
 	width=&#34;746&#34;
 	height=&#34;258&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51_hu8a003c99b23e6ae0da3c96b373118f13_15549_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51_hu8a003c99b23e6ae0da3c96b373118f13_15549_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51_hu10317444502684034872.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51_hu17426180531872676584.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1598,10 +1622,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52.png&#34;
 	width=&#34;918&#34;
 	height=&#34;250&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52_hua2056a1c8a6a92a52da78c72e07b3779_12032_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52_hua2056a1c8a6a92a52da78c72e07b3779_12032_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52_hu3693182200761264452.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52_hu1493159388977510959.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1629,10 +1653,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53.png&#34;
 	width=&#34;454&#34;
 	height=&#34;143&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53_hu460ee99490feb84c3a6eb564f52112fd_6105_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53_hu460ee99490feb84c3a6eb564f52112fd_6105_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53_hu13505605207614654053.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53_hu16720848264225798807.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1701,10 +1725,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54.png&#34;
 	width=&#34;612&#34;
 	height=&#34;387&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54_hucfdd435e322e5eb9ccccbab02730614e_32523_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54_hucfdd435e322e5eb9ccccbab02730614e_32523_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54_hu10176643709612842252.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54_hu7197864985454459645.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1729,10 +1753,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;（3）在博客主目录中创建文件&lt;code&gt;assets\scss\custom.scss&lt;/code&gt;，此文件为Stack主题作者留给我们加入自定义样式用的文件(可以查看主题源码同路径文件找到)
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21.png&#34;
 	width=&#34;551&#34;
 	height=&#34;274&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21_hufa26ad2fc3bcdfb6bee291f9c8b4224e_15855_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21_hufa26ad2fc3bcdfb6bee291f9c8b4224e_15855_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21_hu12775702124180168874.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21_hu15542514798368264731.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1777,10 +1801,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;!-- &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&amp;#34;&amp;gt; --&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22.png&#34;
 	width=&#34;468&#34;
 	height=&#34;323&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22_hu27c1336ddcc9b47cf95b5e48df613ac8_23089_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22_hu27c1336ddcc9b47cf95b5e48df613ac8_23089_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22_hu4274941461021639034.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22_hu13976550532823293038.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1802,10 +1826,10 @@
 &lt;li&gt;&lt;strong&gt;list.index&lt;/strong&gt;：歌曲序号&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;audio.currentTime&lt;/strong&gt;：播放时长&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;paused&lt;/strong&gt; ：播放状态（是否暂停）
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61.png&#34;
 	width=&#34;802&#34;
 	height=&#34;434&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61_hu6b7c0a2e6f69946e6961d61729ae8249_65105_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61_hu6b7c0a2e6f69946e6961d61729ae8249_65105_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61_hu12558172965125632703.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61_hu14637747725732503343.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1929,10 +1953,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;（2）分析页面元素，看哪些是需要我们重新加载的，可以发现是&lt;strong&gt;左侧边栏&lt;/strong&gt;，&lt;strong&gt;中间内容&lt;/strong&gt;，&lt;strong&gt;右侧边栏&lt;/strong&gt;
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/PJAX%E5%BC%95%E5%85%A51.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A51.png&#34;
 	width=&#34;1647&#34;
 	height=&#34;758&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/PJAX%E5%BC%95%E5%85%A51_hud8007f7aefae30e8cb7899da4b86a94e_122141_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/PJAX%E5%BC%95%E5%85%A51_hud8007f7aefae30e8cb7899da4b86a94e_122141_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A51_hu13984116907559513140.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A51_hu15037190329864402283.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1944,10 +1968,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;（3）查看页面源代码，可以发现这些元素都被一个&lt;code&gt;&amp;lt;div class=&amp;quot;main-container&amp;quot;&amp;gt;...&amp;lt;/div&amp;gt;&lt;/code&gt;包裹着，所以我们将着元素定为要刷新的对象
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/PJAX%E5%BC%95%E5%85%A52.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A52.png&#34;
 	width=&#34;687&#34;
 	height=&#34;376&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/PJAX%E5%BC%95%E5%85%A52_huc75a8ba5d5ee3949e921c6b263b53c55_56157_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/PJAX%E5%BC%95%E5%85%A52_huc75a8ba5d5ee3949e921c6b263b53c55_56157_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A52_hu11515734280235833246.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A52_hu10046222914869022645.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1993,10 +2017,10 @@
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;（1）随便点进其中一篇文章，可以发现文章内容的样式丢失，缺少文章该有的边框
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1.png&#34;
 	width=&#34;1019&#34;
 	height=&#34;784&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1_hu8a3a5e666e6b08102eb0f5ca5e01ee39_561935_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1_hu8a3a5e666e6b08102eb0f5ca5e01ee39_561935_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1_hu6496149302952570041.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1_hu13780798210921933270.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2008,10 +2032,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;（2）通过手动刷新，对比页面元素发现，决定文章样式的是&lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; 标签中的class名: &lt;strong&gt;article-page&lt;/strong&gt;，存在此class名就会识别到文章该有的css
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2.png&#34;
 	width=&#34;554&#34;
 	height=&#34;335&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2_hueca45da68dfa5805699c38860a9b0078_39021_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2_hueca45da68dfa5805699c38860a9b0078_39021_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2_hu11435257031448315109.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2_hu16465063641175909278.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2079,10 +2103,10 @@
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;（1）当我们切换页面后，点击左下角切换主题颜色的按钮，会发现没有效果，主题颜色切换失效了
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1.png&#34;
 	width=&#34;688&#34;
 	height=&#34;347&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1_hue3b02119609f6d52a76e50f8c58b1a55_20302_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1_hue3b02119609f6d52a76e50f8c58b1a55_20302_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1_hu5229097294674614917.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1_hu7541949670541231125.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2094,10 +2118,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;（2）阅读Stack主题源码&lt;code&gt;\assets\ts\colorScheme.ts&lt;/code&gt;发现，在脚本初始化时，会给元素绑定一个点击事件。但因为页面切换了，替换了该元素，但没有该元素重新绑定点击事件，导致点击主题切换失效
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2.png&#34;
 	width=&#34;760&#34;
 	height=&#34;533&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2_hufd3657f05a928b9bb2605d5d91d2c79e_34323_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2_hufd3657f05a928b9bb2605d5d91d2c79e_34323_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2_hu3659339438047739286.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2_hu15612737854347973718.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2113,10 +2137,10 @@
 &lt;li&gt;阅读源码，发现&lt;code&gt;colorScheme.ts&lt;/code&gt;被&lt;code&gt;main.ts&lt;/code&gt;引用，在&lt;code&gt;main.ts&lt;/code&gt;中执行了初始化，并且&lt;code&gt;main.ts&lt;/code&gt;生成了个全局变量 &lt;strong&gt;Stack&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;所以在PJAX执行完后，使用全局变量 &lt;strong&gt;Stack&lt;/strong&gt; ，执行里面的初始化方法，重新执行一遍脚本，来绑定点击事件&lt;/li&gt;
 &lt;li&gt;阅读PJAX文档，发现官方也提供了PJAX执行完后的事件，我们执行监听这个事件，&lt;strong&gt;Stack&lt;/strong&gt; 执行初始化就好
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3.png&#34;
 	width=&#34;626&#34;
 	height=&#34;366&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3_huf9e2df91f66833d12bd96ed8907163c6_19407_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3_huf9e2df91f66833d12bd96ed8907163c6_19407_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3_hu17510256541488001342.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3_hu14342275243428319843.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2125,10 +2149,10 @@
 		data-flex-basis=&#34;410px&#34;
 	
 &gt;
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4.png&#34;
 	width=&#34;525&#34;
 	height=&#34;196&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4_hu7b2735220963c253150b46a21327fe30_8148_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4_hu7b2735220963c253150b46a21327fe30_8148_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4_hu5382124042963801288.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4_hu11408407249359434399.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2170,10 +2194,10 @@
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;（1）使用文章搜索功能时，输入关键词，无任何搜索记录，搜索功能失效
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1.png&#34;
 	width=&#34;815&#34;
 	height=&#34;375&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1_hu2270a0eb2730af8618d4cbe193c55918_9106_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1_hu2270a0eb2730af8618d4cbe193c55918_9106_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1_hu5923900623225254529.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1_hu15213815273594980075.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2185,10 +2209,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;（2）查看&lt;code&gt;layouts\ts\search.tsx&lt;/code&gt;文件，发现情况和上面的&lt;code&gt;colorScheme.ts&lt;/code&gt;类似，存在绑定事件
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2.png&#34;
 	width=&#34;705&#34;
 	height=&#34;531&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2_hub4afa07d157d0822dc57969d8359b3ac_36597_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2_hub4afa07d157d0822dc57969d8359b3ac_36597_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2_hu13957798718846057667.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2_hu2235126424913485663.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2200,10 +2224,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;（3）解决思路类似上面的，把 &lt;strong&gt;search.tsx&lt;/strong&gt; 初始化内容，封装为一个函数，并把函数 &lt;strong&gt;export&lt;/strong&gt; 出来，由 &lt;strong&gt;main.ts&lt;/strong&gt; 引入这个函数，并放到 &lt;strong&gt;Stack.init()&lt;/strong&gt; 的方法中，利用此方法来重新初始化搜索脚本 - &lt;em&gt;&lt;strong&gt;（以下操作请复制同路径同名文件到自己主目录下修改，不要在主题源码中修改）&lt;/strong&gt;&lt;/em&gt;
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3.png&#34;
 	width=&#34;967&#34;
 	height=&#34;402&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3_hu3082f2b5d5ee351c4a51527184ce1847_55296_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3_hu3082f2b5d5ee351c4a51527184ce1847_55296_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3_hu4982972655848362456.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3_hu10575550925341558171.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2306,10 +2330,10 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;（4）&lt;strong&gt;tsx&lt;/strong&gt; 类型的文件引入方式有点特殊，需要我们修改以下 &lt;strong&gt;main.ts&lt;/strong&gt; 的引入方式，修改&lt;code&gt;layouts\partials\footer\components\script.html&lt;/code&gt;，改法参考&lt;code&gt;layouts\page\search.html&lt;/code&gt;，把&lt;code&gt;&amp;quot;JSXFactory&amp;quot; &amp;quot;createElement&amp;quot;&lt;/code&gt;补充上就好
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4.png&#34;
 	width=&#34;862&#34;
 	height=&#34;142&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4_hu7fffb2b451a9c13d6fc22df0005eaa45_19191_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4_hu7fffb2b451a9c13d6fc22df0005eaa45_19191_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4_hu9523300484787436676.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4_hu1305163993592567261.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2318,10 +2342,10 @@
 		data-flex-basis=&#34;1456px&#34;
 	
 &gt;
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5.png&#34;
 	width=&#34;747&#34;
 	height=&#34;117&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5_hu1d6347dfe58b03e94a1d975de6f21202_21410_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5_hu1d6347dfe58b03e94a1d975de6f21202_21410_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5_hu16025596555305159424.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5_hu6049477854951056670.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2331,10 +2355,10 @@
 	
 &gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6.png&#34;
 	width=&#34;765&#34;
 	height=&#34;583&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6_huc39ae5598399da7a9361d66e0f944c7a_35519_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6_huc39ae5598399da7a9361d66e0f944c7a_35519_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6_hu6878696442146111979.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6_hu2286289730422645644.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2352,10 +2376,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;（2）阅读 &lt;strong&gt;search.tsx&lt;/strong&gt; 源码可知，搜索内容的数据，是通过React.render，动态渲染回页面的，这些没有触发PJAX，所以PJAX没有识别到。阅读PJAX文档，官方提供给了我们重新解析数的方法，所以在React.render之后，我调用PJAX方法，重新解析页面即可
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1.png&#34;
 	width=&#34;888&#34;
 	height=&#34;361&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1_hu876f60418ecc3855a363539393deb164_39030_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1_hu876f60418ecc3855a363539393deb164_39030_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1_hu9574366060500127333.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1_hu2854418771149339604.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2409,10 +2433,10 @@
 &lt;li&gt;用一个&lt;code&gt;&amp;lt;div class=js-Pjax&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;来包裹一个&lt;code&gt;&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;在&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;标签中，通过&lt;code&gt;document.createElement(&#39;script&#39;)&lt;/code&gt;形式，创建对应的评论脚本内容&lt;/li&gt;
 &lt;li&gt;pjax对象通过 &lt;strong&gt;.js-Pjax&lt;/strong&gt; 被识别到此内容，进行脚本执行
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1.png&#34;
 	width=&#34;870&#34;
 	height=&#34;697&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1_huac4488ee6fd120881d98e87639f5e944_66730_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1_huac4488ee6fd120881d98e87639f5e944_66730_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1_hu5809293150230507459.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1_hu410654423696599295.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2486,10 +2510,10 @@
 &lt;li&gt;
 &lt;p&gt;（2）前往【&lt;a class=&#34;link&#34; href=&#34;https://buunguyen.github.io/topbar/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;topbar&lt;/a&gt;】，点击下载zip包，将解压后的 &lt;strong&gt;topbar.min.js&lt;/strong&gt; 放到&lt;code&gt;assets\js\topbar.min.js&lt;/code&gt;
-&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11.png&#34;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11.png&#34;
 	width=&#34;531&#34;
 	height=&#34;196&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11_hu135fe3a47468ac3230e9ecd62283469a_6848_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11_hu135fe3a47468ac3230e9ecd62283469a_6848_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11_hu17479662426839587091.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11_hu7219304278610830220.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2561,10 +2585,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12.png&#34;
 	width=&#34;769&#34;
 	height=&#34;108&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12_huc1b53445aa63169ed207e80bf509027b_1681_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugoaplayer--pjax-%E5%BC%95%E5%85%A5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E6%94%BE%E5%99%A8%E5%B9%B6%E5%AE%9E%E7%8E%B0%E9%9F%B3%E4%B9%90%E4%B8%8D%E4%B8%AD%E6%96%AD%E5%8A%9F%E8%83%BD/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12_huc1b53445aa63169ed207e80bf509027b_1681_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12_hu9200277858795958785.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12_hu2188347930935890096.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2579,11 +2603,11 @@
         </item>
         <item>
         <title>【Hugo】Hugo &#43; Github 免费部署自己的博客</title>
-        <link>https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
+        <link>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-blog/</link>
         <pubDate>Mon, 22 Jul 2024 15:44:59 +0800</pubDate>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
-        <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E5%B0%81%E9%9D%A2.png" alt="Featured image of post 【Hugo】Hugo &#43; Github 免费部署自己的博客" /&gt;
+        <guid>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-blog/</guid>
+        <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/hugo/custom-blog/%E5%B0%81%E9%9D%A2.png" alt="Featured image of post 【Hugo】Hugo &#43; Github 免费部署自己的博客" /&gt;
 
 
 
@@ -2610,10 +2634,10 @@
     &gt;Git官网&lt;/a&gt;】，下载安装程序&lt;/li&gt;
 &lt;li&gt;一直点下一步，默认安装即可&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/git%E4%B8%8B%E8%BD%BD.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/git%E4%B8%8B%E8%BD%BD.png&#34;
 	width=&#34;1045&#34;
 	height=&#34;420&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/git%E4%B8%8B%E8%BD%BD_hu79401dc42068bcde96d34225ea349dba_146260_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/git%E4%B8%8B%E8%BD%BD_hu79401dc42068bcde96d34225ea349dba_146260_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/git%E4%B8%8B%E8%BD%BD_hu12103083040612969155.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/git%E4%B8%8B%E8%BD%BD_hu11927679261303541557.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2629,10 +2653,10 @@
     &gt;Hugo Github Tags&lt;/a&gt;】，选择对应版本下载，下载后解压即可&lt;/li&gt;
 &lt;li&gt;Windows下载版本：&lt;strong&gt;hugo_extended_xxxxx_windows_amd64.zip&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/hugo%E4%B8%8B%E8%BD%BD.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/hugo%E4%B8%8B%E8%BD%BD.png&#34;
 	width=&#34;1195&#34;
 	height=&#34;264&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/hugo%E4%B8%8B%E8%BD%BD_hu72dd6cc6e4b64f7adb1c89d00878561d_48452_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/hugo%E4%B8%8B%E8%BD%BD_hu72dd6cc6e4b64f7adb1c89d00878561d_48452_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/hugo%E4%B8%8B%E8%BD%BD_hu15858465758439763034.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/hugo%E4%B8%8B%E8%BD%BD_hu17722830100017528196.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2647,10 +2671,10 @@
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;（1）在&lt;strong&gt;hugo.exe&lt;/strong&gt;所在文件夹的地址栏敲打cmd，然后Enter唤起命令行&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1%E5%90%AF%E5%8A%A8cmd.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1%E5%90%AF%E5%8A%A8cmd.png&#34;
 	width=&#34;627&#34;
 	height=&#34;223&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1%E5%90%AF%E5%8A%A8cmd_hu4a644f451efd407af7ecb07006d60774_15133_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1%E5%90%AF%E5%8A%A8cmd_hu4a644f451efd407af7ecb07006d60774_15133_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1%E5%90%AF%E5%8A%A8cmd_hu17847048786220277494.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1%E5%90%AF%E5%8A%A8cmd_hu10611417904628283939.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2662,10 +2686,10 @@
 &lt;ul&gt;
 &lt;li&gt;（2）敲打命令&lt;code&gt;hugo new site xxxx&lt;/code&gt;创建hugo文件&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/2newSite.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/2newSite.png&#34;
 	width=&#34;751&#34;
 	height=&#34;236&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/2newSite_hu2ac10eb8c2868cf82746d459c10cfe73_9083_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/2newSite_hu2ac10eb8c2868cf82746d459c10cfe73_9083_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/2newSite_hu3122308046660715862.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/2newSite_hu17054959501302615844.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2677,10 +2701,10 @@
 &lt;ul&gt;
 &lt;li&gt;（3）敲打命名&lt;code&gt;cd xxxx&lt;/code&gt;切换目录，并把&lt;strong&gt;hugo.exe&lt;/strong&gt;复制到刚生成的文件夹中&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/3cd.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/3cd.png&#34;
 	width=&#34;842&#34;
 	height=&#34;409&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/3cd_huba9add8420bd3a7d429a1e0d0064d5f2_36003_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/3cd_huba9add8420bd3a7d429a1e0d0064d5f2_36003_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/3cd_hu914900251781706643.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/3cd_hu7455587607991263771.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2693,10 +2717,10 @@
 &lt;li&gt;（4）敲打命令&lt;code&gt;hugo server -D&lt;/code&gt;启动服务，访问&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://localhost:1313&lt;/a&gt;，&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;C&lt;/kbd&gt;停止服务 &lt;strong&gt;（hugo默认是没有主题的，需要进行主题配置）&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/4server.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/4server.png&#34;
 	width=&#34;749&#34;
 	height=&#34;466&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/4server_hu855867dc2e6e1214f57271ac16dab21b_15372_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/4server_hu855867dc2e6e1214f57271ac16dab21b_15372_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/4server_hu759523152192672934.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/4server_hu3105970367046092981.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2705,10 +2729,10 @@
 		data-flex-basis=&#34;385px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/5pageNotFind.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/5pageNotFind.png&#34;
 	width=&#34;535&#34;
 	height=&#34;277&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/5pageNotFind_hu72988fb40cf519e0ba9490633b81d251_9956_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/5pageNotFind_hu72988fb40cf519e0ba9490633b81d251_9956_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/5pageNotFind_hu14142279337497898002.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/5pageNotFind_hu3905542197507831849.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2723,10 +2747,10 @@
 &lt;li&gt;（1）前往【&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Hugo Themes&lt;/a&gt;】，查找自己喜欢的主题，进行下载&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.1hugo%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.1hugo%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD.png&#34;
 	width=&#34;1491&#34;
 	height=&#34;645&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.1hugo%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD_hu61c2919905026c1e41ac2a34ea0a2b1e_216336_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.1hugo%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD_hu61c2919905026c1e41ac2a34ea0a2b1e_216336_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.1hugo%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD_hu3884244861959241836.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.1hugo%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD_hu14326899821210437207.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2739,10 +2763,10 @@
 &lt;li&gt;（2）这边以【&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack/tags&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Stack主题&lt;/a&gt;】为例，将下载好的主题解压，放到&lt;code&gt;/themes&lt;/code&gt;文件夹中&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.2%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%8E%8B.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.2%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%8E%8B.png&#34;
 	width=&#34;534&#34;
 	height=&#34;453&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.2%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%8E%8B_hude2a9ad78d081cf11bd6c89920bbf15a_30912_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.2%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%8E%8B_hude2a9ad78d081cf11bd6c89920bbf15a_30912_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.2%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%8E%8B_hu18019446707079695737.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.2%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%8E%8B_hu8909256151664846444.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2754,10 +2778,10 @@
 &lt;ul&gt;
 &lt;li&gt;（3）将&lt;code&gt;exampleSite&lt;/code&gt;样例数据中的 &lt;strong&gt;Content&lt;/strong&gt; 和 &lt;strong&gt;hugo.yaml&lt;/strong&gt; 复制到主文件夹中，并删掉&lt;code&gt;hugo.toml&lt;/code&gt;和&lt;code&gt;content/post/rich-content&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.3%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B61.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.3%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B61.png&#34;
 	width=&#34;296&#34;
 	height=&#34;251&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.3%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B61_huf1d5eb4558861d593c1c13a9eb8f39ab_5663_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.3%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B61_huf1d5eb4558861d593c1c13a9eb8f39ab_5663_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.3%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B61_hu14737932469267142275.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.3%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B61_hu6233231816324566059.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2766,10 +2790,10 @@
 		data-flex-basis=&#34;283px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.4%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B62.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.4%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B62.png&#34;
 	width=&#34;374&#34;
 	height=&#34;244&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.4%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B62_hu64bae648a1dad6cf1141fbd7cc57ca0e_6804_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.4%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B62_hu64bae648a1dad6cf1141fbd7cc57ca0e_6804_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.4%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B62_hu3670930292275600289.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.4%E4%B8%BB%E9%A2%98%E5%A4%8D%E5%88%B62_hu16263024395150776200.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2781,10 +2805,10 @@
 &lt;ul&gt;
 &lt;li&gt;（4）修改 &lt;strong&gt;hugo.yaml&lt;/strong&gt; 中的 &lt;strong&gt;theme&lt;/strong&gt;，将他修改为跟主题文件夹同名&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.5%E4%B8%BB%E9%A2%98%E5%90%8D%E4%BF%AE%E6%94%B9.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.5%E4%B8%BB%E9%A2%98%E5%90%8D%E4%BF%AE%E6%94%B9.png&#34;
 	width=&#34;457&#34;
 	height=&#34;375&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.5%E4%B8%BB%E9%A2%98%E5%90%8D%E4%BF%AE%E6%94%B9_huc5e6e3d17c78110e6b9cedc719f07b4e_16393_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/1.5%E4%B8%BB%E9%A2%98%E5%90%8D%E4%BF%AE%E6%94%B9_huc5e6e3d17c78110e6b9cedc719f07b4e_16393_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.5%E4%B8%BB%E9%A2%98%E5%90%8D%E4%BF%AE%E6%94%B9_hu16474799724051967686.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/1.5%E4%B8%BB%E9%A2%98%E5%90%8D%E4%BF%AE%E6%94%B9_hu14466086748644176880.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2796,10 +2820,10 @@
 &lt;ul&gt;
 &lt;li&gt;（5）再次启动hugo服务，查看主题，具体主题配置修改 &lt;strong&gt;hugo.yaml&lt;/strong&gt;，这里不细说，感兴趣可自行查找相关文章&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/stack%E4%B8%BB%E9%A2%98.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/stack%E4%B8%BB%E9%A2%98.png&#34;
 	width=&#34;1912&#34;
 	height=&#34;987&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/stack%E4%B8%BB%E9%A2%98_hua7031210cd158a803d00862be23a560b_398534_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/stack%E4%B8%BB%E9%A2%98_hua7031210cd158a803d00862be23a560b_398534_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/stack%E4%B8%BB%E9%A2%98_hu13058455221565664461.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/stack%E4%B8%BB%E9%A2%98_hu13097401748800935351.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2815,10 +2839,10 @@
 &lt;li&gt;（1）前往【&lt;a class=&#34;link&#34; href=&#34;https://github.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Github官网&lt;/a&gt;】，创建仓库 &lt;strong&gt;{github用户名}.github.io&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/github%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/github%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA.png&#34;
 	width=&#34;683&#34;
 	height=&#34;163&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/github%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA_hud73596210985cbea96f88c3736533844_18346_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/github%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA_hud73596210985cbea96f88c3736533844_18346_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/github%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA_hu13636233454874534047.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/github%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA_hu14029540066389114074.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2830,10 +2854,10 @@
 &lt;ul&gt;
 &lt;li&gt;（2）前往&lt;code&gt;Setting -&amp;gt; Pages -&amp;gt; Branch&lt;/code&gt;选择main分支，然后保存，会自动开启 &lt;strong&gt;https://{github用户名}.github.io&lt;/strong&gt; 的地址，这地址也是以后访问博客的地址&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubPage%E5%90%AF%E5%8A%A8.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/githubPage%E5%90%AF%E5%8A%A8.png&#34;
 	width=&#34;872&#34;
 	height=&#34;555&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubPage%E5%90%AF%E5%8A%A8_hu3f700aa7925600d99c25f6380950f810_61121_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubPage%E5%90%AF%E5%8A%A8_hu3f700aa7925600d99c25f6380950f810_61121_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/githubPage%E5%90%AF%E5%8A%A8_hu7152301421823947195.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/githubPage%E5%90%AF%E5%8A%A8_hu1901808604315730425.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2845,10 +2869,10 @@
 &lt;ul&gt;
 &lt;li&gt;（3）回到hugo文件中，执行命令&lt;code&gt;hugo -D&lt;/code&gt;，会生成 &lt;strong&gt;public&lt;/strong&gt; 静态资源文件夹&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6.png&#34;
 	width=&#34;698&#34;
 	height=&#34;556&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6_huc6852b1f78249350a5843745ee9e27f8_47603_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6_huc6852b1f78249350a5843745ee9e27f8_47603_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6_hu13746208741483579646.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6_hu4371999441949824785.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2891,10 +2915,10 @@
 &lt;p&gt;（2）前往&lt;code&gt;Setttings -&amp;gt; Developer Settings -&amp;gt; Personal access tokens&lt;/code&gt;，创建一个token(classic)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/createToken1.png&#34;
 	width=&#34;1462&#34;
 	height=&#34;359&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken1_hu4766607541a74e947c83c2388882dd72_53636_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken1_hu4766607541a74e947c83c2388882dd72_53636_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/createToken1_hu3225163424929124414.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/createToken1_hu8495560841693532671.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2906,10 +2930,10 @@
 &lt;ul&gt;
 &lt;li&gt;（3）token选择永不过期，并勾选 &lt;strong&gt;repo&lt;/strong&gt; 和 &lt;strong&gt;workflow&lt;/strong&gt; 选项&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/createToken2.png&#34;
 	width=&#34;1050&#34;
 	height=&#34;637&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken2_huda58f9f86b34c5d074df9a9a778ea617_56016_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken2_huda58f9f86b34c5d074df9a9a778ea617_56016_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/createToken2_hu6150244707236553172.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/createToken2_hu13315092729391035093.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2921,10 +2945,10 @@
 &lt;ul&gt;
 &lt;li&gt;（4）为保证安全，将生成的token，保存的仓库的变量中，前往&lt;code&gt;Settings -&amp;gt; Secrets and variables -&amp;gt; Actions&lt;/code&gt;中设置&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/createToken3.png&#34;
 	width=&#34;842&#34;
 	height=&#34;312&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken3_hucc7d21bd60774f30bc8fab31a1d73b28_25059_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createToken3_hucc7d21bd60774f30bc8fab31a1d73b28_25059_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/createToken3_hu8435878091243039327.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/createToken3_hu4691990066752145827.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2933,10 +2957,10 @@
 		data-flex-basis=&#34;647px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/setToken1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/setToken1.png&#34;
 	width=&#34;1222&#34;
 	height=&#34;712&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/setToken1_hu5afa2fb67f7ac9ecab12c537647b0ad8_77407_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/setToken1_hu5afa2fb67f7ac9ecab12c537647b0ad8_77407_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/setToken1_hu4815040327071206833.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/setToken1_hu3578400413721326659.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3067,10 +3091,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -u origin main
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubActionRun.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/githubActionRun.png&#34;
 	width=&#34;1635&#34;
 	height=&#34;398&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubActionRun_hu84c0fe2cd56b8ab4941172dc9f206338_36617_480x0_resize_box_3.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugohugo--github-%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubActionRun_hu84c0fe2cd56b8ab4941172dc9f206338_36617_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/githubActionRun_hu924624790113105530.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-blog/githubActionRun_hu14556014354036984040.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
