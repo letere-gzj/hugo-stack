@@ -1,0 +1,24 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "阿库露_vts.moc3",
+		"Textures": [
+			"阿库露_vts.4096/texture_00.png",
+			"阿库露_vts.4096/texture_01.png"
+		],
+		"Physics": "阿库露_vts.physics3.json",
+		"DisplayInfo": "阿库露_vts.cdi3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		}
+	]
+}
