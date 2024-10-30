@@ -1,0 +1,75 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "阿库露_vts.moc3",
+		"Textures": [
+			"阿库露_vts.4096/texture_00.png",
+			"阿库露_vts.4096/texture_01.png"
+		],
+		"Physics": "阿库露_vts.physics3.json",
+		"DisplayInfo": "阿库露_vts.cdi3.json",
+		"Expressions": [
+			{
+				"Name": "O",
+				"File": "exp/O形嘴.exp3.json"
+			},
+			{
+				"Name": "Stupid",
+				"File": "exp/呆呆脸.exp3.json"
+			},
+			{
+				"Name": "Shy",
+				"File": "exp/害羞脸.exp3.json"
+			},
+			{
+				"Name": "ShakeHand",
+				"File": "exp/挥挥手.exp3.json"
+			},
+			{
+				"Name": "Squint",
+				"File": "exp/眯眯眼脸.exp3.json"
+			},
+			{
+				"Name": "Corestenoma",
+				"File": "exp/瞳孔缩小.exp3.json"
+			},
+			{
+				"Name": "FaceRed",
+				"File": "exp/脸红.exp3.json"
+			},
+			{
+				"Name": "FaceDark",
+				"File": "exp/脸黑.exp3.json"
+			}
+		],
+		"Motions": {
+			"TapBody": [
+				{
+					"File": "motions/招手.motion3.json"
+				}
+			]
+		}
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		}
+	],
+	"HitAreas": [
+		{
+			"Id": "HitAreaHead",
+			"Name": "Head"
+		},
+		{
+			"Id": "HitAreaBody",
+			"Name": "Body"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{
+    "Type": "Live2D Expression",
+    "Parameters": [
+        {
+            "Id": "eyesmallerButton",
+            "Value": 1.0,
+            "Blend": "Add"
+        }
+    ]
+}

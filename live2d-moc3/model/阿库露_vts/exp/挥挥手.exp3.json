@@ -1,0 +1,15 @@
+{
+    "Type": "Live2D Expression",
+    "Parameters": [
+        {
+            "Id": "HandNormalButton",
+            "Value": -1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "HandButton4",
+            "Value": 1.0,
+            "Blend": "Add"
+        }
+    ]
+}

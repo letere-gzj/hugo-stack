@@ -2,17 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://letere-gzj.github.io/hugo-stack/p/java/java-log/</loc>
-    <lastmod>2024-10-16T17:43:48+08:00</lastmod>
+    <loc>https://letere-gzj.github.io/hugo-stack/categories/</loc>
+    <lastmod>2024-10-30T20:17:58+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/post/</loc>
+    <lastmod>2024-10-30T20:17:58+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2024-10-30T20:17:58+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/study/color-assortment/</loc>
+    <lastmod>2024-10-30T20:17:58+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/java/java-log/</loc>
     <lastmod>2024-10-16T17:43:48+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/</loc>
     <lastmod>2024-10-15T17:28:21+08:00</lastmod>
-  </url><url>
-    <loc>https://letere-gzj.github.io/hugo-stack/categories/</loc>
-    <lastmod>2024-10-16T17:43:48+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/tags/</loc>
     <lastmod>2024-10-16T17:43:48+08:00</lastmod>

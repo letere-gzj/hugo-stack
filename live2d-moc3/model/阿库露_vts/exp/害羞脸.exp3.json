@@ -1,0 +1,45 @@
+{
+    "Type": "Live2D Expression",
+    "Parameters": [
+        {
+            "Id": "MouthNormalButton",
+            "Value": -1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "RedButton",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "RedButton2",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "RedButton3",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "CryButton3",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "CryButton4",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "EyeNormalButton",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "EyeNormalButton2",
+            "Value": 0.0,
+            "Blend": "Add"
+        }
+    ]
+}
