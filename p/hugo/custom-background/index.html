@@ -1369,14 +1369,10 @@
 	
 	
 	
-	
+
 	const sdkv5Path = "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2d-sdk.js"
 	const sdkCorePath = "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2dcubismcore.js"
 	const waifuTipsJsPath = "https://letere-gzj.github.io/hugo-stack/live2d-v3/waifu-tips.js"
-	
-  
-  const live2d_path = "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
-  
 
   
   function loadExternalResource(url, type) {
@@ -1404,15 +1400,15 @@
   if (screen.width >= 768) {
     Promise.all([
       loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/waifu.css", "css"),
+      loadExternalResource(sdkCorePath, "js"),
       loadExternalResource(sdkv5Path, "js"),
-	  loadExternalResource(sdkCorePath, "js"),
       loadExternalResource(waifuTipsJsPath, "js")
     ]).then(() => {
       
       initWidget({
         waifuPath: "https://letere-gzj.github.io/hugo-stack/live2d/my-waifu-tips.json",
         cdnPath: "https://letere-gzj.github.io/hugo-stack/" + "live2d-moc3/",
-        tools: ["hitokoto", "asteroids", "express", "switch-model", "switch-texture", "info", "quit"],
+        tools: ["hitokoto", "asteroids", "express", "info", "quit"],
         dragEnable: true,
         dragDirection: ["x"],
         switchType: "order"
@@ -1420,6 +1416,7 @@
     });
   }
 </script>
+
 </div>
 
     </body>
