@@ -992,57 +992,66 @@
 </script>
 
 	<script>
-	
-	
-	
-	
-	
-
-	const sdkv5Path = "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2d-sdk.js"
-	const sdkCorePath = "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2dcubismcore.js"
-	const waifuTipsJsPath = "https://letere-gzj.github.io/hugo-stack/live2d-v3/waifu-tips.js"
-
-  
-  function loadExternalResource(url, type) {
-    return new Promise((resolve, reject) => {
-      let tag;
-
-      if (type === "css") {
-        tag = document.createElement("link");
-        tag.rel = "stylesheet";
-        tag.href = url;
-      }
-      else if (type === "js") {
-        tag = document.createElement("script");
-        tag.src = url;
-      }
-      if (tag) {
-        tag.onload = () => resolve(url);
-        tag.onerror = () => reject(url);
-        document.head.appendChild(tag);
-      }
-    });
-  }
-
-  
-  if (screen.width >= 768) {
-    Promise.all([
-      loadExternalResource("https://letere-gzj.github.io/hugo-stack/live2d/waifu.css", "css"),
-      loadExternalResource(sdkCorePath, "js"),
-      loadExternalResource(sdkv5Path, "js"),
-      loadExternalResource(waifuTipsJsPath, "js")
-    ]).then(() => {
-      
-      initWidget({
-        waifuPath: "https://letere-gzj.github.io/hugo-stack/live2d/my-waifu-tips.json",
-        cdnPath: "https://letere-gzj.github.io/hugo-stack/" + "live2d-moc3/",
-        tools: ["hitokoto", "asteroids", "express", "info", "quit"],
-        dragEnable: true,
-        dragDirection: ["x"],
+    const config = {
+        
+        path: {
+            modelPath: "https:\/\/letere-gzj.github.io\/hugo-stack\/" + "live2d-moc3/",
+            cssPath: "https://letere-gzj.github.io/hugo-stack/live2d/waifu.css",
+            tipsJsonPath: "https://letere-gzj.github.io/hugo-stack/live2d/my-waifu-tips.json",
+            tipsJsPath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/waifu-tips.js",
+            live2dCorePath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2dcubismcore.js",
+            live2dSdkPath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2d-sdk.js"
+        },
+        
+        tools: ["hitokoto", "asteroids", "express", , "info", "quit"],
+        
+        drag: {
+            enable: true,
+            direction: ["x"]
+        },
+        
         switchType: "order"
-      });
-    });
-  }
+    }
+
+    
+    if (screen.width >= 768) {
+        Promise.all([
+            loadExternalResource(config.path.cssPath, "css"),
+            loadExternalResource(config.path.live2dCorePath, "js"),
+            loadExternalResource(config.path.live2dSdkPath, "js"),
+            loadExternalResource(config.path.tipsJsPath, "js")
+        ]).then(() => {
+            initWidget({
+                waifuPath: config.path.tipsJsonPath,
+                cdnPath: config.path.modelPath,
+                tools: config.tools,
+                dragEnable: config.drag.enable,
+                dragDirection: config.drag.direction,
+                switchType: config.switchType
+            });
+        });
+    }
+
+    
+    function loadExternalResource(url, type) {
+        return new Promise((resolve, reject) => {
+            let tag;
+            if (type === "css") {
+                tag = document.createElement("link");
+                tag.rel = "stylesheet";
+                tag.href = url;
+            }
+            else if (type === "js") {
+                tag = document.createElement("script");
+                tag.src = url;
+            }
+            if (tag) {
+                tag.onload = () => resolve(url);
+                tag.onerror = () => reject(url);
+                document.head.appendChild(tag);
+            }
+        });
+    }
 </script>
 
 </div>

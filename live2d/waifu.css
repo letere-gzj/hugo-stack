@@ -86,7 +86,7 @@
 	transition: opacity 1s;
 }
 
-#waifu:hover #waifu-tool {
+#live2d:hover +#waifu-tool {
 	opacity: 1;
 }
 

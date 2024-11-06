@@ -660,7 +660,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;这样就会文章开头显示修改时间&lt;/li&gt;
+&lt;li&gt;这样就会文章开头显示修改时间
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;tips:&lt;/strong&gt; 更新时间的格式去 &lt;strong&gt;hugo.yaml&lt;/strong&gt; 中的 &lt;strong&gt;params.dateFormat.lastUpdated&lt;/strong&gt; 进行修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B42.png&#34;
 	width=&#34;876&#34;
@@ -735,6 +739,7 @@
 		data-flex-basis=&#34;932px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;hr&gt;
 </description>
         </item>
         <item>
