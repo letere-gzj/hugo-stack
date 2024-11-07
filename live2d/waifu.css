@@ -90,6 +90,10 @@
 	opacity: 1;
 }
 
+#waifu-tool:hover {
+	opacity: 1;
+}
+
 #waifu-tool span {
 	display: block;
 	height: 30px;
