@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新">
-<title>【Hugo】Stack主题自定义修改</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍如何给博客引入moc3类型的live2d模型">
+<title>【Hugo】博客引入moc3类型的live2d模型</title>
 
-<link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/'>
+<link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/live2d-moc3/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.7939d387e48ebbb790808cf23bfd68f256eeac4fc25a0336fb6f6f8bdda04016.css"><meta property='og:title' content="【Hugo】Stack主题自定义修改">
-<meta property='og:description' content="记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新">
-<meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/'>
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.7939d387e48ebbb790808cf23bfd68f256eeac4fc25a0336fb6f6f8bdda04016.css"><meta property='og:title' content="【Hugo】博客引入moc3类型的live2d模型">
+<meta property='og:description' content="介绍如何给博客引入moc3类型的live2d模型">
+<meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/live2d-moc3/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-10-08T11:10:25&#43;08:00'/><meta property='article:modified_time' content='2024-11-06T17:57:23&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
-<meta name="twitter:title" content="【Hugo】Stack主题自定义修改">
-<meta name="twitter:description" content="记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新"><meta name="twitter:card" content="summary_large_image">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-11-14T15:21:35&#43;08:00'/><meta property='article:modified_time' content='2024-11-14T17:06:45&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta name="twitter:title" content="【Hugo】博客引入moc3类型的live2d模型">
+<meta name="twitter:description" content="介绍如何给博客引入moc3类型的live2d模型"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
     <link rel="shortcut icon" href="/hugo-stack/favicon.ico?v=2" />
 
@@ -302,10 +302,14 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-修改字体">1 修改字体</a></li>
-    <li><a href="#2-修改鼠标样式">2 修改鼠标样式</a></li>
-    <li><a href="#3-显示文章更新时间">3 显示文章更新时间</a></li>
-    <li><a href="#4-友链归档多列显示">4 友链、归档多列显示</a></li>
+    <li><a href="#1-基本引入">1 基本引入</a></li>
+    <li><a href="#2-自定义适配">2 自定义适配</a>
+      <ul>
+        <li><a href="#21-调整css和提示语">2.1 调整css和提示语</a></li>
+        <li><a href="#22-自定义模型">2.2 自定义模型</a></li>
+        <li><a href="#23-自定义模型-拓展">2.3 自定义模型-拓展</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         </div>
@@ -341,12 +345,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/hugo-stack/p/hugo/custom-stack-theme/">【Hugo】Stack主题自定义修改</a>
+            <a href="/hugo-stack/p/live2d-moc3/">【Hugo】博客引入moc3类型的live2d模型</a>
         </h2>
 
         
         <h3 class="article-subtitle">
-            记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新
+            介绍如何给博客引入moc3类型的live2d模型
         </h3>
         
     </div>
@@ -367,13 +371,13 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2024-10-08</time>
+                <time class="article-time--published">2024-11-14</time>
             </div>
         |
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2024-11-06
+                    2024-11-14
                 </time>
             </div>
 
@@ -381,7 +385,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                1246 字
+                1153 字
             </time>
         </div>
     </footer>
@@ -396,188 +400,30 @@
     
     
     <hr>
-<p>TODO：bilibili视频，可能做，可能不做，内容比较杂，不太好做视频</p>
+<p>TODO: bilibili视频，不摸的话</p>
 <hr>
-<h2 id="1-修改字体">1 修改字体
+<blockquote>
+<p><strong>前言</strong>：</p>
+<ul>
+<li>用 <a class="link" href="https://github.com/stevenjoezhang/live2d-widget"  target="_blank" rel="noopener"
+    >live2d-widget</a> 自带模型用腻了之后，想找一个自己喜欢的模型，就接触了moc3类型的模型。moc3类型是cubism新版模型的类型，而旧版模型的类型是moc模型</li>
+<li>而live2d-widget并不支持moc3模型，只支持moc模型，所以寻找新的组件来适配moc3模型。找到了以下两个组件 <a class="link" href="https://github.com/oh-my-live2d/oh-my-live2d"  target="_blank" rel="noopener"
+    >oh-my-live2d</a> 和 <a class="link" href="https://github.com/Konata09/Live2dOnWeb"  target="_blank" rel="noopener"
+    >Live2dOnWeb</a> ，但这两组件或多或少有自己的毛病，不及 <a class="link" href="https://github.com/stevenjoezhang/live2d-widget"  target="_blank" rel="noopener"
+    >live2d-widget</a> 使用方便</li>
+<li>于是个人基于 <a class="link" href="https://github.com/stevenjoezhang/live2d-widget"  target="_blank" rel="noopener"
+    >live2d-widget</a> 框架，对moc3类型的模型进行适配，诞生了此项目 <a class="link" href="https://github.com/letere-gzj/live2d-widget-v3"  target="_blank" rel="noopener"
+    >live2d-widget-v3</a></li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="1-基本引入">1 基本引入
 </h2><ul>
-<li>(1) 前往【<a class="link" href="https://www.100font.com/"  target="_blank" rel="noopener"
-    >100font</a>】，下载自己想要的字体，这边演示<strong>缝合像素字体</strong>，字体文件为 <strong>fusion-pixel-10px-monospaced-zh_hans.ttf</strong></li>
-</ul>
-<p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91.png"
-	width="1152"
-	height="579"
-	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91_hu912993607239724154.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B91_hu11079749733186030840.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="198"
-		data-flex-basis="477px"
-	
-></p>
+<li>（1）找到博客的页头(head)或页脚(footer)，将以下代码引入进去
 <ul>
-<li>(2) 把字体文件放入<code>assets/font</code>下(文件夹自己创建)</li>
-</ul>
-<p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92.png"
-	width="502"
-	height="188"
-	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92_hu12516269322304933381.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B92_hu18381981740631101024.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="267"
-		data-flex-basis="640px"
-	
-></p>
-<ul>
-<li>(3) 将以下代码修改并复制到<code>layouts/partials/footer/custom.html</code>文件中(文件不存在就自己创建)
-<ul>
-<li><strong>字体名</strong>：给字体命名一个别名，随便填写就好，保持统一就行</li>
-<li><strong>字体文件名</strong>：字体文件的全名，带后缀名的，也就是 <strong>xxx.ttf</strong></li>
+<li><strong>tips:</strong> stack主题的页脚在<code>layouts/partials/footer/custom.html</code>，可以修改此html</li>
 </ul>
 </li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">font-family</span><span class="o">:</span> <span class="s1">&#39;字体名&#39;</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">src</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="p">{</span><span class="err">{</span> <span class="err">(resources.Get</span> <span class="err">&#34;font/字体文件名&#34;).Permalink</span> <span class="p">}}</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;truetype&#39;</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">  <span class="err">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nv">--base-font-family</span><span class="p">:</span> <span class="s1">&#39;字体名&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="nv">--code-font-family</span><span class="p">:</span> <span class="s1">&#39;字体名&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>(4) 这样博客字体就修改好了</li>
-</ul>
-<p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93.png"
-	width="1537"
-	height="821"
-	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93_hu17417627805824578197.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E5%8D%9A%E5%AE%A2%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B93_hu13082588067879854751.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="187"
-		data-flex-basis="449px"
-	
-></p>
-<hr>
-<h2 id="2-修改鼠标样式">2 修改鼠标样式
-</h2><ul>
-<li>(1) 准备好鼠标样式图片(默认，指针，文本&hellip;)，图片大小建议控制在 <strong>32px</strong> 左右，将图片放入<code>static/mouse</code>文件夹下(文件夹自己创建)
-<ul>
-<li>演示鼠标来源：【<a class="link" href="https://www.bilibili.com/video/BV1KF411D7Y3"  target="_blank" rel="noopener"
-    >B站up主</a>】</li>
-</ul>
-</li>
-</ul>
-<p><img src="/hugo-stack/p/hugo/custom-stack-theme/normal.png"
-	width="32"
-	height="32"
-	srcset="/hugo-stack/p/hugo/custom-stack-theme/normal_hu14032668210150328343.png 480w, /hugo-stack/p/hugo/custom-stack-theme/normal_hu6292692700243705009.png 1024w"
-	loading="lazy"
-	
-		alt="默认光标"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="100"
-		data-flex-basis="240px"
-	
->
-<img src="/hugo-stack/p/hugo/custom-stack-theme/click.png"
-	width="32"
-	height="32"
-	srcset="/hugo-stack/p/hugo/custom-stack-theme/click_hu18340230354889606981.png 480w, /hugo-stack/p/hugo/custom-stack-theme/click_hu4294076499567343567.png 1024w"
-	loading="lazy"
-	
-		alt="指针光标"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="100"
-		data-flex-basis="240px"
-	
->
-<img src="/hugo-stack/p/hugo/custom-stack-theme/text.png"
-	width="32"
-	height="32"
-	srcset="/hugo-stack/p/hugo/custom-stack-theme/text_hu3101339259287223741.png 480w, /hugo-stack/p/hugo/custom-stack-theme/text_hu6057511031312973952.png 1024w"
-	loading="lazy"
-	
-		alt="文本光标"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="100"
-		data-flex-basis="240px"
-	
-></p>
-<p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%871.png"
-	width="498"
-	height="210"
-	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%871_hu3548677101552218964.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%871_hu3910316613496933341.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="237"
-		data-flex-basis="569px"
-	
-></p>
-<ul>
-<li>(2) 修改<code>assets/scss/custom.scss</code>(文件不存在则自己创建)，将以下代码复制进去，根据主题按实际情况填写对应的css选择器</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// 【鼠标样式常规写法】
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">body</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">html</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="sx">url(../mouse/默认光标图片名)</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="ni">auto</span> <span class="k">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nt">css选择器</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="sx">url(../mouse/其他光标图片名)</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="ni">auto</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>(3) 以下是我调试好的 <strong>stack</strong> 主题的鼠标样式，同样是stack主题的可以直接复制，修改对应的图片名即可</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -609,208 +455,186 @@
 </span><span class="lnt">26
 </span><span class="lnt">27
 </span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// 【Stack主题鼠标样式写法】
-</span></span></span><span class="line"><span class="cl"><span class="c1">// default光标图片
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">body</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">html</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nc">.article-content</span> <span class="nt">img</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="sx">url(../mouse/默认光标图片名)</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="ni">auto</span> <span class="k">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// pointer光标图片
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="na">a</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span><span class="na">
-</span></span></span><span class="line"><span class="cl"><span class="na">button</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="na">copyCodeButton</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="mh">#dark</span><span class="o">-</span><span class="n">mode-toggle</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="sx">url(../mouse/指针光标图片名)</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="ni">auto</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// text光标图片
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="na">input</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="n">site-description</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="n">article-subtitle</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="n">article-content</span> <span class="n">span</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="n">article-content</span> <span class="n">li</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="n">article-content</span> <span class="n">p</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="sx">url(../mouse/文本光标图片名)</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="ni">auto</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<h2 id="3-显示文章更新时间">3 显示文章更新时间
-</h2><ul>
-<li>(1) 在配置文件 <strong>hugo.yaml</strong> 中加入以下配置</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># 更新时间：优先读取git时间 -&gt; git时间不存在，就读取本地文件修改时间</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">lastmod</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="p">:</span><span class="l">git</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="p">:</span><span class="l">fileModTime</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 允许获取Git信息		</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableGitInfo</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>(2) 这样就提交代码时，就会去读取git时间，来更新文章的更新时间
-<ul>
-<li><em><strong>stack主题的文章更新时间在文章底部</strong></em></li>
-</ul>
-</li>
-</ul>
-<p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B41.png"
-	width="864"
-	height="404"
-	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B41_hu6290585001422895419.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B41_hu13678536194574241382.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="213"
-		data-flex-basis="513px"
-	
-></p>
-<ul>
-<li>(3) 若想在文章开头就显示更新时间，修改<code>layouts/partials/article/components/detail.html</code>，在指定位置引入以下代码</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;article-details&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    ...
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;article-time&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        ...
-</span></span><span class="line"><span class="cl">        <span class="c">&lt;!-- 更新时间 --&gt;</span>
-</span></span><span class="line"><span class="cl">        {{- if ne .Lastmod .Date -}}
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;article-lastmod&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                {{ partial &#34;helper/icon&#34; &#34;clock&#34; }}
-</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">time</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                    {{ .Lastmod.Format ( or .Site.Params.dateFormat.lastUpdated &#34;Jan 02, 2006 15:04 MST&#34; ) }}
-</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        {{- end -}}
-</span></span><span class="line"><span class="cl">        ....
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    ...
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>这样就会文章开头显示修改时间
-<ul>
-<li><strong>tips:</strong> 更新时间的格式去 <strong>hugo.yaml</strong> 中的 <strong>params.dateFormat.lastUpdated</strong> 进行修改</li>
-</ul>
-</li>
-</ul>
-<p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B42.png"
-	width="876"
-	height="503"
-	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B42_hu16224586151109242004.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B42_hu8867338688542746133.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="174"
-		data-flex-basis="417px"
-	
-></p>
-<hr>
-<h2 id="4-友链归档多列显示">4 友链、归档多列显示
-</h2><ul>
-<li>修改<code>assets/scss/custom.scss</code>文件(不存在则自行创建)，引入以下css样式代码</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@media</span> <span class="p">(</span><span class="na">min-width</span><span class="o">:</span> <span class="mi">1024</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nc">.article-list--compact</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="na">display</span><span class="o">:</span> <span class="ni">grid</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// 目前是两列，如需三列，则后面再加一个1fr，以此类推
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="na">grid-template-columns</span><span class="o">:</span> <span class="mi">1</span><span class="kt">fr</span> <span class="mi">1</span><span class="kt">fr</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="na">background</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="na">box-shadow</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="na">gap</span><span class="o">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nt">article</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="na">background</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">card-background</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="na">border</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="na">box-shadow</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">shadow-l2</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="na">margin-right</span><span class="o">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="na">border-radius</span><span class="o">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">cdnPath</span> <span class="o">=</span> <span class="s1">&#39;https://cdn.jsdelivr.net/gh/letere-gzj/live2d-widget-v3@main&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 资源路径
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">path</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">modelPath</span><span class="o">:</span> <span class="nx">cdnPath</span> <span class="o">+</span> <span class="s2">&#34;/Resources/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">cssPath</span><span class="o">:</span> <span class="nx">cdnPath</span> <span class="o">+</span> <span class="s2">&#34;/waifu.css&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">tipsJsonPath</span><span class="o">:</span> <span class="nx">cdnPath</span> <span class="o">+</span> <span class="s2">&#34;/waifu-tips.json&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">tipsJsPath</span><span class="o">:</span> <span class="nx">cdnPath</span> <span class="o">+</span> <span class="s2">&#34;/waifu-tips.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">live2dCorePath</span><span class="o">:</span> <span class="nx">cdnPath</span> <span class="o">+</span> <span class="s2">&#34;/Core/live2dcubismcore.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">live2dSdkPath</span><span class="o">:</span> <span class="nx">cdnPath</span> <span class="o">+</span> <span class="s2">&#34;/live2d-sdk.js&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 工具栏
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">tools</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;hitokoto&#34;</span><span class="p">,</span> <span class="s2">&#34;asteroids&#34;</span><span class="p">,</span> <span class="s2">&#34;express&#34;</span><span class="p">,</span> <span class="s2">&#34;switch-model&#34;</span><span class="p">,</span> <span class="s2">&#34;switch-texture&#34;</span><span class="p">,</span> <span class="s2">&#34;info&#34;</span><span class="p">,</span> <span class="s2">&#34;quit&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 模型拖拽
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">drag</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">enable</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">direction</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;x&#34;</span><span class="p">,</span> <span class="s2">&#34;y&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 模型切换(order: 顺序切换，random: 随机切换)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">switchType</span><span class="o">:</span> <span class="s2">&#34;order&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 加载资源并初始化
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;=</span> <span class="mi">768</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">cssPath</span><span class="p">,</span> <span class="s2">&#34;css&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">live2dCorePath</span><span class="p">,</span> <span class="s2">&#34;js&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">live2dSdkPath</span><span class="p">,</span> <span class="s2">&#34;js&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">tipsJsPath</span><span class="p">,</span> <span class="s2">&#34;js&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]).</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">initWidget</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">waifuPath</span><span class="o">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">tipsJsonPath</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">cdnPath</span><span class="o">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">modelPath</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tools</span><span class="o">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">tools</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">dragEnable</span><span class="o">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">drag</span><span class="p">.</span><span class="nx">enable</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">dragDirection</span><span class="o">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">drag</span><span class="p">.</span><span class="nx">direction</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">switchType</span><span class="o">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">switchType</span>
+</span></span><span class="line"><span class="cl">      <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 异步加载资源
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">function</span> <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kd">let</span> <span class="nx">tag</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&#34;css&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tag</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;link&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tag</span><span class="p">.</span><span class="nx">rel</span> <span class="o">=</span> <span class="s2">&#34;stylesheet&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tag</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&#34;js&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tag</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;script&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tag</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">tag</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tag</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tag</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">reject</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">document</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">tag</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E5%8F%8B%E9%93%BE%E5%8F%8C%E5%88%97%E6%98%BE%E7%A4%BA.png"
-	width="1286"
-	height="331"
-	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E5%8F%8B%E9%93%BE%E5%8F%8C%E5%88%97%E6%98%BE%E7%A4%BA_hu11357243786200684174.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E5%8F%8B%E9%93%BE%E5%8F%8C%E5%88%97%E6%98%BE%E7%A4%BA_hu12186303809925143077.png 1024w"
+</div><ul>
+<li>（2）这样就引入好了，模型是官方sdk自带的，模型的位置在仓库的<code>/Resources</code>目录下</li>
+</ul>
+<p><img src="/hugo-stack/p/live2d-moc3/%E5%9F%BA%E6%9C%AC%E5%BC%95%E5%85%A51.png"
+	width="490"
+	height="444"
+	srcset="/hugo-stack/p/live2d-moc3/%E5%9F%BA%E6%9C%AC%E5%BC%95%E5%85%A51_hu3699129196796394785.png 480w, /hugo-stack/p/live2d-moc3/%E5%9F%BA%E6%9C%AC%E5%BC%95%E5%85%A51_hu10597847308421648605.png 1024w"
 	loading="lazy"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="388"
-		data-flex-basis="932px"
+		data-flex-grow="110"
+		data-flex-basis="264px"
 	
 ></p>
 <hr>
+<h2 id="2-自定义适配">2 自定义适配
+</h2><h3 id="21-调整css和提示语">2.1 调整css和提示语
+</h3><ul>
+<li>（1）css样式调整和提示语的调整，跟live2d-widget无异，从仓库中下载<strong>waifu.css</strong>和<strong>waifu-tips.json</strong>文件，放入博客中，通过本地引入方式，修改代码中<code>config.path.cssPath</code>和<code>config.path.tipsJsonPath</code>这两个参数</li>
+<li>（2）具体操作和调整方式，请参考<a class="link" href="/hugo-stack/p/hugo/custom-live2d/#2-%e8%87%aa%e5%ae%9a%e4%b9%89%e9%80%82%e9%85%8d" >【Hugo】Live2d-widget 给博客引入萌萌的看板娘</a></li>
+</ul>
+<p><img src="/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%891.png"
+	width="852"
+	height="388"
+	srcset="/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%891_hu8334561162213298298.png 480w, /hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%891_hu16647429193501388759.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="219"
+		data-flex-basis="527px"
+	
+></p>
+<hr>
+<h3 id="22-自定义模型">2.2 自定义模型
+</h3><ul>
+<li>（1）自定义模型方式也是和live2d-widget基本无异(<del><em><strong>因为就是基于live2d-wdiget进行二开的</strong></em></del>)，准备好 <strong>model</strong> 和 <strong>model_list.json</strong> 文件，可直接下载本仓库代码中的<code>/Resources</code>目录</li>
+<li>（2）将自己的自定义模型中放入<strong>model</strong>目录，修改 <strong>model_list.json</strong> 文件，最后修改<code>config.path.modelPath</code>通过cdn的形式引入文件</li>
+<li>（3）具体操作参考<a class="link" href="/hugo-stack/p/hugo/custom-live2d/#2-%e8%87%aa%e5%ae%9a%e4%b9%89%e9%80%82%e9%85%8d" >【Hugo】Live2d-widget 给博客引入萌萌的看板娘</a></li>
+</ul>
+<p><img src="/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%892.png"
+	width="773"
+	height="315"
+	srcset="/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%892_hu9698367118476443868.png 480w, /hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%892_hu11521109069997175448.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="245"
+		data-flex-basis="588px"
+	
+></p>
+<hr>
+<h3 id="23-自定义模型-拓展">2.3 自定义模型-拓展
+</h3><ul>
+<li>除了live2d-widget原生的功能外，个人还进行了一些功能拓展</li>
+<li>接下来会以本站的模型，也是这位【<a class="link" href="https://www.bilibili.com/video/BV1vf421X7Hn"  target="_blank" rel="noopener"
+    >b站up主</a>】所提供的免费模型进行演示
+<ul>
+<li><em><strong>如果你也使用此模型，请勿吝啬你的点赞、投币，收藏，来支持一下此up主</strong></em></li>
+</ul>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1.png"
+	width="330"
+	height="375"
+	srcset="/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu6265983430155059033.png 480w, /hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu4869504311962086212.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="88"
+		data-flex-basis="211px"
+	
+></p>
+<hr>
+<p>TODO：本地调试弄好进行文档编写</p>
 
 </section>
 
@@ -848,12 +672,12 @@
             
                 
 <article class="">
-    <a href="/hugo-stack/p/live2d-moc3/">
+    <a href="/hugo-stack/p/hugo/custom-background/">
 
         
 
         <div class="article-details">
-            <h2 class="article-title">【Hugo】博客引入moc3类型的live2d模型
+            <h2 class="article-title">【Hugo】修改博客背景并引入动态背景
             </h2>
         </div>
     </a>
@@ -862,12 +686,12 @@
             
                 
 <article class="">
-    <a href="/hugo-stack/p/hugo/custom-background/">
+    <a href="/hugo-stack/p/hugo/custom-stack-theme/">
 
         
 
         <div class="article-details">
-            <h2 class="article-title">【Hugo】修改博客背景并引入动态背景
+            <h2 class="article-title">【Hugo】Stack主题自定义修改
             </h2>
         </div>
     </a>
