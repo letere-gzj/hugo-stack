@@ -10,7 +10,7 @@
 <meta property='og:description' content="介绍如何给博客引入moc3类型的live2d模型">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/live2d-moc3/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-11-14T15:21:35&#43;08:00'/><meta property='article:modified_time' content='2024-11-14T17:06:45&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-11-14T15:21:35&#43;08:00'/><meta property='article:modified_time' content='2024-11-19T18:00:01&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="【Hugo】博客引入moc3类型的live2d模型">
 <meta name="twitter:description" content="介绍如何给博客引入moc3类型的live2d模型"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
@@ -307,7 +307,18 @@
       <ul>
         <li><a href="#21-调整css和提示语">2.1 调整css和提示语</a></li>
         <li><a href="#22-自定义模型">2.2 自定义模型</a></li>
-        <li><a href="#23-自定义模型-拓展">2.3 自定义模型-拓展</a></li>
+        <li><a href="#23-自定义模型-拓展">2.3 自定义模型-拓展</a>
+          <ul>
+            <li><a href="#231-调整模型大小和位置">2.3.1 调整模型大小和位置</a></li>
+            <li><a href="#232-适配模型表情">2.3.2 适配模型表情</a></li>
+            <li><a href="#233-适配模型动作">2.3.3 适配模型动作</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#3-优化">3 优化</a>
+      <ul>
+        <li><a href="#31-png转webp">3.1 png转webp</a></li>
       </ul>
     </li>
   </ul>
@@ -377,7 +388,7 @@
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2024-11-14
+                    2024-11-19
                 </time>
             </div>
 
@@ -385,7 +396,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                1153 字
+                1825 字
             </time>
         </div>
     </footer>
@@ -634,7 +645,244 @@
 	
 ></p>
 <hr>
-<p>TODO：本地调试弄好进行文档编写</p>
+<h4 id="231-调整模型大小和位置">2.3.1 调整模型大小和位置
+</h4><ul>
+<li>在模型的目录下，创建一个config.json文件，将以下内容复制进去，修改参数就可以对大小和位置进行调整 【<a class="link" href="https://letere-gzj.github.io/live2d-v3-demo/"  target="_blank" rel="noopener"
+    >在线调整地址</a>】</li>
+<li><strong>scale</strong>: 模型大小</li>
+<li><strong>translate.x</strong>: 模型x轴偏移量</li>
+<li><strong>translate.y</strong>: 模型y轴偏移量</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;scale&#34;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;translate&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;x&#34;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;y&#34;</span><span class="p">:</span> <span class="mf">0.0</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41.png"
+	width="475"
+	height="197"
+	srcset="/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41_hu7162332327257526066.png 480w, /hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41_hu3106954491439025332.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="241"
+		data-flex-basis="578px"
+	
+></p>
+<hr>
+<h4 id="232-适配模型表情">2.3.2 适配模型表情
+</h4><ul>
+<li>模型文件中如果存在<code>xxx.exp3.json</code>文件，此文件为模型的表情文件</li>
+</ul>
+<p><img src="/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42.png"
+	width="547"
+	height="453"
+	srcset="/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42_hu865528068069803678.png 480w, /hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42_hu1366849209553501859.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="120"
+		data-flex-basis="289px"
+	
+></p>
+<ul>
+<li>可修改<code>xxx.model3.json</code>，按照以下格式，进行配置</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">...</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;FileReferences&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">...,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Expressions&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;表情名&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;File&#34;</span><span class="p">:</span> <span class="s2">&#34;表情文件路径&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43.png"
+	width="586"
+	height="568"
+	srcset="/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43_hu8102967777702742708.png 480w, /hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43_hu888501432401326176.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="103"
+		data-flex-basis="247px"
+	
+></p>
+<ul>
+<li>这样点击侧边工具栏的标签按钮，就会随机切换表情了</li>
+</ul>
+<hr>
+<h4 id="233-适配模型动作">2.3.3 适配模型动作
+</h4><ul>
+<li>若模型存在<code>xxx.motion3.json</code>文件，此文件为模型的动作文件</li>
+</ul>
+<p><img src="/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44.png"
+	width="529"
+	height="478"
+	srcset="/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44_hu587005784032521022.png 480w, /hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44_hu5012321822840937685.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="110"
+		data-flex-basis="265px"
+	
+></p>
+<ul>
+<li>可以修改<code>xxx.model3.json</code>文件，按照以下格式，进行配置</li>
+<li>动作的触发分为两种，配置时选其中一种配置即可
+<ul>
+<li><strong>Idel</strong>：闲置动作，会一直从闲置动作数组中，随机选一个进行播放</li>
+<li><strong>TapBody</strong>：点击动作，当点击画布时，才会从点击动作数组中，随机选一个进行播放</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">...</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;FileReferences&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">...</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Motions&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Idle&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;File&#34;</span><span class="p">:</span> <span class="s2">&#34;动作文件路径&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;TapBody&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;File&#34;</span><span class="p">:</span> <span class="s2">&#34;动作文件路径&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45.png"
+	width="636"
+	height="398"
+	srcset="/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45_hu8940765428483735333.png 480w, /hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45_hu6564659672653254400.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="159"
+		data-flex-basis="383px"
+	
+></p>
+<ul>
+<li>因为我配置的是TapBody，所以点击模型时，会触发模型的招手动作</li>
+</ul>
+<hr>
+<h2 id="3-优化">3 优化
+</h2><h3 id="31-png转webp">3.1 png转webp
+</h3><ul>
+<li>为了优化模型的加载速度，可以将模型中的皮肤png文件，转为webp文件</li>
+<li>清晰度几乎没有变化，但皮肤文件的小了有10倍多，可以减少网络请求量，从而加快加载速度</li>
+</ul>
+<p><img src="/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp1.png"
+	width="678"
+	height="192"
+	srcset="/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp1_hu11958732251395545840.png 480w, /hugo-stack/p/live2d-moc3/%E8%BD%ACwebp1_hu13128823962066910427.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="353"
+		data-flex-basis="847px"
+	
+></p>
+<ul>
+<li>转弯webp文件后，修改<code>xxx.model3.json</code>文件，将皮肤文件从png改成webp</li>
+</ul>
+<p><img src="/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp2.png"
+	width="561"
+	height="245"
+	srcset="/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp2_hu10829808436984738940.png 480w, /hugo-stack/p/live2d-moc3/%E8%BD%ACwebp2_hu3673437887931515338.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="228"
+		data-flex-basis="549px"
+	
+></p>
+<ul>
+<li>这样网络请求时要加载的数据量就会少很多</li>
+</ul>
+<p><img src="/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp3.png"
+	width="798"
+	height="550"
+	srcset="/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp3_hu17633319253363787813.png 480w, /hugo-stack/p/live2d-moc3/%E8%BD%ACwebp3_hu3040850138834790454.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="145"
+		data-flex-basis="348px"
+	
+></p>
+<hr>
 
 </section>
 

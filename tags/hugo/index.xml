@@ -247,7 +247,244 @@
 	
 &gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;TODO：本地调试弄好进行文档编写&lt;/p&gt;
+&lt;h4 id=&#34;231-调整模型大小和位置&#34;&gt;2.3.1 调整模型大小和位置
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;在模型的目录下，创建一个config.json文件，将以下内容复制进去，修改参数就可以对大小和位置进行调整 【&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/live2d-v3-demo/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在线调整地址&lt;/a&gt;】&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;scale&lt;/strong&gt;: 模型大小&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;translate.x&lt;/strong&gt;: 模型x轴偏移量&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;translate.y&lt;/strong&gt;: 模型y轴偏移量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;scale&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;translate&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;x&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;y&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41.png&#34;
+	width=&#34;475&#34;
+	height=&#34;197&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41_hu7162332327257526066.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41_hu3106954491439025332.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;241&#34;
+		data-flex-basis=&#34;578px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;232-适配模型表情&#34;&gt;2.3.2 适配模型表情
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;模型文件中如果存在&lt;code&gt;xxx.exp3.json&lt;/code&gt;文件，此文件为模型的表情文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42.png&#34;
+	width=&#34;547&#34;
+	height=&#34;453&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42_hu865528068069803678.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42_hu1366849209553501859.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;120&#34;
+		data-flex-basis=&#34;289px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可修改&lt;code&gt;xxx.model3.json&lt;/code&gt;，按照以下格式，进行配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;FileReferences&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;err&#34;&gt;...,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Expressions&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;#34;Name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;表情名&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;#34;File&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;表情文件路径&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43.png&#34;
+	width=&#34;586&#34;
+	height=&#34;568&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43_hu8102967777702742708.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43_hu888501432401326176.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;103&#34;
+		data-flex-basis=&#34;247px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这样点击侧边工具栏的标签按钮，就会随机切换表情了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;233-适配模型动作&#34;&gt;2.3.3 适配模型动作
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;若模型存在&lt;code&gt;xxx.motion3.json&lt;/code&gt;文件，此文件为模型的动作文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44.png&#34;
+	width=&#34;529&#34;
+	height=&#34;478&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44_hu587005784032521022.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44_hu5012321822840937685.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;110&#34;
+		data-flex-basis=&#34;265px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以修改&lt;code&gt;xxx.model3.json&lt;/code&gt;文件，按照以下格式，进行配置&lt;/li&gt;
+&lt;li&gt;动作的触发分为两种，配置时选其中一种配置即可
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Idel&lt;/strong&gt;：闲置动作，会一直从闲置动作数组中，随机选一个进行播放&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TapBody&lt;/strong&gt;：点击动作，当点击画布时，才会从点击动作数组中，随机选一个进行播放&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;FileReferences&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;err&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Motions&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Idle&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;#34;File&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;动作文件路径&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;TapBody&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;#34;File&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;动作文件路径&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45.png&#34;
+	width=&#34;636&#34;
+	height=&#34;398&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45_hu8940765428483735333.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45_hu6564659672653254400.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;因为我配置的是TapBody，所以点击模型时，会触发模型的招手动作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-优化&#34;&gt;3 优化
+&lt;/h2&gt;&lt;h3 id=&#34;31-png转webp&#34;&gt;3.1 png转webp
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;为了优化模型的加载速度，可以将模型中的皮肤png文件，转为webp文件&lt;/li&gt;
+&lt;li&gt;清晰度几乎没有变化，但皮肤文件的小了有10倍多，可以减少网络请求量，从而加快加载速度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp1.png&#34;
+	width=&#34;678&#34;
+	height=&#34;192&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp1_hu11958732251395545840.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp1_hu13128823962066910427.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;353&#34;
+		data-flex-basis=&#34;847px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;转弯webp文件后，修改&lt;code&gt;xxx.model3.json&lt;/code&gt;文件，将皮肤文件从png改成webp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp2.png&#34;
+	width=&#34;561&#34;
+	height=&#34;245&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp2_hu10829808436984738940.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp2_hu3673437887931515338.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;549px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这样网络请求时要加载的数据量就会少很多&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp3.png&#34;
+	width=&#34;798&#34;
+	height=&#34;550&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp3_hu17633319253363787813.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp3_hu3040850138834790454.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;348px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
 </description>
         </item>
         <item>
