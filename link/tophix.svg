@@ -1,0 +1,45 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+	<title>logo-svg</title>
+	<defs>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,7508.477,-6891.764,0,3220.285,84.41)">
+			<stop offset="0" stop-color="#ff74b7"/>
+			<stop offset="1" stop-color="#ff4081"/>
+		</linearGradient>
+		<linearGradient id="g2" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,12673.584,-11350.077,0,5144.528,38.474)">
+			<stop offset="0" stop-color="#cb4fd8"/>
+			<stop offset="1" stop-color="#9c27b0"/>
+		</linearGradient>
+		<linearGradient id="g3" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,7449.552,-6896.596,0,3246.896,20.1)">
+			<stop offset="0" stop-color="#00dfec"/>
+			<stop offset="1" stop-color="#00bcd4"/>
+		</linearGradient>
+		<linearGradient id="g4" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,4470.998,-6694.607,0,5036.499,20.1)">
+			<stop offset="0" stop-color="#ffe211"/>
+			<stop offset="1" stop-color="#ffc107"/>
+		</linearGradient>
+		<linearGradient id="g5" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,12673.584,-13074.647,0,6723.142,38.474)">
+			<stop offset="0" stop-color="#ff9047"/>
+			<stop offset="1" stop-color="#ff5722"/>
+		</linearGradient>
+		<linearGradient id="g6" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,12673.901,-11290.2,0,5078,20.1)">
+			<stop offset="0" stop-color="#07d4fa"/>
+			<stop offset="1" stop-color="#03a9f4"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1) } 
+		.s1 { fill: url(#g2) } 
+		.s2 { fill: url(#g3) } 
+		.s3 { fill: url(#g4) } 
+		.s4 { fill: url(#g5) } 
+		.s5 { fill: url(#g6) } 
+	</style>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s0" d="m175.2 220.3h2.9l2.5-2.8-131.2-133.1-2.8 5.4zm-107.7 18.4h120.7v-18.1h-120.7z"/>
+		<path id="Layer" fill-rule="evenodd" class="s1" d="m233.5 129.4h21.2l-66.5 109.3-10.1-18.1 27.5-45.3 0.3 0.3 2.9-5.7zm-158.1-88l1.9-2.9h3.5c0 0 125.8 129 128 131.5l-3.2 5.4z"/>
+		<path id="Layer" fill-rule="evenodd" class="s2" d="m188.2 38.5l-120.4-0.3v-18.1h120.4zm-13.6 0h3.5l1.9 3.2-131.2 132.1-2.9-5.4z"/>
+		<path id="Layer" fill-rule="evenodd" class="s3" d="m77.3 38.5l-24 39.8-0.4 0.1-4.7 7.9 0.3-0.1-32 53-15.2-9.8 66.5-109.3zm102.3 2.5l-1.5-2.5h-10.5l-114.3 39.8-4.8 7.9z"/>
+		<path id="Layer" fill-rule="evenodd" class="s4" d="m67.8 238.7l-66.5-109.3h21.2l27.6 45.6 1.9 2.9 21.8 35.8 4.1 6.8zm10.1-18.4l-0.1 0.2 0.1 0.1h1.9v-42.4h124.2l3.8-6h-128v-133.7h-2.5l-3.5 6v127.7h-25.4l1.9 2.8 1.9 3.2h21.6v35.5z"/>
+		<path id="Layer" fill-rule="evenodd" class="s5" d="m206.2 84.7l-28.1-46.2 10.1-18.4 66.5 109.3h-21.2l-21.2-34.9 0.3-0.3zm-24.1 129.6l-3.8 6h-4.1l32.6-132.1-123.8 132.1h-5.4l-1.3-1.6 128-136.8 1.9 2.8 6 9.9z"/>
+	</g>
+</svg>

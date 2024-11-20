@@ -456,7 +456,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;转弯webp文件后，修改&lt;code&gt;xxx.model3.json&lt;/code&gt;文件，将皮肤文件从png改成webp&lt;/li&gt;
+&lt;li&gt;转完webp文件后，修改&lt;code&gt;xxx.model3.json&lt;/code&gt;文件，将皮肤文件从png改成webp&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp2.png&#34;
 	width=&#34;561&#34;
@@ -717,7 +717,11 @@
 	
 &gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;(2) 下载配置文件，以及 &lt;strong&gt;particles.js&lt;/strong&gt; 所需要的js文件&lt;/li&gt;
+&lt;li&gt;(2) 下载配置文件，以及 &lt;strong&gt;particles.js&lt;/strong&gt; 所需要的js文件
+&lt;ul&gt;
+&lt;li&gt;【&lt;a class=&#34;link&#34; href=&#34;particlesjs-config.json&#34; &gt;particlesjs-config.json&lt;/a&gt;】(&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;S&lt;/kbd&gt; 保存)，本博客的动态背景json配置，有需求的可直接下载&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/particlesJs2.png&#34;
 	width=&#34;747&#34;
