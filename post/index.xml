@@ -13,7 +13,7 @@
         <pubDate>Thu, 14 Nov 2024 15:21:35 +0800</pubDate>
         
         <guid>https://letere-gzj.github.io/hugo-stack/p/hugo/live2d-moc3/</guid>
-        <description>&lt;hr&gt;
+        <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/hugo/live2d-moc3/cover.png" alt="Featured image of post 【Hugo】博客引入moc3类型的live2d模型" /&gt;&lt;hr&gt;
 &lt;p&gt;TODO: bilibili视频，不摸的话&lt;/p&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
@@ -518,17 +518,27 @@
         <pubDate>Sat, 12 Oct 2024 15:59:49 +0800</pubDate>
         
         <guid>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/</guid>
-        <description>&lt;hr&gt;
+        <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/cover.png" alt="Featured image of post 【Hugo】修改博客背景并引入动态背景" /&gt;&lt;hr&gt;
 &lt;p&gt;TODO：bilibili视频，不摸的话&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-修改背景图&#34;&gt;1 修改背景图
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;(1) 准备一张背景图，尽可能大一点，并放到&lt;code&gt;assets/background&lt;/code&gt;文件夹下(不存在则自己创建)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;(2) 在页脚文件&lt;code&gt;layouts/partials/footer/custom.html&lt;/code&gt;中(不存在则自己创建)，引入以下代码，修改对应的背景图片名&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;(1) 准备一张背景图，尽可能大一点，并放到&lt;code&gt;assets/background&lt;/code&gt;文件夹下(不存在则自己创建)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/background.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1440&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/background_hu2151218798409956407.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/background_hu8371985567105139663.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(2) 在页脚文件&lt;code&gt;layouts/partials/footer/custom.html&lt;/code&gt;中(不存在则自己创建)，引入以下代码，修改对应的背景图片名&lt;/li&gt;
 &lt;/ul&gt;
 &lt;style type=&#34;text/css&#34;&gt;
      
@@ -673,7 +683,19 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;hr&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/%E8%83%8C%E6%99%AF%E5%9B%BE.png&#34;
+	width=&#34;2489&#34;
+	height=&#34;1251&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/%E8%83%8C%E6%99%AF%E5%9B%BE_hu18175841029863837376.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/%E8%83%8C%E6%99%AF%E5%9B%BE_hu11550029116250546254.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;477px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;2-引入动态背景&#34;&gt;2 引入动态背景
 &lt;/h2&gt;&lt;h3 id=&#34;21-樱花飞舞&#34;&gt;2.1 樱花飞舞
 &lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-background/%E6%A8%B1%E8%8A%B1%E9%A3%9E%E8%88%9E.png&#34;
@@ -833,7 +855,7 @@
         <pubDate>Tue, 08 Oct 2024 11:10:25 +0800</pubDate>
         
         <guid>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/</guid>
-        <description>&lt;hr&gt;
+        <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/cover.png" alt="Featured image of post 【Hugo】Stack主题自定义修改" /&gt;&lt;hr&gt;
 &lt;p&gt;TODO：bilibili视频，可能做，可能不做，内容比较杂，不太好做视频&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-修改字体&#34;&gt;1 修改字体

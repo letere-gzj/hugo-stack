@@ -10,10 +10,10 @@
 <meta property='og:description' content="介绍如何修改博客的背景图，以及如何引入有趣的动态背景特效">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-10-12T15:59:49&#43;08:00'/><meta property='article:modified_time' content='2024-11-20T17:50:32&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-10-12T15:59:49&#43;08:00'/><meta property='article:modified_time' content='2024-11-24T01:06:13&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/cover.png' />
 <meta name="twitter:title" content="【Hugo】修改博客背景并引入动态背景">
 <meta name="twitter:description" content="介绍如何修改博客的背景图，以及如何引入有趣的动态背景特效"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+    <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/cover.png' />
     <link rel="shortcut icon" href="/hugo-stack/favicon.ico?v=2" />
 
     </head>
@@ -320,8 +320,20 @@
 
 
             <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/hugo-stack/p/hugo/custom-background/">
+                <img src="/hugo-stack/p/hugo/custom-background/cover_hu2293983962586828338.png"
+                        srcset="/hugo-stack/p/hugo/custom-background/cover_hu2293983962586828338.png 800w, /hugo-stack/p/hugo/custom-background/cover_hu14574305980186920068.png 1600w"
+                        width="800" 
+                        height="250" 
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】修改博客背景并引入动态背景" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
     
@@ -376,7 +388,7 @@
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2024-11-20
+                    2024-11-24
                 </time>
             </div>
 
@@ -403,12 +415,22 @@
 <hr>
 <h2 id="1-修改背景图">1 修改背景图
 </h2><ul>
-<li>
-<p>(1) 准备一张背景图，尽可能大一点，并放到<code>assets/background</code>文件夹下(不存在则自己创建)</p>
-</li>
-<li>
-<p>(2) 在页脚文件<code>layouts/partials/footer/custom.html</code>中(不存在则自己创建)，引入以下代码，修改对应的背景图片名</p>
-</li>
+<li>(1) 准备一张背景图，尽可能大一点，并放到<code>assets/background</code>文件夹下(不存在则自己创建)</li>
+</ul>
+<p><img src="/hugo-stack/p/hugo/custom-background/background.png"
+	width="2560"
+	height="1440"
+	srcset="/hugo-stack/p/hugo/custom-background/background_hu2151218798409956407.png 480w, /hugo-stack/p/hugo/custom-background/background_hu8371985567105139663.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<ul>
+<li>(2) 在页脚文件<code>layouts/partials/footer/custom.html</code>中(不存在则自己创建)，引入以下代码，修改对应的背景图片名</li>
 </ul>
 <style type="text/css">
      
@@ -553,7 +575,19 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><hr>
+</div><p><img src="/hugo-stack/p/hugo/custom-background/%E8%83%8C%E6%99%AF%E5%9B%BE.png"
+	width="2489"
+	height="1251"
+	srcset="/hugo-stack/p/hugo/custom-background/%E8%83%8C%E6%99%AF%E5%9B%BE_hu18175841029863837376.png 480w, /hugo-stack/p/hugo/custom-background/%E8%83%8C%E6%99%AF%E5%9B%BE_hu11550029116250546254.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="198"
+		data-flex-basis="477px"
+	
+></p>
+<hr>
 <h2 id="2-引入动态背景">2 引入动态背景
 </h2><h3 id="21-樱花飞舞">2.1 樱花飞舞
 </h3><p><img src="/hugo-stack/p/hugo/custom-background/%E6%A8%B1%E8%8A%B1%E9%A3%9E%E8%88%9E.png"
@@ -741,9 +775,20 @@
         <div class="flex article-list--tile">
             
                 
-<article class="">
+<article class="has-image">
     <a href="/hugo-stack/p/hugo/live2d-moc3/">
 
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugo/live2d-moc3/cover.47964cfc431c0005f3c9eb3d99651190_hu4805388833244741341.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】博客引入moc3类型的live2d模型"
+                        data-key="hugo/live2d-moc3" 
+                        data-hash="md5-R5ZM/EMcAAXzyes9mWURkA==">
+                
+            </div>
         
 
         <div class="article-details">
@@ -755,9 +800,20 @@
 
             
                 
-<article class="">
+<article class="has-image">
     <a href="/hugo-stack/p/hugo/custom-stack-theme/">
 
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugo/custom-stack-theme/cover.552d684dee02b994c1b7efde44f1cb0d_hu5530006314175102094.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】Stack主题自定义修改"
+                        data-key="hugo/custom-stack-theme" 
+                        data-hash="md5-VS1oTe4CuZTBt&#43;/eRPHLDQ==">
+                
+            </div>
         
 
         <div class="article-details">
@@ -1145,7 +1201,7 @@
 		'乖乖报到-MC 张天赋',
 		'摄氏零度-张敬轩',
 		'爱别等-洪卓立',
-		'还记得-周柏豪',
+		'初初-古巨基',
 		'这个故事教训我们-李克勤'
 	];
 	let audios = [];
