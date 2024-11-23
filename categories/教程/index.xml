@@ -8,10 +8,10 @@
         <language>zh-cn</language>
         <copyright>莱特雷-letere</copyright><atom:link href="https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【Hugo】博客引入moc3类型的live2d模型</title>
-        <link>https://letere-gzj.github.io/hugo-stack/p/live2d-moc3/</link>
+        <link>https://letere-gzj.github.io/hugo-stack/p/hugo/live2d-moc3/</link>
         <pubDate>Thu, 14 Nov 2024 15:21:35 +0800</pubDate>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/p/live2d-moc3/</guid>
+        <guid>https://letere-gzj.github.io/hugo-stack/p/hugo/live2d-moc3/</guid>
         <description>&lt;hr&gt;
 &lt;p&gt;TODO: bilibili视频，不摸的话&lt;/p&gt;
 &lt;hr&gt;
@@ -173,10 +173,10 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;（2）这样就引入好了，模型是官方sdk自带的，模型的位置在仓库的&lt;code&gt;/Resources&lt;/code&gt;目录下&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E5%9F%BA%E6%9C%AC%E5%BC%95%E5%85%A51.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E5%9F%BA%E6%9C%AC%E5%BC%95%E5%85%A51.png&#34;
 	width=&#34;490&#34;
 	height=&#34;444&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E5%9F%BA%E6%9C%AC%E5%BC%95%E5%85%A51_hu3699129196796394785.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E5%9F%BA%E6%9C%AC%E5%BC%95%E5%85%A51_hu10597847308421648605.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E5%9F%BA%E6%9C%AC%E5%BC%95%E5%85%A51_hu3699129196796394785.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E5%9F%BA%E6%9C%AC%E5%BC%95%E5%85%A51_hu10597847308421648605.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -192,10 +192,10 @@
 &lt;li&gt;（1）css样式调整和提示语的调整，跟live2d-widget无异，从仓库中下载&lt;strong&gt;waifu.css&lt;/strong&gt;和&lt;strong&gt;waifu-tips.json&lt;/strong&gt;文件，放入博客中，通过本地引入方式，修改代码中&lt;code&gt;config.path.cssPath&lt;/code&gt;和&lt;code&gt;config.path.tipsJsonPath&lt;/code&gt;这两个参数&lt;/li&gt;
 &lt;li&gt;（2）具体操作和调整方式，请参考&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/#2-%e8%87%aa%e5%ae%9a%e4%b9%89%e9%80%82%e9%85%8d&#34; &gt;【Hugo】Live2d-widget 给博客引入萌萌的看板娘&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%891.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%891.png&#34;
 	width=&#34;852&#34;
 	height=&#34;388&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%891_hu8334561162213298298.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%891_hu16647429193501388759.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%891_hu8334561162213298298.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%891_hu16647429193501388759.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -211,10 +211,10 @@
 &lt;li&gt;（2）将自己的自定义模型中放入&lt;strong&gt;model&lt;/strong&gt;目录，修改 &lt;strong&gt;model_list.json&lt;/strong&gt; 文件，最后修改&lt;code&gt;config.path.modelPath&lt;/code&gt;通过cdn的形式引入文件&lt;/li&gt;
 &lt;li&gt;（3）具体操作参考&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-live2d/#2-%e8%87%aa%e5%ae%9a%e4%b9%89%e9%80%82%e9%85%8d&#34; &gt;【Hugo】Live2d-widget 给博客引入萌萌的看板娘&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%892.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%892.png&#34;
 	width=&#34;773&#34;
 	height=&#34;315&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%892_hu9698367118476443868.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%892_hu11521109069997175448.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%892_hu9698367118476443868.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%892_hu11521109069997175448.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -234,10 +234,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1.png&#34;
 	width=&#34;330&#34;
 	height=&#34;375&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu6265983430155059033.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu4869504311962086212.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu6265983430155059033.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu4869504311962086212.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -275,10 +275,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41.png&#34;
 	width=&#34;475&#34;
 	height=&#34;197&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41_hu7162332327257526066.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41_hu3106954491439025332.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41_hu7162332327257526066.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41_hu3106954491439025332.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -292,10 +292,10 @@
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;模型文件中如果存在&lt;code&gt;xxx.exp3.json&lt;/code&gt;文件，此文件为模型的表情文件&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42.png&#34;
 	width=&#34;547&#34;
 	height=&#34;453&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42_hu865528068069803678.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42_hu1366849209553501859.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42_hu865528068069803678.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42_hu1366849209553501859.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -337,10 +337,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43.png&#34;
 	width=&#34;586&#34;
 	height=&#34;568&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43_hu8102967777702742708.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43_hu888501432401326176.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43_hu8102967777702742708.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43_hu888501432401326176.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -352,15 +352,27 @@
 &lt;ul&gt;
 &lt;li&gt;这样点击侧边工具栏的标签按钮，就会随机切换表情了&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%A1%A8%E6%83%85%E5%88%87%E6%8D%A2.gif&#34;
+	width=&#34;1024&#34;
+	height=&#34;576&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%A1%A8%E6%83%85%E5%88%87%E6%8D%A2_hu4041891454558155399.gif 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%A1%A8%E6%83%85%E5%88%87%E6%8D%A2_hu372672823737886989.gif 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;233-适配模型动作&#34;&gt;2.3.3 适配模型动作
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;若模型存在&lt;code&gt;xxx.motion3.json&lt;/code&gt;文件，此文件为模型的动作文件&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44.png&#34;
 	width=&#34;529&#34;
 	height=&#34;478&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44_hu587005784032521022.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44_hu5012321822840937685.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44_hu587005784032521022.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44_hu5012321822840937685.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -420,10 +432,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45.png&#34;
 	width=&#34;636&#34;
 	height=&#34;398&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45_hu8940765428483735333.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45_hu6564659672653254400.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45_hu8940765428483735333.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45_hu6564659672653254400.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -435,6 +447,18 @@
 &lt;ul&gt;
 &lt;li&gt;因为我配置的是TapBody，所以点击模型时，会触发模型的招手动作&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E7%82%B9%E5%87%BB%E5%8A%A8%E4%BD%9C.gif&#34;
+	width=&#34;1280&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E7%82%B9%E5%87%BB%E5%8A%A8%E4%BD%9C_hu7133905328938138698.gif 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E7%82%B9%E5%87%BB%E5%8A%A8%E4%BD%9C_hu6398600253560736685.gif 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;3-优化&#34;&gt;3 优化
 &lt;/h2&gt;&lt;h3 id=&#34;31-png转webp&#34;&gt;3.1 png转webp
@@ -442,10 +466,10 @@
 &lt;li&gt;为了优化模型的加载速度，可以将模型中的皮肤png文件，转为webp文件&lt;/li&gt;
 &lt;li&gt;清晰度几乎没有变化，但皮肤文件的小了有10倍多，可以减少网络请求量，从而加快加载速度&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp1.png&#34;
 	width=&#34;678&#34;
 	height=&#34;192&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp1_hu11958732251395545840.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp1_hu13128823962066910427.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp1_hu11958732251395545840.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp1_hu13128823962066910427.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -457,10 +481,10 @@
 &lt;ul&gt;
 &lt;li&gt;转完webp文件后，修改&lt;code&gt;xxx.model3.json&lt;/code&gt;文件，将皮肤文件从png改成webp&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp2.png&#34;
 	width=&#34;561&#34;
 	height=&#34;245&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp2_hu10829808436984738940.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp2_hu3673437887931515338.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp2_hu10829808436984738940.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp2_hu3673437887931515338.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -472,10 +496,10 @@
 &lt;ul&gt;
 &lt;li&gt;这样网络请求时要加载的数据量就会少很多&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp3.png&#34;
 	width=&#34;798&#34;
 	height=&#34;550&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp3_hu17633319253363787813.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/live2d-moc3/%E8%BD%ACwebp3_hu3040850138834790454.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp3_hu17633319253363787813.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp3_hu3040850138834790454.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
