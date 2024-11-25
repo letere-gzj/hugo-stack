@@ -282,23 +282,85 @@
     <aside class="sidebar right-sidebar sticky">
         
             
-                <form action="/hugo-stack/search/" class="search-form widget" >
-        <p>
-            <label>搜索</label>
-            <input name="keyword" required placeholder="输入关键词..." />
+                <section>
+    <div class='clock-border'>
+        <div class='clock'>
+            <ul class='minute-marks'>
+                <li class='five'></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li class='five'></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li class='five'></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li class='five'></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li class='five'></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li class='five'></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class='hour'>
+                <div class='hand'></div>
+            </div>
+            <div class='minute'>
+                <div class='hand'></div>
+            </div>
+            <div class='second'>
+                <div class='hand'></div>
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href=https://letere-gzj.github.io/hugo-stack/clock/style.css media="screen" type="text/css" />
+
+    <script>
+        initTime()
+
         
-            <button title="搜索">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="10" cy="10" r="7" />
-  <line x1="21" y1="21" x2="15" y2="15" />
-</svg>
 
+        function initTime() {
+            
+            const now = new Date(Date.now() + 3000);
+            const perHour = 360 / 12;
+            const perHourMinute = perHour / 60;
+            const perSecond = 360 / 60;
+            
+            const hour = document.querySelector(".hour");
+            setDeg(hour, (now.getHours() % 12) * perHour + now.getMinutes() * perHourMinute)
+            
+            const minute = document.querySelector(".minute");
+            setDeg(minute, now.getMinutes() * perSecond + now.getSeconds() * perSecond / 60)
+            
+            const second = document.querySelector(".second");
+            setDeg(second, now.getSeconds() * perSecond)
+        }
 
+        
 
-            </button>
-        </p>
-    </form>
+        function setDeg(element, deg) {
+            element.style.transform = "rotate(" + deg + "deg)";
+        }
+    </script>
+</section>
+
             
         
             
