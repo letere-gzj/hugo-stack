@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.e08919214ed2075906505332095db96983e9c453353a8dbee95d1b297f4b1fed.css"><meta property='og:title' content="Category: 学习笔记 - 莱特雷-letere">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.714a822fe2939f43050edc68ff6eeb696826b34184bc547958aa6fa141c45770.css"><meta property='og:title' content="Category: 学习笔记 - 莱特雷-letere">
 <meta property='og:description' content="演示说明">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/'>
 <meta property='og:site_name' content='莱特雷-letere'>
@@ -282,83 +282,83 @@
         
             
                 <section>
-    <div class='clock-border'>
-        <div class='clock'>
-            <ul class='minute-marks'>
-                <li class='five'></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li class='five'></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li class='five'></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li class='five'></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li class='five'></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li class='five'></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div class='hour'>
-                <div class='hand'></div>
-            </div>
-            <div class='minute'>
-                <div class='hand'></div>
-            </div>
-            <div class='second'>
-                <div class='hand'></div>
+    <div class="clock-wrapper">
+        <div class='clock-border'>
+            <div class='clock'>
+                <ul class='minute-marks'>
+                    <li class='five'></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class='five'></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class='five'></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class='five'></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class='five'></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class='five'></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class='hour'>
+                    <div class='hand'></div>
+                </div>
+                <div class='minute'>
+                    <div class='hand'></div>
+                </div>
+                <div class='second'>
+                    <div class='hand'></div>
+                </div>
             </div>
         </div>
     </div>
-
-    <link rel="stylesheet" href=https://letere-gzj.github.io/hugo-stack/clock/style.css media="screen" type="text/css" />
-
-    <script>
-        initTime()
-
-        
-
-        function initTime() {
-            
-            const now = new Date(Date.now() + 3000);
-            const perHour = 360 / 12;
-            const perHourMinute = perHour / 60;
-            const perSecond = 360 / 60;
-            
-            const hour = document.querySelector(".hour");
-            setDeg(hour, (now.getHours() % 12) * perHour + now.getMinutes() * perHourMinute)
-            
-            const minute = document.querySelector(".minute");
-            setDeg(minute, now.getMinutes() * perSecond + now.getSeconds() * perSecond / 60)
-            
-            const second = document.querySelector(".second");
-            setDeg(second, now.getSeconds() * perSecond)
-        }
-
-        
-
-        function setDeg(element, deg) {
-            element.style.transform = "rotate(" + deg + "deg)";
-        }
-    </script>
 </section>
+
+<script>
+    initTime()
+
+    
+
+    function initTime() {
+        
+        const now = new Date(Date.now() + 3000);
+        const perHour = 360 / 12;
+        const perHourMinute = perHour / 60;
+        const perSecond = 360 / 60;
+        
+        const hour = document.querySelector(".hour");
+        setDeg(hour, (now.getHours() % 12) * perHour + now.getMinutes() * perHourMinute)
+        
+        const minute = document.querySelector(".minute");
+        setDeg(minute, now.getMinutes() * perSecond + now.getSeconds() * perSecond / 60)
+        
+        const second = document.querySelector(".second");
+        setDeg(second, now.getSeconds() * perSecond)
+    }
+
+    
+
+    function setDeg(element, deg) {
+        element.style.transform = "rotate(" + deg + "deg)";
+    }
+</script>
 
             
         
@@ -472,15 +472,6 @@
         console.log('particles.js loaded - callback');
     });
 </script>
-
-
-
-
-
-
-
-
-
 
 
 
