@@ -3782,9 +3782,10 @@
     &gt;B站up&lt;/a&gt;】&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;引入时钟组件&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;del&gt;引入时钟组件&lt;/del&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;2024.11.27&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;在翻页时钟和圆盘时钟中，选择了圆盘时钟，插件来源【&lt;a class=&#34;link&#34; href=&#34;https://github.com/letere-gzj/pure-css3-clock&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github&lt;/a&gt;】&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
