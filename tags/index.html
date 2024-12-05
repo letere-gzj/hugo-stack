@@ -10,7 +10,7 @@
 <meta property='og:description' content="演示说明">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/tags/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-11-27T18:00:12&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-12-05T14:24:18&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="Tags">
 <meta name="twitter:description" content="演示说明"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' /><link rel="alternate" type="application/rss&#43;xml" href="https://letere-gzj.github.io/hugo-stack/tags/index.xml">
@@ -603,6 +603,8 @@
 		initTocHide();
 		
 		initScrollTop();
+		
+		showWelcomeMessage();
 	})
 </script>
 
@@ -862,6 +864,7 @@
     const config = {
         
         path: {
+            homePath: "/hugo-stack/",
             modelPath: "https:\/\/letere-gzj.github.io\/hugo-stack\/" + "live2d-moc3/",
             cssPath: "https://letere-gzj.github.io/hugo-stack/live2d/waifu.css",
             tipsJsonPath: "https://letere-gzj.github.io/hugo-stack/live2d/my-waifu-tips.json",
@@ -870,7 +873,7 @@
             live2dSdkPath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2d-sdk.js"
         },
         
-        tools: ["hitokoto", "asteroids", "express", , "info", "quit"],
+        tools: ["hitokoto", "asteroids", "express", "info", "quit"],
         
         drag: {
             enable: true,
@@ -889,6 +892,7 @@
             loadExternalResource(config.path.tipsJsPath, "js")
         ]).then(() => {
             initWidget({
+                homePath: config.path.homePath,
                 waifuPath: config.path.tipsJsonPath,
                 cdnPath: config.path.modelPath,
                 tools: config.tools,

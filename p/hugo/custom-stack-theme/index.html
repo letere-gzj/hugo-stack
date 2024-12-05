@@ -1257,6 +1257,8 @@
 		initTocHide();
 		
 		initScrollTop();
+		
+		showWelcomeMessage();
 	})
 </script>
 
@@ -1516,6 +1518,7 @@
     const config = {
         
         path: {
+            homePath: "/hugo-stack/",
             modelPath: "https:\/\/letere-gzj.github.io\/hugo-stack\/" + "live2d-moc3/",
             cssPath: "https://letere-gzj.github.io/hugo-stack/live2d/waifu.css",
             tipsJsonPath: "https://letere-gzj.github.io/hugo-stack/live2d/my-waifu-tips.json",
@@ -1524,7 +1527,7 @@
             live2dSdkPath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2d-sdk.js"
         },
         
-        tools: ["hitokoto", "asteroids", "express", , "info", "quit"],
+        tools: ["hitokoto", "asteroids", "express", "info", "quit"],
         
         drag: {
             enable: true,
@@ -1543,6 +1546,7 @@
             loadExternalResource(config.path.tipsJsPath, "js")
         ]).then(() => {
             initWidget({
+                homePath: config.path.homePath,
                 waifuPath: config.path.tipsJsonPath,
                 cdnPath: config.path.modelPath,
                 tools: config.tools,
