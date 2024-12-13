@@ -249,7 +249,7 @@
 &lt;hr&gt;
 &lt;h4 id=&#34;231-调整模型大小和位置&#34;&gt;2.3.1 调整模型大小和位置
 &lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;在模型的目录下，创建一个config.json文件，将以下内容复制进去，修改参数就可以对大小和位置进行调整 【&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/live2d-v3-demo/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;li&gt;在模型的目录下，创建一个config.json文件，将以下内容复制进去，修改参数就可以对大小和位置进行调整 【&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/live2d-widget-v3/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;在线调整地址&lt;/a&gt;】&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;scale&lt;/strong&gt;: 模型大小&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;translate.x&lt;/strong&gt;: 模型x轴偏移量&lt;/li&gt;
