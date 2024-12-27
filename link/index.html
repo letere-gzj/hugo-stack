@@ -10,7 +10,7 @@
 <meta property='og:description' content="">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/link/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2024-12-13T17:39:12&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2024-12-27T17:54:39&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="技术链接">
 <meta name="twitter:description" content=""><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
@@ -587,6 +587,29 @@
                     
                     <div class="article-image">
                         <img src="/hugo-stack/link/hugo-notice.png" loading="lazy">
+                    </div>
+                
+            </a>
+        </article>
+    
+        <article>
+            <a href="https://github.com/EvanNotFound/vercount" target="_blank" rel="noopener">
+                <div class="article-details">
+                    <h2 class="article-title">vercount</h2>
+                    <footer class="article-time">
+                        
+                            文章浏览数统计，不蒜子计数的一个替代方案
+                        
+                    </footer>
+                </div>
+        
+                
+                    
+                    
+                        
+                    
+                    <div class="article-image">
+                        <img src="/hugo-stack/link/vercount-logo.png" loading="lazy">
                     </div>
                 
             </a>
@@ -1180,6 +1203,35 @@
         });
     }
 </script>
+
+	
+
+
+<div class="js-Pjax">
+    <script>
+        (function() {
+            let script = document.createElement('script');
+            script.defer = true;
+            script.src = "https://cn.vercount.one/js";
+            let footer = document.querySelector("footer")
+            if (footer) {
+                showHideView()
+                footer.appendChild(script);
+            }
+        })(document)
+
+        function showHideView() {
+            let viewCounts = document.querySelectorAll("#viewCount");
+            if (viewCounts) {
+                const style = document.querySelector(".article-page") ? '' : 'none';
+                viewCounts.forEach(ele => {
+                        ele.style.display = style;
+                    }
+                )
+            }
+        }
+    </script>
+</div>
 
 </div>
 
