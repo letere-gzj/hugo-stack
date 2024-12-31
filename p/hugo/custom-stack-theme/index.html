@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.714a822fe2939f43050edc68ff6eeb696826b34184bc547958aa6fa141c45770.css"><meta property='og:title' content="【Hugo】Stack主题自定义修改">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.804953fa399825df726dd76d0cb34c2200ccc128225bcbd5c5b7423e1634527f.css"><meta property='og:title' content="【Hugo】Stack主题自定义修改">
 <meta property='og:description' content="记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-10-08T11:10:25&#43;08:00'/><meta property='article:modified_time' content='2024-11-24T01:06:13&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/cover.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-10-08T11:10:25&#43;08:00'/><meta property='article:modified_time' content='2024-12-31T17:33:15&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/cover.png' />
 <meta name="twitter:title" content="【Hugo】Stack主题自定义修改">
 <meta name="twitter:description" content="记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/cover.png' />
@@ -385,7 +385,7 @@
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2024-11-24
+                    2024-12-31
                 </time>
             </div>
 
@@ -393,7 +393,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                1246 字
+                1347 字
             </time>
         </div>
         
@@ -689,7 +689,46 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>(2) 这样就提交代码时，就会去读取git时间，来更新文章的更新时间
+<li>(2) 修改github action文件<code>.github/workflows/xxx.yaml</code>，在运行 <strong>hugo -D</strong> 命令的step前加入以下配置</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Git Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">          git config --global core.quotePath false
+</span></span></span><span class="line"><span class="cl"><span class="sd">          git config --global core.autocrlf false
+</span></span></span><span class="line"><span class="cl"><span class="sd">          git config --global core.safecrlf true
+</span></span></span><span class="line"><span class="cl"><span class="sd">          git config --global core.ignorecase false</span><span class="w">          
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B43.png"
+	width="562"
+	height="647"
+	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B43_hu2614787356995756243.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B43_hu11255136505133528108.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="86"
+		data-flex-basis="208px"
+	
+></p>
+<ul>
+<li>(3) 这样就提交代码时，就会去读取git时间，来更新文章的更新时间
 <ul>
 <li><em><strong>stack主题的文章更新时间在文章底部</strong></em></li>
 </ul>
@@ -708,7 +747,7 @@
 	
 ></p>
 <ul>
-<li>(3) 若想在文章开头就显示更新时间，修改<code>layouts/partials/article/components/detail.html</code>，在指定位置引入以下代码</li>
+<li>(4) 若想在文章开头就显示更新时间，修改<code>layouts/partials/article/components/detail.html</code>，在指定位置引入以下代码</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
