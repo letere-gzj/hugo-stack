@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/study/color-assortment/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.ab4b1d16fb86e77f689221a256d4345e2628d660016a26fa91f3308ab93937d9.css"><meta property='og:title' content="颜色搭配">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.f046802aaeac33be65c5bd6966ff6e5a6d1f520a2101972068a6473cf0a11172.css"><meta property='og:title' content="颜色搭配">
 <meta property='og:description' content="关于颜色搭配的学习记录">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/study/color-assortment/'>
 <meta property='og:site_name' content='莱特雷-letere'>
@@ -670,12 +670,6 @@
 
 
 
-<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
-<script type="text/javascript">
-    document.write(returnCitySN["cip"]+','+returnCitySN["cname"])
-    console.log(returnCitySN);
-</script>
-
 
 
 	
@@ -939,6 +933,7 @@
         cursor: pointer;
         width: 30px;
         height: 30px;
+        transition: transform 0.8s ease-in-out;
     }
 
     [data-scheme="light"] {
@@ -946,9 +941,9 @@
             background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-light.svg);
         }
 
-        #backTopBtn:hover {
-            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-light2.svg);
-        }
+         
+          
+         
     }
 
     [data-scheme="dark"] {
@@ -956,8 +951,25 @@
             background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-dark.svg);
         }
 
-        #backTopBtn:hover {
-            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-dark2.svg);
+         
+          
+         
+    }
+
+    #backTopBtn:hover {
+        transform: rotate(360deg)
+         
+    }
+
+    @keyframes wobble {
+        0%, 100% {
+            transform: rotate(0);
+        }
+        25% {
+            transform: rotate(45deg);
+        }
+        65% {
+            transform: rotate(-45deg);
         }
     }
 </style>
