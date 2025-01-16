@@ -100,9 +100,9 @@
     &gt;&lt;strong&gt;vercount&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;博客按钮添加动画效果&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;del&gt;博客元素添加动画效果&lt;/del&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;2025.01.16&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;初步将能点击的元素，弄了些动画效果，感觉差不多就好，弄太多反而有点杂乱&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
