@@ -104,6 +104,12 @@
           &lt;td style=&#34;text-align: left&#34;&gt;2025.01.16&lt;/td&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;初步将能点击的元素，弄了些动画效果，感觉差不多就好，弄太多反而有点杂乱&lt;/td&gt;
       &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;del&gt;实现仿Github的markdown引用块颜色自定义写法&lt;/del&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;2025.01.23&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;感谢大佬的文章参考 &lt;a class=&#34;link&#34; href=&#34;https://blog.hentioe.dev/posts/hugo-support-blockquote-alerts.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;让Hugo支持GitHub风格的块引用Alerts&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
