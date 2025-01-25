@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.4ab6afceb5bfeb4ba1bac220c47705a6e91f82bde0802f900e0b1dc6759f9e93.css"><meta property='og:title' content="【Hugo】Stack主题自定义修改">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.36a68c9ef5edb3b2d69993e6dc42c8b2423ff1a2c82f1a2bca93fe5b7e3a3c07.css"><meta property='og:title' content="【Hugo】Stack主题自定义修改">
 <meta property='og:description' content="记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-10-08T11:10:25&#43;08:00'/><meta property='article:modified_time' content='2025-01-23T17:28:17&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/cover.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-10-08T11:10:25&#43;08:00'/><meta property='article:modified_time' content='2025-01-25T13:35:39&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/cover.png' />
 <meta name="twitter:title" content="【Hugo】Stack主题自定义修改">
 <meta name="twitter:description" content="记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/cover.png' />
@@ -312,6 +312,7 @@
     <li><a href="#6-添加返回顶部按钮">6 添加&rsquo;返回顶部&rsquo;按钮</a></li>
     <li><a href="#7-macos风格的代码块">7 macOS风格的代码块</a></li>
     <li><a href="#8-自定义md引用块颜色模板">8 自定义MD引用块颜色模板</a></li>
+    <li><a href="#9-代码块过长折叠展开">9 代码块过长折叠&amp;展开</a></li>
   </ul>
 </nav>
         </div>
@@ -368,7 +369,7 @@
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2025-01-23
+                    2025-01-25
                 </time>
             </div>
 
@@ -376,7 +377,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                2630 字
+                3020 字
             </time>
         </div>
         
@@ -1280,7 +1281,7 @@
 </span></span><span class="line"><span class="cl">    <span class="na">--card-separator-color</span><span class="o">:</span> <span class="mh">#55aa55</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--blockquote-background-color</span><span class="o">:</span> <span class="mh">#eeffee</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="nc">.alert-warning</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nc">.alert-warn</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--card-separator-color</span><span class="o">:</span> <span class="mh">#ffbb78</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--blockquote-background-color</span><span class="o">:</span> <span class="mh">#ffeecc</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
@@ -1299,7 +1300,7 @@
 </span></span><span class="line"><span class="cl">    <span class="na">--card-separator-color</span><span class="o">:</span> <span class="mh">#336733</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--blockquote-background-color</span><span class="o">:</span> <span class="mh">#112310</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="nc">.alert-warning</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nc">.alert-warn</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--card-separator-color</span><span class="o">:</span> <span class="mh">#aa5501</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--blockquote-background-color</span><span class="o">:</span> <span class="mh">#452300</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
@@ -1313,7 +1314,7 @@
 </div><ul>
 <li>(3) 使用方法
 <ul>
-<li>可选项：<strong>NOTE</strong> | <strong>TIP</strong> | <strong>WARNING</strong> | <strong>ERROR</strong></li>
+<li>可选项：<strong>NOTE</strong> | <strong>TIP</strong> | <strong>WARN</strong> | <strong>ERROR</strong></li>
 <li>可仿照上面css写法，自行添加新的css样式，来实现更多的可选项</li>
 </ul>
 </li>
@@ -1367,7 +1368,7 @@
 
     <p>这是TIP风格</p>
 </blockquote>
-<blockquote class="alert alert-warning">
+<blockquote class="alert alert-warn">
 
 
 
@@ -1383,7 +1384,7 @@
 
 
 
-    <p>这是WARNING风格</p>
+    <p>这是WARN风格</p>
 </blockquote>
 <blockquote class="alert alert-error">
 
@@ -1404,6 +1405,197 @@
     <p>这是ERROR风格</p>
 </blockquote>
 <hr>
+<h2 id="9-代码块过长折叠展开">9 代码块过长折叠&amp;展开
+</h2><blockquote class="alert alert-note">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>代码块折叠的样式风格完全仿照<a class="link" href="https://blog.csdn.net/"  target="_blank" rel="noopener"
+    ><strong>CSDN</strong></a>来实现的</p>
+</blockquote>
+<ul>
+<li>
+<p>(1) 准备一张<a class="link" href="codeMore.png" ><strong>向下展开图片</strong></a>(<kbd>Ctrl</kbd>+<kbd>S</kbd>保存)，放到<code>assets/icons</code>目录下</p>
+</li>
+<li>
+<p>(2) 将以下代码复制进<code>layouts/partials/footer/custom.html</code>(文件不存在则自行创建)</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">highlight</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c">/* 你可以根据需要调整这个高度 */</span>
+</span></span><span class="line"><span class="cl">        <span class="k">max-height</span><span class="p">:</span> <span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">code-show</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">max-height</span><span class="p">:</span> <span class="kc">none</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">code-more-box</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">padding-top</span><span class="p">:</span> <span class="mi">78</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">background-image</span><span class="p">:</span> <span class="kp">-webkit-</span><span class="nf">gradient</span><span class="p">(</span><span class="kc">linear</span><span class="p">,</span> <span class="kc">left</span> <span class="kc">top</span><span class="p">,</span> <span class="kc">left</span> <span class="kc">bottom</span><span class="p">,</span> <span class="nf">from</span><span class="p">(</span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span> <span class="nf">to</span><span class="p">(</span><span class="mh">#fff</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">right</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">z-index</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">code-more-btn</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">margin</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mi">44</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">height</span><span class="p">:</span> <span class="mi">22</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">background</span><span class="p">:</span> <span class="mh">#f0f0f5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">border-top-left-radius</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">border-top-right-radius</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">padding-top</span><span class="p">:</span> <span class="mi">6</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">code-more-img</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">margin</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mi">22</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">height</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nx">initCodeMoreBox</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">codeBlocks</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&#34;.highlight&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">codeBlocks</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">codeBlocks</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">codeBlock</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 校验是否overflow
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="nx">codeBlock</span><span class="p">.</span><span class="nx">scrollHeight</span> <span class="o">&lt;=</span> <span class="nx">codeBlock</span><span class="p">.</span><span class="nx">clientHeight</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 元素初始化
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="c1">// codeMoreBox
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kd">let</span> <span class="nx">codeMoreBox</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">codeMoreBox</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;code-more-box&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// codeMoreBtn
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kd">let</span> <span class="nx">codeMoreBtn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">codeMoreBtn</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;code-more-btn&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">codeMoreBtn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">codeBlock</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;code-show&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">codeMoreBox</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">})</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// img
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kd">let</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">img</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;code-more-img&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="p">{{</span> <span class="p">(</span><span class="nx">resources</span><span class="p">.</span><span class="nx">Get</span> <span class="s2">&#34;icons/codeMore.png&#34;</span><span class="p">).</span><span class="nx">Permalink</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 元素添加
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">codeMoreBtn</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">img</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">codeMoreBox</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">codeMoreBtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">codeBlock</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">codeMoreBox</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nx">initCodeMoreBox</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 
 </section>
 
@@ -2201,6 +2393,89 @@
                     }
                 )
             }
+        }
+    </script>
+</div>
+
+	<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+         
+    }
+
+    .code-more-img {
+         
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<div class="js-Pjax">
+    <script>
+        (function() {
+            initCodeMoreBox();
+        })(document)
+
+        function initCodeMoreBox() {
+            let codeBlocks = document.querySelectorAll(".highlight");
+            if (!codeBlocks) {
+                return;
+            }
+            codeBlocks.forEach(codeBlock => {
+                
+                if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+                    return;
+                }
+                
+                
+                let codeMoreBox = document.createElement('div');
+                codeMoreBox.classList.add('code-more-box');
+                
+                let codeMoreBtn = document.createElement('span');
+                codeMoreBtn.classList.add('code-more-btn');
+                codeMoreBtn.addEventListener('click', () => {
+                    codeBlock.classList.add('code-show');
+                    codeMoreBox.style.display = 'none';
+                })
+                
+                let img = document.createElement('img');
+                img.classList.add('code-more-img');
+                img.src = "https://letere-gzj.github.io/hugo-stack/icons/codeMore.png"
+                
+                codeMoreBtn.appendChild(img);
+                codeMoreBox.appendChild(codeMoreBtn);
+                codeBlock.appendChild(codeMoreBox)
+            })
         }
     </script>
 </div>
