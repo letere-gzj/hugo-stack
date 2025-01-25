@@ -221,6 +221,9 @@
   }, {
     "selector": ".aplayer-list li",
     "text": ["要听 <span>{text}</span> 吗？"]
+  }, {
+    "selector": ".code-more-btn",
+    "text": ["点击查看代码详情吧！", "代码被折叠了，点击可以查看更多哦！"]
   }],
   "click": [{
     "selector": "#live2d",

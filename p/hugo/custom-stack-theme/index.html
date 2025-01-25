@@ -10,7 +10,7 @@
 <meta property='og:description' content="记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-10-08T11:10:25&#43;08:00'/><meta property='article:modified_time' content='2025-01-25T13:35:39&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/cover.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-10-08T11:10:25&#43;08:00'/><meta property='article:modified_time' content='2025-01-25T14:31:17&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/cover.png' />
 <meta name="twitter:title" content="【Hugo】Stack主题自定义修改">
 <meta name="twitter:description" content="记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/cover.png' />
@@ -377,7 +377,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                3020 字
+                2972 字
             </time>
         </div>
         
@@ -957,17 +957,17 @@
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 监听滚动
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;scroll&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//清除class值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">openUl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&#34;.open&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">openUl</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">openUl</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">ul</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">ul</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&#34;open&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="p">})</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 获取active-class
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">currentLi</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.active-class&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">currentLi</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="k">return</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">//清除class值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">elementsByClassName</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&#34;.open&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">elementsByClassName</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="nx">elementsByClassName</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">ul</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="nx">ul</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&#34;open&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                <span class="p">})</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 展示子ul
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">currentLi</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
@@ -1003,14 +1003,7 @@
 <hr>
 <h2 id="6-添加返回顶部按钮">6 添加&rsquo;返回顶部&rsquo;按钮
 </h2><ul>
-<li>(1) 自行准备一张 <strong>返回顶部</strong> 的图片 <img src="/hugo-stack/p/hugo/custom-stack-theme/backTop-light.svg"
-	
-	
-	
-	loading="lazy"
-	
-	
->，放到<code>assets/icons</code>文件夹下(不存在则自行创建)</li>
+<li>(1) 准备一张<a class="link" href="backTop.svg" ><strong>返回顶部图片</strong></a>(<kbd>Ctrl</kbd>+<kbd>S</kbd>保存)，放到<code>assets/icons</code>文件夹下(不存在则自行创建)</li>
 </ul>
 <p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E6%B7%BB%E5%8A%A0%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8%E6%8C%89%E9%92%AE1.png"
 	width="403"
@@ -1025,7 +1018,7 @@
 	
 ></p>
 <ul>
-<li>(2) 将以下代码复制到<code>layouts/partials/footer/custom.html</code>文件中(不存在则自行创建)，修改css中的图片文件名，改成自己准备的图片名</li>
+<li>(2) 将以下代码复制到<code>layouts/partials/footer/custom.html</code>文件中(不存在则自行创建)</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1087,7 +1080,7 @@
 </span></span><span class="line"><span class="cl">        <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">height</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">{{ (resources.Get &#34;icons/图片文件名&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">Permalink</span> <span class="p">}</span><span class="err">}</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">{{ (resources.Get &#34;icons/backTop.svg&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">Permalink</span> <span class="p">}</span><span class="err">}</span><span class="o">);</span>
 </span></span><span class="line"><span class="cl">    <span class="err">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
@@ -1426,12 +1419,22 @@
     ><strong>CSDN</strong></a>来实现的</p>
 </blockquote>
 <ul>
-<li>
-<p>(1) 准备一张<a class="link" href="codeMore.png" ><strong>向下展开图片</strong></a>(<kbd>Ctrl</kbd>+<kbd>S</kbd>保存)，放到<code>assets/icons</code>目录下</p>
-</li>
-<li>
-<p>(2) 将以下代码复制进<code>layouts/partials/footer/custom.html</code>(文件不存在则自行创建)</p>
-</li>
+<li>(1) 准备一张<a class="link" href="codeMore.png" ><strong>向下展开图片</strong></a>(<kbd>Ctrl</kbd>+<kbd>S</kbd>保存)，放到<code>assets/icons</code>目录下</li>
+</ul>
+<p><img src="/hugo-stack/p/hugo/custom-stack-theme/%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8A%98%E5%8F%A0%E4%B8%8E%E5%B1%95%E5%BC%80.png"
+	width="423"
+	height="177"
+	srcset="/hugo-stack/p/hugo/custom-stack-theme/%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8A%98%E5%8F%A0%E4%B8%8E%E5%B1%95%E5%BC%80_hu9842396540413307876.png 480w, /hugo-stack/p/hugo/custom-stack-theme/%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8A%98%E5%8F%A0%E4%B8%8E%E5%B1%95%E5%BC%80_hu4641373201162015394.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="238"
+		data-flex-basis="573px"
+	
+></p>
+<ul>
+<li>(2) 将以下代码复制进<code>layouts/partials/footer/custom.html</code>(文件不存在则自行创建)</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2027,6 +2030,8 @@
 		
 		initScrollTop();
 		
+		initCodeMoreBox()
+		
 		showWelcomeMessage();
 	})
 </script>
@@ -2192,16 +2197,16 @@
         
         window.addEventListener('scroll', function() {
             
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+                openUl.forEach((ul) => {
+                    ul.classList.remove("open")
+                })
+            }
+            
             let currentLi = document.querySelector(".active-class");
             if (!currentLi) {
                 return
-            }
-            
-            let elementsByClassName = document.querySelectorAll(".open");
-            if (elementsByClassName.length > 0) {
-                elementsByClassName.forEach((ul) => {
-                    ul.classList.remove("open")
-                })
             }
             
             if (currentLi.children.length > 1) {
@@ -2440,45 +2445,44 @@
     }
 </style>
 
-<div class="js-Pjax">
-    <script>
-        (function() {
-            initCodeMoreBox();
-        })(document)
+<script>
+    
 
-        function initCodeMoreBox() {
-            let codeBlocks = document.querySelectorAll(".highlight");
-            if (!codeBlocks) {
+    function initCodeMoreBox() {
+        let codeBlocks = document.querySelectorAll(".highlight");
+        if (!codeBlocks) {
+            return;
+        }
+        codeBlocks.forEach(codeBlock => {
+            
+            if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
                 return;
             }
-            codeBlocks.forEach(codeBlock => {
-                
-                if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
-                    return;
-                }
-                
-                
-                let codeMoreBox = document.createElement('div');
-                codeMoreBox.classList.add('code-more-box');
-                
-                let codeMoreBtn = document.createElement('span');
-                codeMoreBtn.classList.add('code-more-btn');
-                codeMoreBtn.addEventListener('click', () => {
-                    codeBlock.classList.add('code-show');
-                    codeMoreBox.style.display = 'none';
-                })
-                
-                let img = document.createElement('img');
-                img.classList.add('code-more-img');
-                img.src = "https://letere-gzj.github.io/hugo-stack/icons/codeMore.png"
-                
-                codeMoreBtn.appendChild(img);
-                codeMoreBox.appendChild(codeMoreBtn);
-                codeBlock.appendChild(codeMoreBox)
+            
+            
+            let codeMoreBox = document.createElement('div');
+            codeMoreBox.classList.add('code-more-box');
+            
+            let codeMoreBtn = document.createElement('span');
+            codeMoreBtn.classList.add('code-more-btn');
+            codeMoreBtn.addEventListener('click', () => {
+                codeBlock.classList.add('code-show');
+                codeMoreBox.style.display = 'none';
             })
-        }
-    </script>
-</div>
+            
+            let img = document.createElement('img');
+            img.classList.add('code-more-img');
+            img.src = "https://letere-gzj.github.io/hugo-stack/icons/codeMore.png"
+            
+            codeMoreBtn.appendChild(img);
+            codeMoreBox.appendChild(codeMoreBtn);
+            codeBlock.appendChild(codeMoreBox)
+        })
+    }
+
+    initCodeMoreBox();
+    window.initCodeMoreBox = initCodeMoreBox;
+</script>
 
 </div>
 

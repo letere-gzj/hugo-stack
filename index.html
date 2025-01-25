@@ -11,7 +11,7 @@
 <meta property='og:description' content="演示说明">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-01-25T13:35:39&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-01-25T14:31:17&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="莱特雷-letere">
 <meta name="twitter:description" content="演示说明"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' /><link rel="alternate" type="application/rss&#43;xml" href="https://letere-gzj.github.io/hugo-stack/index.xml">
@@ -699,7 +699,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                3020 字
+                2972 字
             </time>
         </div>
         
@@ -1189,6 +1189,8 @@
 		
 		initScrollTop();
 		
+		initCodeMoreBox()
+		
 		showWelcomeMessage();
 	})
 </script>
@@ -1354,16 +1356,16 @@
         
         window.addEventListener('scroll', function() {
             
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+                openUl.forEach((ul) => {
+                    ul.classList.remove("open")
+                })
+            }
+            
             let currentLi = document.querySelector(".active-class");
             if (!currentLi) {
                 return
-            }
-            
-            let elementsByClassName = document.querySelectorAll(".open");
-            if (elementsByClassName.length > 0) {
-                elementsByClassName.forEach((ul) => {
-                    ul.classList.remove("open")
-                })
             }
             
             if (currentLi.children.length > 1) {
@@ -1602,45 +1604,44 @@
     }
 </style>
 
-<div class="js-Pjax">
-    <script>
-        (function() {
-            initCodeMoreBox();
-        })(document)
+<script>
+    
 
-        function initCodeMoreBox() {
-            let codeBlocks = document.querySelectorAll(".highlight");
-            if (!codeBlocks) {
+    function initCodeMoreBox() {
+        let codeBlocks = document.querySelectorAll(".highlight");
+        if (!codeBlocks) {
+            return;
+        }
+        codeBlocks.forEach(codeBlock => {
+            
+            if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
                 return;
             }
-            codeBlocks.forEach(codeBlock => {
-                
-                if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
-                    return;
-                }
-                
-                
-                let codeMoreBox = document.createElement('div');
-                codeMoreBox.classList.add('code-more-box');
-                
-                let codeMoreBtn = document.createElement('span');
-                codeMoreBtn.classList.add('code-more-btn');
-                codeMoreBtn.addEventListener('click', () => {
-                    codeBlock.classList.add('code-show');
-                    codeMoreBox.style.display = 'none';
-                })
-                
-                let img = document.createElement('img');
-                img.classList.add('code-more-img');
-                img.src = "https://letere-gzj.github.io/hugo-stack/icons/codeMore.png"
-                
-                codeMoreBtn.appendChild(img);
-                codeMoreBox.appendChild(codeMoreBtn);
-                codeBlock.appendChild(codeMoreBox)
+            
+            
+            let codeMoreBox = document.createElement('div');
+            codeMoreBox.classList.add('code-more-box');
+            
+            let codeMoreBtn = document.createElement('span');
+            codeMoreBtn.classList.add('code-more-btn');
+            codeMoreBtn.addEventListener('click', () => {
+                codeBlock.classList.add('code-show');
+                codeMoreBox.style.display = 'none';
             })
-        }
-    </script>
-</div>
+            
+            let img = document.createElement('img');
+            img.classList.add('code-more-img');
+            img.src = "https://letere-gzj.github.io/hugo-stack/icons/codeMore.png"
+            
+            codeMoreBtn.appendChild(img);
+            codeMoreBox.appendChild(codeMoreBtn);
+            codeBlock.appendChild(codeMoreBox)
+        })
+    }
+
+    initCodeMoreBox();
+    window.initCodeMoreBox = initCodeMoreBox;
+</script>
 
 </div>
 

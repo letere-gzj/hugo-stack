@@ -110,6 +110,12 @@
           &lt;td style=&#34;text-align: left&#34;&gt;感谢大佬的文章参考 &lt;a class=&#34;link&#34; href=&#34;https://blog.hentioe.dev/posts/hugo-support-blockquote-alerts.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;让Hugo支持GitHub风格的块引用Alerts&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;del&gt;实现代码块过长自动折叠功能&lt;/del&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;2025.01.25&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;样式风格参考的是&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;CSDN&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
