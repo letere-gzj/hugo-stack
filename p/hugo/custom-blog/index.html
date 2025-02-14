@@ -1830,6 +1830,8 @@
             codeMoreBtn.addEventListener('click', () => {
                 codeBlock.classList.add('code-show');
                 codeMoreBox.style.display = 'none';
+                
+                window.dispatchEvent(new Event('resize'))
             })
             
             let img = document.createElement('img');

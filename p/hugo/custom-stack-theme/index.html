@@ -10,7 +10,7 @@
 <meta property='og:description' content="记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-10-08T11:10:25&#43;08:00'/><meta property='article:modified_time' content='2025-01-25T14:31:17&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/cover.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-10-08T11:10:25&#43;08:00'/><meta property='article:modified_time' content='2025-02-14T17:58:43&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/cover.png' />
 <meta name="twitter:title" content="【Hugo】Stack主题自定义修改">
 <meta name="twitter:description" content="记录一些Stack主题的自定义修改，一般都是不太好分类的，长期更新"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-theme/cover.png' />
@@ -369,7 +369,7 @@
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2025-01-25
+                    2025-02-14
                 </time>
             </div>
 
@@ -377,7 +377,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                2972 字
+                2996 字
             </time>
         </div>
         
@@ -1516,6 +1516,8 @@
 </span><span class="lnt">76
 </span><span class="lnt">77
 </span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
@@ -1582,6 +1584,8 @@
 </span></span><span class="line"><span class="cl">      <span class="nx">codeMoreBtn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">codeBlock</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;code-show&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">codeMoreBox</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 触发resize事件，重新计算目录位置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nb">window</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="k">new</span> <span class="nx">Event</span><span class="p">(</span><span class="s1">&#39;resize&#39;</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">      <span class="p">})</span>
 </span></span><span class="line"><span class="cl">      <span class="c1">// img
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kd">let</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">);</span>
@@ -2495,6 +2499,8 @@
             codeMoreBtn.addEventListener('click', () => {
                 codeBlock.classList.add('code-show');
                 codeMoreBox.style.display = 'none';
+                
+                window.dispatchEvent(new Event('resize'))
             })
             
             let img = document.createElement('img');
