@@ -16,7 +16,7 @@
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-blog/%E5%B0%81%E9%9D%A2.png' />
     <link rel="shortcut icon" href="/hugo-stack/favicon.ico?v=2" />
 
-<div class="bg">
+<div class="loading">
     <div class="scale">
         <div class="sharingon">
             <div class="ring">
@@ -31,18 +31,18 @@
 
 <style>
     [data-scheme="light"] {
-    .bg {
-        background-color: #f5f5fa;
-    }
+        .loading{
+            background-color: #f5f5fa;
+        }
     }
 
     [data-scheme="dark"] {
-    .bg {
-        background-color: #303030;
-    }
+        .loading {
+            background-color: #303030;
+        }
     }
 
-    .bg {
+    .loading {
         position: fixed;
         display: flex;
         justify-content: center;  
@@ -54,7 +54,6 @@
         z-index: 99;
         zoom: 3.0;
     }
-
 
      
     .sharingon {
@@ -176,39 +175,31 @@
 </style>
 
 <script>
-    function fadeOut() {
-        let stopAnimate = document.querySelector(".animated-stop");
-        if (stopAnimate) {
-            return;
-        }
-        let sharingon= document.querySelector(".sharingon");
-        sharingon.classList.add("animated-stop")
-        let scale = document.querySelector(".scale");
-        scale.classList.add("scaleAndFadeout");
-        let bg = document.querySelector(".bg");
-        bg.classList.add("fadeout")
+    function initLoading() {
+        let loading = document.querySelector(".loading");
+        document.addEventListener('DOMContentLoaded', function() {
+            fadeOut();
+            setTimeout(() => {
+                loading.style.display = "none";
+            }, 1500)
+        });
     }
 
-    
-    
-    
-    
-    
-    
-    
+    function fadeOut() {
+        
+        let sharingon= document.querySelector(".sharingon");
+        sharingon.classList.add("animated-stop")
+        
+        let scale = document.querySelector(".scale");
+        scale.classList.add("scaleAndFadeout");
+        
+        let loading = document.querySelector(".loading");
+        loading.classList.add("fadeout")
+    }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        fadeOut();
-        let bg = document.querySelector(".bg");
-        setTimeout(() => {
-            bg.style.display = "none";
-        }, 1000)
-    });
-
-    
-    
-    
+    initLoading();
 </script>
+
 
     </head>
     <body class="
@@ -1164,6 +1155,20 @@
         <div class="flex article-list--tile">
             
                 
+<article class="">
+    <a href="/hugo-stack/p/hugo/page-loading/">
+
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】博客引入页面加载动画
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
 <article class="has-image">
     <a href="/hugo-stack/p/hugo/live2d-moc3/">
 
@@ -1257,31 +1262,6 @@
 
         <div class="article-details">
             <h2 class="article-title">【Hugo】APlayer &#43; PJAX 引入音乐播放放器并实现音乐不中断功能
-            </h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/hugo-stack/p/hugo/custom-live2d/">
-
-        
-            <div class="article-image">
-                <img src="/hugo-stack/p/hugo/custom-live2d/cover.6ace62d4616fb2a2b258ce17a1ed0e28_hu15227522066959895952.png"
-                        width="250"
-                        height="150"
-                        loading="lazy"
-                        alt="Featured image of post 【Hugo】Live2d-widget 给博客引入萌萌的看板娘"
-                        data-key="hugo/custom-live2d" 
-                        data-hash="md5-as5i1GFvsqKyWM4Xoe0OKA==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">【Hugo】Live2d-widget 给博客引入萌萌的看板娘
             </h2>
         </div>
     </a>
@@ -2041,7 +2021,6 @@
     initCodeMoreBox();
     window.initCodeMoreBox = initCodeMoreBox;
 </script>
-
 
 </div>
 

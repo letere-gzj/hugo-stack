@@ -1,0 +1,2212 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="博客刷新加载时引入加载动画，功能性一般般，但非常的酷炫">
+<title>【Hugo】博客引入页面加载动画</title>
+
+<link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugo/page-loading/'>
+
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.36a68c9ef5edb3b2d69993e6dc42c8b2423ff1a2c82f1a2bca93fe5b7e3a3c07.css"><meta property='og:title' content="【Hugo】博客引入页面加载动画">
+<meta property='og:description' content="博客刷新加载时引入加载动画，功能性一般般，但非常的酷炫">
+<meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/page-loading/'>
+<meta property='og:site_name' content='莱特雷-letere'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2025-02-19T11:21:50&#43;08:00'/><meta property='article:modified_time' content='2025-02-20T09:44:24&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta name="twitter:title" content="【Hugo】博客引入页面加载动画">
+<meta name="twitter:description" content="博客刷新加载时引入加载动画，功能性一般般，但非常的酷炫"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+    <link rel="shortcut icon" href="/hugo-stack/favicon.ico?v=2" />
+
+<div class="loading">
+    <div class="scale">
+        <div class="sharingon">
+            <div class="ring">
+                <div class="to"></div>
+                <div class="to"></div>
+                <div class="to"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    [data-scheme="light"] {
+        .loading{
+            background-color: #f5f5fa;
+        }
+    }
+
+    [data-scheme="dark"] {
+        .loading {
+            background-color: #303030;
+        }
+    }
+
+    .loading {
+        position: fixed;
+        display: flex;
+        justify-content: center;  
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        zoom: 3.0;
+    }
+
+     
+    .sharingon {
+        position: relative;
+        width: 6em;
+        height: 6em;
+        background-color: red;
+        border: 6px solid black;
+        animation: rot 1s ease-in-out infinite;
+    }
+
+    .animated-stop {
+        animation-play-state: paused;
+    }
+
+    .fadeout {
+        animation: fadeOut 1.5s forwards;
+    }
+
+    .scaleAndFadeout {
+        animation: scaleAndFadeOut 1.5s forwards
+    }
+
+    .ring {
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+        width: 3.5em;
+        height: 3.5em;
+        border: 4px solid rgb(110, 13 ,13 ,0.5);
+        transform: translate(-50%,-50%);
+    }
+
+    .sharingon, .ring, .to,.circle {
+        border-radius: 50%;
+    }
+
+    .to,.circle {
+        position: absolute;
+        content: "";
+        width: 0.9em;
+        height: 0.9em;
+        background-color: black;
+    }
+
+    .to:nth-child(1) {
+        top: -0.5em;
+        left: 50%;
+        transform: translate(-40%);
+    }
+
+    .to::before {
+        content: "";
+        position: absolute;
+        top: -0.5em;
+        right: -0.2em;
+        width: 1.1em;
+        height: 0.9em;
+        box-sizing: border-box;
+        border-left: 16px solid black;
+        border-radius: 100% 0 0;
+    }
+
+    .to:nth-child(2) {
+        bottom: 0.5em;
+        left: -0.35em;
+        transform: rotate(-120deg);
+    }
+
+    .to:nth-child(3) {
+        bottom: 0.5em;
+        right: -0.35em;
+        transform: rotate(120deg);
+    }
+
+    .circle {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 0 0 20px 1px;
+        width: 1em;
+        height: 1em;
+    }
+
+    @keyframes rot {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes scaleAndFadeOut {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.5);  
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.5);  
+            opacity: 0;  
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;  
+        }
+    }
+</style>
+
+<script>
+    function initLoading() {
+        let loading = document.querySelector(".loading");
+        document.addEventListener('DOMContentLoaded', function() {
+            fadeOut();
+            setTimeout(() => {
+                loading.style.display = "none";
+            }, 1500)
+        });
+    }
+
+    function fadeOut() {
+        
+        let sharingon= document.querySelector(".sharingon");
+        sharingon.classList.add("animated-stop")
+        
+        let scale = document.querySelector(".scale");
+        scale.classList.add("scaleAndFadeout");
+        
+        let loading = document.querySelector(".loading");
+        loading.classList.add("fadeout")
+    }
+
+    initLoading();
+</script>
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/hugo-stack/">
+                
+                    
+
+                    
+
+
+
+                        <img src="/hugo-stack/img/muzimi.gif" width="250"
+                             height="250" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🤔</span>
+                
+            </figure>
+            
+        
+
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/hugo-stack">莱特雷-letere</a></h1>
+            <h2 class="site-description">欢迎来到我的网站，此博客由【Hugo &#43; Stack】来进行搭建，主要分享个人生活和学习笔记</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a
+                        href='https://space.bilibili.com/402971365'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-bilibili" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" />
+  <path d="M8 3l2 3" />
+  <path d="M16 3l-2 3" />
+  <path d="M9 13v-2" />
+  <path d="M15 11v2" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                        href='https://github.com/letere-gzj'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                        href='https://letere-gzj.github.io'
+                        target="_blank"
+                        title="Hexo_Blog"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-hexo"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /><path d="M9 8v8" /><path d="M15 8v8" /><path d="M9 12h6" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                        href='/hugo-stack/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rss"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M4 4a16 16 0 0 1 16 16" /><path d="M4 11a9 9 0 0 1 9 9" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/hugo-stack/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/categories-tags/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-tags"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 8v4.172a2 2 0 0 0 .586 1.414l5.71 5.71a2.41 2.41 0 0 0 3.408 0l3.592 -3.592a2.41 2.41 0 0 0 0 -3.408l-5.71 -5.71a2 2 0 0 0 -1.414 -.586h-4.172a2 2 0 0 0 -2 2z" /><path d="M18 19l1.592 -1.592a4.82 4.82 0 0 0 0 -6.816l-4.592 -4.592" /><path d="M7 10h-.01" /></svg>
+                
+                <span>分类&amp;标签</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/update-list/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-list"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l11 0" /><path d="M9 12l11 0" /><path d="M9 18l11 0" /><path d="M5 6l0 .01" /><path d="M5 12l0 .01" /><path d="M5 18l0 .01" /></svg>
+                
+                <span>更新计划</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>技术链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-写轮眼加载动画">1 写轮眼加载动画</a>
+      <ul>
+        <li><a href="#11-基本引入">1.1 基本引入</a></li>
+        <li><a href="#12-动画首次加载">1.2 动画首次加载</a>
+          <ul>
+            <li><a href="#121-pjax">1.2.1 PJAX</a></li>
+            <li><a href="#122-sessionstorage">1.2.2 SessionStorage</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#2-自定义加载动画">2 自定义加载动画</a>
+      <ul>
+        <li><a href="#21-基本引入">2.1 基本引入</a></li>
+        <li><a href="#22-样式修改">2.2 样式修改</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/hugo-stack/p/hugo/page-loading/">【Hugo】博客引入页面加载动画</a>
+        </h2>
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-02-19</time>
+            </div>
+        |
+            <div class="article-lastmod">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
+                <time>
+                    2025-02-20
+                </time>
+            </div>
+
+        <div>
+            |
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
+            <time class="article-time--reading">
+                1665 字
+            </time>
+        </div>
+        
+        <div id="viewCount">
+            |
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                <span id="vercount_value_page_pv">loading... </span>次
+            </time>
+        </div>
+    </footer>
+    
+
+    <div class="article-title-wrapper">
+        
+        <h3 class="article-subtitle">
+            博客刷新加载时引入加载动画，功能性一般般，但非常的酷炫
+        </h3>
+        
+    </div>
+
+    
+
+    
+        <header class="article-category">
+            
+            <div class="left-category">
+                
+                    <a href="/hugo-stack/categories/%E6%95%99%E7%A8%8B/" style="background-color: #2a9d8f; color: #fff;">
+                        教程
+                    </a>
+                
+            </div>
+            
+            
+                <div class="right-tag">
+                    
+                        <a href="/hugo-stack/tags/hugo/" style="background-color: #fe53bc; color: #fff;">Hugo</a>
+                    
+                </div>
+            
+        </header>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <hr>
+<h2 id="1-写轮眼加载动画">1 写轮眼加载动画
+</h2><div class="sharingon">
+    <div class="ring">
+        <div class="to"></div>
+        <div class="to"></div>
+        <div class="to"></div>
+        <div class="circle"></div>
+    </div>
+</div>
+<blockquote class="alert alert-note">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><ul>
+<li>这边先介绍如何引入本博客的加载动画，直接复制就能实现，适用于代码二次开发能力不强的用户</li>
+<li>&ldquo;<strong>授人以鱼不如授人以渔</strong>&quot;，后面会教大家如何引入自己想要的加载动画</li>
+</ul>
+</blockquote>
+<h3 id="11-基本引入">1.1 基本引入
+</h3><ul>
+<li>将以下代码复制进<code>layouts/partials/head/custom.html</code>(文件不存在则自行创建)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;loading&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sharingon&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ring&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;to&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;to&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;to&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;circle&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">loading</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">position</span><span class="p">:</span> <span class="kc">fixed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">justify-content</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">z-index</span><span class="p">:</span> <span class="mi">99</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">zoom</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f5f5fa</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">animated-stop</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">animation-play-state</span><span class="p">:</span> <span class="kc">paused</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">scaleAndFadeout</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">animation</span><span class="p">:</span> <span class="n">scaleAndFadeOut</span> <span class="mf">1.5</span><span class="kt">s</span> <span class="kc">forwards</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">    <span class="c">/** 放大1.5倍，并渐变到透明 */</span>
+</span></span><span class="line"><span class="cl">    <span class="p">@</span><span class="k">keyframes</span> <span class="nt">scaleAndFadeOut</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">100</span><span class="o">%</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">/* From Uiverse.io by shadowfax29 */</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">sharingon</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mi">6</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">height</span><span class="p">:</span> <span class="mi">6</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">border</span><span class="p">:</span> <span class="mi">6</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">black</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">animation</span><span class="p">:</span> <span class="n">rot</span> <span class="mi">1</span><span class="kt">s</span> <span class="kc">ease-in-out</span> <span class="kc">infinite</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">ring</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">top</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mf">3.5</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">height</span><span class="p">:</span> <span class="mf">3.5</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">border</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="kc">solid</span> <span class="nb">rgb</span><span class="p">(</span><span class="mi">110</span><span class="p">,</span> <span class="mi">13</span> <span class="p">,</span><span class="mi">13</span> <span class="p">,</span><span class="mf">0.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">transform</span><span class="p">:</span> <span class="nb">translate</span><span class="p">(</span><span class="mi">-50</span><span class="kt">%</span><span class="p">,</span><span class="mi">-50</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">sharingon</span><span class="o">,</span> <span class="p">.</span><span class="nc">ring</span><span class="o">,</span> <span class="p">.</span><span class="nc">to</span><span class="o">,</span><span class="p">.</span><span class="nc">circle</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">border-radius</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">to</span><span class="o">,</span><span class="p">.</span><span class="nc">circle</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">height</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">background-color</span><span class="p">:</span> <span class="kc">black</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">to</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">top</span><span class="p">:</span> <span class="mf">-0.5</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">transform</span><span class="p">:</span> <span class="nb">translate</span><span class="p">(</span><span class="mi">-40</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">to</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">top</span><span class="p">:</span> <span class="mf">-0.5</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">right</span><span class="p">:</span> <span class="mf">-0.2</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mf">1.1</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">height</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">border-left</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">black</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">border-radius</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">to</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">bottom</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">left</span><span class="p">:</span> <span class="mf">-0.35</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">-120</span><span class="kt">deg</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">to</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">bottom</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">right</span><span class="p">:</span> <span class="mf">-0.35</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">120</span><span class="kt">deg</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">circle</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">top</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">transform</span><span class="p">:</span> <span class="nb">translate</span><span class="p">(</span><span class="mi">-50</span><span class="kt">%</span><span class="p">,</span><span class="mi">-50</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">20</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">height</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">@</span><span class="k">keyframes</span> <span class="nt">rot</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">0</span><span class="kt">deg</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nt">100</span><span class="o">%</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>	
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">initLoading</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">loading</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.loading&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 本地页面加载速度快，可自行使用setTimeout()来进行延迟，体验加载动画效果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">// 执行加载完成动画
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">loadFinish</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 延迟1.5s，待加载完成动画执行结束
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">loading</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span> <span class="mi">1500</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">loadFinish</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 暂停动画
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">sharingon</span><span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.sharingon&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">sharingon</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&#34;animated-stop&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 放大并渐变到透明
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">loading</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.loading&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">loading</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&#34;scaleAndFadeout&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">    <span class="nx">initLoading</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="12-动画首次加载">1.2 动画首次加载
+</h3><blockquote class="alert alert-note">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><ul>
+<li>每次切换页面都播放一次加载动画，这种看个人喜欢。</li>
+<li>我个人是不太喜欢的，我只希望第一次打开这页面的时候加载一下就好</li>
+</ul>
+</blockquote>
+<h4 id="121-pjax">1.2.1 PJAX
+</h4><ul>
+<li>如果你博客引入了PJAX功能，基本是不会出现这情况了。因为页头页脚一般不是PJAX会刷新的地方，所以页面切换时不会重复执行加载动画脚本</li>
+<li>想了解PJAX可以去查看<a class="link" href="/hugo-stack/p/hugo/custom-player" ><strong>【Hugo】APlayer + PJAX 引入音乐播放放器并实现音乐不中断功能</strong></a></li>
+</ul>
+<hr>
+<h4 id="122-sessionstorage">1.2.2 SessionStorage
+</h4><ul>
+<li>
+<p>PJAX技术对大部分轻度用户来说还是有点困难的，可以用SessionStorage存储一下页面是否已经播放过加载动画了，播放过了就不重新播放一遍，来平替PJAX技术</p>
+</li>
+<li>
+<p>(1) 将display改为none，默认不显示加载动画</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">loading</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="err">...</span>
+</span></span><span class="line"><span class="cl">        <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>(2) 修改initLoading方法</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">initLoading</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">loading</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.loading&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">isFirstVisit</span> <span class="o">=</span> <span class="o">!</span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;visited&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">isFirstVisit</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">loading</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s2">&#34;flex&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 执行加载完成动画
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">loadFinish</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 延迟1.5s，待加载完成动画执行结束
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">loading</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">},</span> <span class="mi">1500</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;visited&#39;</span><span class="p">,</span> <span class="s1">&#39;true&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>(3) 这样就只有首次进入此网站时才播放加载动画，页面关闭后重新进入才再次播放加载动画</li>
+</ul>
+<hr>
+<h2 id="2-自定义加载动画">2 自定义加载动画
+</h2><h3 id="21-基本引入">2.1 基本引入
+</h3><ul>
+<li>(1) 前往<a class="link" href="https://uiverse.io/loaders"  target="_blank" rel="noopener"
+    ><strong>UIverse</strong></a>，寻找自己喜欢的加载动画</li>
+</ul>
+<p><img src="/hugo-stack/p/hugo/page-loading/uiverse.png"
+	width="1330"
+	height="721"
+	srcset="/hugo-stack/p/hugo/page-loading/uiverse_hu17156948676691080230.png 480w, /hugo-stack/p/hugo/page-loading/uiverse_hu7449830171440858061.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="442px"
+	
+></p>
+<ul>
+<li>(2) 将加载动画的html，css分别复制到下面的模板，然后将模板内容复制到<code>layouts/partials/head/custom.html</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;loading&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- html内容 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">loading</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">position</span><span class="p">:</span> <span class="kc">fixed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">justify-content</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">z-index</span><span class="p">:</span> <span class="mi">99</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f5f5fa</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">    <span class="c">/* css内容 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>	
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">initLoading</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">loading</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.loading&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 本地页面加载速度快，可自行使用setTimeout()来进行延迟，体验加载动画效果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">loading</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">initLoading</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>这样就能实现最基本的加载动画效果</li>
+</ul>
+<hr>
+<h3 id="22-样式修改">2.2 样式修改
+</h3><blockquote class="alert alert-note">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><ul>
+<li>因为每个人的加载动画都不一致，这边只分享一下可能会用到的css样式，实际情况还需自己自行适配</li>
+<li>也可以参考上面的写轮眼动画的写法，来模仿写法</li>
+</ul>
+</blockquote>
+<ul>
+<li>CSS样式</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/**
+</span></span></span><span class="line"><span class="cl"><span class="c"> * 可能会用到的CSS
+</span></span></span><span class="line"><span class="cl"><span class="c"> */</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* 整体修改元素大小(大于1放大, 小于1缩小) */</span>
+</span></span><span class="line"><span class="cl">    <span class="n">zoom</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">/* 开始动画播放 */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">animation-play-state</span><span class="p">:</span> <span class="kc">running</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">/* 暂停动画播放 */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">animation-play-state</span><span class="p">:</span> <span class="kc">paused</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">/* 元素居中(flex布局) */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">justify-content</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">/* 元素隐藏 */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">/* 定义动画 */</span>
+</span></span><span class="line"><span class="cl">    <span class="err">@keyframes</span> <span class="err">动画名</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">        <span class="err">0%</span> <span class="err">{</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">进度</span><span class="o">%</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">100</span><span class="o">%</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="err">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">/* 执行动画 */</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">animation</span><span class="o">:</span> <span class="nt">动画名</span> <span class="nt">时间</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="err">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>CSS动画参数</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/**
+</span></span></span><span class="line"><span class="cl"><span class="c"> * CSS动画常用参数
+</span></span></span><span class="line"><span class="cl"><span class="c"> */</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="c">/* 不透明度 */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">/* 放大缩小 */</span>  
+</span></span><span class="line"><span class="cl">    <span class="k">transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">/* 旋转 */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">/* 平移(水平, 垂直) */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">transform</span><span class="p">:</span> <span class="nb">translate</span><span class="p">(</span><span class="mi">-100</span><span class="kt">%</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>根据CC BY-NC-SA 4.0协议授权</span>
+    </section>
+    
+
+</footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/hugo-stack/p/hugo/live2d-moc3/">
+
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugo/live2d-moc3/cover.47964cfc431c0005f3c9eb3d99651190_hu4805388833244741341.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】博客引入moc3类型的live2d模型"
+                        data-key="hugo/live2d-moc3" 
+                        data-hash="md5-R5ZM/EMcAAXzyes9mWURkA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】博客引入moc3类型的live2d模型
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo-stack/p/hugo/custom-background/">
+
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugo/custom-background/cover.53b9d140b749b00db6ff535e59062b87_hu8671535214065020568.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】修改博客背景并引入动态背景"
+                        data-key="hugo/custom-background" 
+                        data-hash="md5-U7nRQLdJsA22/1NeWQYrhw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】修改博客背景并引入动态背景
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo-stack/p/hugo/custom-stack-theme/">
+
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugo/custom-stack-theme/cover.552d684dee02b994c1b7efde44f1cb0d_hu5530006314175102094.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】Stack主题自定义修改"
+                        data-key="hugo/custom-stack-theme" 
+                        data-hash="md5-VS1oTe4CuZTBt&#43;/eRPHLDQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】Stack主题自定义修改
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo-stack/p/hugo/custom-player/">
+
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugo/custom-player/cover.a0ef3134a444d2fa7a5e76e2af2f70ce_hu15528814248431698573.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】APlayer &#43; PJAX 引入音乐播放放器并实现音乐不中断功能"
+                        data-key="hugo/custom-player" 
+                        data-hash="md5-oO8xNKRE0vp6Xnbiry9wzg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】APlayer &#43; PJAX 引入音乐播放放器并实现音乐不中断功能
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo-stack/p/hugo/custom-blog/">
+
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugo/custom-blog/%E5%B0%81%E9%9D%A2.27481dd80f235da3bb222c51d2d09c36_hu15959188276720576554.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】Hugo &#43; Github 免费部署自己的博客"
+                        data-key="hugo/custom-blog" 
+                        data-hash="md5-J0gd2A8jXaO7IixR0tCcNg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】Hugo &#43; Github 免费部署自己的博客
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div id="comment">
+        <script
+    src="https://giscus.app/client.js"
+    data-repo="letere-gzj/hugo-stack"
+    data-repo-id="R_kgDOMXeWfg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOMXeWfs4CheU8"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+    </div>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 莱特雷-letere
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/hugo-stack/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<div id="custom-footer">
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+    <script src=https://letere-gzj.github.io/hugo-stack/background/particles/particles.js></script>
+
+
+    <link rel="stylesheet" href=https://letere-gzj.github.io/hugo-stack/background/particles/style.css>
+
+
+<div id="particles-js"></div>
+
+<script>
+    
+
+    particlesJS.load('particles-js', "https://letere-gzj.github.io/hugo-stack/background/particles/particlesjs-config.json", function() {
+        console.log('particles.js loaded - callback');
+    });
+</script>
+
+
+
+
+
+
+
+	
+	<script src=https://letere-gzj.github.io/hugo-stack/js/pjax.min.js></script>
+
+
+	<script src=https://letere-gzj.github.io/hugo-stack/js/topbar.js></script>
+
+
+<script>
+	var pjax = new Pjax({
+		elements: "a, form",
+		
+		selectors: [
+			"title",
+			".main-container",
+			".js-Pjax"
+		],
+		cacheBust: false
+	})
+
+	
+	pjax._handleResponse = pjax.handleResponse;
+	pjax.handleResponse = function(responseText, request, href, options) {
+		if (request.responseText.match("<html")) {
+			let newDoc = new DOMParser().parseFromString(responseText, 'text/html');
+			
+			let bodyClass = newDoc.body.className;
+			document.body.setAttribute("class", bodyClass)
+			
+			pjax._handleResponse(responseText, request, href, options);
+		} else {
+			window.open(href)
+			topbar.hide();
+		}
+	}
+
+	
+	topbar.config({
+		barColors: {
+			'0': 'rgba(255,  255, 255, 1)',
+			'1.0': 'rgba(0, 149, 234,  1)'
+		}
+	})
+
+	
+	document.addEventListener('pjax:send', () => {
+		
+		topbar.show();
+	})
+
+	
+	document.addEventListener('pjax:complete', () => {
+		
+		window.Stack.init();
+		
+		topbar.hide();
+		
+		
+		
+		initTocHide();
+		
+		initScrollTop();
+		
+		initCodeMoreBox()
+		
+		showWelcomeMessage();
+	})
+</script>
+
+	
+	<script src=https://letere-gzj.github.io/hugo-stack/js/APlayer.min.js></script>
+
+
+<div class="demo">
+	<div id="aplayer"/>
+</div>
+<script>
+	
+	const musicDir = "https://letere-gzj.github.io/hugo-stack/" + 'music/';
+	const songs = [
+		'爱别等-洪卓立',
+		'查无此字-林奕匡',
+		'初初-古巨基',
+		'乖乖报到-MC 张天赋',
+		'泼墨桃花-林峯',
+		'摄氏零度-张敬轩',
+		'下一位前度-林家谦',
+		'这个故事教训我们-李克勤',
+		'最后祝福-黄宗泽'
+	];
+	let audios = [];
+	songs.forEach((item) => {
+		const songInfo = item.split('-');
+		audios.push({
+			name: songInfo[0],
+			artist: songInfo[1],
+			url: musicDir + item + '/song.mp3',
+			cover: musicDir + item + '/cover.jpg',
+			lrc: musicDir + item + '/lyric.lrc'
+		});
+	})
+
+	
+	const ap = new APlayer({
+		container: document.getElementById('aplayer'),
+		listFolded: false,
+		listMaxHeight: '160px',
+		lrcType: 3,
+		mutex: true,
+		fixed: true,
+		audio: audios
+	});
+
+	
+
+	window.onload = () => {
+		const playInfo = JSON.parse(localStorage.getItem("playInfo"));
+		
+		if (!playInfo) {
+			return;
+		}
+		ap.list.switch(playInfo.index);
+		setTimeout(() => {
+			ap.seek(playInfo.currentTime);
+			
+			if (!playInfo.paused) {
+				ap.play()
+			}
+		}, 500);
+	};
+
+	
+
+	window.onbeforeunload = () => {
+		const playInfo = {
+			index: ap.list.index,
+			paused: ap.paused,
+			currentTime: ap.audio.currentTime
+		};
+		localStorage.setItem("playInfo", JSON.stringify(playInfo));
+	};
+</script>
+
+
+
+
+	
+    <style>
+        @font-face {
+            font-family: 'ChildFunSans';
+            src: url(https://letere-gzj.github.io/hugo-stack/font/ChildFunSans-Demo.ttf) format('truetype');
+        }
+
+        :root {
+             
+             
+            --article-font-family: "ChildFunSans";
+            --zh-font-family: "ChildFunSans";
+        }
+    </style>
+
+
+	<div class="js-Pjax"><script>
+            (function() {
+                let comment = document.querySelector("#comment")
+                if (comment) {
+                    addCommentScript(comment)
+                }
+            })(document)
+
+            
+            function addCommentScript(comment) {
+                let script = document.createElement('script');
+                script.src = 'https://giscus.app/client.js';
+                script.crossOrigin = 'anonymous';
+                script.setAttribute('data-repo',"letere-gzj/hugo-stack");
+                script.setAttribute('data-repo-id',"R_kgDOMXeWfg");
+                script.setAttribute('data-category',"Announcements"); 
+                script.setAttribute('data-category-id',"DIC_kwDOMXeWfs4CheU8"); 
+                script.setAttribute('data-mapping',"pathname");
+                script.setAttribute('data-strict', 0 );
+                script.setAttribute('data-reactions-enabled', 1 );
+                script.setAttribute('data-emit-metadata', 0 );
+                script.setAttribute('data-input-position',"top");
+                script.setAttribute('data-theme',"light");
+                script.setAttribute('data-lang',"zh-CN");
+                script.setAttribute('data-loading', 'lazy')
+                script.async = true;
+                comment.appendChild(script);
+                initGiscus();
+            }
+
+            function initGiscus() {
+                addEventListener("message", (e) => {
+                    if (event.origin !== "https://giscus.app") return;
+                    handler();
+                });
+                window.addEventListener("onColorSchemeChange", handler);
+
+                function handler() {
+                    if (document.documentElement.dataset.scheme === "light") {
+                        setGiscusTheme('light');
+                    } else {
+                        setGiscusTheme('dark_dimmed');
+                    }
+                }
+            };
+        </script></div>
+
+	<style>
+    #TableOfContents > ul {
+        ul {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+                openUl.forEach((ul) => {
+                    ul.classList.remove("open")
+                })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && ul.localName === 'ul')
+        });
+    }
+    initTocHide()
+    window.initTocHide = initTocHide
+</script>
+
+	<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        transition: transform 0.8s ease-in-out;
+    }
+
+    [data-scheme="light"] {
+        #backTopBtn {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-light.svg);
+        }
+
+         
+          
+         
+    }
+
+    [data-scheme="dark"] {
+        #backTopBtn {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-dark.svg);
+        }
+
+         
+          
+         
+    }
+
+    #backTopBtn:hover {
+        transform: rotate(360deg)
+         
+    }
+
+    @keyframes wobble {
+        0%, 100% {
+            transform: rotate(0);
+        }
+        25% {
+            transform: rotate(45deg);
+        }
+        65% {
+            transform: rotate(-45deg);
+        }
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+    window.initScrollTop = initScrollTop;
+</script>
+
+	<script>
+    const config = {
+        
+        path: {
+            homePath: "/hugo-stack/",
+            modelPath: "https:\/\/letere-gzj.github.io\/hugo-stack\/" + "live2d-moc3/",
+            cssPath: "https://letere-gzj.github.io/hugo-stack/live2d/waifu.css",
+            tipsJsonPath: "https://letere-gzj.github.io/hugo-stack/live2d/my-waifu-tips.json",
+            tipsJsPath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/waifu-tips.js",
+            live2dCorePath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2dcubismcore.js",
+            live2dSdkPath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2d-sdk.js"
+        },
+        
+        tools: ["hitokoto", "asteroids", "express", "photo", "info", "quit"],
+        
+        drag: {
+            enable: true,
+            direction: ["x"]
+        },
+        
+        switchType: "order"
+    }
+
+    
+    if (screen.width >= 768) {
+        Promise.all([
+            loadExternalResource(config.path.cssPath, "css"),
+            loadExternalResource(config.path.live2dCorePath, "js"),
+            loadExternalResource(config.path.live2dSdkPath, "js"),
+            loadExternalResource(config.path.tipsJsPath, "js")
+        ]).then(() => {
+            initWidget({
+                homePath: config.path.homePath,
+                waifuPath: config.path.tipsJsonPath,
+                cdnPath: config.path.modelPath,
+                tools: config.tools,
+                dragEnable: config.drag.enable,
+                dragDirection: config.drag.direction,
+                switchType: config.switchType
+            });
+        });
+    }
+
+    
+    function loadExternalResource(url, type) {
+        return new Promise((resolve, reject) => {
+            let tag;
+            if (type === "css") {
+                tag = document.createElement("link");
+                tag.rel = "stylesheet";
+                tag.href = url;
+            }
+            else if (type === "js") {
+                tag = document.createElement("script");
+                tag.src = url;
+            }
+            if (tag) {
+                tag.onload = () => resolve(url);
+                tag.onerror = () => reject(url);
+                document.head.appendChild(tag);
+            }
+        });
+    }
+</script>
+
+	
+
+
+<div class="js-Pjax">
+    <script>
+        (function() {
+            let script = document.createElement('script');
+            script.defer = true;
+            script.src = "https://cn.vercount.one/js";
+            let footer = document.querySelector("footer")
+            if (footer) {
+                showHideView()
+                footer.appendChild(script);
+            }
+        })(document)
+
+        function showHideView() {
+            let viewCounts = document.querySelectorAll("#viewCount");
+            if (viewCounts) {
+                const style = document.querySelector(".article-page") ? '' : 'none';
+                viewCounts.forEach(ele => {
+                        ele.style.display = style;
+                    }
+                )
+            }
+        }
+    </script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+         
+    }
+
+    .code-more-img {
+         
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+    
+
+    function initCodeMoreBox() {
+        let codeBlocks = document.querySelectorAll(".highlight");
+        if (!codeBlocks) {
+            return;
+        }
+        codeBlocks.forEach(codeBlock => {
+            
+            if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+                return;
+            }
+            
+            
+            let codeMoreBox = document.createElement('div');
+            codeMoreBox.classList.add('code-more-box');
+            
+            let codeMoreBtn = document.createElement('span');
+            codeMoreBtn.classList.add('code-more-btn');
+            codeMoreBtn.addEventListener('click', () => {
+                codeBlock.classList.add('code-show');
+                codeMoreBox.style.display = 'none';
+                
+                window.dispatchEvent(new Event('resize'))
+            })
+            
+            let img = document.createElement('img');
+            img.classList.add('code-more-img');
+            img.src = "https://letere-gzj.github.io/hugo-stack/icons/codeMore.png"
+            
+            codeMoreBtn.appendChild(img);
+            codeMoreBox.appendChild(codeMoreBtn);
+            codeBlock.appendChild(codeMoreBox)
+        })
+    }
+
+    initCodeMoreBox();
+    window.initCodeMoreBox = initCodeMoreBox;
+</script>
+
+</div>
+
+    </body>
+</html>

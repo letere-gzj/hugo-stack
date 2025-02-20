@@ -10,13 +10,13 @@
 <meta property='og:description' content="欢迎来到我的网站，此博客由【Hugo + Stack】来进行搭建，主要分享个人生活和学习笔记">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/categories/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-02-14T17:58:43&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-02-20T09:44:24&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="Categories">
 <meta name="twitter:description" content="欢迎来到我的网站，此博客由【Hugo + Stack】来进行搭建，主要分享个人生活和学习笔记"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' /><link rel="alternate" type="application/rss&#43;xml" href="https://letere-gzj.github.io/hugo-stack/categories/index.xml">
     <link rel="shortcut icon" href="/hugo-stack/favicon.ico?v=2" />
 
-<div class="bg">
+<div class="loading">
     <div class="scale">
         <div class="sharingon">
             <div class="ring">
@@ -31,18 +31,18 @@
 
 <style>
     [data-scheme="light"] {
-    .bg {
-        background-color: #f5f5fa;
-    }
+        .loading{
+            background-color: #f5f5fa;
+        }
     }
 
     [data-scheme="dark"] {
-    .bg {
-        background-color: #303030;
-    }
+        .loading {
+            background-color: #303030;
+        }
     }
 
-    .bg {
+    .loading {
         position: fixed;
         display: flex;
         justify-content: center;  
@@ -54,7 +54,6 @@
         z-index: 99;
         zoom: 3.0;
     }
-
 
      
     .sharingon {
@@ -176,39 +175,31 @@
 </style>
 
 <script>
-    function fadeOut() {
-        let stopAnimate = document.querySelector(".animated-stop");
-        if (stopAnimate) {
-            return;
-        }
-        let sharingon= document.querySelector(".sharingon");
-        sharingon.classList.add("animated-stop")
-        let scale = document.querySelector(".scale");
-        scale.classList.add("scaleAndFadeout");
-        let bg = document.querySelector(".bg");
-        bg.classList.add("fadeout")
+    function initLoading() {
+        let loading = document.querySelector(".loading");
+        document.addEventListener('DOMContentLoaded', function() {
+            fadeOut();
+            setTimeout(() => {
+                loading.style.display = "none";
+            }, 1500)
+        });
     }
 
-    
-    
-    
-    
-    
-    
-    
+    function fadeOut() {
+        
+        let sharingon= document.querySelector(".sharingon");
+        sharingon.classList.add("animated-stop")
+        
+        let scale = document.querySelector(".scale");
+        scale.classList.add("scaleAndFadeout");
+        
+        let loading = document.querySelector(".loading");
+        loading.classList.add("fadeout")
+    }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        fadeOut();
-        let bg = document.querySelector(".bg");
-        setTimeout(() => {
-            bg.style.display = "none";
-        }, 1000)
-    });
-
-    
-    
-    
+    initLoading();
 </script>
+
 
     </head>
     <body class="">
@@ -1139,7 +1130,6 @@
     initCodeMoreBox();
     window.initCodeMoreBox = initCodeMoreBox;
 </script>
-
 
 </div>
 

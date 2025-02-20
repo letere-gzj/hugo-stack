@@ -11,13 +11,13 @@
 <meta property='og:description' content="欢迎来到我的网站，此博客由【Hugo + Stack】来进行搭建，主要分享个人生活和学习笔记">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-02-14T17:58:43&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-02-20T09:44:24&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="莱特雷-letere">
 <meta name="twitter:description" content="欢迎来到我的网站，此博客由【Hugo + Stack】来进行搭建，主要分享个人生活和学习笔记"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' /><link rel="alternate" type="application/rss&#43;xml" href="https://letere-gzj.github.io/hugo-stack/index.xml">
     <link rel="shortcut icon" href="/hugo-stack/favicon.ico?v=2" />
 
-<div class="bg">
+<div class="loading">
     <div class="scale">
         <div class="sharingon">
             <div class="ring">
@@ -32,18 +32,18 @@
 
 <style>
     [data-scheme="light"] {
-    .bg {
-        background-color: #f5f5fa;
-    }
+        .loading{
+            background-color: #f5f5fa;
+        }
     }
 
     [data-scheme="dark"] {
-    .bg {
-        background-color: #303030;
-    }
+        .loading {
+            background-color: #303030;
+        }
     }
 
-    .bg {
+    .loading {
         position: fixed;
         display: flex;
         justify-content: center;  
@@ -55,7 +55,6 @@
         z-index: 99;
         zoom: 3.0;
     }
-
 
      
     .sharingon {
@@ -177,39 +176,31 @@
 </style>
 
 <script>
-    function fadeOut() {
-        let stopAnimate = document.querySelector(".animated-stop");
-        if (stopAnimate) {
-            return;
-        }
-        let sharingon= document.querySelector(".sharingon");
-        sharingon.classList.add("animated-stop")
-        let scale = document.querySelector(".scale");
-        scale.classList.add("scaleAndFadeout");
-        let bg = document.querySelector(".bg");
-        bg.classList.add("fadeout")
+    function initLoading() {
+        let loading = document.querySelector(".loading");
+        document.addEventListener('DOMContentLoaded', function() {
+            fadeOut();
+            setTimeout(() => {
+                loading.style.display = "none";
+            }, 1500)
+        });
     }
 
-    
-    
-    
-    
-    
-    
-    
+    function fadeOut() {
+        
+        let sharingon= document.querySelector(".sharingon");
+        sharingon.classList.add("animated-stop")
+        
+        let scale = document.querySelector(".scale");
+        scale.classList.add("scaleAndFadeout");
+        
+        let loading = document.querySelector(".loading");
+        loading.classList.add("fadeout")
+    }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        fadeOut();
-        let bg = document.querySelector(".bg");
-        setTimeout(() => {
-            bg.style.display = "none";
-        }, 1000)
-    });
-
-    
-    
-    
+    initLoading();
 </script>
+
 
     </head>
     <body class="">
@@ -579,6 +570,14 @@
         
         <div class="widget-archive--list">
             <div class="archives-year">
+                    <a href="/hugo-stack/archives/#2025">
+                        
+                            <span class="year">2025</span>
+                            <span class="count">1</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
                     <a href="/hugo-stack/archives/#2024">
                         
                             <span class="year">2024</span>
@@ -609,7 +608,7 @@
 
     <div class="tagCloud-tags">
         
-            <a href="/hugo-stack/categories/%E6%95%99%E7%A8%8B/" class="font_size_6">
+            <a href="/hugo-stack/categories/%E6%95%99%E7%A8%8B/" class="font_size_7">
                 教程
             </a>
         
@@ -632,6 +631,97 @@
     
 
     <section class="article-list">
+        
+            
+<article class="">
+    <header class="article-header">
+
+    <div class="article-details">
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/hugo-stack/p/hugo/page-loading/">【Hugo】博客引入页面加载动画</a>
+        </h2>
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-02-19</time>
+            </div>
+        |
+            <div class="article-lastmod">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
+                <time>
+                    2025-02-20
+                </time>
+            </div>
+
+        <div>
+            |
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
+            <time class="article-time--reading">
+                1665 字
+            </time>
+        </div>
+        
+        <div id="viewCount">
+            |
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                <span id="vercount_value_page_pv">loading... </span>次
+            </time>
+        </div>
+    </footer>
+    
+
+    <div class="article-title-wrapper">
+        
+        <h3 class="article-subtitle">
+            博客刷新加载时引入加载动画，功能性一般般，但非常的酷炫
+        </h3>
+        
+    </div>
+
+    
+
+    
+        <header class="article-category">
+            
+            <div class="left-category">
+                
+                    <a href="/hugo-stack/categories/%E6%95%99%E7%A8%8B/" style="background-color: #2a9d8f; color: #fff;">
+                        教程
+                    </a>
+                
+            </div>
+            
+            
+                <div class="right-tag">
+                    
+                        <a href="/hugo-stack/tags/hugo/" style="background-color: #fe53bc; color: #fff;">Hugo</a>
+                    
+                </div>
+            
+        </header>
+    
+</div>
+
+</header>
+</article>
         
             
 <article class="has-image">
@@ -1865,7 +1955,6 @@
     initCodeMoreBox();
     window.initCodeMoreBox = initCodeMoreBox;
 </script>
-
 
 </div>
 
