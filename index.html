@@ -18,6 +18,7 @@
     <link rel="shortcut icon" href="/hugo-stack/favicon.ico?v=2" />
 
 <div class="loading">
+    <div class="bg"></div>
     <div class="scale">
         <div class="sharingon">
             <div class="ring">
@@ -33,13 +34,13 @@
 <style>
     [data-scheme="light"] {
         .loading{
-            background-color: #f5f5fa;
+            background-color: rgba(245, 245, 250, 0.8);
         }
     }
 
     [data-scheme="dark"] {
         .loading {
-            background-color: #303030;
+            background-color: rgba(48, 48, 48, 0.8);
         }
     }
 
@@ -177,12 +178,17 @@
 
 <script>
     function initLoading() {
+        const startTime = Date.now();
         let loading = document.querySelector(".loading");
         document.addEventListener('DOMContentLoaded', function() {
-            fadeOut();
+            const timeDelay = Date.now() - startTime;
+            
             setTimeout(() => {
-                loading.style.display = "none";
-            }, 1500)
+                fadeOut();
+                setTimeout(() => {
+                    loading.style.display = "none";
+                }, 1500)
+            }, timeDelay > 1050 ? 0 : 1050 - timeDelay)
         });
     }
 
