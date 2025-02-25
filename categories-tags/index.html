@@ -1201,6 +1201,32 @@
     window.initCodeMoreBox = initCodeMoreBox;
 </script>
 
+	<div class="js-Pjax">
+    <script>
+        (function () {
+            let katex = document.querySelector(".katex-pjax");
+            let scriptEle;
+            if(katex) {
+                            scriptEle = document.createElement("script");
+                            scriptEle.src = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js";scriptEle.integrity = "sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8";scriptEle.crossOrigin = "anonymous";
+                            
+                                scriptEle.defer = true;
+                            
+                            katex.appendChild(scriptEle);
+                            scriptEle = document.createElement("script");
+                            scriptEle.src = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js";scriptEle.integrity = "sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05";scriptEle.crossOrigin = "anonymous";
+                            
+                                scriptEle.defer = true;
+                            
+                            katex.appendChild(scriptEle);
+                setTimeout(() => {
+                    renderKaTeX()
+                }, 500)
+            }
+        })(document)
+    </script>
+</div>
+
 </div>
 
     </body>
