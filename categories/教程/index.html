@@ -10,7 +10,7 @@
 <meta property='og:description' content="记录问题or需求的解决方案，以及操作步骤">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-02-21T17:57:15&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/cover.png' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-02-26T16:51:34&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/cover.png' />
 <meta name="twitter:title" content="Category: 教程 - 莱特雷-letere">
 <meta name="twitter:description" content="记录问题or需求的解决方案，以及操作步骤"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/cover.png' /><link rel="alternate" type="application/rss&#43;xml" href="https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/index.xml">
@@ -481,7 +481,7 @@
 
         <div class="section-card">
             <div class="section-details">
-                <h3 class="section-count">7 个页面</h3>
+                <h3 class="section-count">8 个页面</h3>
                 <h1 class="section-term">教程</h1>
                 
                     <h2 class="section-description">记录问题or需求的解决方案，以及操作步骤</h2>
@@ -499,6 +499,17 @@
     </header>
     
     <section class="article-list--compact">
+        
+            <article>
+    <a href="/hugo-stack/p/hugo/pjax/">
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】PJAX实现无刷新加载页面</h2>
+            <footer class="article-time">
+                <time datetime='2025-02-26T13:46:57&#43;08:00'>2025-02-26</time>
+            </footer>
+        </div>
+    </a>
+</article>
         
             <article>
     <a href="/hugo-stack/p/hugo/page-loading/">
@@ -767,6 +778,10 @@
 		initCodeMoreBox()
 		
 		showWelcomeMessage();
+		
+		setTimeout(() => {
+			renderKaTeX();
+		}, 500)
 	})
 </script>
 
@@ -1247,31 +1262,25 @@
     window.initCodeMoreBox = initCodeMoreBox;
 </script>
 
-	<div class="js-Pjax">
-    <script>
-        (function () {
-            let katex = document.querySelector(".katex-pjax");
-            let scriptEle;
-            if(katex) {
-                            scriptEle = document.createElement("script");
-                            scriptEle.src = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js";scriptEle.integrity = "sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8";scriptEle.crossOrigin = "anonymous";
-                            
-                                scriptEle.defer = true;
-                            
-                            katex.appendChild(scriptEle);
-                            scriptEle = document.createElement("script");
-                            scriptEle.src = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js";scriptEle.integrity = "sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05";scriptEle.crossOrigin = "anonymous";
-                            
-                                scriptEle.defer = true;
-                            
-                            katex.appendChild(scriptEle);
-                setTimeout(() => {
-                    renderKaTeX()
-                }, 500)
-            }
-        })(document)
-    </script>
-</div>
+	<script>
+    function renderKaTeX() {
+        let katex = document.querySelector(".math-katex");
+        if (!katex) {
+            return;
+        }
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });
+    }
+
+    window.renderKaTeX = renderKaTeX;
+</script>
 
 </div>
 

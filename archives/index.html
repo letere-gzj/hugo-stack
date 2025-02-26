@@ -477,13 +477,24 @@
     
     
 
-    <section class="article-content">太棒了！目前共计 7 篇日志。继续加油。</section>
+    <section class="article-content">太棒了！目前共计 8 篇日志。继续加油。</section>
 
     
         
         <div class="archives-group" id="2025">
             <h2 class="archives-date section-title"><a href="/hugo-stack/archives/#2025">2025</a></h2>
             <div class="article-list--compact">
+                
+                    <article>
+    <a href="/hugo-stack/p/hugo/pjax/">
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】PJAX实现无刷新加载页面</h2>
+            <footer class="article-time">
+                <time datetime='2025-02-26T13:46:57&#43;08:00'>2025-02-26</time>
+            </footer>
+        </div>
+    </a>
+</article>
                 
                     <article>
     <a href="/hugo-stack/p/hugo/page-loading/">
@@ -763,6 +774,10 @@
 		initCodeMoreBox()
 		
 		showWelcomeMessage();
+		
+		setTimeout(() => {
+			renderKaTeX();
+		}, 500)
 	})
 </script>
 
@@ -1243,31 +1258,25 @@
     window.initCodeMoreBox = initCodeMoreBox;
 </script>
 
-	<div class="js-Pjax">
-    <script>
-        (function () {
-            let katex = document.querySelector(".katex-pjax");
-            let scriptEle;
-            if(katex) {
-                            scriptEle = document.createElement("script");
-                            scriptEle.src = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js";scriptEle.integrity = "sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8";scriptEle.crossOrigin = "anonymous";
-                            
-                                scriptEle.defer = true;
-                            
-                            katex.appendChild(scriptEle);
-                            scriptEle = document.createElement("script");
-                            scriptEle.src = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js";scriptEle.integrity = "sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05";scriptEle.crossOrigin = "anonymous";
-                            
-                                scriptEle.defer = true;
-                            
-                            katex.appendChild(scriptEle);
-                setTimeout(() => {
-                    renderKaTeX()
-                }, 500)
-            }
-        })(document)
-    </script>
-</div>
+	<script>
+    function renderKaTeX() {
+        let katex = document.querySelector(".math-katex");
+        if (!katex) {
+            return;
+        }
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });
+    }
+
+    window.renderKaTeX = renderKaTeX;
+</script>
 
 </div>
 

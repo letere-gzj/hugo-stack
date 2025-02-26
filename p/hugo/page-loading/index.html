@@ -1334,6 +1334,20 @@
         <div class="flex article-list--tile">
             
                 
+<article class="">
+    <a href="/hugo-stack/p/hugo/pjax/">
+
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】PJAX实现无刷新加载页面
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
 <article class="has-image">
     <a href="/hugo-stack/p/hugo/live2d-moc3/">
 
@@ -1427,31 +1441,6 @@
 
         <div class="article-details">
             <h2 class="article-title">【Hugo】APlayer &#43; PJAX 引入音乐播放放器并实现音乐不中断功能
-            </h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/hugo-stack/p/hugo/custom-blog/">
-
-        
-            <div class="article-image">
-                <img src="/hugo-stack/p/hugo/custom-blog/%E5%B0%81%E9%9D%A2.27481dd80f235da3bb222c51d2d09c36_hu15959188276720576554.png"
-                        width="250"
-                        height="150"
-                        loading="lazy"
-                        alt="Featured image of post 【Hugo】Hugo &#43; Github 免费部署自己的博客"
-                        data-key="hugo/custom-blog" 
-                        data-hash="md5-J0gd2A8jXaO7IixR0tCcNg==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">【Hugo】Hugo &#43; Github 免费部署自己的博客
             </h2>
         </div>
     </a>
@@ -1732,6 +1721,10 @@
 		initCodeMoreBox()
 		
 		showWelcomeMessage();
+		
+		setTimeout(() => {
+			renderKaTeX();
+		}, 500)
 	})
 </script>
 
@@ -2212,31 +2205,25 @@
     window.initCodeMoreBox = initCodeMoreBox;
 </script>
 
-	<div class="js-Pjax">
-    <script>
-        (function () {
-            let katex = document.querySelector(".katex-pjax");
-            let scriptEle;
-            if(katex) {
-                            scriptEle = document.createElement("script");
-                            scriptEle.src = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js";scriptEle.integrity = "sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8";scriptEle.crossOrigin = "anonymous";
-                            
-                                scriptEle.defer = true;
-                            
-                            katex.appendChild(scriptEle);
-                            scriptEle = document.createElement("script");
-                            scriptEle.src = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js";scriptEle.integrity = "sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05";scriptEle.crossOrigin = "anonymous";
-                            
-                                scriptEle.defer = true;
-                            
-                            katex.appendChild(scriptEle);
-                setTimeout(() => {
-                    renderKaTeX()
-                }, 500)
-            }
-        })(document)
-    </script>
-</div>
+	<script>
+    function renderKaTeX() {
+        let katex = document.querySelector(".math-katex");
+        if (!katex) {
+            return;
+        }
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });
+    }
+
+    window.renderKaTeX = renderKaTeX;
+</script>
 
 </div>
 
