@@ -10,7 +10,7 @@
 <meta property='og:description' content="通过Aplayer引入音乐播放器，再使用PJAX不刷新加载技术，实现页面切换不中断音乐播放">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-player/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-08-14T14:50:54&#43;08:00'/><meta property='article:modified_time' content='2024-11-05T11:37:09&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-player/cover.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-08-14T14:50:54&#43;08:00'/><meta property='article:modified_time' content='2025-02-26T17:28:04&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-player/cover.png' />
 <meta name="twitter:title" content="【Hugo】APlayer + PJAX 引入音乐播放放器并实现音乐不中断功能">
 <meta name="twitter:description" content="通过Aplayer引入音乐播放器，再使用PJAX不刷新加载技术，实现页面切换不中断音乐播放"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-player/cover.png' />
@@ -415,13 +415,13 @@
         
         
         <li >
-            <a href='/hugo-stack/update-list/' >
+            <a href='/hugo-stack/update-log/' >
                 
                 
                 
                     <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-list"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l11 0" /><path d="M9 12l11 0" /><path d="M9 18l11 0" /><path d="M5 6l0 .01" /><path d="M5 12l0 .01" /><path d="M5 18l0 .01" /></svg>
                 
-                <span>更新计划</span>
+                <span>更新日志</span>
             </a>
         </li>
         
@@ -565,7 +565,7 @@
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2024-11-05
+                    2025-02-26
                 </time>
             </div>
 
@@ -573,7 +573,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                4382 字
+                4443 字
             </time>
         </div>
         
@@ -1016,7 +1016,28 @@
 </div><p><em><strong>到这一步音乐播放进行已经完成了</strong></em></p>
 <hr>
 <h2 id="4-引入pjax">4 引入PJAX
-</h2><h3 id="41-基本引入">4.1 基本引入
+</h2><blockquote class="alert alert-warn">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><ul>
+<li>PJAX已单独创建到一篇新的文章上 <a class="link" href="/hugo-stack/p/hugo/pjax" ><strong>【Hugo】PJAX实现无刷新加载页面</strong></a></li>
+<li>后续相关问题将在新文章中更新，不会在此文章进行更新</li>
+</ul>
+</blockquote>
+<h3 id="41-基本引入">4.1 基本引入
 </h3><ul>
 <li>
 <p>（1）PJAX主要分为两个版本，<strong>带JQuery</strong> 和 <strong>不带JQuery</strong>的，下面我演示的是不带JQuery版本的</p>

@@ -24,11 +24,11 @@
         <description></description>
         </item>
         <item>
-        <title>更新计划</title>
-        <link>https://letere-gzj.github.io/hugo-stack/update-list/</link>
+        <title>更新日志</title>
+        <link>https://letere-gzj.github.io/hugo-stack/update-log/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/update-list/</guid>
+        <guid>https://letere-gzj.github.io/hugo-stack/update-log/</guid>
         <description>&lt;hr&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -40,14 +40,14 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;del&gt;引入 &lt;strong&gt;pjax&lt;/strong&gt; ，实现音乐播放器不中断功能&lt;/del&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;2024.08.11&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;不着急，现在的将就用&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;&lt;del&gt;引入2D虚拟人物到widget，放在右侧边栏&lt;/del&gt;&lt;/td&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;2024.08.10&lt;/td&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;改成全页面引用，非widget&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;del&gt;引入 &lt;strong&gt;pjax&lt;/strong&gt; ，实现音乐播放器不中断功能&lt;/del&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;2024.08.11&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;不着急，现在的将就用&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;&lt;del&gt;美化背景，引入动态背景&lt;/del&gt;&lt;/td&gt;
