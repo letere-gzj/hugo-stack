@@ -10,7 +10,7 @@
 <meta property='og:description' content="pjax = pushState + ajax，无刷新ajax加载页面">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/pjax/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2025-02-26T13:46:57&#43;08:00'/><meta property='article:modified_time' content='2025-02-26T17:28:04&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2025-02-26T13:46:57&#43;08:00'/><meta property='article:modified_time' content='2025-02-27T17:23:31&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="【Hugo】PJAX实现无刷新加载页面">
 <meta name="twitter:description" content="pjax = pushState + ajax，无刷新ajax加载页面"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
@@ -551,7 +551,7 @@
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2025-02-26
+                    2025-02-27
                 </time>
             </div>
 
@@ -559,7 +559,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                3498 字
+                3531 字
             </time>
         </div>
         
@@ -611,6 +611,25 @@
     
     
     <hr>
+
+
+
+
+
+
+    
+
+
+<div class="video-wrapper">
+    <iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;high_quality=1&amp;page=4&bvid=BV1zVndePE2Q&autoplay=0"
+            scrolling="no"
+            frameborder="no"
+            framespacing="0"
+            allowfullscreen="true"
+    >
+    </iframe>
+</div>
+
 <blockquote class="alert alert-note">
 
 
@@ -776,17 +795,21 @@
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">pjax</span><span class="p">.</span><span class="nx">_handleResponse</span> <span class="o">=</span> <span class="nx">pjax</span><span class="p">.</span><span class="nx">handleResponse</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">pjax</span><span class="p">.</span><span class="nx">handleResponse</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">responseText</span><span class="p">,</span> <span class="nx">request</span><span class="p">,</span> <span class="nx">href</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">responseText</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s2">&#34;&lt;html&#34;</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">// 将新页面的html字符串解析成DOM对象
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">newDom</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DOMParser</span><span class="p">().</span><span class="nx">parseFromString</span><span class="p">(</span><span class="nx">responseText</span><span class="p">,</span> <span class="s1">&#39;text/html&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">// 获取新页面中body的className，并设置回当前页面
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">bodyClass</span> <span class="o">=</span> <span class="nx">newDom</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">className</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&#34;class&#34;</span><span class="p">,</span> <span class="nx">bodyClass</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">responseText</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 将新页面的html字符串解析成DOM对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="kd">let</span> <span class="nx">newDom</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DOMParser</span><span class="p">().</span><span class="nx">parseFromString</span><span class="p">(</span><span class="nx">responseText</span><span class="p">,</span> <span class="s1">&#39;text/html&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 获取新页面中body的className，并设置回当前页面
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="kd">let</span> <span class="nx">bodyClass</span> <span class="o">=</span> <span class="nx">newDom</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">className</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&#34;class&#34;</span><span class="p">,</span> <span class="nx">bodyClass</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 放行，交给pjax自己处理
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">pjax</span><span class="p">.</span><span class="nx">_handleResponse</span><span class="p">(</span><span class="nx">responseText</span><span class="p">,</span> <span class="nx">request</span><span class="p">,</span> <span class="nx">href</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
@@ -1321,15 +1344,29 @@
 </span><span class="lnt">24
 </span><span class="lnt">25
 </span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">renderKaTeX</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">async</span> <span class="kd">function</span> <span class="nx">renderKaTeX</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 判断当前页面是否有KateX
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">katex</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.math-katex&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">katex</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 等待函数加载成功后，再执行渲染方法
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">while</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">renderMathInElement</span> <span class="o">!==</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kr">await</span> <span class="nx">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>        
 </span></span><span class="line"><span class="cl">        <span class="c1">// KaTeX渲染方法
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">renderMathInElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">delimiters</span><span class="o">:</span> <span class="p">[</span>
@@ -1341,12 +1378,18 @@
 </span></span><span class="line"><span class="cl">            <span class="nx">ignoredClasses</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;gist&#34;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">        <span class="p">});</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * 同步延迟
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">delay</span><span class="p">(</span><span class="nx">time</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">time</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;pjax:complete&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="c1">// 延迟一段时间，让KaTeX的脚本加载完成后再执行
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">renderKaTeX</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="mi">500</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">})</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
@@ -1858,10 +1901,12 @@
 	pjax._handleResponse = pjax.handleResponse;
 	pjax.handleResponse = function(responseText, request, href, options) {
 		if (request.responseText.match("<html")) {
-			let newDoc = new DOMParser().parseFromString(responseText, 'text/html');
 			
-			let bodyClass = newDoc.body.className;
-			document.body.setAttribute("class", bodyClass)
+			if (responseText) {
+				let newDoc = new DOMParser().parseFromString(responseText, 'text/html');
+				let bodyClass = newDoc.body.className;
+				document.body.setAttribute("class", bodyClass)
+			}
 			
 			pjax._handleResponse(responseText, request, href, options);
 		} else {
@@ -1901,9 +1946,7 @@
 		
 		showWelcomeMessage();
 		
-		setTimeout(() => {
-			renderKaTeX();
-		}, 500)
+		renderKaTeX();
 	})
 </script>
 
@@ -2385,11 +2428,16 @@
 </script>
 
 	<script>
-    function renderKaTeX() {
+    async function renderKaTeX() {
         let katex = document.querySelector(".math-katex");
         if (!katex) {
             return;
         }
+        
+        while (typeof renderMathInElement !== 'function') {
+            await delay(1000)
+        }
+        
         renderMathInElement(document.body, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
@@ -2399,6 +2447,12 @@
             ],
             ignoredClasses: ["gist"]
         });
+    }
+
+    function delay(time) {
+        return new Promise(resolve => {
+            setTimeout(resolve, time)
+        })
     }
 
     window.renderKaTeX = renderKaTeX;

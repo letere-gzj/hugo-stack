@@ -1762,10 +1762,12 @@
 	pjax._handleResponse = pjax.handleResponse;
 	pjax.handleResponse = function(responseText, request, href, options) {
 		if (request.responseText.match("<html")) {
-			let newDoc = new DOMParser().parseFromString(responseText, 'text/html');
 			
-			let bodyClass = newDoc.body.className;
-			document.body.setAttribute("class", bodyClass)
+			if (responseText) {
+				let newDoc = new DOMParser().parseFromString(responseText, 'text/html');
+				let bodyClass = newDoc.body.className;
+				document.body.setAttribute("class", bodyClass)
+			}
 			
 			pjax._handleResponse(responseText, request, href, options);
 		} else {
@@ -1805,9 +1807,7 @@
 		
 		showWelcomeMessage();
 		
-		setTimeout(() => {
-			renderKaTeX();
-		}, 500)
+		renderKaTeX();
 	})
 </script>
 
@@ -2289,11 +2289,16 @@
 </script>
 
 	<script>
-    function renderKaTeX() {
+    async function renderKaTeX() {
         let katex = document.querySelector(".math-katex");
         if (!katex) {
             return;
         }
+        
+        while (typeof renderMathInElement !== 'function') {
+            await delay(1000)
+        }
+        
         renderMathInElement(document.body, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
@@ -2303,6 +2308,12 @@
             ],
             ignoredClasses: ["gist"]
         });
+    }
+
+    function delay(time) {
+        return new Promise(resolve => {
+            setTimeout(resolve, time)
+        })
     }
 
     window.renderKaTeX = renderKaTeX;

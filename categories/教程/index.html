@@ -10,7 +10,7 @@
 <meta property='og:description' content="记录问题or需求的解决方案，以及操作步骤">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-02-26T17:28:04&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/cover.png' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-02-27T17:23:31&#43;08:00 '/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/cover.png' />
 <meta name="twitter:title" content="Category: 教程 - 莱特雷-letere">
 <meta name="twitter:description" content="记录问题or需求的解决方案，以及操作步骤"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/cover.png' /><link rel="alternate" type="application/rss&#43;xml" href="https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/index.xml">
@@ -736,10 +736,12 @@
 	pjax._handleResponse = pjax.handleResponse;
 	pjax.handleResponse = function(responseText, request, href, options) {
 		if (request.responseText.match("<html")) {
-			let newDoc = new DOMParser().parseFromString(responseText, 'text/html');
 			
-			let bodyClass = newDoc.body.className;
-			document.body.setAttribute("class", bodyClass)
+			if (responseText) {
+				let newDoc = new DOMParser().parseFromString(responseText, 'text/html');
+				let bodyClass = newDoc.body.className;
+				document.body.setAttribute("class", bodyClass)
+			}
 			
 			pjax._handleResponse(responseText, request, href, options);
 		} else {
@@ -779,9 +781,7 @@
 		
 		showWelcomeMessage();
 		
-		setTimeout(() => {
-			renderKaTeX();
-		}, 500)
+		renderKaTeX();
 	})
 </script>
 
@@ -1263,11 +1263,16 @@
 </script>
 
 	<script>
-    function renderKaTeX() {
+    async function renderKaTeX() {
         let katex = document.querySelector(".math-katex");
         if (!katex) {
             return;
         }
+        
+        while (typeof renderMathInElement !== 'function') {
+            await delay(1000)
+        }
+        
         renderMathInElement(document.body, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
@@ -1277,6 +1282,12 @@
             ],
             ignoredClasses: ["gist"]
         });
+    }
+
+    function delay(time) {
+        return new Promise(resolve => {
+            setTimeout(resolve, time)
+        })
     }
 
     window.renderKaTeX = renderKaTeX;
