@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://letere-gzj.github.io/hugo-stack/p/hugo/pjax/</loc>
-    <lastmod>2025-02-27T17:23:31+08:00</lastmod>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/hugo/view-count/</loc>
+    <lastmod>2025-02-28T16:00:18+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/categories/</loc>
-    <lastmod>2025-02-27T17:23:31+08:00</lastmod>
+    <lastmod>2025-02-28T16:00:18+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/post/</loc>
-    <lastmod>2025-02-27T17:23:31+08:00</lastmod>
+    <lastmod>2025-02-28T16:00:18+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/tags/</loc>
+    <lastmod>2025-02-28T16:00:18+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/hugo/pjax/</loc>
     <lastmod>2025-02-27T17:23:31+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/p/travel/beijing/</loc>
@@ -24,7 +27,7 @@
     <lastmod>2025-02-21T17:57:15+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/p/hugo/page-loading/</loc>
-    <lastmod>2025-02-26T17:28:04+08:00</lastmod>
+    <lastmod>2025-02-28T16:00:18+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/p/zzz/activity/mcdonalds/bbf/</loc>
     <lastmod>2024-12-24T17:47:49+08:00</lastmod>
