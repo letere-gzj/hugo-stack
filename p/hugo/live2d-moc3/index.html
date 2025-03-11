@@ -10,7 +10,7 @@
 <meta property='og:description' content="介绍如何给博客引入moc3类型的live2d模型">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/live2d-moc3/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-11-14T15:21:35&#43;08:00'/><meta property='article:modified_time' content='2025-01-23T17:28:17&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugo/live2d-moc3/cover.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2024-11-14T15:21:35&#43;08:00'/><meta property='article:modified_time' content='2025-03-11T17:45:01&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/hugo/live2d-moc3/cover.png' />
 <meta name="twitter:title" content="【Hugo】博客引入moc3类型的live2d模型">
 <meta name="twitter:description" content="介绍如何给博客引入moc3类型的live2d模型"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/hugo/live2d-moc3/cover.png' />
@@ -570,7 +570,7 @@
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2025-01-23
+                    2025-03-11
                 </time>
             </div>
 
@@ -578,7 +578,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                1825 字
+                1837 字
             </time>
         </div>
         
@@ -735,13 +735,15 @@
 </span><span class="lnt">61
 </span><span class="lnt">62
 </span><span class="lnt">63
+</span><span class="lnt">64
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">cdnPath</span> <span class="o">=</span> <span class="s1">&#39;https://cdn.jsdelivr.net/gh/letere-gzj/live2d-widget-v3@main&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">cdnPath</span> <span class="o">=</span> <span class="s2">&#34;https://cdn.jsdelivr.net/gh/letere-gzj/live2d-widget-v3@main&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// 资源路径
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">path</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">homePath</span><span class="o">:</span> <span class="s2">&#34;/&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">modelPath</span><span class="o">:</span> <span class="nx">cdnPath</span> <span class="o">+</span> <span class="s2">&#34;/Resources/&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">cssPath</span><span class="o">:</span> <span class="nx">cdnPath</span> <span class="o">+</span> <span class="s2">&#34;/waifu.css&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">tipsJsonPath</span><span class="o">:</span> <span class="nx">cdnPath</span> <span class="o">+</span> <span class="s2">&#34;/waifu-tips.json&#34;</span><span class="p">,</span>
@@ -750,7 +752,7 @@
 </span></span><span class="line"><span class="cl">      <span class="nx">live2dSdkPath</span><span class="o">:</span> <span class="nx">cdnPath</span> <span class="o">+</span> <span class="s2">&#34;/live2d-sdk.js&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// 工具栏
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">tools</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;hitokoto&#34;</span><span class="p">,</span> <span class="s2">&#34;asteroids&#34;</span><span class="p">,</span> <span class="s2">&#34;express&#34;</span><span class="p">,</span> <span class="s2">&#34;switch-model&#34;</span><span class="p">,</span> <span class="s2">&#34;switch-texture&#34;</span><span class="p">,</span> <span class="s2">&#34;info&#34;</span><span class="p">,</span> <span class="s2">&#34;quit&#34;</span><span class="p">],</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">tools</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;hitokoto&#34;</span><span class="p">,</span> <span class="s2">&#34;asteroids&#34;</span><span class="p">,</span> <span class="s2">&#34;express&#34;</span><span class="p">,</span> <span class="s2">&#34;switch-model&#34;</span><span class="p">,</span> <span class="s2">&#34;switch-texture&#34;</span><span class="p">,</span> <span class="s2">&#34;photo&#34;</span><span class="p">,</span> <span class="s2">&#34;info&#34;</span><span class="p">,</span> <span class="s2">&#34;quit&#34;</span><span class="p">],</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// 模型拖拽
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">drag</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">enable</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -1095,7 +1097,8 @@
 <h2 id="3-优化">3 优化
 </h2><h3 id="31-png转webp">3.1 png转webp
 </h3><ul>
-<li>为了优化模型的加载速度，可以将模型中的皮肤png文件，转为webp文件</li>
+<li>为了优化模型的加载速度，可以将模型中的皮肤png文件，转为webp文件<a class="link" href="https://tophix.com/zh-cn/image-converter/png-to-webp"  target="_blank" rel="noopener"
+    >【在线转换地址】</a></li>
 <li>清晰度几乎没有变化，但皮肤文件的小了有10倍多，可以减少网络请求量，从而加快加载速度</li>
 </ul>
 <p><img src="/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp1.png"
