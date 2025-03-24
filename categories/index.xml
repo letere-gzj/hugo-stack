@@ -7,7 +7,15 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>莱特雷-letere</copyright>
-        <lastBuildDate>Fri, 28 Feb 2025 11:29:14 +0800</lastBuildDate><atom:link href="https://letere-gzj.github.io/hugo-stack/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 24 Mar 2025 17:50:28 +0800</lastBuildDate><atom:link href="https://letere-gzj.github.io/hugo-stack/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>游戏</title>
+        <link>https://letere-gzj.github.io/hugo-stack/categories/%E6%B8%B8%E6%88%8F/</link>
+        <pubDate>Mon, 24 Mar 2025 17:50:28 +0800</pubDate>
+        
+        <guid>https://letere-gzj.github.io/hugo-stack/categories/%E6%B8%B8%E6%88%8F/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>生活</title>
         <link>https://letere-gzj.github.io/hugo-stack/categories/%E7%94%9F%E6%B4%BB/</link>
         <pubDate>Fri, 21 Feb 2025 11:29:15 +0800</pubDate>

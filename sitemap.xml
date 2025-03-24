@@ -2,17 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://letere-gzj.github.io/hugo-stack/p/hugo/view-count/</loc>
-    <lastmod>2025-02-28T16:00:18+08:00</lastmod>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/mhws%E5%A4%AA%E5%88%80%E9%94%81%E5%88%83%E9%BE%99%E6%8B%9B%E5%BC%8F%E5%A4%84%E7%90%86/</loc>
+    <lastmod>2025-03-24T18:00:42+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/categories/</loc>
-    <lastmod>2025-03-18T11:06:02+08:00</lastmod>
+    <lastmod>2025-03-24T18:00:42+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/post/</loc>
-    <lastmod>2025-03-18T11:06:02+08:00</lastmod>
+    <lastmod>2025-03-24T18:00:42+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/tags/</loc>
-    <lastmod>2025-03-18T11:06:02+08:00</lastmod>
+    <lastmod>2025-03-24T18:00:42+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/tags/%E6%80%AA%E7%89%A9%E7%8C%8E%E4%BA%BA%E8%8D%92%E9%87%8E/</loc>
+    <lastmod>2025-03-24T18:00:42+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2025-03-24T18:00:42+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/hugo/view-count/</loc>
+    <lastmod>2025-02-28T16:00:18+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/p/hugo/pjax/</loc>
     <lastmod>2025-03-18T11:06:02+08:00</lastmod>
