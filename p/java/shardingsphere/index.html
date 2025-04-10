@@ -1,0 +1,2467 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SpringBoot整合ShardingSphere，来实现分库分表功能">
+<title>【Java】SpringBoot整合ShardingSphere</title>
+
+<link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/'>
+
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.36a68c9ef5edb3b2d69993e6dc42c8b2423ff1a2c82f1a2bca93fe5b7e3a3c07.css"><meta property='og:title' content="【Java】SpringBoot整合ShardingSphere">
+<meta property='og:description' content="SpringBoot整合ShardingSphere，来实现分库分表功能">
+<meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/'>
+<meta property='og:site_name' content='莱特雷-letere'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:published_time' content='2025-03-28T17:31:02&#43;08:00'/><meta property='article:modified_time' content='2025-04-10T17:59:10&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta name="twitter:title" content="【Java】SpringBoot整合ShardingSphere">
+<meta name="twitter:description" content="SpringBoot整合ShardingSphere，来实现分库分表功能"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+    <link rel="shortcut icon" href="/hugo-stack/favicon.ico?v=2" />
+
+<div class="loading">
+    <div class="bg"></div>
+    <div class="scale">
+        <div class="sharingon">
+            <div class="ring">
+                <div class="to"></div>
+                <div class="to"></div>
+                <div class="to"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    [data-scheme="light"] {
+        .loading{
+            background-color: rgba(245, 245, 250, 0.8);
+        }
+    }
+
+    [data-scheme="dark"] {
+        .loading {
+            background-color: rgba(48, 48, 48, 0.8);
+        }
+    }
+
+    .loading {
+        position: fixed;
+        display: flex;
+        justify-content: center;  
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        zoom: 3.0;
+    }
+
+     
+    .sharingon {
+        position: relative;
+        width: 6em;
+        height: 6em;
+        background-color: red;
+        border: 6px solid black;
+        animation: rot 1s ease-in-out infinite;
+    }
+
+    .animated-stop {
+        animation-play-state: paused;
+    }
+
+    .fadeout {
+        animation: fadeOut 1.5s forwards;
+    }
+
+    .scaleAndFadeout {
+        animation: scaleAndFadeOut 1.5s forwards
+    }
+
+    .ring {
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+        width: 3.5em;
+        height: 3.5em;
+        border: 4px solid rgb(110, 13 ,13 ,0.5);
+        transform: translate(-50%,-50%);
+    }
+
+    .sharingon, .ring, .to,.circle {
+        border-radius: 50%;
+    }
+
+    .to,.circle {
+        position: absolute;
+        content: "";
+        width: 0.9em;
+        height: 0.9em;
+        background-color: black;
+    }
+
+    .to:nth-child(1) {
+        top: -0.5em;
+        left: 50%;
+        transform: translate(-40%);
+    }
+
+    .to::before {
+        content: "";
+        position: absolute;
+        top: -0.5em;
+        right: -0.2em;
+        width: 1.1em;
+        height: 0.9em;
+        box-sizing: border-box;
+        border-left: 16px solid black;
+        border-radius: 100% 0 0;
+    }
+
+    .to:nth-child(2) {
+        bottom: 0.5em;
+        left: -0.35em;
+        transform: rotate(-120deg);
+    }
+
+    .to:nth-child(3) {
+        bottom: 0.5em;
+        right: -0.35em;
+        transform: rotate(120deg);
+    }
+
+    .circle {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 0 0 20px 1px;
+        width: 1em;
+        height: 1em;
+    }
+
+    @keyframes rot {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes scaleAndFadeOut {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.5);  
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.5);  
+            opacity: 0;  
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;  
+        }
+    }
+</style>
+
+<script>
+    function initLoading() {
+        const startTime = Date.now();
+        let loading = document.querySelector(".loading");
+        document.addEventListener('DOMContentLoaded', function() {
+            const timeDelay = Date.now() - startTime;
+            
+            setTimeout(() => {
+                fadeOut();
+                setTimeout(() => {
+                    loading.style.display = "none";
+                }, 1500)
+            }, timeDelay > 1050 ? 0 : 1050 - timeDelay)
+        });
+    }
+
+    function fadeOut() {
+        
+        let sharingon= document.querySelector(".sharingon");
+        sharingon.classList.add("animated-stop")
+        
+        let scale = document.querySelector(".scale");
+        scale.classList.add("scaleAndFadeout");
+        
+        let loading = document.querySelector(".loading");
+        loading.classList.add("fadeout")
+    }
+
+    initLoading();
+</script>
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/hugo-stack/">
+                
+                    
+
+                    
+
+
+
+                        <img src="/hugo-stack/img/muzimi.gif" width="250"
+                             height="250" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🤔</span>
+                
+            </figure>
+            
+        
+
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/hugo-stack">莱特雷-letere</a></h1>
+            <h2 class="site-description">欢迎来到我的网站，此博客由【Hugo &#43; Stack】来进行搭建，主要分享个人生活和学习笔记</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a
+                        href='https://space.bilibili.com/402971365'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-bilibili" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" />
+  <path d="M8 3l2 3" />
+  <path d="M16 3l-2 3" />
+  <path d="M9 13v-2" />
+  <path d="M15 11v2" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                        href='https://github.com/letere-gzj'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                        href='https://letere-gzj.github.io'
+                        target="_blank"
+                        title="Hexo_Blog"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-hexo"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /><path d="M9 8v8" /><path d="M15 8v8" /><path d="M9 12h6" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                        href='/hugo-stack/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rss"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M4 4a16 16 0 0 1 16 16" /><path d="M4 11a9 9 0 0 1 9 9" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/hugo-stack/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/categories-tags/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-tags"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 8v4.172a2 2 0 0 0 .586 1.414l5.71 5.71a2.41 2.41 0 0 0 3.408 0l3.592 -3.592a2.41 2.41 0 0 0 0 -3.408l-5.71 -5.71a2 2 0 0 0 -1.414 -.586h-4.172a2 2 0 0 0 -2 2z" /><path d="M18 19l1.592 -1.592a4.82 4.82 0 0 0 0 -6.816l-4.592 -4.592" /><path d="M7 10h-.01" /></svg>
+                
+                <span>分类&amp;标签</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/update-log/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-list"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l11 0" /><path d="M9 12l11 0" /><path d="M9 18l11 0" /><path d="M5 6l0 .01" /><path d="M5 12l0 .01" /><path d="M5 18l0 .01" /></svg>
+                
+                <span>更新日志</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>技术链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-数据准备">1 数据准备</a></li>
+    <li><a href="#2-shardingsphere-jdbc">2 ShardingSphere-JDBC</a>
+      <ul>
+        <li><a href="#21-基本引入">2.1 基本引入</a></li>
+        <li><a href="#22-自定义分片算法类">2.2 自定义分片算法类</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-shardingsphere-proxy">3 ShardingSphere-Proxy</a>
+      <ul>
+        <li><a href="#31-基本引入">3.1 基本引入</a></li>
+        <li><a href="#32-连接使用">3.2 连接使用</a></li>
+        <li><a href="#33-自定义分片算法类">3.3 自定义分片算法类</a>
+          <ul>
+            <li><a href="#331-自定义算法类打包">3.3.1 自定义算法类打包</a></li>
+            <li><a href="#332-proxy配置自定义分片算法类">3.3.2 proxy配置自定义分片算法类</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/hugo-stack/p/java/shardingsphere/">【Java】SpringBoot整合ShardingSphere</a>
+        </h2>
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-03-28</time>
+            </div>
+        |
+            <div class="article-lastmod">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
+                <time>
+                    2025-04-10
+                </time>
+            </div>
+
+        <div>
+            |
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
+            <time class="article-time--reading">
+                2597 字
+            </time>
+        </div>
+        
+        <div id="viewCount">
+            |
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                <span id="vercount_value_page_pv">loading... </span>次
+            </time>
+        </div>
+    </footer>
+    
+
+    <div class="article-title-wrapper">
+        
+        <h3 class="article-subtitle">
+            SpringBoot整合ShardingSphere，来实现分库分表功能
+        </h3>
+        
+    </div>
+
+    
+
+    
+        <header class="article-category">
+            
+            <div class="left-category">
+                
+                    <a href="/hugo-stack/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" >
+                        学习笔记
+                    </a>
+                
+            </div>
+            
+            
+                <div class="right-tag">
+                    
+                        <a href="/hugo-stack/tags/java/" style="background-color: #518fd2; color: #fff;">Java</a>
+                    
+                </div>
+            
+        </header>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <hr>
+<blockquote class="alert alert-note">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><strong>前言：</strong></p>
+<ul>
+<li>官方文档：<a class="link" href="https://shardingsphere.apache.org/document/current/cn/overview/"  target="_blank" rel="noopener"
+    ><strong>ShardingSphere</strong></a></li>
+<li>本篇文章基于<strong>5.5.2</strong>版本所编写，其他版本可能存在差异</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="1-数据准备">1 数据准备
+</h2><ul>
+<li>（1）表sql</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">t_user</span><span class="o">`</span><span class="w">  </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">user_id</span><span class="o">`</span><span class="w"> </span><span class="nb">bigint</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">COMMENT</span><span class="w"> </span><span class="s1">&#39;用户id&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">username</span><span class="o">`</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">COMMENT</span><span class="w"> </span><span class="s1">&#39;用户名&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">sex</span><span class="o">`</span><span class="w"> </span><span class="n">tinyint</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">COMMENT</span><span class="w"> </span><span class="s1">&#39;性别&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">user_id</span><span class="o">`</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>（2）数据库表结构</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">- sharding
+</span></span><span class="line"><span class="cl">  - 任意表
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- sharding_0
+</span></span><span class="line"><span class="cl">  - t_user_0
+</span></span><span class="line"><span class="cl">  - t_user_1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- sharding_1
+</span></span><span class="line"><span class="cl">  - t_user_0
+</span></span><span class="line"><span class="cl">  - t_user_1 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>（3）按照上面的sql，以及数据库表结构，创建好数据库和表</li>
+</ul>
+<p><img src="/hugo-stack/p/java/shardingsphere/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E7%BB%93%E6%9E%84.png"
+	width="290"
+	height="466"
+	srcset="/hugo-stack/p/java/shardingsphere/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E7%BB%93%E6%9E%84_hu7785404077405981742.png 480w, /hugo-stack/p/java/shardingsphere/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E7%BB%93%E6%9E%84_hu8252462336811945093.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="62"
+		data-flex-basis="149px"
+	
+></p>
+<hr>
+<h2 id="2-shardingsphere-jdbc">2 ShardingSphere-JDBC
+</h2><h3 id="21-基本引入">2.1 基本引入
+</h3><ul>
+<li>（1）依赖引入</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="c">&lt;!-- https://mvnrepository.com/artifact/org.apache.shardingsphere/shardingsphere-jdbc --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;groupId&gt;</span>org.apache.shardingsphere<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;artifactId&gt;</span>shardingsphere-jdbc<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;version&gt;</span>5.5.2<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>（2）创建shardingsphere配置文件<strong>shardingsphere-config.yaml</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># 数据源配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">dataSources</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">default_ds</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dataSourceClassName</span><span class="p">:</span><span class="w"> </span><span class="l">com.zaxxer.hikari.HikariDataSource</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driverClassName</span><span class="p">:</span><span class="w"> </span><span class="l">com.mysql.cj.jdbc.Driver</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">jdbcUrl</span><span class="p">:</span><span class="w"> </span><span class="l">jdbc:mysql://127.0.0.1:3306/sharding?serverTimezone=GMT%2B8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l">letere</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="m">123456</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ds_0</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dataSourceClassName</span><span class="p">:</span><span class="w"> </span><span class="l">com.zaxxer.hikari.HikariDataSource</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driverClassName</span><span class="p">:</span><span class="w"> </span><span class="l">com.mysql.cj.jdbc.Driver</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">jdbcUrl</span><span class="p">:</span><span class="w"> </span><span class="l">jdbc:mysql://127.0.0.1:3306/sharding_0?serverTimezone=GMT%2B8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l">letere</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="m">123456</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ds_1</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dataSourceClassName</span><span class="p">:</span><span class="w"> </span><span class="l">com.zaxxer.hikari.HikariDataSource</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driverClassName</span><span class="p">:</span><span class="w"> </span><span class="l">com.mysql.cj.jdbc.Driver</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">jdbcUrl</span><span class="p">:</span><span class="w"> </span><span class="l">jdbc:mysql://127.0.0.1:3306/sharding_1?serverTimezone=GMT%2B8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l">letere</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="m">123456</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 规则配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">rules</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 单表配置(不分库分表的表)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- !<span class="l">SINGLE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tables</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;default_ds.*&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 广播表配置(分库分表的表)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- !<span class="l">BROADCAST</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tables</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;ds_0.t_user&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;ds_1.t_user&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- !<span class="l">SHARDING</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 表分片配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tables</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">t_user</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">actualDataNodes</span><span class="p">:</span><span class="w"> </span><span class="l">ds_${0..1}.t_user_${0..1}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c"># 库分片策略</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">databaseStrategy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">standard</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">shardingColumn</span><span class="p">:</span><span class="w"> </span><span class="l">user_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">shardingAlgorithmName</span><span class="p">:</span><span class="w"> </span><span class="l">user_database_inline</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c"># 表分片策略</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">tableStrategy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">standard</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">shardingColumn</span><span class="p">:</span><span class="w"> </span><span class="l">sex</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">shardingAlgorithmName</span><span class="p">:</span><span class="w"> </span><span class="l">user_table_inline</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">bindingTables</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">t_user</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 分片算法定义</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">shardingAlgorithms</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">user_database_inline</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">INLINE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">props</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">algorithm-expression</span><span class="p">:</span><span class="w"> </span><span class="l">ds_${user_id % 2}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">user_table_inline</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">INLINE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">props</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">algorithm-expression</span><span class="p">:</span><span class="w"> </span><span class="l">t_user_${sex % 2}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># sql打印调试</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">props</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">sql-show</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>（3）<strong>application.yaml</strong>引入shardingsphere配置文件</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">spring</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">datasource</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver-class-name</span><span class="p">:</span><span class="w"> </span><span class="l">org.apache.shardingsphere.driver.ShardingSphereDriver</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">jdbc:shardingsphere:classpath:shardingsphere-config.yaml</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/hugo-stack/p/java/shardingsphere/jdbc%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png"
+	width="445"
+	height="188"
+	srcset="/hugo-stack/p/java/shardingsphere/jdbc%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84_hu10810568037823398399.png 480w, /hugo-stack/p/java/shardingsphere/jdbc%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84_hu6103893355542962003.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="236"
+		data-flex-basis="568px"
+	
+></p>
+<ul>
+<li>（4）以上就成功引入实现了分库分表，对<code>t_user</code>进行新增操作，会触发分库分表策略，对于其他不分库分表的表就，直接在default_ds进行数据操作</li>
+</ul>
+<p><img src="/hugo-stack/p/java/shardingsphere/jdbc-%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.png"
+	width="1233"
+	height="207"
+	srcset="/hugo-stack/p/java/shardingsphere/jdbc-%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8_hu7804815707699906588.png 480w, /hugo-stack/p/java/shardingsphere/jdbc-%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8_hu9421737949444043277.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="595"
+		data-flex-basis="1429px"
+	
+></p>
+<p><img src="/hugo-stack/p/java/shardingsphere/jdbc-%E4%B8%8D%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.png"
+	width="1261"
+	height="421"
+	srcset="/hugo-stack/p/java/shardingsphere/jdbc-%E4%B8%8D%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8_hu8058748178145607220.png 480w, /hugo-stack/p/java/shardingsphere/jdbc-%E4%B8%8D%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8_hu14427164648643625984.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="299"
+		data-flex-basis="718px"
+	
+></p>
+<hr>
+<h3 id="22-自定义分片算法类">2.2 自定义分片算法类
+</h3><ul>
+<li>（1）实现<code>ShardingAlgorithm</code>的子接口，实现分片算法，下边以<code>StandardShardingAlgorithm</code>举例
+<ul>
+<li><strong>StandardShardingAlgorithm</strong></li>
+<li><strong>ComplexKeysShardingAlgorithm</strong></li>
+<li><strong>HintShardingAlgorithm</strong></li>
+</ul>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/java/shardingsphere/%E5%88%86%E7%89%87%E7%AE%97%E6%B3%95%E7%B1%BB.png"
+	width="943"
+	height="410"
+	srcset="/hugo-stack/p/java/shardingsphere/%E5%88%86%E7%89%87%E7%AE%97%E6%B3%95%E7%B1%BB_hu17065751928278022851.png 480w, /hugo-stack/p/java/shardingsphere/%E5%88%86%E7%89%87%E7%AE%97%E6%B3%95%E7%B1%BB_hu12688878541811275068.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="230"
+		data-flex-basis="552px"
+	
+></p>
+<ul>
+<li>（2）创建自定义类，实现里面的方法
+<ul>
+<li><strong>collection</strong>：分片表名集合</li>
+<li><strong>preciseShardingValue</strong>：分片字段值</li>
+<li><strong>rangeShardingValue</strong>：分片字段范围值</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CustomStandardShardingAlgorithm</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">StandardShardingAlgorithm</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">doSharding</span><span class="p">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">collection</span><span class="p">,</span><span class="w"> </span><span class="n">PreciseShardingValue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">preciseShardingValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// TODO: 分表业务处理（按自己实际业务修改）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">tableNo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">preciseShardingValue</span><span class="p">.</span><span class="na">getValue</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 返回对应的表名(表名_no)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">preciseShardingValue</span><span class="p">.</span><span class="na">getLogicTableName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;_&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tableNo</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">doSharding</span><span class="p">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">collection</span><span class="p">,</span><span class="w"> </span><span class="n">RangeShardingValue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rangeShardingValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// TODO: 范围查询分表业务处理，一般用时间来分表的会使用到（按自己实际业务修改）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 返回对应表名集合</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">collection</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>（3）在<code>shardingsphere-config.yaml</code>中，配置自定义分片算法类</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">rules</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- !<span class="l">SHARDING</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 表分片配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tables</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">t_user</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">actualDataNodes</span><span class="p">:</span><span class="w"> </span><span class="l">ds_${0..1}.t_user_${0..1}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c"># 表分片策略</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">tableStrategy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">standard</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">shardingColumn</span><span class="p">:</span><span class="w"> </span><span class="l">sex</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">shardingAlgorithmName</span><span class="p">:</span><span class="w"> </span><span class="l">user_custom_standard</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 分片算法定义</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">shardingAlgorithms</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">user_custom_standard</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">CLASS_BASED</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">props</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">strategy</span><span class="p">:</span><span class="w"> </span><span class="l">STANDARD</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">algorithmClassName</span><span class="p">:</span><span class="w"> </span><span class="l">com.xxxx.CustomStandardShardingAlgorithm</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="3-shardingsphere-proxy">3 ShardingSphere-Proxy
+</h2><blockquote class="alert alert-note">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>下面ShardingSphere-Proxy的安装使用，是以<strong>windows</strong>版为主</p>
+</blockquote>
+<h3 id="31-基本引入">3.1 基本引入
+</h3><ul>
+<li>（1）前往<a class="link" href="https://shardingsphere.apache.org/document/current/cn/downloads/"  target="_blank" rel="noopener"
+    ><strong>shardingsphere</strong></a>，下载<strong>shardingsphere-proxy</strong>二进制包</li>
+</ul>
+<p><img src="/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD.png"
+	width="1171"
+	height="571"
+	srcset="/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD_hu12107506924032985290.png 480w, /hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD_hu14235679436039961826.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="205"
+		data-flex-basis="492px"
+	
+></p>
+<p><img src="/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD2.png"
+	width="1230"
+	height="580"
+	srcset="/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD2_hu4672075268362008072.png 480w, /hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD2_hu4582616987321254074.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="212"
+		data-flex-basis="508px"
+	
+></p>
+<ul>
+<li>
+<p>（2）命令行输入<code>tar -zxvf apache-shardingsphere-5.5.2-shardingsphere-proxy-bin.tar.gz</code>进行解压（包名，版本号按实际情况填写）</p>
+</li>
+<li>
+<p>（3）创建<code>ex-lib</code>文件夹，下载<a class="link" href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-proxy/startup/bin/"  target="_blank" rel="noopener"
+    ><strong>mysql驱动</strong></a>，并放入</p>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%85.png"
+	width="465"
+	height="318"
+	srcset="/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%85_hu13552599376770913915.png 480w, /hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%85_hu12133335845737287506.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="350px"
+	
+></p>
+<p><img src="/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%852.png"
+	width="1177"
+	height="722"
+	srcset="/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%852_hu14223544683608709068.png 480w, /hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%852_hu11973402482764736487.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="163"
+		data-flex-basis="391px"
+	
+></p>
+<ul>
+<li>（4）修改<code>conf/global.yaml</code>，配置权限和属性</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># 权限验证</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">authority</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">users</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l">root@%</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l">root</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">admin</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">privilege</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">ALL_PERMITTED</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">props</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># sql打印</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">sql-show</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>（5）修改<code>conf/database-sharding.yaml</code>，配置数据源和分片规则</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># 数据库名</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">databaseName</span><span class="p">:</span><span class="w"> </span><span class="l">sharding_db</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 数据源</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">dataSources</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">default_ds</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">jdbc:mysql://127.0.0.1:3306/sharding?serverTimezone=GMT%2B8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l">letere</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="m">123456</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ds_0</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">jdbc:mysql://127.0.0.1:3306/sharding_0?serverTimezone=GMT%2B8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l">letere</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="m">123456</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ds_1</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">jdbc:mysql://127.0.0.1:3306/sharding_1?serverTimezone=GMT%2B8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l">letere</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="m">123456</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 规则配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">rules</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 单表配置(不分库分表的表)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- !<span class="l">SINGLE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tables</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;default_ds.*&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 广播表配置(分库分表的表)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- !<span class="l">BROADCAST</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tables</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;ds_0.t_user&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;ds_1.t_user&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- !<span class="l">SHARDING</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 表分片配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tables</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">t_user</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">actualDataNodes</span><span class="p">:</span><span class="w"> </span><span class="l">ds_${0..1}.t_user_${0..1}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c"># 库分片策略</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">databaseStrategy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">standard</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">shardingColumn</span><span class="p">:</span><span class="w"> </span><span class="l">user_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">shardingAlgorithmName</span><span class="p">:</span><span class="w"> </span><span class="l">user_database_inline</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c"># 表分片策略</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">tableStrategy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">standard</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">shardingColumn</span><span class="p">:</span><span class="w"> </span><span class="l">sex</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">shardingAlgorithmName</span><span class="p">:</span><span class="w"> </span><span class="l">user_table_inline</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">bindingTables</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">t_user</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 分片算法定义</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">shardingAlgorithms</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">user_database_inline</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">INLINE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">props</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">algorithm-expression</span><span class="p">:</span><span class="w"> </span><span class="l">ds_${user_id % 2}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">user_table_inline</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">INLINE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">props</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">algorithm-expression</span><span class="p">:</span><span class="w"> </span><span class="l">t_user_${sex % 2}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>（6）运行<code>bin/start.bat</code>，命令行没终止即启动成功，默认端口<strong>3307</strong>，可以前往<code>logs/stdout.log</code>查看具体启动日志</li>
+</ul>
+<p><img src="/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C.png"
+	width="573"
+	height="181"
+	srcset="/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C_hu17512846245406108549.png 480w, /hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C_hu13761289734865068430.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="316"
+		data-flex-basis="759px"
+	
+></p>
+<p><img src="/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C2.png"
+	width="787"
+	height="282"
+	srcset="/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C2_hu1684831312247876816.png 480w, /hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C2_hu13155879737924022236.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="279"
+		data-flex-basis="669px"
+	
+></p>
+<hr>
+<h3 id="32-连接使用">3.2 连接使用
+</h3><ul>
+<li>（1）可以通过原生mysql命令行，进行连接
+<ul>
+<li>运行命令<code>mysql -P3307 -uroot -proot</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/java/shardingsphere/mysql%E8%BF%9E%E6%8E%A5.png"
+	width="749"
+	height="264"
+	srcset="/hugo-stack/p/java/shardingsphere/mysql%E8%BF%9E%E6%8E%A5_hu9927416038309566057.png 480w, /hugo-stack/p/java/shardingsphere/mysql%E8%BF%9E%E6%8E%A5_hu18023703736653733011.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="283"
+		data-flex-basis="680px"
+	
+></p>
+<ul>
+<li>（2）用springboot连接的话，就将数据源配置为shardingsphere-proxy服务就好</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">spring</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">datasource</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;jdbc:mysql://127.0.0.1:3307/sharding_db?serverTimezone=GMT%2B8&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l">root</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l">root</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="33-自定义分片算法类">3.3 自定义分片算法类
+</h3><h4 id="331-自定义算法类打包">3.3.1 自定义算法类打包
+</h4><ul>
+<li>（1）创建标准的maven目录结构，用于打包</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">my-sharding-algorithm/
+</span></span><span class="line"><span class="cl">├── src/
+</span></span><span class="line"><span class="cl">│   └── main/
+</span></span><span class="line"><span class="cl">│       ├── java/
+</span></span><span class="line"><span class="cl">│       └── resources/
+</span></span><span class="line"><span class="cl">└── pom.xml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>（2）创建自定义算法类(具体看shardingsphere-jdbc)，并放入上面的maven项目中</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">my-sharding-algorithm/
+</span></span><span class="line"><span class="cl">├── src/
+</span></span><span class="line"><span class="cl">│   └── main/
+</span></span><span class="line"><span class="cl">│       ├── java/
+</span></span><span class="line"><span class="cl">│       │   └── com/
+</span></span><span class="line"><span class="cl">│       │       └── example/
+</span></span><span class="line"><span class="cl">│       │           └── CustomShardingAlgorithm.java
+</span></span><span class="line"><span class="cl">│       └── resources/
+</span></span><span class="line"><span class="cl">└── pom.xml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.example</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.shardingsphere.sharding.api.sharding.standard.PreciseShardingValue</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.shardingsphere.sharding.api.sharding.standard.RangeShardingValue</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.shardingsphere.sharding.api.sharding.standard.StandardShardingAlgorithm</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Collection</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CustomShardingAlgorithm</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">StandardShardingAlgorithm</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">doSharding</span><span class="p">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">collection</span><span class="p">,</span><span class="w"> </span><span class="n">PreciseShardingValue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">preciseShardingValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// TODO: 分表业务处理（按自己实际业务修改）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">tableNo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">preciseShardingValue</span><span class="p">.</span><span class="na">getValue</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 返回对应的表名(表名_no)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">preciseShardingValue</span><span class="p">.</span><span class="na">getLogicTableName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;_&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tableNo</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">doSharding</span><span class="p">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">collection</span><span class="p">,</span><span class="w"> </span><span class="n">RangeShardingValue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rangeShardingValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// TODO: 范围查询分表业务处理，一般用时间来分表的会使用到（按自己实际业务修改）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 返回对应表名集合</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">collection</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>（3）在<strong>resources</strong>目录下创建<code>META-INF/services/org.apache.shardingsphere.sharding.spi.ShardingAlgorithm</code>文件，并填写上面自定义算法类的全限定名
+<ul>
+<li>全限定类名：<code>com.example.CustomShardingAlgorithm</code></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">my-sharding-algorithm/
+</span></span><span class="line"><span class="cl">├── src/
+</span></span><span class="line"><span class="cl">│   └── main/
+</span></span><span class="line"><span class="cl">│       ├── java/
+</span></span><span class="line"><span class="cl">│       │   └── com/
+</span></span><span class="line"><span class="cl">│       │       └── example/
+</span></span><span class="line"><span class="cl">│       │           └── CustomShardingAlgorithm.java
+</span></span><span class="line"><span class="cl">│       └── resources/
+</span></span><span class="line"><span class="cl">│           └── META-INF/
+</span></span><span class="line"><span class="cl">│               └── services/
+</span></span><span class="line"><span class="cl">│                   └── org.apache.shardingsphere.sharding.spi.ShardingAlgorithm
+</span></span><span class="line"><span class="cl">└── pom.xml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>（4）修改<strong>pom.xml</strong>，配置打包需要的参数</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;project&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;groupId&gt;</span>com.example<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;artifactId&gt;</span>my-sharding-algorithm<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;version&gt;</span>1.0.0<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;dependencies&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!-- ShardingSphere依赖 --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;groupId&gt;</span>org.apache.shardingsphere<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;artifactId&gt;</span>shardingsphere-jdbc<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;version&gt;</span>5.5.2<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/dependencies&gt;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;build&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;plugins&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;plugin&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>maven-compiler-plugin<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;configuration&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="c">&lt;!-- java版本，看情况修改 --&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;source&gt;</span>17<span class="nt">&lt;/source&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;target&gt;</span>17<span class="nt">&lt;/target&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;encoding&gt;</span>utf8<span class="nt">&lt;/encoding&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;/configuration&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/plugin&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;plugin&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>maven-assembly-plugin<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/plugin&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/plugins&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/build&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/project&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>（5）执行<code>mvn clean package</code>命令，用maven进行打包，生成的jar包在<code>target</code>文件夹下</li>
+</ul>
+<p><img src="/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%85.png"
+	width="1019"
+	height="721"
+	srcset="/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%85_hu1413897870524585068.png 480w, /hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%85_hu18106251624978351541.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="141"
+		data-flex-basis="339px"
+	
+></p>
+<p><img src="/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%852.png"
+	width="623"
+	height="241"
+	srcset="/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%852_hu7693615230935597261.png 480w, /hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%852_hu10136515674402457717.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="258"
+		data-flex-basis="620px"
+	
+></p>
+<hr>
+<h4 id="332-proxy配置自定义分片算法类">3.3.2 proxy配置自定义分片算法类
+</h4><ul>
+<li>
+<p>（1）将上面打包好的jar包复制到<code>ext-lib</code>文件夹下</p>
+</li>
+<li>
+<p>（2）修改<code>conf/database-sharding.yaml</code>，配置自定义算法类</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># 规则配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">rules</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- !<span class="l">SHARDING</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 表分片配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tables</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">t_user</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">tableStrategy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">standard</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">shardingColumn</span><span class="p">:</span><span class="w"> </span><span class="l">sex</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">shardingAlgorithmName</span><span class="p">:</span><span class="w"> </span><span class="l">custom_inline</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 分片算法定义</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">shardingAlgorithms</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">custom_inline</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">CLASS_BASED</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">props</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">strategy</span><span class="p">:</span><span class="w"> </span><span class="l">STANDARD</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">algorithmClassName</span><span class="p">:</span><span class="w"> </span><span class="l">com.example.CustomShardingAlgorithm</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>（3）重启shardingsphere-proxy服务，即可使用自定义算法类</li>
+</ul>
+<hr>
+
+</section>
+
+
+    <footer class="article-footer">
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>根据CC BY-NC-SA 4.0协议授权</span>
+    </section>
+    
+
+</footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="letere-gzj/hugo-stack"
+    data-repo-id="R_kgDOMXeWfg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOMXeWfs4CheU8"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+    <div id="comment"></div>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 莱特雷-letere
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/hugo-stack/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<div id="custom-footer">
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+    <script src=https://letere-gzj.github.io/hugo-stack/background/particles/particles.js></script>
+
+
+    <link rel="stylesheet" href=https://letere-gzj.github.io/hugo-stack/background/particles/style.css>
+
+
+<div id="particles-js"></div>
+
+<script>
+    
+
+    particlesJS.load('particles-js', "https://letere-gzj.github.io/hugo-stack/background/particles/particlesjs-config.json", function() {
+        console.log('particles.js loaded - callback');
+    });
+</script>
+
+
+
+
+
+
+
+	
+	<script src=https://letere-gzj.github.io/hugo-stack/js/pjax.min.js></script>
+
+
+	<script src=https://letere-gzj.github.io/hugo-stack/js/topbar.js></script>
+
+
+<script>
+	var pjax = new Pjax({
+		elements: "a, form",
+		
+		selectors: [
+			"title",
+			".main-container",
+			".js-Pjax"
+		],
+		cacheBust: false
+	})
+
+	
+	pjax._handleResponse = pjax.handleResponse;
+	pjax.handleResponse = function(responseText, request, href, options) {
+		if (request.responseText.match("<html")) {
+			
+			if (responseText) {
+				let newDoc = new DOMParser().parseFromString(responseText, 'text/html');
+				let bodyClass = newDoc.body.className;
+				document.body.setAttribute("class", bodyClass)
+			}
+			
+			pjax._handleResponse(responseText, request, href, options);
+		} else {
+			window.open(href)
+			topbar.hide();
+		}
+	}
+
+	
+	topbar.config({
+		barColors: {
+			'0': 'rgba(255,  255, 255, 1)',
+			'1.0': 'rgba(0, 149, 234,  1)'
+		}
+	})
+
+	
+	document.addEventListener('pjax:send', () => {
+		
+		topbar.show();
+	})
+
+	
+	document.addEventListener('pjax:complete', () => {
+		
+		window.Stack.init();
+		
+		topbar.hide();
+		
+		
+		
+		initTocHide();
+		
+		initScrollTop();
+		
+		initCodeMoreBox()
+		
+		showWelcomeMessage();
+		
+		renderKaTeX();
+	})
+</script>
+
+	
+	<script src=https://letere-gzj.github.io/hugo-stack/js/APlayer.min.js></script>
+
+
+<div class="demo">
+	<div id="aplayer"/>
+</div>
+<script>
+	
+	const musicDir = "https://letere-gzj.github.io/hugo-stack/" + 'music/';
+	const songs = [
+		'爱别等-洪卓立',
+		'查无此字-林奕匡',
+		'初初-古巨基',
+		'乖乖报到-MC 张天赋',
+		'泼墨桃花-林峯',
+		'摄氏零度-张敬轩',
+		'下一位前度-林家谦',
+		'这个故事教训我们-李克勤',
+		'最后祝福-黄宗泽'
+	];
+	let audios = [];
+	songs.forEach((item) => {
+		const songInfo = item.split('-');
+		audios.push({
+			name: songInfo[0],
+			artist: songInfo[1],
+			url: musicDir + item + '/song.mp3',
+			cover: musicDir + item + '/cover.jpg',
+			lrc: musicDir + item + '/lyric.lrc'
+		});
+	})
+
+	
+	const ap = new APlayer({
+		container: document.getElementById('aplayer'),
+		listFolded: false,
+		listMaxHeight: '160px',
+		lrcType: 3,
+		mutex: true,
+		fixed: true,
+		audio: audios
+	});
+
+	
+
+	window.onload = () => {
+		const playInfo = JSON.parse(localStorage.getItem("playInfo"));
+		
+		if (!playInfo) {
+			return;
+		}
+		ap.list.switch(playInfo.index);
+		setTimeout(() => {
+			ap.seek(playInfo.currentTime);
+			
+			if (!playInfo.paused) {
+				ap.play()
+			}
+		}, 500);
+	};
+
+	
+
+	window.onbeforeunload = () => {
+		const playInfo = {
+			index: ap.list.index,
+			paused: ap.paused,
+			currentTime: ap.audio.currentTime
+		};
+		localStorage.setItem("playInfo", JSON.stringify(playInfo));
+	};
+</script>
+
+
+
+
+	
+    <style>
+        @font-face {
+            font-family: 'ChildFunSans';
+            src: url(https://letere-gzj.github.io/hugo-stack/font/ChildFunSans-Demo.ttf) format('truetype');
+        }
+
+        :root {
+             
+             
+            --article-font-family: "ChildFunSans";
+            --zh-font-family: "ChildFunSans";
+        }
+    </style>
+
+
+	<div class="js-Pjax"><script>
+            (function() {
+                let comment = document.querySelector("#comment")
+                if (comment) {
+                    addCommentScript(comment)
+                }
+            })(document)
+
+            
+            function addCommentScript(comment) {
+                let script = document.createElement('script');
+                script.src = 'https://giscus.app/client.js';
+                script.crossOrigin = 'anonymous';
+                script.setAttribute('data-repo',"letere-gzj/hugo-stack");
+                script.setAttribute('data-repo-id',"R_kgDOMXeWfg");
+                script.setAttribute('data-category',"Announcements"); 
+                script.setAttribute('data-category-id',"DIC_kwDOMXeWfs4CheU8"); 
+                script.setAttribute('data-mapping',"pathname");
+                script.setAttribute('data-strict', 0 );
+                script.setAttribute('data-reactions-enabled', 1 );
+                script.setAttribute('data-emit-metadata', 0 );
+                script.setAttribute('data-input-position',"top");
+                script.setAttribute('data-theme',"light");
+                script.setAttribute('data-lang',"zh-CN");
+                script.setAttribute('data-loading', 'lazy')
+                script.async = true;
+                comment.appendChild(script);
+                initGiscus();
+            }
+
+            function initGiscus() {
+                addEventListener("message", (e) => {
+                    if (event.origin !== "https://giscus.app") return;
+                    handler();
+                });
+                window.addEventListener("onColorSchemeChange", handler);
+
+                function handler() {
+                    if (document.documentElement.dataset.scheme === "light") {
+                        setGiscusTheme('light');
+                    } else {
+                        setGiscusTheme('dark_dimmed');
+                    }
+                }
+            };
+        </script></div>
+
+	<style>
+    #TableOfContents > ul {
+        ul {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+                openUl.forEach((ul) => {
+                    ul.classList.remove("open")
+                })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && ul.localName === 'ul')
+        });
+    }
+    initTocHide()
+    window.initTocHide = initTocHide
+</script>
+
+	<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        transition: transform 0.8s ease-in-out;
+    }
+
+    [data-scheme="light"] {
+        #backTopBtn {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-light.svg);
+        }
+
+         
+          
+         
+    }
+
+    [data-scheme="dark"] {
+        #backTopBtn {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-dark.svg);
+        }
+
+         
+          
+         
+    }
+
+    #backTopBtn:hover {
+        transform: rotate(360deg)
+         
+    }
+
+    @keyframes wobble {
+        0%, 100% {
+            transform: rotate(0);
+        }
+        25% {
+            transform: rotate(45deg);
+        }
+        65% {
+            transform: rotate(-45deg);
+        }
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+    window.initScrollTop = initScrollTop;
+</script>
+
+	<script>
+    const config = {
+        
+        path: {
+            homePath: "/hugo-stack/",
+            modelPath: "https:\/\/letere-gzj.github.io\/hugo-stack\/" + "live2d-moc3/",
+            cssPath: "https://letere-gzj.github.io/hugo-stack/live2d/waifu.css",
+            tipsJsonPath: "https://letere-gzj.github.io/hugo-stack/live2d/my-waifu-tips.json",
+            tipsJsPath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/waifu-tips.js",
+            live2dCorePath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2dcubismcore.js",
+            live2dSdkPath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2d-sdk.js"
+        },
+        
+        tools: ["hitokoto", "asteroids", "express", "photo", "info", "quit"],
+        
+        drag: {
+            enable: true,
+            direction: ["x"]
+        },
+        
+        switchType: "order"
+    }
+
+    
+    if (screen.width >= 768) {
+        Promise.all([
+            loadExternalResource(config.path.cssPath, "css"),
+            loadExternalResource(config.path.live2dCorePath, "js"),
+            loadExternalResource(config.path.live2dSdkPath, "js"),
+            loadExternalResource(config.path.tipsJsPath, "js")
+        ]).then(() => {
+            initWidget({
+                homePath: config.path.homePath,
+                waifuPath: config.path.tipsJsonPath,
+                cdnPath: config.path.modelPath,
+                tools: config.tools,
+                dragEnable: config.drag.enable,
+                dragDirection: config.drag.direction,
+                switchType: config.switchType
+            });
+        });
+    }
+
+    
+    function loadExternalResource(url, type) {
+        return new Promise((resolve, reject) => {
+            let tag;
+            if (type === "css") {
+                tag = document.createElement("link");
+                tag.rel = "stylesheet";
+                tag.href = url;
+            }
+            else if (type === "js") {
+                tag = document.createElement("script");
+                tag.src = url;
+            }
+            if (tag) {
+                tag.onload = () => resolve(url);
+                tag.onerror = () => reject(url);
+                document.head.appendChild(tag);
+            }
+        });
+    }
+</script>
+
+	
+
+
+<div class="js-Pjax">
+    <script>
+        (function() {
+            let script = document.createElement('script');
+            script.defer = true;
+            script.src = "https://cn.vercount.one/js";
+            let footer = document.querySelector("footer")
+            if (footer) {
+                showHideView()
+                footer.appendChild(script);
+            }
+        })(document)
+
+        function showHideView() {
+            let viewCounts = document.querySelectorAll("#viewCount");
+            if (viewCounts) {
+                const style = document.querySelector(".article-page") ? '' : 'none';
+                viewCounts.forEach(ele => {
+                        ele.style.display = style;
+                    }
+                )
+            }
+        }
+    </script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+         
+    }
+
+    .code-more-img {
+         
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+    
+
+    function initCodeMoreBox() {
+        let codeBlocks = document.querySelectorAll(".highlight");
+        if (!codeBlocks) {
+            return;
+        }
+        codeBlocks.forEach(codeBlock => {
+            
+            if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+                return;
+            }
+            
+            
+            let codeMoreBox = document.createElement('div');
+            codeMoreBox.classList.add('code-more-box');
+            
+            let codeMoreBtn = document.createElement('span');
+            codeMoreBtn.classList.add('code-more-btn');
+            codeMoreBtn.addEventListener('click', () => {
+                codeBlock.classList.add('code-show');
+                codeMoreBox.style.display = 'none';
+                
+                window.dispatchEvent(new Event('resize'))
+            })
+            
+            let img = document.createElement('img');
+            img.classList.add('code-more-img');
+            img.src = "https://letere-gzj.github.io/hugo-stack/icons/codeMore.png"
+            
+            codeMoreBtn.appendChild(img);
+            codeMoreBox.appendChild(codeMoreBtn);
+            codeBlock.appendChild(codeMoreBox)
+        })
+    }
+
+    initCodeMoreBox();
+    window.initCodeMoreBox = initCodeMoreBox;
+</script>
+
+	<script>
+    async function renderKaTeX() {
+        let katex = document.querySelector(".math-katex");
+        if (!katex) {
+            return;
+        }
+        
+        while (typeof renderMathInElement !== 'function') {
+            await delay(1000)
+        }
+        
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });
+    }
+
+    function delay(time) {
+        return new Promise(resolve => {
+            setTimeout(resolve, time)
+        })
+    }
+
+    window.renderKaTeX = renderKaTeX;
+</script>
+
+</div>
+
+    </body>
+</html>
