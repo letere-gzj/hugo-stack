@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-widget/</loc>
-    <lastmod>2025-05-07T10:19:05+08:00</lastmod>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/python/build-env/</loc>
+    <lastmod>2025-05-14T15:52:42+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/categories/</loc>
-    <lastmod>2025-05-09T00:34:29+08:00</lastmod>
+    <lastmod>2025-05-14T15:52:42+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/post/</loc>
-    <lastmod>2025-05-09T00:34:29+08:00</lastmod>
+    <lastmod>2025-05-14T15:52:42+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/tags/</loc>
-    <lastmod>2025-05-09T00:34:29+08:00</lastmod>
+    <lastmod>2025-05-14T15:52:42+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-widget/</loc>
+    <lastmod>2025-05-07T10:19:05+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/</loc>
     <lastmod>2025-05-09T00:34:29+08:00</lastmod>
@@ -75,7 +78,10 @@
     <lastmod>2025-04-11T17:25:54+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/tags/java/</loc>
-    <lastmod>2025-04-11T17:53:49+08:00</lastmod>
+    <lastmod>2025-05-14T15:52:42+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/tags/python/</loc>
+    <lastmod>2025-05-14T15:52:42+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/update-log/</loc>
     <lastmod>2025-05-07T18:00:25+08:00</lastmod>
