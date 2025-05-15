@@ -199,7 +199,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;(5) 刷新项目，样式正常，时钟组件引入成功&lt;/li&gt;
+&lt;li&gt;(5) 刷新项目，样式正常，时钟组件引入成功
+&lt;ul&gt;
+&lt;li&gt;这是我改好的&lt;a class=&#34;link&#34; href=&#34;clock.txt&#34; &gt;&lt;strong&gt;clock.html&lt;/strong&gt;&lt;/a&gt;，可以直接下载使用(&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;S&lt;/kbd&gt;保存)，下载后将后缀名改回html即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/hugo/custom-stack-widget/%E5%BC%95%E5%85%A5%E6%97%B6%E9%92%9F%E7%BB%84%E4%BB%B65.png&#34;
 	width=&#34;1380&#34;
