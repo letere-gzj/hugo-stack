@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="分享如何在Windows上以免安装的形式搭建Python环境">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="在Windows上以免安装的形式搭建Python环境">
 <title>【Python】Windows搭建Python环境</title>
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/python/build-env/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.1fcc0daa13caec6ef20de7f66ac8e7743ec455b0a196071cbda7a46479670c2e.css"><meta property='og:title' content="【Python】Windows搭建Python环境">
-<meta property='og:description' content="分享如何在Windows上以免安装的形式搭建Python环境">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.a1ac04e0c65c55028a71ce139c78625c60f9e6bb316052a91e5c1925b263f530.css"><meta property='og:title' content="【Python】Windows搭建Python环境">
+<meta property='og:description' content="在Windows上以免安装的形式搭建Python环境">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/python/build-env/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Python' /><meta property='article:published_time' content='2025-05-14T14:08:02&#43;08:00'/><meta property='article:modified_time' content='2025-05-14T15:52:42&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Python' /><meta property='article:published_time' content='2025-05-14T14:08:02&#43;08:00'/><meta property='article:modified_time' content='2025-05-15T09:39:53&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="【Python】Windows搭建Python环境">
-<meta name="twitter:description" content="分享如何在Windows上以免安装的形式搭建Python环境"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="在Windows上以免安装的形式搭建Python环境"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
     <link rel="shortcut icon" href="/hugo-stack/favicon.ico?v=2" />
 
@@ -542,7 +542,7 @@
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2025-05-14
+                    2025-05-15
                 </time>
             </div>
 
@@ -550,7 +550,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                778 字
+                769 字
             </time>
         </div>
         
@@ -567,7 +567,7 @@
     <div class="article-title-wrapper">
         
         <h3 class="article-subtitle">
-            分享如何在Windows上以免安装的形式搭建Python环境
+            在Windows上以免安装的形式搭建Python环境
         </h3>
         
     </div>
@@ -620,8 +620,8 @@
 
     <p><strong>前言：</strong></p>
 <ul>
-<li>个人喜好问题，软件的安装不喜欢用exe安装，更喜欢用压缩包形式进行安装，这样方便管理，也方便卸载，绝对删的干净</li>
-<li>所有下面的python也是以压缩包形式进行搭建，也就是<strong>免安装</strong>或<strong>绿色版</strong></li>
+<li>个人喜好问题，软件的安装不喜欢用exe安装，更喜欢用压缩包形式进行安装，这样方便管理，也方便卸载</li>
+<li>所以下面的python也是以压缩包形式进行搭建，也就是<strong>免安装</strong>或<strong>绿色版</strong></li>
 </ul>
 </blockquote>
 <hr>
@@ -740,7 +740,7 @@
     <p><ul>
 <li><strong>pip</strong>是Python官方提供的包管理工具，用于安装Python第三方库，</li>
 <li><strong>pip</strong>安装包后，可以不用再下载安装包，直接使用命令行安装，方便管理，也方便卸载</li>
-<li>所以搭建python环境基本都要搭建安装pip</li>
+<li>所以搭建python环境基本都要安装pip</li>
 </ul>
 </blockquote>
 <ul>
@@ -881,6 +881,18 @@
 		class="gallery-image" 
 		data-flex-grow="350"
 		data-flex-basis="841px"
+	
+></p>
+<p><img src="/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B92.png"
+	width="481"
+	height="138"
+	srcset="/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B92_hu670897785293588120.png 480w, /hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B92_hu15887387325732744368.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="348"
+		data-flex-basis="836px"
 	
 ></p>
 <hr>
