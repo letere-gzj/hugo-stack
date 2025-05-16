@@ -7,6 +7,418 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>莱特雷-letere</copyright><atom:link href="https://letere-gzj.github.io/hugo-stack/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【AI】MCP初认识</title>
+        <link>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</link>
+        <pubDate>Fri, 16 May 2025 09:23:21 +0800</pubDate>
+        
+        <guid>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</guid>
+        <description>&lt;hr&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;&lt;strong&gt;前言：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI技术迅速发展，各种新技术层出不重，作为开发者应主动了解这些技术，以免被市场淘汰&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MCP&lt;/strong&gt;算是AI辅助代码开发中比较重要的一项技术&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-mcp介绍&#34;&gt;1 MCP介绍
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mcp-docs.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;MCP官方文档&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MCP&lt;/strong&gt;：Model Context Protocol(模型上下文协议)是一个开放协议，它为应用程序向 LLM 提供上下文的方式进行了标准化。你可以将 MCP 想象成 AI 应用程序的 USB-C 接口。就像 USB-C 为设备连接各种外设和配件提供了标准化的方式一样，MCP 为 AI 模型连接各种数据源和工具提供了标准化的接口。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-tip&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;简单来说MCP是一个统一规范的协议，而遵循这个协议而开发的MCP服务，是一个给AI使用的工具，来拓展AI的功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;类比：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;AI = 电脑&lt;/li&gt;
+&lt;li&gt;MCP = 电脑的USB插口&lt;/li&gt;
+&lt;li&gt;MCP服务 = 鼠标，键盘等外设&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-mcp使用&#34;&gt;2 MCP使用
+&lt;/h2&gt;&lt;h3 id=&#34;21-使用场景准备&#34;&gt;2.1 使用场景准备
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;(1) MCP与AI挂钩，所以要使用MCP，肯定要准备AI代码编程相关的软件或插件
+&lt;ul&gt;
+&lt;li&gt;AI编程软件首推&lt;a class=&#34;link&#34; href=&#34;https://www.cursor.com/cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Cursor&lt;/strong&gt;&lt;/a&gt;，但是收费软件(&lt;del&gt;有破解途径就是了&lt;/del&gt;)&lt;/li&gt;
+&lt;li&gt;因为我是Java开发，更习惯IDEA的界面，所以选择了AI编程插件&lt;a class=&#34;link&#34; href=&#34;https://www.cursor.com/cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;通义灵码&lt;/strong&gt;&lt;/a&gt;(主要是免费，不用搞破解)&lt;/li&gt;
+&lt;li&gt;非代码开发者的话，可以选择使用&lt;a class=&#34;link&#34; href=&#34;https://www.cherry-ai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Cherry studio&lt;/strong&gt;&lt;/a&gt;，算是给非开发者使用的一个AI对话软件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(2) 一般AI只有问答对话功能，没法实现其他更多的功能
+&lt;ul&gt;
+&lt;li&gt;例如我让AI帮我实现下面的需求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. 帮我编写一个&amp;#34;翻页时钟&amp;#34;的html页面，时钟的时间以读取本地时间为主
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. 将生成好的html保存到当前目录下，文件名为&amp;#34;flip-clock.html&amp;#34;，并将文件路径输出到控制台
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81.png&#34;
+	width=&#34;534&#34;
+	height=&#34;635&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu16051579982529800285.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu15761362870951001377.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;84&#34;
+		data-flex-basis=&#34;201px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(3) 而AI无法实现文件保存功能，所以需要一个MCP服务，来拓展AI的功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;22-mcp服务搭建&#34;&gt;2.2 MCP服务搭建
+&lt;/h3&gt;&lt;blockquote class=&#34;alert alert-tip&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;MCP服务搜索网址推荐：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/punkpeye/awesome-mcp-servers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;punkpeye/awesome-mcp-servers&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/modelcontextprotocol/servers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;modelcontextprotocol/servers&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://smithery.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Smithery&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mcp.so/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;mcp.so&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;(1) 根据上面的需求，需要一个能操作本地系统文件的MCP服务，所以推荐的是这个MCP服务&lt;a class=&#34;link&#34; href=&#34;https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Filesystem&lt;/strong&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;MCP服务使用需搭建好对应的环境&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NPX&lt;/strong&gt;运行的，需要先安装Node环境(教程自己寻找)，这个&lt;strong&gt;FileSystem&lt;/strong&gt;就是npx运行的&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;UVX&lt;/strong&gt;运行的，需要先安装Python环境(&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env&#34; &gt;&lt;strong&gt;【Python】Windows搭建Python环境&lt;/strong&gt;&lt;/a&gt;)，搭建完后运行&lt;code&gt;pip install uv&lt;/code&gt;就好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851.png&#34;
+	width=&#34;1098&#34;
+	height=&#34;381&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu12400468924744860481.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu8884379790382067544.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;288&#34;
+		data-flex-basis=&#34;691px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(2) 通义灵码点击&lt;strong&gt;MCP工具&lt;/strong&gt;，通过MCP广场搜索&lt;code&gt;文件&lt;/code&gt;，点击安装
+&lt;ul&gt;
+&lt;li&gt;也可以通过配置文件添加，将上面的npx脚本复制进去就好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852.png&#34;
+	width=&#34;1093&#34;
+	height=&#34;345&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu8059125951367273534.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu6940551785252208720.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;316&#34;
+		data-flex-basis=&#34;760px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853.png&#34;
+	width=&#34;557&#34;
+	height=&#34;201&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu3328535034608254016.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu5499105473676982018.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;277&#34;
+		data-flex-basis=&#34;665px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(3) 默认安装会失败，错误信息是&lt;code&gt;没有对应的文件或文件夹&lt;/code&gt;，因为里面的参数是默认参数，需按实际情况修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854.png&#34;
+	width=&#34;523&#34;
+	height=&#34;502&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu3894597563050294522.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu13590490386471086619.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;104&#34;
+		data-flex-basis=&#34;250px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(4) 按实际情况修改自己电脑的用户名，以及后面的允许操作的文件夹路径
+&lt;ul&gt;
+&lt;li&gt;我图省事，将整个&lt;strong&gt;D盘&lt;/strong&gt;都设置为允许操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855.png&#34;
+	width=&#34;538&#34;
+	height=&#34;442&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu1351744071634018108.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu10887468920110777535.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;121&#34;
+		data-flex-basis=&#34;292px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(5) 无报错信息即搭建成功&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856.png&#34;
+	width=&#34;534&#34;
+	height=&#34;403&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu1216865244556104265.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu17990218548616656080.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;132&#34;
+		data-flex-basis=&#34;318px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;23-mcp服务使用测试&#34;&gt;2.3 MCP服务使用测试
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;(1) AI模式切换成&lt;strong&gt;智能体&lt;/strong&gt;，然后重新运行一次上面的需求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951.png&#34;
+	width=&#34;531&#34;
+	height=&#34;418&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu7060540861615635445.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu12684457575657985896.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;127&#34;
+		data-flex-basis=&#34;304px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(2) 运行期间会询问是否执行MCP工具，点击&lt;strong&gt;允许&lt;/strong&gt;就好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952.png&#34;
+	width=&#34;543&#34;
+	height=&#34;611&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu2052040905295521314.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu1577831713169465734.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;88&#34;
+		data-flex-basis=&#34;213px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(3) AI成功通过MCP服务，实现了&lt;strong&gt;将代码保存为文件&lt;/strong&gt;的功能
+&lt;ul&gt;
+&lt;li&gt;下面是AI帮我写的&lt;a class=&#34;link&#34; href=&#34;flip-clock.txt&#34; &gt;&lt;strong&gt;翻页时钟&lt;/strong&gt;&lt;/a&gt;功能(&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;S&lt;/kbd&gt;保存，修改后缀名为html即可)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;flip-clock&#34; id=&#34;flip-clock&#34;&gt;
+    &lt;div class=&#34;digit&#34; id=&#34;hours1&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;digit&#34; id=&#34;hours2&#34;&gt;&lt;/div&gt;
+    &lt;div style=&#34;width: 10px;&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;digit&#34; id=&#34;minutes1&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;digit&#34; id=&#34;minutes2&#34;&gt;&lt;/div&gt;
+    &lt;div style=&#34;width: 10px;&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;digit&#34; id=&#34;seconds1&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;digit&#34; id=&#34;seconds2&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+    .flip-clock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .digit {
+        position: relative;
+        width: 60px;
+        height: 80px;
+        perspective: 400px;
+    }
+
+    .digit__number {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        border: 2px solid #333;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 48px;
+        color: #333;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transition: transform 0.5s ease;
+    }
+
+    .digit__number.top {
+        z-index: 2;
+        transform: rotateX(0deg);
+    }
+
+    .digit__number.bottom {
+        z-index: 1;
+        transform: rotateX(-90deg);
+    }
+
+    .digit.flip .digit__number.top {
+        transform: rotateX(90deg);
+    }
+
+    .digit.flip .digit__number.bottom {
+        transform: rotateX(0deg);
+    }
+&lt;/style&gt;
+&lt;script&gt;
+    function createDigitElements(digitElement) {
+        const top = document.createElement(&#39;div&#39;);
+        top.className = &#39;digit__number top&#39;;
+        top.textContent = &#39;0&#39;;
+        const bottom = document.createElement(&#39;div&#39;);
+        bottom.className = &#39;digit__number bottom&#39;;
+        bottom.textContent = &#39;0&#39;;
+        digitElement.appendChild(top);
+        digitElement.appendChild(bottom);
+        return { top, bottom };
+    }
+
+    function updateDigit(digit, newValue) {
+        const currentTop = parseInt(digit.top.textContent);
+        if (currentTop === newValue) return;
+        const newBottomValue = newValue;
+        // 设置新值到bottom
+        digit.bottom.textContent = newBottomValue;
+        // 添加翻转类
+        digit.top.parentElement.classList.add(&#39;flip&#39;);
+        // 在过渡结束后更新top的值并移除flip类
+        setTimeout(() =&gt; {
+            digit.top.textContent = newBottomValue;
+            digit.top.parentElement.classList.remove(&#39;flip&#39;);
+        }, 500); // 与CSS中的过渡时间相匹配
+    }
+
+    function updateTime(digits) {
+        const now = new Date();
+        let hours = now.getHours().toString().padStart(2, &#39;0&#39;);
+        let minutes = now.getMinutes().toString().padStart(2, &#39;0&#39;);
+        let seconds = now.getSeconds().toString().padStart(2, &#39;0&#39;);
+        // 更新小时的十位和个位
+        updateDigit(digits.hours1, parseInt(hours[0]));
+        updateDigit(digits.hours2, parseInt(hours[1]));
+        // 更新分钟的十位和个位
+        updateDigit(digits.minutes1, parseInt(minutes[0]));
+        updateDigit(digits.minutes2, parseInt(minutes[1]));
+        // 更新秒的十位和个位
+        updateDigit(digits.seconds1, parseInt(seconds[0]));
+        updateDigit(digits.seconds2, parseInt(seconds[1]));
+    }
+
+    function initFlipClock() {
+        // 初始化各个数字位
+        const digits = {};
+        Object.keys({
+            hours1: null,
+            hours2: null,
+            minutes1: null,
+            minutes2: null,
+            seconds1: null,
+            seconds2: null
+        }).forEach(key =&gt; {
+            digits[key] = createDigitElements(document.getElementById(key));
+        });
+        // 初始更新时间
+        updateTime(digits);
+        // 每隔一秒更新一次时间
+        setInterval(() =&gt; updateTime(digits), 1000);
+    }
+
+    initFlipClock();
+&lt;/script&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
         <title>【Python】Windows搭建Python环境</title>
         <link>https://letere-gzj.github.io/hugo-stack/p/python/build-env/</link>
         <pubDate>Wed, 14 May 2025 14:08:02 +0800</pubDate>

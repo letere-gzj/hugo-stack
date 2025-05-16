@@ -928,6 +928,8 @@
 		showWelcomeMessage();
 		
 		renderKaTeX();
+		
+		initFlipClock();
 	})
 </script>
 
@@ -1472,6 +1474,85 @@
         overflow: hidden;
     }
 </style>
+	<script>
+    function createDigitElements(digitElement) {
+        const top = document.createElement('div');
+        top.className = 'digit__number top';
+        top.textContent = '0';
+
+        const bottom = document.createElement('div');
+        bottom.className = 'digit__number bottom';
+        bottom.textContent = '0';
+
+        digitElement.appendChild(top);
+        digitElement.appendChild(bottom);
+
+        return { top, bottom };
+    }
+
+    function updateDigit(digit, newValue) {
+        const currentTop = parseInt(digit.top.textContent);
+        if (currentTop === newValue) return;
+
+        const newBottomValue = newValue;
+
+        
+        digit.bottom.textContent = newBottomValue;
+
+        
+        digit.top.parentElement.classList.add('flip');
+
+        
+        setTimeout(() => {
+            digit.top.textContent = newBottomValue;
+            digit.top.parentElement.classList.remove('flip');
+        }, 500); 
+    }
+
+    function updateTime(digits) {
+        const now = new Date();
+        let hours = now.getHours().toString().padStart(2, '0');
+        let minutes = now.getMinutes().toString().padStart(2, '0');
+        let seconds = now.getSeconds().toString().padStart(2, '0');
+
+        
+        updateDigit(digits.hours1, parseInt(hours[0]));
+        updateDigit(digits.hours2, parseInt(hours[1]));
+
+        
+        updateDigit(digits.minutes1, parseInt(minutes[0]));
+        updateDigit(digits.minutes2, parseInt(minutes[1]));
+
+        
+        updateDigit(digits.seconds1, parseInt(seconds[0]));
+        updateDigit(digits.seconds2, parseInt(seconds[1]));
+    }
+
+    function initFlipClock() {
+        const flipClock = document.querySelector('#flip-clock');
+        if (!flipClock) {
+            return
+        }
+        
+        const digits = {};
+        Object.keys({
+            hours1: null,
+            hours2: null,
+            minutes1: null,
+            minutes2: null,
+            seconds1: null,
+            seconds2: null
+        }).forEach(key => {
+            digits[key] = createDigitElements(document.getElementById(key));
+        });
+        
+        updateTime(digits);
+        
+        setInterval(() => updateTime(digits), 1000);
+    }
+
+    window.initFilipClock = initFlipClock;
+</script>
 </div>
 
     </body>

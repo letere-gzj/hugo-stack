@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="MCP: Model Context Protocol - 模型上下文协议">
+<title>【AI】MCP初认识</title>
+
+<link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/'>
+
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.a1ac04e0c65c55028a71ce139c78625c60f9e6bb316052a91e5c1925b263f530.css"><meta property='og:title' content="【AI】MCP初认识">
+<meta property='og:description' content="MCP: Model Context Protocol - 模型上下文协议">
+<meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/'>
+<meta property='og:site_name' content='莱特雷-letere'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='AI' /><meta property='article:published_time' content='2025-05-16T09:23:21&#43;08:00'/><meta property='article:modified_time' content='2025-05-16T13:54:49&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta name="twitter:title" content="【AI】MCP初认识">
+<meta name="twitter:description" content="MCP: Model Context Protocol - 模型上下文协议"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+    <link rel="shortcut icon" href="/hugo-stack/favicon.ico?v=2" />
+
+<div class="loading">
+    <div class="bg"></div>
+    <div class="scale">
+        <div class="sharingon">
+            <div class="ring">
+                <div class="to"></div>
+                <div class="to"></div>
+                <div class="to"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    [data-scheme="light"] {
+        .loading{
+            background-color: rgba(245, 245, 250, 0.8);
+        }
+    }
+
+    [data-scheme="dark"] {
+        .loading {
+            background-color: rgba(48, 48, 48, 0.8);
+        }
+    }
+
+    .loading {
+        position: fixed;
+        display: flex;
+        justify-content: center;  
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        zoom: 3.0;
+    }
+
+     
+    .sharingon {
+        position: relative;
+        width: 6em;
+        height: 6em;
+        background-color: red;
+        border: 6px solid black;
+        animation: rot 1s ease-in-out infinite;
+    }
+
+    .animated-stop {
+        animation-play-state: paused;
+    }
+
+    .fadeout {
+        animation: fadeOut 1.5s forwards;
+    }
+
+    .scaleAndFadeout {
+        animation: scaleAndFadeOut 1.5s forwards
+    }
+
+    .ring {
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+        width: 3.5em;
+        height: 3.5em;
+        border: 4px solid rgb(110, 13 ,13 ,0.5);
+        transform: translate(-50%,-50%);
+    }
+
+    .sharingon, .ring, .to,.circle {
+        border-radius: 50%;
+    }
+
+    .to,.circle {
+        position: absolute;
+        content: "";
+        width: 0.9em;
+        height: 0.9em;
+        background-color: black;
+    }
+
+    .to:nth-child(1) {
+        top: -0.5em;
+        left: 50%;
+        transform: translate(-40%);
+    }
+
+    .to::before {
+        content: "";
+        position: absolute;
+        top: -0.5em;
+        right: -0.2em;
+        width: 1.1em;
+        height: 0.9em;
+        box-sizing: border-box;
+        border-left: 16px solid black;
+        border-radius: 100% 0 0;
+    }
+
+    .to:nth-child(2) {
+        bottom: 0.5em;
+        left: -0.35em;
+        transform: rotate(-120deg);
+    }
+
+    .to:nth-child(3) {
+        bottom: 0.5em;
+        right: -0.35em;
+        transform: rotate(120deg);
+    }
+
+    .circle {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 0 0 20px 1px;
+        width: 1em;
+        height: 1em;
+    }
+
+    @keyframes rot {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes scaleAndFadeOut {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.5);  
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.5);  
+            opacity: 0;  
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;  
+        }
+    }
+</style>
+
+<script>
+    function initLoading() {
+        const startTime = Date.now();
+        let loading = document.querySelector(".loading");
+        document.addEventListener('DOMContentLoaded', function() {
+            const timeDelay = Date.now() - startTime;
+            
+            setTimeout(() => {
+                fadeOut();
+                setTimeout(() => {
+                    loading.style.display = "none";
+                }, 1500)
+            }, timeDelay > 1050 ? 0 : 1050 - timeDelay)
+        });
+    }
+
+    function fadeOut() {
+        
+        let sharingon= document.querySelector(".sharingon");
+        sharingon.classList.add("animated-stop")
+        
+        let scale = document.querySelector(".scale");
+        scale.classList.add("scaleAndFadeout");
+        
+        let loading = document.querySelector(".loading");
+        loading.classList.add("fadeout")
+    }
+
+    initLoading();
+</script>
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/hugo-stack/">
+                
+                    
+
+                    
+
+
+
+                        <img src="/hugo-stack/img/muzimi.gif" width="250"
+                             height="250" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🤔</span>
+                
+            </figure>
+            
+        
+
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/hugo-stack">莱特雷-letere</a></h1>
+            <h2 class="site-description">欢迎来到我的网站，此博客由【Hugo &#43; Stack】来进行搭建，主要分享个人生活和学习笔记</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a
+                        href='https://space.bilibili.com/402971365'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-bilibili" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" />
+  <path d="M8 3l2 3" />
+  <path d="M16 3l-2 3" />
+  <path d="M9 13v-2" />
+  <path d="M15 11v2" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                        href='https://github.com/letere-gzj'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                        href='https://letere-gzj.github.io'
+                        target="_blank"
+                        title="Hexo_Blog"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-hexo"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /><path d="M9 8v8" /><path d="M15 8v8" /><path d="M9 12h6" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                        href='/hugo-stack/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rss"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M4 4a16 16 0 0 1 16 16" /><path d="M4 11a9 9 0 0 1 9 9" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/hugo-stack/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/categories-tags/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-tags"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 8v4.172a2 2 0 0 0 .586 1.414l5.71 5.71a2.41 2.41 0 0 0 3.408 0l3.592 -3.592a2.41 2.41 0 0 0 0 -3.408l-5.71 -5.71a2 2 0 0 0 -1.414 -.586h-4.172a2 2 0 0 0 -2 2z" /><path d="M18 19l1.592 -1.592a4.82 4.82 0 0 0 0 -6.816l-4.592 -4.592" /><path d="M7 10h-.01" /></svg>
+                
+                <span>分类&amp;标签</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/update-log/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-list"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l11 0" /><path d="M9 12l11 0" /><path d="M9 18l11 0" /><path d="M5 6l0 .01" /><path d="M5 12l0 .01" /><path d="M5 18l0 .01" /></svg>
+                
+                <span>更新日志</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>技术链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-mcp介绍">1 MCP介绍</a></li>
+    <li><a href="#2-mcp使用">2 MCP使用</a>
+      <ul>
+        <li><a href="#21-使用场景准备">2.1 使用场景准备</a></li>
+        <li><a href="#22-mcp服务搭建">2.2 MCP服务搭建</a></li>
+        <li><a href="#23-mcp服务使用测试">2.3 MCP服务使用测试</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/hugo-stack/p/ai/mcp-learn/">【AI】MCP初认识</a>
+        </h2>
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-05-16</time>
+            </div>
+        |
+            <div class="article-lastmod">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
+                <time>
+                    2025-05-16
+                </time>
+            </div>
+
+        <div>
+            |
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
+            <time class="article-time--reading">
+                1144 字
+            </time>
+        </div>
+        
+        <div id="viewCount">
+            |
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                <span id="vercount_value_page_pv">loading... </span>次
+            </time>
+        </div>
+    </footer>
+    
+
+    <div class="article-title-wrapper">
+        
+        <h3 class="article-subtitle">
+            MCP: Model Context Protocol - 模型上下文协议
+        </h3>
+        
+    </div>
+
+    
+
+    
+        <header class="article-category">
+            
+            <div class="left-category">
+                
+                    <a href="/hugo-stack/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="background-color: #dc4930; color: #fff;">
+                        学习笔记
+                    </a>
+                
+            </div>
+            
+            
+                <div class="right-tag">
+                    
+                        <a href="/hugo-stack/tags/ai/" style="background-color: #01cdfb; color: #fff;">AI</a>
+                    
+                </div>
+            
+        </header>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <hr>
+<blockquote class="alert alert-note">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><strong>前言：</strong></p>
+<ul>
+<li>AI技术迅速发展，各种新技术层出不重，作为开发者应主动了解这些技术，以免被市场淘汰</li>
+<li><strong>MCP</strong>算是AI辅助代码开发中比较重要的一项技术</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="1-mcp介绍">1 MCP介绍
+</h2><ul>
+<li><a class="link" href="https://mcp-docs.cn/"  target="_blank" rel="noopener"
+    ><strong>MCP官方文档</strong></a></li>
+<li><strong>MCP</strong>：Model Context Protocol(模型上下文协议)是一个开放协议，它为应用程序向 LLM 提供上下文的方式进行了标准化。你可以将 MCP 想象成 AI 应用程序的 USB-C 接口。就像 USB-C 为设备连接各种外设和配件提供了标准化的方式一样，MCP 为 AI 模型连接各种数据源和工具提供了标准化的接口。</li>
+</ul>
+<blockquote class="alert alert-tip">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>简单来说MCP是一个统一规范的协议，而遵循这个协议而开发的MCP服务，是一个给AI使用的工具，来拓展AI的功能</p>
+<ul>
+<li><strong>类比：</strong>
+<ul>
+<li>AI = 电脑</li>
+<li>MCP = 电脑的USB插口</li>
+<li>MCP服务 = 鼠标，键盘等外设</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="2-mcp使用">2 MCP使用
+</h2><h3 id="21-使用场景准备">2.1 使用场景准备
+</h3><ul>
+<li>(1) MCP与AI挂钩，所以要使用MCP，肯定要准备AI代码编程相关的软件或插件
+<ul>
+<li>AI编程软件首推<a class="link" href="https://www.cursor.com/cn"  target="_blank" rel="noopener"
+    ><strong>Cursor</strong></a>，但是收费软件(<del>有破解途径就是了</del>)</li>
+<li>因为我是Java开发，更习惯IDEA的界面，所以选择了AI编程插件<a class="link" href="https://www.cursor.com/cn"  target="_blank" rel="noopener"
+    ><strong>通义灵码</strong></a>(主要是免费，不用搞破解)</li>
+<li>非代码开发者的话，可以选择使用<a class="link" href="https://www.cherry-ai.com/"  target="_blank" rel="noopener"
+    ><strong>Cherry studio</strong></a>，算是给非开发者使用的一个AI对话软件</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li>(2) 一般AI只有问答对话功能，没法实现其他更多的功能
+<ul>
+<li>例如我让AI帮我实现下面的需求</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">1. 帮我编写一个&#34;翻页时钟&#34;的html页面，时钟的时间以读取本地时间为主
+</span></span><span class="line"><span class="cl">2. 将生成好的html保存到当前目录下，文件名为&#34;flip-clock.html&#34;，并将文件路径输出到控制台
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81.png"
+	width="534"
+	height="635"
+	srcset="/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu16051579982529800285.png 480w, /hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu15761362870951001377.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="84"
+		data-flex-basis="201px"
+	
+></p>
+<ul>
+<li>(3) 而AI无法实现文件保存功能，所以需要一个MCP服务，来拓展AI的功能</li>
+</ul>
+<hr>
+<h3 id="22-mcp服务搭建">2.2 MCP服务搭建
+</h3><blockquote class="alert alert-tip">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>MCP服务搜索网址推荐：</p>
+<ul>
+<li><a class="link" href="https://github.com/punkpeye/awesome-mcp-servers"  target="_blank" rel="noopener"
+    ><strong>punkpeye/awesome-mcp-servers</strong></a></li>
+<li><a class="link" href="https://github.com/modelcontextprotocol/servers"  target="_blank" rel="noopener"
+    ><strong>modelcontextprotocol/servers</strong></a></li>
+<li><a class="link" href="https://smithery.ai/"  target="_blank" rel="noopener"
+    ><strong>Smithery</strong></a></li>
+<li><a class="link" href="https://mcp.so/"  target="_blank" rel="noopener"
+    ><strong>mcp.so</strong></a></li>
+</ul>
+</blockquote>
+<ul>
+<li>(1) 根据上面的需求，需要一个能操作本地系统文件的MCP服务，所以推荐的是这个MCP服务<a class="link" href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem"  target="_blank" rel="noopener"
+    ><strong>Filesystem</strong></a>
+<ul>
+<li>MCP服务使用需搭建好对应的环境</li>
+<li><strong>NPX</strong>运行的，需要先安装Node环境(教程自己寻找)，这个<strong>FileSystem</strong>就是npx运行的</li>
+<li><strong>UVX</strong>运行的，需要先安装Python环境(<a class="link" href="/hugo-stack/p/python/build-env" ><strong>【Python】Windows搭建Python环境</strong></a>)，搭建完后运行<code>pip install uv</code>就好</li>
+</ul>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851.png"
+	width="1098"
+	height="381"
+	srcset="/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu12400468924744860481.png 480w, /hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu8884379790382067544.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="288"
+		data-flex-basis="691px"
+	
+></p>
+<ul>
+<li>(2) 通义灵码点击<strong>MCP工具</strong>，通过MCP广场搜索<code>文件</code>，点击安装
+<ul>
+<li>也可以通过配置文件添加，将上面的npx脚本复制进去就好</li>
+</ul>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852.png"
+	width="1093"
+	height="345"
+	srcset="/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu8059125951367273534.png 480w, /hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu6940551785252208720.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="316"
+		data-flex-basis="760px"
+	
+></p>
+<p><img src="/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853.png"
+	width="557"
+	height="201"
+	srcset="/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu3328535034608254016.png 480w, /hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu5499105473676982018.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="277"
+		data-flex-basis="665px"
+	
+></p>
+<ul>
+<li>(3) 默认安装会失败，错误信息是<code>没有对应的文件或文件夹</code>，因为里面的参数是默认参数，需按实际情况修改</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854.png"
+	width="523"
+	height="502"
+	srcset="/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu3894597563050294522.png 480w, /hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu13590490386471086619.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="104"
+		data-flex-basis="250px"
+	
+></p>
+<ul>
+<li>(4) 按实际情况修改自己电脑的用户名，以及后面的允许操作的文件夹路径
+<ul>
+<li>我图省事，将整个<strong>D盘</strong>都设置为允许操作</li>
+</ul>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855.png"
+	width="538"
+	height="442"
+	srcset="/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu1351744071634018108.png 480w, /hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu10887468920110777535.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="121"
+		data-flex-basis="292px"
+	
+></p>
+<ul>
+<li>(5) 无报错信息即搭建成功</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856.png"
+	width="534"
+	height="403"
+	srcset="/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu1216865244556104265.png 480w, /hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu17990218548616656080.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="132"
+		data-flex-basis="318px"
+	
+></p>
+<hr>
+<h3 id="23-mcp服务使用测试">2.3 MCP服务使用测试
+</h3><ul>
+<li>(1) AI模式切换成<strong>智能体</strong>，然后重新运行一次上面的需求</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951.png"
+	width="531"
+	height="418"
+	srcset="/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu7060540861615635445.png 480w, /hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu12684457575657985896.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="127"
+		data-flex-basis="304px"
+	
+></p>
+<ul>
+<li>(2) 运行期间会询问是否执行MCP工具，点击<strong>允许</strong>就好</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952.png"
+	width="543"
+	height="611"
+	srcset="/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu2052040905295521314.png 480w, /hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu1577831713169465734.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="88"
+		data-flex-basis="213px"
+	
+></p>
+<ul>
+<li>(3) AI成功通过MCP服务，实现了<strong>将代码保存为文件</strong>的功能
+<ul>
+<li>下面是AI帮我写的<a class="link" href="flip-clock.txt" ><strong>翻页时钟</strong></a>功能(<kbd>Ctrl</kbd>+<kbd>S</kbd>保存，修改后缀名为html即可)</li>
+</ul>
+</li>
+</ul>
+<div class="flip-clock" id="flip-clock">
+    <div class="digit" id="hours1"></div>
+    <div class="digit" id="hours2"></div>
+    <div style="width: 10px;"></div>
+    <div class="digit" id="minutes1"></div>
+    <div class="digit" id="minutes2"></div>
+    <div style="width: 10px;"></div>
+    <div class="digit" id="seconds1"></div>
+    <div class="digit" id="seconds2"></div>
+</div>
+<style>
+    .flip-clock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .digit {
+        position: relative;
+        width: 60px;
+        height: 80px;
+        perspective: 400px;
+    }
+
+    .digit__number {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        border: 2px solid #333;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 48px;
+        color: #333;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transition: transform 0.5s ease;
+    }
+
+    .digit__number.top {
+        z-index: 2;
+        transform: rotateX(0deg);
+    }
+
+    .digit__number.bottom {
+        z-index: 1;
+        transform: rotateX(-90deg);
+    }
+
+    .digit.flip .digit__number.top {
+        transform: rotateX(90deg);
+    }
+
+    .digit.flip .digit__number.bottom {
+        transform: rotateX(0deg);
+    }
+</style>
+<script>
+    function createDigitElements(digitElement) {
+        const top = document.createElement('div');
+        top.className = 'digit__number top';
+        top.textContent = '0';
+        const bottom = document.createElement('div');
+        bottom.className = 'digit__number bottom';
+        bottom.textContent = '0';
+        digitElement.appendChild(top);
+        digitElement.appendChild(bottom);
+        return { top, bottom };
+    }
+
+    function updateDigit(digit, newValue) {
+        const currentTop = parseInt(digit.top.textContent);
+        if (currentTop === newValue) return;
+        const newBottomValue = newValue;
+        // 设置新值到bottom
+        digit.bottom.textContent = newBottomValue;
+        // 添加翻转类
+        digit.top.parentElement.classList.add('flip');
+        // 在过渡结束后更新top的值并移除flip类
+        setTimeout(() => {
+            digit.top.textContent = newBottomValue;
+            digit.top.parentElement.classList.remove('flip');
+        }, 500); // 与CSS中的过渡时间相匹配
+    }
+
+    function updateTime(digits) {
+        const now = new Date();
+        let hours = now.getHours().toString().padStart(2, '0');
+        let minutes = now.getMinutes().toString().padStart(2, '0');
+        let seconds = now.getSeconds().toString().padStart(2, '0');
+        // 更新小时的十位和个位
+        updateDigit(digits.hours1, parseInt(hours[0]));
+        updateDigit(digits.hours2, parseInt(hours[1]));
+        // 更新分钟的十位和个位
+        updateDigit(digits.minutes1, parseInt(minutes[0]));
+        updateDigit(digits.minutes2, parseInt(minutes[1]));
+        // 更新秒的十位和个位
+        updateDigit(digits.seconds1, parseInt(seconds[0]));
+        updateDigit(digits.seconds2, parseInt(seconds[1]));
+    }
+
+    function initFlipClock() {
+        // 初始化各个数字位
+        const digits = {};
+        Object.keys({
+            hours1: null,
+            hours2: null,
+            minutes1: null,
+            minutes2: null,
+            seconds1: null,
+            seconds2: null
+        }).forEach(key => {
+            digits[key] = createDigitElements(document.getElementById(key));
+        });
+        // 初始更新时间
+        updateTime(digits);
+        // 每隔一秒更新一次时间
+        setInterval(() => updateTime(digits), 1000);
+    }
+
+    initFlipClock();
+</script>
+<hr>
+
+</section>
+
+
+    <footer class="article-footer">
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>根据CC BY-NC-SA 4.0协议授权</span>
+    </section>
+    
+
+</footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/hugo-stack/p/python/build-env/">
+
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Python】Windows搭建Python环境
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo-stack/p/java/shardingsphere/">
+
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/java/shardingsphere/cover.dcf822ea57f7a6ce474d9cc16c83ba4d_hu11589056487236479637.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Java】SpringBoot整合ShardingSphere"
+                        data-key="java/shardingsphere" 
+                        data-hash="md5-3Pgi6lf3ps5HTZzBbIO6TQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Java】SpringBoot整合ShardingSphere
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="letere-gzj/hugo-stack"
+    data-repo-id="R_kgDOMXeWfg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOMXeWfs4CheU8"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+    <div id="comment"></div>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 莱特雷-letere
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/hugo-stack/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<div id="custom-footer">
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+    <script src=https://letere-gzj.github.io/hugo-stack/background/particles/particles.js></script>
+
+
+    <link rel="stylesheet" href=https://letere-gzj.github.io/hugo-stack/background/particles/style.css>
+
+
+<div id="particles-js"></div>
+
+<script>
+    
+
+    particlesJS.load('particles-js', "https://letere-gzj.github.io/hugo-stack/background/particles/particlesjs-config.json", function() {
+        console.log('particles.js loaded - callback');
+    });
+</script>
+
+
+
+
+
+
+
+	
+	<script src=https://letere-gzj.github.io/hugo-stack/js/pjax.min.js></script>
+
+
+	<script src=https://letere-gzj.github.io/hugo-stack/js/topbar.js></script>
+
+
+<script>
+	var pjax = new Pjax({
+		elements: "a, form",
+		
+		selectors: [
+			"title",
+			".main-container",
+			".js-Pjax"
+		],
+		cacheBust: false
+	})
+
+	
+	pjax._handleResponse = pjax.handleResponse;
+	pjax.handleResponse = function(responseText, request, href, options) {
+		if (request.responseText.match("<html")) {
+			
+			if (responseText) {
+				let newDoc = new DOMParser().parseFromString(responseText, 'text/html');
+				let bodyClass = newDoc.body.className;
+				document.body.setAttribute("class", bodyClass)
+			}
+			
+			pjax._handleResponse(responseText, request, href, options);
+		} else {
+			window.open(href)
+			topbar.hide();
+		}
+	}
+
+	
+	topbar.config({
+		barColors: {
+			'0': 'rgba(255,  255, 255, 1)',
+			'1.0': 'rgba(0, 149, 234,  1)'
+		}
+	})
+
+	
+	document.addEventListener('pjax:send', () => {
+		
+		topbar.show();
+	})
+
+	
+	document.addEventListener('pjax:complete', () => {
+		
+		window.Stack.init();
+		
+		topbar.hide();
+		
+		
+		
+		initTocHide();
+		
+		initScrollTop();
+		
+		initCodeMoreBox()
+		
+		showWelcomeMessage();
+		
+		renderKaTeX();
+		
+		initFlipClock();
+	})
+</script>
+
+	
+	<script src=https://letere-gzj.github.io/hugo-stack/js/APlayer.min.js></script>
+
+
+<div class="demo">
+	<div id="aplayer"/>
+</div>
+<script>
+	
+	const musicDir = "https://letere-gzj.github.io/hugo-stack/" + 'music/';
+	const songs = [
+		'爱别等-洪卓立',
+		'查无此字-林奕匡',
+		'初初-古巨基',
+		'乖乖报到-MC 张天赋',
+		'泼墨桃花-林峯',
+		'摄氏零度-张敬轩',
+		'下一位前度-林家谦',
+		'这个故事教训我们-李克勤',
+		'最后祝福-黄宗泽'
+	];
+	let audios = [];
+	songs.forEach((item) => {
+		const songInfo = item.split('-');
+		audios.push({
+			name: songInfo[0],
+			artist: songInfo[1],
+			url: musicDir + item + '/song.mp3',
+			cover: musicDir + item + '/cover.jpg',
+			lrc: musicDir + item + '/lyric.lrc'
+		});
+	})
+
+	
+	const ap = new APlayer({
+		container: document.getElementById('aplayer'),
+		listFolded: false,
+		listMaxHeight: '160px',
+		lrcType: 3,
+		mutex: true,
+		fixed: true,
+		audio: audios
+	});
+
+	
+
+	window.onload = () => {
+		const playInfo = JSON.parse(localStorage.getItem("playInfo"));
+		
+		if (!playInfo) {
+			return;
+		}
+		ap.list.switch(playInfo.index);
+		setTimeout(() => {
+			ap.seek(playInfo.currentTime);
+			
+			if (!playInfo.paused) {
+				ap.play()
+			}
+		}, 500);
+	};
+
+	
+
+	window.onbeforeunload = () => {
+		const playInfo = {
+			index: ap.list.index,
+			paused: ap.paused,
+			currentTime: ap.audio.currentTime
+		};
+		localStorage.setItem("playInfo", JSON.stringify(playInfo));
+	};
+</script>
+
+
+
+
+	
+    <style>
+        @font-face {
+            font-family: 'ChildFunSans';
+            src: url(https://letere-gzj.github.io/hugo-stack/font/ChildFunSans-Demo.ttf) format('truetype');
+        }
+
+        :root {
+             
+             
+            --article-font-family: "ChildFunSans";
+            --zh-font-family: "ChildFunSans";
+        }
+    </style>
+
+
+	<div class="js-Pjax"><script>
+            (function() {
+                let comment = document.querySelector("#comment")
+                if (comment) {
+                    addCommentScript(comment)
+                }
+            })(document)
+
+            
+            function addCommentScript(comment) {
+                let script = document.createElement('script');
+                script.src = 'https://giscus.app/client.js';
+                script.crossOrigin = 'anonymous';
+                script.setAttribute('data-repo',"letere-gzj/hugo-stack");
+                script.setAttribute('data-repo-id',"R_kgDOMXeWfg");
+                script.setAttribute('data-category',"Announcements"); 
+                script.setAttribute('data-category-id',"DIC_kwDOMXeWfs4CheU8"); 
+                script.setAttribute('data-mapping',"pathname");
+                script.setAttribute('data-strict', 0 );
+                script.setAttribute('data-reactions-enabled', 1 );
+                script.setAttribute('data-emit-metadata', 0 );
+                script.setAttribute('data-input-position',"top");
+                script.setAttribute('data-theme',"light");
+                script.setAttribute('data-lang',"zh-CN");
+                script.setAttribute('data-loading', 'lazy')
+                script.async = true;
+                comment.appendChild(script);
+                initGiscus();
+            }
+
+            function initGiscus() {
+                addEventListener("message", (e) => {
+                    if (event.origin !== "https://giscus.app") return;
+                    handler();
+                });
+                window.addEventListener("onColorSchemeChange", handler);
+
+                function handler() {
+                    if (document.documentElement.dataset.scheme === "light") {
+                        setGiscusTheme('light');
+                    } else {
+                        setGiscusTheme('dark_dimmed');
+                    }
+                }
+            };
+        </script></div>
+
+	<style>
+    #TableOfContents > ul {
+        ul {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+                openUl.forEach((ul) => {
+                    ul.classList.remove("open")
+                })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && ul.localName === 'ul')
+        });
+    }
+    initTocHide()
+    window.initTocHide = initTocHide
+</script>
+
+	<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        transition: transform 0.8s ease-in-out;
+    }
+
+    [data-scheme="light"] {
+        #backTopBtn {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-light.svg);
+        }
+
+         
+          
+         
+    }
+
+    [data-scheme="dark"] {
+        #backTopBtn {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-dark.svg);
+        }
+
+         
+          
+         
+    }
+
+    #backTopBtn:hover {
+        transform: rotate(360deg)
+         
+    }
+
+    @keyframes wobble {
+        0%, 100% {
+            transform: rotate(0);
+        }
+        25% {
+            transform: rotate(45deg);
+        }
+        65% {
+            transform: rotate(-45deg);
+        }
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+    window.initScrollTop = initScrollTop;
+</script>
+
+	<script>
+    const config = {
+        
+        path: {
+            homePath: "/hugo-stack/",
+            modelPath: "https:\/\/letere-gzj.github.io\/hugo-stack\/" + "live2d-moc3/",
+            cssPath: "https://letere-gzj.github.io/hugo-stack/live2d/waifu.css",
+            tipsJsonPath: "https://letere-gzj.github.io/hugo-stack/live2d/my-waifu-tips.json",
+            tipsJsPath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/waifu-tips.js",
+            live2dCorePath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2dcubismcore.js",
+            live2dSdkPath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2d-sdk.js"
+        },
+        
+        tools: ["hitokoto", "asteroids", "express", "photo", "info", "quit"],
+        
+        drag: {
+            enable: true,
+            direction: ["x"]
+        },
+        
+        switchType: "order"
+    }
+
+    
+    if (screen.width >= 768) {
+        Promise.all([
+            loadExternalResource(config.path.cssPath, "css"),
+            loadExternalResource(config.path.live2dCorePath, "js"),
+            loadExternalResource(config.path.live2dSdkPath, "js"),
+            loadExternalResource(config.path.tipsJsPath, "js")
+        ]).then(() => {
+            initWidget({
+                homePath: config.path.homePath,
+                waifuPath: config.path.tipsJsonPath,
+                cdnPath: config.path.modelPath,
+                tools: config.tools,
+                dragEnable: config.drag.enable,
+                dragDirection: config.drag.direction,
+                switchType: config.switchType
+            });
+        });
+    }
+
+    
+    function loadExternalResource(url, type) {
+        return new Promise((resolve, reject) => {
+            let tag;
+            if (type === "css") {
+                tag = document.createElement("link");
+                tag.rel = "stylesheet";
+                tag.href = url;
+            }
+            else if (type === "js") {
+                tag = document.createElement("script");
+                tag.src = url;
+            }
+            if (tag) {
+                tag.onload = () => resolve(url);
+                tag.onerror = () => reject(url);
+                document.head.appendChild(tag);
+            }
+        });
+    }
+</script>
+
+	
+
+
+<div class="js-Pjax">
+    <script>
+        (function() {
+            let script = document.createElement('script');
+            script.defer = true;
+            script.src = "https://cn.vercount.one/js";
+            let footer = document.querySelector("footer")
+            if (footer) {
+                showHideView()
+                footer.appendChild(script);
+            }
+        })(document)
+
+        function showHideView() {
+            let viewCounts = document.querySelectorAll("#viewCount");
+            if (viewCounts) {
+                const style = document.querySelector(".article-page") ? '' : 'none';
+                viewCounts.forEach(ele => {
+                        ele.style.display = style;
+                    }
+                )
+            }
+        }
+    </script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+         
+    }
+
+    .code-more-img {
+         
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+    
+
+    function initCodeMoreBox() {
+        let codeBlocks = document.querySelectorAll(".highlight");
+        if (!codeBlocks) {
+            return;
+        }
+        codeBlocks.forEach(codeBlock => {
+            
+            if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+                return;
+            }
+            
+            
+            let codeMoreBox = document.createElement('div');
+            codeMoreBox.classList.add('code-more-box');
+            
+            let codeMoreBtn = document.createElement('span');
+            codeMoreBtn.classList.add('code-more-btn');
+            codeMoreBtn.addEventListener('click', () => {
+                codeBlock.classList.add('code-show');
+                codeMoreBox.style.display = 'none';
+                
+                window.dispatchEvent(new Event('resize'))
+            })
+            
+            let img = document.createElement('img');
+            img.classList.add('code-more-img');
+            img.src = "https://letere-gzj.github.io/hugo-stack/icons/codeMore.png"
+            
+            codeMoreBtn.appendChild(img);
+            codeMoreBox.appendChild(codeMoreBtn);
+            codeBlock.appendChild(codeMoreBox)
+        })
+    }
+
+    initCodeMoreBox();
+    window.initCodeMoreBox = initCodeMoreBox;
+</script>
+
+	<script>
+    async function renderKaTeX() {
+        let katex = document.querySelector(".math-katex");
+        if (!katex) {
+            return;
+        }
+        
+        while (typeof renderMathInElement !== 'function') {
+            await delay(1000)
+        }
+        
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });
+    }
+
+    function delay(time) {
+        return new Promise(resolve => {
+            setTimeout(resolve, time)
+        })
+    }
+
+    window.renderKaTeX = renderKaTeX;
+</script>
+
+	
+    <script src=https://letere-gzj.github.io/hugo-stack/js/fish.js></script>
+
+
+<div id="jsi-flying-fish-container"></div>
+
+<script>
+    window.onload = () =>{
+        initFish();
+    }
+
+    function initFish() {
+        RENDERER.init();
+    }
+</script>
+
+
+<style>
+    #custom-footer {
+        position: relative;
+    }
+
+    #jsi-flying-fish-container {
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.5;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+    }
+</style>
+	<script>
+    function createDigitElements(digitElement) {
+        const top = document.createElement('div');
+        top.className = 'digit__number top';
+        top.textContent = '0';
+
+        const bottom = document.createElement('div');
+        bottom.className = 'digit__number bottom';
+        bottom.textContent = '0';
+
+        digitElement.appendChild(top);
+        digitElement.appendChild(bottom);
+
+        return { top, bottom };
+    }
+
+    function updateDigit(digit, newValue) {
+        const currentTop = parseInt(digit.top.textContent);
+        if (currentTop === newValue) return;
+
+        const newBottomValue = newValue;
+
+        
+        digit.bottom.textContent = newBottomValue;
+
+        
+        digit.top.parentElement.classList.add('flip');
+
+        
+        setTimeout(() => {
+            digit.top.textContent = newBottomValue;
+            digit.top.parentElement.classList.remove('flip');
+        }, 500); 
+    }
+
+    function updateTime(digits) {
+        const now = new Date();
+        let hours = now.getHours().toString().padStart(2, '0');
+        let minutes = now.getMinutes().toString().padStart(2, '0');
+        let seconds = now.getSeconds().toString().padStart(2, '0');
+
+        
+        updateDigit(digits.hours1, parseInt(hours[0]));
+        updateDigit(digits.hours2, parseInt(hours[1]));
+
+        
+        updateDigit(digits.minutes1, parseInt(minutes[0]));
+        updateDigit(digits.minutes2, parseInt(minutes[1]));
+
+        
+        updateDigit(digits.seconds1, parseInt(seconds[0]));
+        updateDigit(digits.seconds2, parseInt(seconds[1]));
+    }
+
+    function initFlipClock() {
+        const flipClock = document.querySelector('#flip-clock');
+        if (!flipClock) {
+            return
+        }
+        
+        const digits = {};
+        Object.keys({
+            hours1: null,
+            hours2: null,
+            minutes1: null,
+            minutes2: null,
+            seconds1: null,
+            seconds2: null
+        }).forEach(key => {
+            digits[key] = createDigitElements(document.getElementById(key));
+        });
+        
+        updateTime(digits);
+        
+        setInterval(() => updateTime(digits), 1000);
+    }
+
+    window.initFilipClock = initFlipClock;
+</script>
+</div>
+
+    </body>
+</html>

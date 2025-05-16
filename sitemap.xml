@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://letere-gzj.github.io/hugo-stack/p/python/build-env/</loc>
-    <lastmod>2025-05-15T09:39:53+08:00</lastmod>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</loc>
+    <lastmod>2025-05-16T13:54:49+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/categories/</loc>
-    <lastmod>2025-05-15T17:34:15+08:00</lastmod>
+    <lastmod>2025-05-16T13:54:49+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/post/</loc>
-    <lastmod>2025-05-15T17:34:15+08:00</lastmod>
+    <lastmod>2025-05-16T13:54:49+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/tags/</loc>
-    <lastmod>2025-05-15T17:34:15+08:00</lastmod>
+    <lastmod>2025-05-16T13:54:49+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/python/build-env/</loc>
+    <lastmod>2025-05-15T09:39:53+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/p/hugo/custom-stack-widget/</loc>
     <lastmod>2025-05-15T17:34:15+08:00</lastmod>
@@ -73,6 +76,9 @@
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/</loc>
     <lastmod>2024-07-19T16:39:35+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/tags/ai/</loc>
+    <lastmod>2025-05-16T13:54:49+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/tags/hugo/</loc>
     <lastmod>2025-04-11T17:25:54+08:00</lastmod>
