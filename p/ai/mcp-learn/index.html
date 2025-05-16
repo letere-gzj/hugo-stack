@@ -10,7 +10,7 @@
 <meta property='og:description' content="MCP: Model Context Protocol - 模型上下文协议">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='AI' /><meta property='article:published_time' content='2025-05-16T09:23:21&#43;08:00'/><meta property='article:modified_time' content='2025-05-16T13:54:49&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='AI' /><meta property='article:published_time' content='2025-05-16T09:23:21&#43;08:00'/><meta property='article:modified_time' content='2025-05-16T17:44:36&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
 <meta name="twitter:title" content="【AI】MCP初认识">
 <meta name="twitter:description" content="MCP: Model Context Protocol - 模型上下文协议"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/img/gou.jpg' />
@@ -555,7 +555,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                1144 字
+                1147 字
             </time>
         </div>
         
@@ -652,7 +652,7 @@
 
 
 
-    <p>简单来说MCP是一个统一规范的协议，而遵循这个协议而开发的MCP服务，是一个给AI使用的工具，来拓展AI的功能</p>
+    <p>简单来说MCP是一个统一规范的协议，遵循这个协议来开发的MCP服务，是给AI使用的工具，来拓展AI的功能</p>
 <ul>
 <li><strong>类比：</strong>
 <ul>
@@ -709,7 +709,7 @@
 	
 ></p>
 <ul>
-<li>(3) 而AI无法实现文件保存功能，所以需要一个MCP服务，来拓展AI的功能</li>
+<li>(3) 可以看到，AI无法实现文件保存功能，所以需要一个MCP服务，来拓展AI的功能</li>
 </ul>
 <hr>
 <h3 id="22-mcp服务搭建">2.2 MCP服务搭建
@@ -742,12 +742,12 @@
 </ul>
 </blockquote>
 <ul>
-<li>(1) 根据上面的需求，需要一个能操作本地系统文件的MCP服务，所以推荐的是这个MCP服务<a class="link" href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem"  target="_blank" rel="noopener"
+<li>(1) 根据上面的需求，需要一个能操作本地系统文件的MCP服务，这边选择的是<a class="link" href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem"  target="_blank" rel="noopener"
     ><strong>Filesystem</strong></a>
 <ul>
-<li>MCP服务使用需搭建好对应的环境</li>
-<li><strong>NPX</strong>运行的，需要先安装Node环境(教程自己寻找)，这个<strong>FileSystem</strong>就是npx运行的</li>
-<li><strong>UVX</strong>运行的，需要先安装Python环境(<a class="link" href="/hugo-stack/p/python/build-env" ><strong>【Python】Windows搭建Python环境</strong></a>)，搭建完后运行<code>pip install uv</code>就好</li>
+<li>要使用MCP服务需搭建好对应的环境</li>
+<li>以<strong>NPX</strong>运行的，需要先安装<strong>Node.js</strong>环境(教程需自己寻找)，<strong>FileSystem</strong>就是npx运行的</li>
+<li>以<strong>UVX</strong>运行的，需要先安装<strong>Python</strong>环境(可看<a class="link" href="/hugo-stack/p/python/build-env" ><strong>【Python】Windows搭建Python环境</strong></a>)，搭建完后运行<code>pip install uv</code>就好</li>
 </ul>
 </li>
 </ul>
@@ -764,7 +764,7 @@
 	
 ></p>
 <ul>
-<li>(2) 通义灵码点击<strong>MCP工具</strong>，通过MCP广场搜索<code>文件</code>，点击安装
+<li>(2) 通义灵码点击<strong>MCP工具</strong>，通过MCP广场搜索<code>文件</code>，最后点击安装
 <ul>
 <li>也可以通过配置文件添加，将上面的npx脚本复制进去就好</li>
 </ul>

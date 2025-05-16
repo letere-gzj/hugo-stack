@@ -58,7 +58,7 @@
 
 
 
-    &lt;p&gt;简单来说MCP是一个统一规范的协议，而遵循这个协议而开发的MCP服务，是一个给AI使用的工具，来拓展AI的功能&lt;/p&gt;
+    &lt;p&gt;简单来说MCP是一个统一规范的协议，遵循这个协议来开发的MCP服务，是给AI使用的工具，来拓展AI的功能&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;类比：&lt;/strong&gt;
 &lt;ul&gt;
@@ -115,7 +115,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;(3) 而AI无法实现文件保存功能，所以需要一个MCP服务，来拓展AI的功能&lt;/li&gt;
+&lt;li&gt;(3) 可以看到，AI无法实现文件保存功能，所以需要一个MCP服务，来拓展AI的功能&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;22-mcp服务搭建&#34;&gt;2.2 MCP服务搭建
@@ -148,12 +148,12 @@
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;(1) 根据上面的需求，需要一个能操作本地系统文件的MCP服务，所以推荐的是这个MCP服务&lt;a class=&#34;link&#34; href=&#34;https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;li&gt;(1) 根据上面的需求，需要一个能操作本地系统文件的MCP服务，这边选择的是&lt;a class=&#34;link&#34; href=&#34;https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;Filesystem&lt;/strong&gt;&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;MCP服务使用需搭建好对应的环境&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;NPX&lt;/strong&gt;运行的，需要先安装Node环境(教程自己寻找)，这个&lt;strong&gt;FileSystem&lt;/strong&gt;就是npx运行的&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;UVX&lt;/strong&gt;运行的，需要先安装Python环境(&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env&#34; &gt;&lt;strong&gt;【Python】Windows搭建Python环境&lt;/strong&gt;&lt;/a&gt;)，搭建完后运行&lt;code&gt;pip install uv&lt;/code&gt;就好&lt;/li&gt;
+&lt;li&gt;要使用MCP服务需搭建好对应的环境&lt;/li&gt;
+&lt;li&gt;以&lt;strong&gt;NPX&lt;/strong&gt;运行的，需要先安装&lt;strong&gt;Node.js&lt;/strong&gt;环境(教程需自己寻找)，&lt;strong&gt;FileSystem&lt;/strong&gt;就是npx运行的&lt;/li&gt;
+&lt;li&gt;以&lt;strong&gt;UVX&lt;/strong&gt;运行的，需要先安装&lt;strong&gt;Python&lt;/strong&gt;环境(可看&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env&#34; &gt;&lt;strong&gt;【Python】Windows搭建Python环境&lt;/strong&gt;&lt;/a&gt;)，搭建完后运行&lt;code&gt;pip install uv&lt;/code&gt;就好&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -170,7 +170,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;(2) 通义灵码点击&lt;strong&gt;MCP工具&lt;/strong&gt;，通过MCP广场搜索&lt;code&gt;文件&lt;/code&gt;，点击安装
+&lt;li&gt;(2) 通义灵码点击&lt;strong&gt;MCP工具&lt;/strong&gt;，通过MCP广场搜索&lt;code&gt;文件&lt;/code&gt;，最后点击安装
 &lt;ul&gt;
 &lt;li&gt;也可以通过配置文件添加，将上面的npx脚本复制进去就好&lt;/li&gt;
 &lt;/ul&gt;
