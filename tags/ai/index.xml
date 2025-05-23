@@ -5,14 +5,22 @@
         <link>https://letere-gzj.github.io/hugo-stack/tags/ai/</link>
         <description>Recent content in AI on 莱特雷-letere</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>莱特雷-letere</copyright><atom:link href="https://letere-gzj.github.io/hugo-stack/tags/ai/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>【AI】MCP初认识</title>
-        <link>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</link>
-        <pubDate>Fri, 16 May 2025 09:23:21 +0800</pubDate>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</guid>
-        <description>&lt;hr&gt;
+            <language>zh-cn</language>
+        
+        
+        
+        
+            <copyright>莱特雷-letere</copyright>
+        
+        <atom:link href="https://letere-gzj.github.io/hugo-stack/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+                <item>
+                <title>【AI】MCP初认识</title>
+                <link>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</link>
+                <pubDate>Fri, 16 May 2025 09:23:21 +0800</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</guid>
+                <description>&lt;hr&gt;
 &lt;blockquote class=&#34;alert alert-note&#34;&gt;
 
 
@@ -102,10 +110,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. 将生成好的html保存到当前目录下，文件名为&amp;#34;flip-clock.html&amp;#34;，并将文件路径输出到控制台
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81.png&#34;
 	width=&#34;534&#34;
 	height=&#34;635&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu16051579982529800285.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu15761362870951001377.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu16051579982529800285.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu15761362870951001377.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -155,14 +163,14 @@
 &lt;ul&gt;
 &lt;li&gt;要使用MCP服务需搭建好对应的环境&lt;/li&gt;
 &lt;li&gt;以&lt;strong&gt;NPX&lt;/strong&gt;运行的，需要先安装&lt;strong&gt;Node.js&lt;/strong&gt;环境(教程需自己寻找)，&lt;strong&gt;FileSystem&lt;/strong&gt;就是npx运行的&lt;/li&gt;
-&lt;li&gt;以&lt;strong&gt;UVX&lt;/strong&gt;运行的，需要先安装&lt;strong&gt;Python&lt;/strong&gt;环境(可看&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env&#34; &gt;&lt;strong&gt;【Python】Windows搭建Python环境&lt;/strong&gt;&lt;/a&gt;)，搭建完后运行&lt;code&gt;pip install uv&lt;/code&gt;就好&lt;/li&gt;
+&lt;li&gt;以&lt;strong&gt;UVX&lt;/strong&gt;运行的，需要先安装&lt;strong&gt;Python&lt;/strong&gt;环境(可看&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env&#34; &gt;&lt;strong&gt;【Python】Windows搭建Python环境&lt;/strong&gt;&lt;/a&gt;)，搭建完后运行&lt;code&gt;pip install uv&lt;/code&gt;就好&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851.png&#34;
 	width=&#34;1098&#34;
 	height=&#34;381&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu12400468924744860481.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu8884379790382067544.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu12400468924744860481.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu8884379790382067544.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -178,10 +186,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852.png&#34;
 	width=&#34;1093&#34;
 	height=&#34;345&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu8059125951367273534.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu6940551785252208720.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu8059125951367273534.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu6940551785252208720.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -190,10 +198,10 @@
 		data-flex-basis=&#34;760px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853.png&#34;
 	width=&#34;557&#34;
 	height=&#34;201&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu3328535034608254016.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu5499105473676982018.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu3328535034608254016.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu5499105473676982018.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -205,10 +213,10 @@
 &lt;ul&gt;
 &lt;li&gt;(3) 默认安装会失败，错误信息是&lt;code&gt;没有对应的文件或文件夹&lt;/code&gt;，因为里面的参数是默认参数，需按实际情况修改&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854.png&#34;
 	width=&#34;523&#34;
 	height=&#34;502&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu3894597563050294522.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu13590490386471086619.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu3894597563050294522.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu13590490386471086619.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -224,10 +232,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855.png&#34;
 	width=&#34;538&#34;
 	height=&#34;442&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu1351744071634018108.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu10887468920110777535.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu1351744071634018108.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu10887468920110777535.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -239,10 +247,10 @@
 &lt;ul&gt;
 &lt;li&gt;(5) 无报错信息即搭建成功&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856.png&#34;
 	width=&#34;534&#34;
 	height=&#34;403&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu1216865244556104265.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu17990218548616656080.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu1216865244556104265.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu17990218548616656080.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -256,10 +264,10 @@
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;(1) AI模式切换成&lt;strong&gt;智能体&lt;/strong&gt;，然后重新运行一次上面的需求&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951.png&#34;
 	width=&#34;531&#34;
 	height=&#34;418&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu7060540861615635445.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu12684457575657985896.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu7060540861615635445.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu12684457575657985896.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -271,10 +279,10 @@
 &lt;ul&gt;
 &lt;li&gt;(2) 运行期间会询问是否执行MCP工具，点击&lt;strong&gt;允许&lt;/strong&gt;就好&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952.png&#34;
 	width=&#34;543&#34;
 	height=&#34;611&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu2052040905295521314.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu1577831713169465734.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu2052040905295521314.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu1577831713169465734.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -418,8 +426,9 @@
     initFlipClock();
 &lt;/script&gt;
 &lt;hr&gt;
-</description>
-        </item>
+
+                </description>
+            </item>
         
     </channel>
 </rss>

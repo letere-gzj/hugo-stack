@@ -5,40 +5,56 @@
         <link>https://letere-gzj.github.io/hugo-stack/tags/</link>
         <description>Recent content in Tags on 莱特雷-letere</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>莱特雷-letere</copyright>
-        <lastBuildDate>Fri, 16 May 2025 09:23:21 +0800</lastBuildDate><atom:link href="https://letere-gzj.github.io/hugo-stack/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>AI</title>
-        <link>https://letere-gzj.github.io/hugo-stack/tags/ai/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/tags/ai/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Hugo</title>
-        <link>https://letere-gzj.github.io/hugo-stack/tags/hugo/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+            <language>zh-cn</language>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/tags/hugo/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Java</title>
-        <link>https://letere-gzj.github.io/hugo-stack/tags/java/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/tags/java/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Python</title>
-        <link>https://letere-gzj.github.io/hugo-stack/tags/python/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/tags/python/</guid>
-        <description></description>
-        </item>
+        
+            <copyright>莱特雷-letere</copyright>
+        
+        
+            <lastBuildDate>Fri, 16 May 2025 09:23:21 +0800</lastBuildDate>
+        <atom:link href="https://letere-gzj.github.io/hugo-stack/tags/index.xml" rel="self" type="application/rss+xml" />
+                <item>
+                <title>AI</title>
+                <link>https://letere-gzj.github.io/hugo-stack/tags/ai/</link>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/tags/ai/</guid>
+                <description>
+                </description>
+            </item>
+        
+                <item>
+                <title>Hugo</title>
+                <link>https://letere-gzj.github.io/hugo-stack/tags/hugo/</link>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/tags/hugo/</guid>
+                <description>
+                </description>
+            </item>
+        
+                <item>
+                <title>Java</title>
+                <link>https://letere-gzj.github.io/hugo-stack/tags/java/</link>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/tags/java/</guid>
+                <description>
+                </description>
+            </item>
+        
+                <item>
+                <title>Python</title>
+                <link>https://letere-gzj.github.io/hugo-stack/tags/python/</link>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/tags/python/</guid>
+                <description>
+                </description>
+            </item>
         
     </channel>
 </rss>

@@ -5,14 +5,22 @@
         <link>https://letere-gzj.github.io/hugo-stack/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
         <description>Recent content in 学习笔记 on 莱特雷-letere</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>莱特雷-letere</copyright><atom:link href="https://letere-gzj.github.io/hugo-stack/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>【AI】MCP初认识</title>
-        <link>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</link>
-        <pubDate>Fri, 16 May 2025 09:23:21 +0800</pubDate>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</guid>
-        <description>&lt;hr&gt;
+            <language>zh-cn</language>
+        
+        
+        
+        
+            <copyright>莱特雷-letere</copyright>
+        
+        <atom:link href="https://letere-gzj.github.io/hugo-stack/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+                <item>
+                <title>【AI】MCP初认识</title>
+                <link>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</link>
+                <pubDate>Fri, 16 May 2025 09:23:21 +0800</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</guid>
+                <description>&lt;hr&gt;
 &lt;blockquote class=&#34;alert alert-note&#34;&gt;
 
 
@@ -102,10 +110,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. 将生成好的html保存到当前目录下，文件名为&amp;#34;flip-clock.html&amp;#34;，并将文件路径输出到控制台
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81.png&#34;
 	width=&#34;534&#34;
 	height=&#34;635&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu16051579982529800285.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu15761362870951001377.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu16051579982529800285.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu15761362870951001377.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -155,14 +163,14 @@
 &lt;ul&gt;
 &lt;li&gt;要使用MCP服务需搭建好对应的环境&lt;/li&gt;
 &lt;li&gt;以&lt;strong&gt;NPX&lt;/strong&gt;运行的，需要先安装&lt;strong&gt;Node.js&lt;/strong&gt;环境(教程需自己寻找)，&lt;strong&gt;FileSystem&lt;/strong&gt;就是npx运行的&lt;/li&gt;
-&lt;li&gt;以&lt;strong&gt;UVX&lt;/strong&gt;运行的，需要先安装&lt;strong&gt;Python&lt;/strong&gt;环境(可看&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env&#34; &gt;&lt;strong&gt;【Python】Windows搭建Python环境&lt;/strong&gt;&lt;/a&gt;)，搭建完后运行&lt;code&gt;pip install uv&lt;/code&gt;就好&lt;/li&gt;
+&lt;li&gt;以&lt;strong&gt;UVX&lt;/strong&gt;运行的，需要先安装&lt;strong&gt;Python&lt;/strong&gt;环境(可看&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env&#34; &gt;&lt;strong&gt;【Python】Windows搭建Python环境&lt;/strong&gt;&lt;/a&gt;)，搭建完后运行&lt;code&gt;pip install uv&lt;/code&gt;就好&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851.png&#34;
 	width=&#34;1098&#34;
 	height=&#34;381&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu12400468924744860481.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu8884379790382067544.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu12400468924744860481.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu8884379790382067544.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -178,10 +186,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852.png&#34;
 	width=&#34;1093&#34;
 	height=&#34;345&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu8059125951367273534.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu6940551785252208720.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu8059125951367273534.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu6940551785252208720.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -190,10 +198,10 @@
 		data-flex-basis=&#34;760px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853.png&#34;
 	width=&#34;557&#34;
 	height=&#34;201&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu3328535034608254016.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu5499105473676982018.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu3328535034608254016.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu5499105473676982018.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -205,10 +213,10 @@
 &lt;ul&gt;
 &lt;li&gt;(3) 默认安装会失败，错误信息是&lt;code&gt;没有对应的文件或文件夹&lt;/code&gt;，因为里面的参数是默认参数，需按实际情况修改&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854.png&#34;
 	width=&#34;523&#34;
 	height=&#34;502&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu3894597563050294522.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu13590490386471086619.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu3894597563050294522.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu13590490386471086619.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -224,10 +232,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855.png&#34;
 	width=&#34;538&#34;
 	height=&#34;442&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu1351744071634018108.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu10887468920110777535.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu1351744071634018108.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu10887468920110777535.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -239,10 +247,10 @@
 &lt;ul&gt;
 &lt;li&gt;(5) 无报错信息即搭建成功&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856.png&#34;
 	width=&#34;534&#34;
 	height=&#34;403&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu1216865244556104265.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu17990218548616656080.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu1216865244556104265.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu17990218548616656080.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -256,10 +264,10 @@
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;(1) AI模式切换成&lt;strong&gt;智能体&lt;/strong&gt;，然后重新运行一次上面的需求&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951.png&#34;
 	width=&#34;531&#34;
 	height=&#34;418&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu7060540861615635445.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu12684457575657985896.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu7060540861615635445.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu12684457575657985896.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -271,10 +279,10 @@
 &lt;ul&gt;
 &lt;li&gt;(2) 运行期间会询问是否执行MCP工具，点击&lt;strong&gt;允许&lt;/strong&gt;就好&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952.png&#34;
 	width=&#34;543&#34;
 	height=&#34;611&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu2052040905295521314.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu1577831713169465734.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu2052040905295521314.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu1577831713169465734.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -418,15 +426,17 @@
     initFlipClock();
 &lt;/script&gt;
 &lt;hr&gt;
-</description>
-        </item>
-        <item>
-        <title>【Python】Windows搭建Python环境</title>
-        <link>https://letere-gzj.github.io/hugo-stack/p/python/build-env/</link>
-        <pubDate>Wed, 14 May 2025 14:08:02 +0800</pubDate>
+
+                </description>
+            </item>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/p/python/build-env/</guid>
-        <description>&lt;hr&gt;
+                <item>
+                <title>【Python】Windows搭建Python环境</title>
+                <link>https://letere-gzj.github.io/hugo-stack/p/python/build-env/</link>
+                <pubDate>Wed, 14 May 2025 14:08:02 +0800</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/p/python/build-env/</guid>
+                <description>&lt;hr&gt;
 &lt;blockquote class=&#34;alert alert-note&#34;&gt;
 
 
@@ -455,10 +465,10 @@
 &lt;li&gt;(1) 前往&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;Python官网&lt;/strong&gt;&lt;/a&gt;，选择要下载的版本，点击对应的download&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD1.png&#34;
 	width=&#34;1350&#34;
 	height=&#34;535&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD1_hu5555568738207442362.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD1_hu15234259659145039565.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD1_hu5555568738207442362.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD1_hu15234259659145039565.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -470,10 +480,10 @@
 &lt;ul&gt;
 &lt;li&gt;(2) 点击下载对应电脑位数的&lt;strong&gt;Windows embeddable package&lt;/strong&gt;包&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD2.png&#34;
 	width=&#34;1340&#34;
 	height=&#34;504&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD2_hu669687186614799334.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD2_hu5339246725101096413.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD2_hu669687186614799334.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD2_hu5339246725101096413.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -485,10 +495,10 @@
 &lt;ul&gt;
 &lt;li&gt;(3) 下载完后直接解压&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD3.png&#34;
 	width=&#34;875&#34;
 	height=&#34;483&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD3_hu3177232495211463377.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD3_hu9455462449350410125.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD3_hu3177232495211463377.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD3_hu9455462449350410125.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -505,10 +515,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE1.png&#34;
 	width=&#34;1271&#34;
 	height=&#34;656&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE1_hu6923260931511668893.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE1_hu12057450863988303937.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE1_hu6923260931511668893.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE1_hu12057450863988303937.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -517,10 +527,10 @@
 		data-flex-basis=&#34;465px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2.png&#34;
 	width=&#34;527&#34;
 	height=&#34;563&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu16328763852489462966.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu15698168266117394990.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu16328763852489462966.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu15698168266117394990.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -532,10 +542,10 @@
 &lt;ul&gt;
 &lt;li&gt;(5) 打开命令行，输入&lt;code&gt;python -V&lt;/code&gt;，正常显示版本号则安装成功&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/python%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95.png&#34;
 	width=&#34;423&#34;
 	height=&#34;166&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/python%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu13290024271973948077.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/python%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu11885443784938959301.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu13290024271973948077.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu11885443784938959301.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -576,10 +586,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD.png&#34;
 	width=&#34;944&#34;
 	height=&#34;659&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD_hu12648631603669106140.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD_hu6569780432046611905.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD_hu12648631603669106140.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD_hu6569780432046611905.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -588,10 +598,10 @@
 		data-flex-basis=&#34;343px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD2.png&#34;
 	width=&#34;917&#34;
 	height=&#34;554&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD2_hu11489025882399472246.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD2_hu1136306123010289467.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD2_hu11489025882399472246.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD2_hu1136306123010289467.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -603,10 +613,10 @@
 &lt;ul&gt;
 &lt;li&gt;(2) 下载后放入python文件夹，打开命令行运行&lt;code&gt;python get-pip.py&lt;/code&gt;安装&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85.png&#34;
 	width=&#34;929&#34;
 	height=&#34;340&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85_hu17564093063608403168.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85_hu5619660392491308176.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85_hu17564093063608403168.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85_hu5619660392491308176.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -622,10 +632,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%852.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%852.png&#34;
 	width=&#34;663&#34;
 	height=&#34;455&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%852_hu5387804586641296204.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%852_hu5148449657674300684.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%852_hu5387804586641296204.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%852_hu5148449657674300684.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -637,10 +647,10 @@
 &lt;ul&gt;
 &lt;li&gt;(4) 将安装pip产生的&lt;strong&gt;Scripts&lt;/strong&gt;文件夹加入到环境变量中(参考python安装)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.png&#34;
 	width=&#34;949&#34;
 	height=&#34;568&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu11309827044125026175.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu10221373135494075502.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu11309827044125026175.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu10221373135494075502.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -652,10 +662,10 @@
 &lt;ul&gt;
 &lt;li&gt;(5) 打开命令行输入&lt;code&gt;pip -V&lt;/code&gt;，正常显示版本号则安装成功&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95.png&#34;
 	width=&#34;861&#34;
 	height=&#34;195&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu8876805099299470519.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu1958704254797024362.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu8876805099299470519.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu1958704254797024362.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -696,10 +706,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B91.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B91.png&#34;
 	width=&#34;796&#34;
 	height=&#34;227&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B91_hu11593978755733577885.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B91_hu1024332580400867734.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B91_hu11593978755733577885.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B91_hu1024332580400867734.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -708,10 +718,10 @@
 		data-flex-basis=&#34;841px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B92.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B92.png&#34;
 	width=&#34;481&#34;
 	height=&#34;138&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B92_hu670897785293588120.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B92_hu15887387325732744368.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B92_hu670897785293588120.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B92_hu15887387325732744368.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -721,15 +731,17 @@
 	
 &gt;&lt;/p&gt;
 &lt;hr&gt;
-</description>
-        </item>
-        <item>
-        <title>【Java】SpringBoot整合ShardingSphere</title>
-        <link>https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/</link>
-        <pubDate>Fri, 28 Mar 2025 17:31:02 +0800</pubDate>
+
+                </description>
+            </item>
         
-        <guid>https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/</guid>
-        <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/cover.png" alt="Featured image of post 【Java】SpringBoot整合ShardingSphere" /&gt;&lt;hr&gt;
+                <item>
+                <title>【Java】SpringBoot整合ShardingSphere</title>
+                <link>https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/</link>
+                <pubDate>Fri, 28 Mar 2025 17:31:02 +0800</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/</guid>
+                <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/cover.png" alt="Featured image of post 【Java】SpringBoot整合ShardingSphere" /&gt;&lt;hr&gt;
 &lt;blockquote class=&#34;alert alert-note&#34;&gt;
 
 
@@ -808,10 +820,10 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;（3）按照上面的sql，以及数据库表结构，创建好数据库和表&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E7%BB%93%E6%9E%84.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E7%BB%93%E6%9E%84.png&#34;
 	width=&#34;290&#34;
 	height=&#34;466&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E7%BB%93%E6%9E%84_hu7785404077405981742.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E7%BB%93%E6%9E%84_hu8252462336811945093.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E7%BB%93%E6%9E%84_hu7785404077405981742.png 480w, https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E7%BB%93%E6%9E%84_hu8252462336811945093.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -996,10 +1008,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;jdbc:shardingsphere:classpath:shardingsphere-config.yaml&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/jdbc%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/jdbc%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png&#34;
 	width=&#34;445&#34;
 	height=&#34;188&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/jdbc%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84_hu10810568037823398399.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/jdbc%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84_hu6103893355542962003.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/jdbc%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84_hu10810568037823398399.png 480w, https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/jdbc%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84_hu6103893355542962003.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1011,10 +1023,10 @@
 &lt;ul&gt;
 &lt;li&gt;（4）以上就成功引入实现了分库分表，对&lt;code&gt;t_user&lt;/code&gt;进行新增操作，会触发分库分表策略，对于其他不分库分表的表就，直接在default_ds进行数据操作&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/jdbc-%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/jdbc-%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.png&#34;
 	width=&#34;1233&#34;
 	height=&#34;207&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/jdbc-%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8_hu7804815707699906588.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/jdbc-%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8_hu9421737949444043277.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/jdbc-%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8_hu7804815707699906588.png 480w, https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/jdbc-%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8_hu9421737949444043277.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1023,10 +1035,10 @@
 		data-flex-basis=&#34;1429px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/jdbc-%E4%B8%8D%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/jdbc-%E4%B8%8D%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8.png&#34;
 	width=&#34;1261&#34;
 	height=&#34;421&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/jdbc-%E4%B8%8D%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8_hu8058748178145607220.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/jdbc-%E4%B8%8D%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8_hu14427164648643625984.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/jdbc-%E4%B8%8D%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8_hu8058748178145607220.png 480w, https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/jdbc-%E4%B8%8D%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8_hu14427164648643625984.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1046,10 +1058,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/%E5%88%86%E7%89%87%E7%AE%97%E6%B3%95%E7%B1%BB.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/%E5%88%86%E7%89%87%E7%AE%97%E6%B3%95%E7%B1%BB.png&#34;
 	width=&#34;943&#34;
 	height=&#34;410&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/%E5%88%86%E7%89%87%E7%AE%97%E6%B3%95%E7%B1%BB_hu17065751928278022851.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/%E5%88%86%E7%89%87%E7%AE%97%E6%B3%95%E7%B1%BB_hu12688878541811275068.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/%E5%88%86%E7%89%87%E7%AE%97%E6%B3%95%E7%B1%BB_hu17065751928278022851.png 480w, https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/%E5%88%86%E7%89%87%E7%AE%97%E6%B3%95%E7%B1%BB_hu12688878541811275068.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1175,10 +1187,10 @@
 &lt;li&gt;（1）前往&lt;a class=&#34;link&#34; href=&#34;https://shardingsphere.apache.org/document/current/cn/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;shardingsphere&lt;/strong&gt;&lt;/a&gt;，下载&lt;strong&gt;shardingsphere-proxy&lt;/strong&gt;二进制包&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD.png&#34;
 	width=&#34;1171&#34;
 	height=&#34;571&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD_hu12107506924032985290.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD_hu14235679436039961826.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD_hu12107506924032985290.png 480w, https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD_hu14235679436039961826.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1187,10 +1199,10 @@
 		data-flex-basis=&#34;492px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD2.png&#34;
 	width=&#34;1230&#34;
 	height=&#34;580&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD2_hu4672075268362008072.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD2_hu4582616987321254074.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD2_hu4672075268362008072.png 480w, https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E4%B8%8B%E8%BD%BD2_hu4582616987321254074.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1208,10 +1220,10 @@
     &gt;&lt;strong&gt;mysql驱动&lt;/strong&gt;&lt;/a&gt;，并放入&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%85.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%85.png&#34;
 	width=&#34;465&#34;
 	height=&#34;318&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%85_hu13552599376770913915.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%85_hu12133335845737287506.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%85_hu13552599376770913915.png 480w, https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%85_hu12133335845737287506.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1220,10 +1232,10 @@
 		data-flex-basis=&#34;350px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%852.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%852.png&#34;
 	width=&#34;1177&#34;
 	height=&#34;722&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%852_hu14223544683608709068.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%852_hu11973402482764736487.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%852_hu14223544683608709068.png 480w, https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/mysql%E9%A9%B1%E5%8A%A8%E8%A1%A5%E5%85%852_hu11973402482764736487.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1389,10 +1401,10 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;（6）运行&lt;code&gt;bin/start.bat&lt;/code&gt;，命令行没终止即启动成功，默认端口&lt;strong&gt;3307&lt;/strong&gt;，可以前往&lt;code&gt;logs/stdout.log&lt;/code&gt;查看具体启动日志&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C.png&#34;
 	width=&#34;573&#34;
 	height=&#34;181&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C_hu17512846245406108549.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C_hu13761289734865068430.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C_hu17512846245406108549.png 480w, https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C_hu13761289734865068430.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1401,10 +1413,10 @@
 		data-flex-basis=&#34;759px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C2.png&#34;
 	width=&#34;787&#34;
 	height=&#34;282&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C2_hu1684831312247876816.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C2_hu13155879737924022236.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C2_hu1684831312247876816.png 480w, https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/shardingsphere-proxy%E8%BF%90%E8%A1%8C2_hu13155879737924022236.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1422,10 +1434,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/mysql%E8%BF%9E%E6%8E%A5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/mysql%E8%BF%9E%E6%8E%A5.png&#34;
 	width=&#34;749&#34;
 	height=&#34;264&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/mysql%E8%BF%9E%E6%8E%A5_hu9927416038309566057.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/mysql%E8%BF%9E%E6%8E%A5_hu18023703736653733011.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/mysql%E8%BF%9E%E6%8E%A5_hu9927416038309566057.png 480w, https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/mysql%E8%BF%9E%E6%8E%A5_hu18023703736653733011.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1680,10 +1692,10 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;（5）执行&lt;code&gt;mvn clean package&lt;/code&gt;命令，用maven进行打包，生成的jar包在&lt;code&gt;target&lt;/code&gt;文件夹下&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%85.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%85.png&#34;
 	width=&#34;1019&#34;
 	height=&#34;721&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%85_hu1413897870524585068.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%85_hu18106251624978351541.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%85_hu1413897870524585068.png 480w, https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%85_hu18106251624978351541.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1692,10 +1704,10 @@
 		data-flex-basis=&#34;339px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%852.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%852.png&#34;
 	width=&#34;623&#34;
 	height=&#34;241&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%852_hu7693615230935597261.png 480w, https://letere-gzj.github.io/hugo-stack/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%852_hu10136515674402457717.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%852_hu7693615230935597261.png 480w, https://letere-gzj.github.io/hugo-stack/p/java/shardingsphere/maven%E6%89%93%E5%8C%852_hu10136515674402457717.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1758,8 +1770,9 @@
 &lt;li&gt;（3）重启shardingsphere-proxy服务，即可使用自定义算法类&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-</description>
-        </item>
+
+                </description>
+            </item>
         
     </channel>
 </rss>
