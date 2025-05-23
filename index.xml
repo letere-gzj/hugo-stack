@@ -8219,7 +8219,7 @@
             </item>
         
                 <item>
-                <title>分类&amp;标签</title>
+                <title>分类&amp;标签 | Cats&amp;Tags</title>
                 <link>https://letere-gzj.github.io/hugo-stack/categories-tags/</link>
                 <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
                 
@@ -8229,7 +8229,7 @@
             </item>
         
                 <item>
-                <title>归档</title>
+                <title>归档 | Archives</title>
                 <link>https://letere-gzj.github.io/hugo-stack/archives/</link>
                 <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
                 
@@ -8239,7 +8239,7 @@
             </item>
         
                 <item>
-                <title>更新日志</title>
+                <title>更新日志 | Logs</title>
                 <link>https://letere-gzj.github.io/hugo-stack/update-log/</link>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
                 
@@ -8351,7 +8351,7 @@
             </item>
         
                 <item>
-                <title>技术链接</title>
+                <title>技术链接 | Links</title>
                 <link>https://letere-gzj.github.io/hugo-stack/link/</link>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
                 
@@ -8361,7 +8361,7 @@
             </item>
         
                 <item>
-                <title>搜索</title>
+                <title>搜索 | Search</title>
                 <link>https://letere-gzj.github.io/hugo-stack/search/</link>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
                 
