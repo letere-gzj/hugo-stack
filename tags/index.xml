@@ -14,7 +14,7 @@
             <copyright>莱特雷-letere</copyright>
         
         
-            <lastBuildDate>Fri, 16 May 2025 09:23:21 +0800</lastBuildDate>
+            <lastBuildDate>Tue, 17 Jun 2025 10:26:00 +0800</lastBuildDate>
         <atom:link href="https://letere-gzj.github.io/hugo-stack/tags/index.xml" rel="self" type="application/rss+xml" />
                 <item>
                 <title>AI</title>
@@ -52,6 +52,16 @@
                 <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
                 
                 <guid>https://letere-gzj.github.io/hugo-stack/tags/python/</guid>
+                <description>
+                </description>
+            </item>
+        
+                <item>
+                <title>噬神者</title>
+                <link>https://letere-gzj.github.io/hugo-stack/tags/%E5%99%AC%E7%A5%9E%E8%80%85/</link>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/tags/%E5%99%AC%E7%A5%9E%E8%80%85/</guid>
                 <description>
                 </description>
             </item>

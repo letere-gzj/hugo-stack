@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</loc>
-    <lastmod>2025-06-11T16:13:57+08:00</lastmod>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/</loc>
+    <lastmod>2025-06-18T12:50:32+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/categories/</loc>
-    <lastmod>2025-06-11T16:13:57+08:00</lastmod>
+    <lastmod>2025-06-18T12:50:32+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/post/</loc>
-    <lastmod>2025-06-11T16:13:57+08:00</lastmod>
+    <lastmod>2025-06-18T12:50:32+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/tags/</loc>
+    <lastmod>2025-06-18T12:50:32+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</loc>
     <lastmod>2025-06-11T16:13:57+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/p/python/build-env/</loc>
@@ -98,10 +101,16 @@
     <loc>https://letere-gzj.github.io/hugo-stack/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2024-10-16T17:43:48+08:00</lastmod>
   </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/tags/%E5%99%AC%E7%A5%9E%E8%80%85/</loc>
+    <lastmod>2025-06-18T12:50:32+08:00</lastmod>
+  </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/search/</loc>
     <lastmod>2025-05-23T17:49:25+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2025-04-11T17:25:54+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2025-06-18T12:50:32+08:00</lastmod>
   </url>
 </urlset>

@@ -14,8 +14,205 @@
             <copyright>莱特雷-letere</copyright>
         
         
-            <lastBuildDate>Fri, 16 May 2025 09:23:21 +0800</lastBuildDate>
+            <lastBuildDate>Tue, 17 Jun 2025 10:26:00 +0800</lastBuildDate>
         <atom:link href="https://letere-gzj.github.io/hugo-stack/post/index.xml" rel="self" type="application/rss+xml" />
+                <item>
+                <title>【GE2RB】噬神者2狂怒解放steam版汉化</title>
+                <link>https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/</link>
+                <pubDate>Tue, 17 Jun 2025 10:26:00 +0800</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/</guid>
+                <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/cover.png" alt="Featured image of post 【GE2RB】噬神者2狂怒解放steam版汉化" /&gt;&lt;hr&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;&lt;strong&gt;前言：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;汉化补丁来源：&lt;a class=&#34;link&#34; href=&#34;https://space.bilibili.com/22143170&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;B站Up主-清羽510&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;汉化教程原文：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/opus/929171060171997206&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;【STEAM】噬神者1+2卡加载以及汉化补丁安装教程（包含steamdeck）&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;本文只是个人汉化过程的一个记录，仅自用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-汉化&#34;&gt;1 汉化
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;（1）下载汉化补丁，将part1~12全都下载
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/1NFs452Rzwxgr8nlbRwu9Pw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;百度网盘&lt;/strong&gt;&lt;/a&gt;(提取码：&lt;strong&gt;GERB&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloud.189.cn/t/3U7bmyiMR3uy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;天翼云盘&lt;/strong&gt;&lt;/a&gt;(访问码：&lt;strong&gt;2yfr&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;如果链接失效，请联系制作汉化补丁的up主&lt;/li&gt;
+&lt;li&gt;补丁包含日语资源，所以比较大，steam版只有英语(日本二次元游戏，还是日语对味点)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E4%B8%8B%E8%BD%BD.png&#34;
+	width=&#34;1930&#34;
+	height=&#34;1011&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E4%B8%8B%E8%BD%BD_hu2289380322684728380.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E4%B8%8B%E8%BD%BD_hu3844254014548516716.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;190&#34;
+		data-flex-basis=&#34;458px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）解压(密码：&lt;strong&gt;qingyu510&lt;/strong&gt;)
+&lt;ul&gt;
+&lt;li&gt;汉化补丁是分卷压缩，用windows默认的解压软件无法解压，可以下载&lt;a class=&#34;link&#34; href=&#34;https://www.7-zip.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;7-Zip&lt;/strong&gt;&lt;/a&gt;来解压&lt;/li&gt;
+&lt;li&gt;全选所有压缩文件，鼠标右键选择提取，即可解压&lt;/li&gt;
+&lt;li&gt;如果密码错误，请联系制作汉化补丁的up主&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E8%A7%A3%E5%8E%8B.png&#34;
+	width=&#34;1186&#34;
+	height=&#34;836&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E8%A7%A3%E5%8E%8B_hu18170131770934419777.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E8%A7%A3%E5%8E%8B_hu13230033654750033077.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;141&#34;
+		data-flex-basis=&#34;340px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（3）将解压的内容全部复制到游戏文件夹中
+&lt;ul&gt;
+&lt;li&gt;steam可以直接&lt;code&gt;设置 -&amp;gt; 管理 -&amp;gt; 浏览本地文件&lt;/code&gt;来打开游戏文件夹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B6.png&#34;
+	width=&#34;1232&#34;
+	height=&#34;837&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B6_hu5898039570320940564.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B6_hu10771373317669621956.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;353px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B62.png&#34;
+	width=&#34;1215&#34;
+	height=&#34;782&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B62_hu16693382632954262980.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B62_hu14317698424602744690.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;155&#34;
+		data-flex-basis=&#34;372px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（4）汉化已经打好，启动游戏即可
+&lt;ul&gt;
+&lt;li&gt;如果遇到问题，可以看看制作汉化补丁的up主的教程，看有没有你遇到的情况，本人是没遇到任何问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%B1%89%E5%8C%96%E6%BC%94%E7%A4%BA.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%B1%89%E5%8C%96%E6%BC%94%E7%A4%BA_hu13365983568161475254.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%B1%89%E5%8C%96%E6%BC%94%E7%A4%BA_hu17861624341462762829.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-问题修复&#34;&gt;2 问题修复
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;如果你跟我一样是使用PS手柄的话，进入游戏会发现游戏的按键图标非常的奇怪，变成数字&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF1.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF1_hu8137704225518952574.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF1_hu4828308122823439308.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以开启steam的控制器映射，这样就可以将PS手柄映射成Xbox手柄，图标就会变成Xbox图标，虽然不是PS图标，但总比不知道什么按键的数字要好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF2.png&#34;
+	width=&#34;2010&#34;
+	height=&#34;799&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF2_hu2100138042415703988.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF2_hu15737305886647673757.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;251&#34;
+		data-flex-basis=&#34;603px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF3.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF3_hu8377195877980320129.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF3_hu2565631616737945443.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-补丁缺陷&#34;&gt;3 补丁缺陷
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;这补丁有个小问题就是游戏资料库中的教程说明&lt;strong&gt;不显示按键图标&lt;/strong&gt;，导致不知道武器的技能要怎么按出来，其实问题也不大，上网搜一搜就好了&lt;/li&gt;
+&lt;li&gt;我玩这么久了也就是这么一个问题，总之非常感谢大佬的汉化补丁制作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%8C%89%E9%92%AE%E5%9B%BE%E6%A0%87%E7%BC%BA%E5%A4%B1.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%8C%89%E9%92%AE%E5%9B%BE%E6%A0%87%E7%BC%BA%E5%A4%B1_hu16979977273592453686.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%8C%89%E9%92%AE%E5%9B%BE%E6%A0%87%E7%BC%BA%E5%A4%B1_hu9132411851853379548.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+                </description>
+            </item>
+        
                 <item>
                 <title>【AI】MCP初认识</title>
                 <link>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</link>
