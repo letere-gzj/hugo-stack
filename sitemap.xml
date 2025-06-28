@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/</loc>
-    <lastmod>2025-06-18T12:50:32+08:00</lastmod>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/game/fli/build-share/</loc>
+    <lastmod>2025-06-28T12:23:20+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/categories/</loc>
-    <lastmod>2025-06-18T12:50:32+08:00</lastmod>
+    <lastmod>2025-06-28T12:23:20+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/post/</loc>
-    <lastmod>2025-06-18T12:50:32+08:00</lastmod>
+    <lastmod>2025-06-28T12:23:20+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/tags/</loc>
+    <lastmod>2025-06-28T12:23:20+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/</loc>
     <lastmod>2025-06-18T12:50:32+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</loc>
@@ -94,6 +97,9 @@
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/update-log/</loc>
     <lastmod>2025-05-23T17:49:25+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/tags/%E5%B9%BB%E6%83%B3%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2025-06-28T12:23:20+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/link/</loc>
     <lastmod>2025-05-23T17:49:25+08:00</lastmod>

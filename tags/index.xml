@@ -14,7 +14,7 @@
             <copyright>莱特雷-letere</copyright>
         
         
-            <lastBuildDate>Tue, 17 Jun 2025 10:26:00 +0800</lastBuildDate>
+            <lastBuildDate>Sat, 28 Jun 2025 10:46:08 +0800</lastBuildDate>
         <atom:link href="https://letere-gzj.github.io/hugo-stack/tags/index.xml" rel="self" type="application/rss+xml" />
                 <item>
                 <title>AI</title>
@@ -52,6 +52,16 @@
                 <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
                 
                 <guid>https://letere-gzj.github.io/hugo-stack/tags/python/</guid>
+                <description>
+                </description>
+            </item>
+        
+                <item>
+                <title>幻想生活</title>
+                <link>https://letere-gzj.github.io/hugo-stack/tags/%E5%B9%BB%E6%83%B3%E7%94%9F%E6%B4%BB/</link>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/tags/%E5%B9%BB%E6%83%B3%E7%94%9F%E6%B4%BB/</guid>
                 <description>
                 </description>
             </item>
