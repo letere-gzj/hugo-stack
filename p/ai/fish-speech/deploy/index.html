@@ -1,0 +1,2265 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="记录如何在windows部署fish-speech项目">
+<title>【AI】fish-speech文本转语音项目本地部署</title>
+
+<link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/'>
+
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.a1ac04e0c65c55028a71ce139c78625c60f9e6bb316052a91e5c1925b263f530.css"><meta property='og:title' content="【AI】fish-speech文本转语音项目本地部署">
+<meta property='og:description' content="记录如何在windows部署fish-speech项目">
+<meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/'>
+<meta property='og:site_name' content='莱特雷-letere'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='AI' /><meta property='article:published_time' content='2025-09-01T17:00:27&#43;08:00'/><meta property='article:modified_time' content='2025-09-08T14:44:08&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cover.png' />
+<meta name="twitter:title" content="【AI】fish-speech文本转语音项目本地部署">
+<meta name="twitter:description" content="记录如何在windows部署fish-speech项目"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cover.png' />
+    <link rel="shortcut icon" href="/hugo-stack/favicon.ico?v=2" />
+
+<div class="loading">
+    <div class="bg"></div>
+    <div class="scale">
+        <div class="sharingon">
+            <div class="ring">
+                <div class="to"></div>
+                <div class="to"></div>
+                <div class="to"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    [data-scheme="light"] {
+        .loading{
+            background-color: rgba(245, 245, 250, 0.8);
+        }
+    }
+
+    [data-scheme="dark"] {
+        .loading {
+            background-color: rgba(48, 48, 48, 0.8);
+        }
+    }
+
+    .loading {
+        position: fixed;
+        display: flex;
+        justify-content: center;  
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        zoom: 3.0;
+    }
+
+     
+    .sharingon {
+        position: relative;
+        width: 6em;
+        height: 6em;
+        background-color: red;
+        border: 6px solid black;
+        animation: rot 1s ease-in-out infinite;
+    }
+
+    .animated-stop {
+        animation-play-state: paused;
+    }
+
+    .fadeout {
+        animation: fadeOut 1.5s forwards;
+    }
+
+    .scaleAndFadeout {
+        animation: scaleAndFadeOut 1.5s forwards
+    }
+
+    .ring {
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+        width: 3.5em;
+        height: 3.5em;
+        border: 4px solid rgb(110, 13 ,13 ,0.5);
+        transform: translate(-50%,-50%);
+    }
+
+    .sharingon, .ring, .to,.circle {
+        border-radius: 50%;
+    }
+
+    .to,.circle {
+        position: absolute;
+        content: "";
+        width: 0.9em;
+        height: 0.9em;
+        background-color: black;
+    }
+
+    .to:nth-child(1) {
+        top: -0.5em;
+        left: 50%;
+        transform: translate(-40%);
+    }
+
+    .to::before {
+        content: "";
+        position: absolute;
+        top: -0.5em;
+        right: -0.2em;
+        width: 1.1em;
+        height: 0.9em;
+        box-sizing: border-box;
+        border-left: 16px solid black;
+        border-radius: 100% 0 0;
+    }
+
+    .to:nth-child(2) {
+        bottom: 0.5em;
+        left: -0.35em;
+        transform: rotate(-120deg);
+    }
+
+    .to:nth-child(3) {
+        bottom: 0.5em;
+        right: -0.35em;
+        transform: rotate(120deg);
+    }
+
+    .circle {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 0 0 20px 1px;
+        width: 1em;
+        height: 1em;
+    }
+
+    @keyframes rot {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes scaleAndFadeOut {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.5);  
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.5);  
+            opacity: 0;  
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;  
+        }
+    }
+</style>
+
+<script>
+    function initLoading() {
+        const startTime = Date.now();
+        let loading = document.querySelector(".loading");
+        document.addEventListener('DOMContentLoaded', function() {
+            const timeDelay = Date.now() - startTime;
+            
+            setTimeout(() => {
+                fadeOut();
+                setTimeout(() => {
+                    loading.style.display = "none";
+                }, 1500)
+            }, timeDelay > 1050 ? 0 : 1050 - timeDelay)
+        });
+    }
+
+    function fadeOut() {
+        
+        let sharingon= document.querySelector(".sharingon");
+        sharingon.classList.add("animated-stop")
+        
+        let scale = document.querySelector(".scale");
+        scale.classList.add("scaleAndFadeout");
+        
+        let loading = document.querySelector(".loading");
+        loading.classList.add("fadeout")
+    }
+
+    initLoading();
+</script>
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/hugo-stack/">
+                
+                    
+
+                    
+
+
+
+                        <img src="/hugo-stack/img/muzimi.gif" width="250"
+                             height="250" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🤔</span>
+                
+            </figure>
+            
+        
+
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/hugo-stack">莱特雷-letere</a></h1>
+            <h2 class="site-description">欢迎来到我的网站，此博客由【Hugo &#43; Stack】来进行搭建，主要分享个人生活和学习笔记</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a
+                        href='https://space.bilibili.com/402971365'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-bilibili" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" />
+  <path d="M8 3l2 3" />
+  <path d="M16 3l-2 3" />
+  <path d="M9 13v-2" />
+  <path d="M15 11v2" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                        href='https://github.com/letere-gzj'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                        href='https://letere-gzj.github.io'
+                        target="_blank"
+                        title="Hexo_Blog"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-hexo"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /><path d="M9 8v8" /><path d="M15 8v8" /><path d="M9 12h6" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                        href='/hugo-stack/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rss"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M4 4a16 16 0 0 1 16 16" /><path d="M4 11a9 9 0 0 1 9 9" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/hugo-stack/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页 | Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/categories-tags/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-tags"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 8v4.172a2 2 0 0 0 .586 1.414l5.71 5.71a2.41 2.41 0 0 0 3.408 0l3.592 -3.592a2.41 2.41 0 0 0 0 -3.408l-5.71 -5.71a2 2 0 0 0 -1.414 -.586h-4.172a2 2 0 0 0 -2 2z" /><path d="M18 19l1.592 -1.592a4.82 4.82 0 0 0 0 -6.816l-4.592 -4.592" /><path d="M7 10h-.01" /></svg>
+                
+                <span>分类&amp;标签 | Cats&amp;Tags</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档 | Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索 | Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/update-log/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-list"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l11 0" /><path d="M9 12l11 0" /><path d="M9 18l11 0" /><path d="M5 6l0 .01" /><path d="M5 12l0 .01" /><path d="M5 18l0 .01" /></svg>
+                
+                <span>更新日志 | Logs</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-stack/link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>技术链接 | Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式 | Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-环境准备">1 环境准备</a>
+      <ul>
+        <li><a href="#11-conda安装">1.1 conda安装</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-本地部署">2 本地部署</a>
+      <ul>
+        <li><a href="#21-安装">2.1 安装</a></li>
+        <li><a href="#22-推理">2.2 推理</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-推理加速">3 推理加速</a>
+      <ul>
+        <li><a href="#31-cuda安装">3.1 CUDA安装</a></li>
+        <li><a href="#32-更换pytorch版本">3.2 更换pytorch版本</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-fish-speech使用">4 fish-speech使用</a>
+      <ul>
+        <li><a href="#41-基础使用">4.1 基础使用</a></li>
+        <li><a href="#42-references使用">4.2 references使用</a></li>
+        <li><a href="#43-发音调整">4.3 发音调整</a></li>
+        <li><a href="#44-情感语调调整">4.4 情感语调调整</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/hugo-stack/p/ai/fish-speech/deploy/">
+                <img src="/hugo-stack/p/ai/fish-speech/deploy/cover_hu8150871195647134946.png"
+                        srcset="/hugo-stack/p/ai/fish-speech/deploy/cover_hu8150871195647134946.png 800w, /hugo-stack/p/ai/fish-speech/deploy/cover_hu12923971561793651100.png 1600w"
+                        width="800" 
+                        height="250" 
+                        loading="lazy"
+                        alt="Featured image of post 【AI】fish-speech文本转语音项目本地部署" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/hugo-stack/p/ai/fish-speech/deploy/">【AI】fish-speech文本转语音项目本地部署</a>
+        </h2>
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-09-01</time>
+            </div>
+        |
+            <div class="article-lastmod">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
+                <time>
+                    2025-09-08
+                </time>
+            </div>
+
+        <div>
+            |
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
+            <time class="article-time--reading">
+                1378 字
+            </time>
+        </div>
+        
+        <div id="viewCount">
+            |
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                <span id="vercount_value_page_pv">loading... </span>次
+            </time>
+        </div>
+    </footer>
+    
+
+    <div class="article-title-wrapper">
+        
+        <h3 class="article-subtitle">
+            记录如何在windows部署fish-speech项目
+        </h3>
+        
+    </div>
+
+    
+
+    
+        <header class="article-category">
+            
+            <div class="left-category">
+                
+                    <a href="/hugo-stack/categories/%E6%95%99%E7%A8%8B/" style="background-color: #2a9d8f; color: #fff;">
+                        教程
+                    </a>
+                
+            </div>
+            
+            
+                <div class="right-tag">
+                    
+                        <a href="/hugo-stack/tags/ai/" style="background-color: #01cdfb; color: #fff;">AI</a>
+                    
+                </div>
+            
+        </header>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <hr>
+<h2 id="1-环境准备">1 环境准备
+</h2><h3 id="11-conda安装">1.1 conda安装
+</h3><blockquote class="alert alert-note">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><ul>
+<li><a class="link" href="https://anaconda.net.cn/"  target="_blank" rel="noopener"
+    ><strong>conda官网</strong></a></li>
+<li><a class="link" href="https://docs.anaconda.net.cn/"  target="_blank" rel="noopener"
+    ><strong>conda官方文档</strong></a></li>
+</ul>
+</blockquote>
+<ul>
+<li>（1）下载conda，conda有多个版本，具体版本可以按需下载，这边演示下载miniconda</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%85.png"
+	width="2154"
+	height="571"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%85_hu2174013281673136967.png 480w, /hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%85_hu10480695839740599082.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="377"
+		data-flex-basis="905px"
+	
+></p>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%852.png"
+	width="2174"
+	height="1050"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%852_hu14083056593100666618.png 480w, /hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%852_hu7718241515864750290.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="207"
+		data-flex-basis="496px"
+	
+></p>
+<ul>
+<li>
+<p>（2）下载后，除了安装路径按需选择外，其余一路默认安装即可</p>
+</li>
+<li>
+<p>（3）添加conda环境变量</p>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.png"
+	width="2322"
+	height="1193"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu3355112333161292858.png 480w, /hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu6774639002376048374.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="194"
+		data-flex-basis="467px"
+	
+></p>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2.png"
+	width="826"
+	height="784"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu14565201788017387200.png 480w, /hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu7526012472548818451.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="105"
+		data-flex-basis="252px"
+	
+></p>
+<ul>
+<li>（4）命令行敲<code>conda -V</code>，成功显示版本则安装成功</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/conda%E6%B5%8B%E8%AF%95.png"
+	width="511"
+	height="234"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/conda%E6%B5%8B%E8%AF%95_hu7611486596292011314.png 480w, /hugo-stack/p/ai/fish-speech/deploy/conda%E6%B5%8B%E8%AF%95_hu2787131873669345621.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="218"
+		data-flex-basis="524px"
+	
+></p>
+<hr>
+<h2 id="2-本地部署">2 本地部署
+</h2><blockquote class="alert alert-note">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><ul>
+<li><a class="link" href="https://github.com/fishaudio/fish-speech"  target="_blank" rel="noopener"
+    ><strong>fish-speech项目</strong></a></li>
+<li><a class="link" href="https://speech.fish.audio/zh/"  target="_blank" rel="noopener"
+    ><strong>fish-speech部署文档</strong></a></li>
+<li>以下内容根据官方文件进行编写，若内容失效，请根据官方最新文档进行部署</li>
+</ul>
+</blockquote>
+<h3 id="21-安装">2.1 安装
+</h3><ul>
+<li>（1）下载fish-speech项目</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E4%B8%8B%E8%BD%BD.png"
+	width="1470"
+	height="674"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E4%B8%8B%E8%BD%BD_hu6383235579293399642.png 480w, /hugo-stack/p/ai/fish-speech/deploy/fish-speech%E4%B8%8B%E8%BD%BD_hu2720164818683065730.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="218"
+		data-flex-basis="523px"
+	
+></p>
+<ul>
+<li>（2）安装fish-speech（以conda形式），在解压的fish-speech项目文件夹敲一下命令</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">fish</span><span class="o">-</span><span class="n">speech</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.12</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">activate</span> <span class="n">fish</span><span class="o">-</span><span class="n">speech</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E5%AE%89%E8%A3%85.png"
+	width="963"
+	height="758"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E5%AE%89%E8%A3%85_hu17846535565982031955.png 480w, /hugo-stack/p/ai/fish-speech/deploy/fish-speech%E5%AE%89%E8%A3%85_hu1714410311166619252.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="127"
+		data-flex-basis="304px"
+	
+></p>
+<hr>
+<h3 id="22-推理">2.2 推理
+</h3><ul>
+<li>（1）前往<a class="link" href="https://huggingface.co/"  target="_blank" rel="noopener"
+    ><strong>huggingface官网</strong></a>获取<a class="link" href="https://huggingface.co/fishaudio/openaudio-s1-mini"  target="_blank" rel="noopener"
+    ><strong>fish-speech模型</strong></a>的访问权限
+<ul>
+<li>模型可能会更新，具体最新模型看官方文档</li>
+</ul>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/%E8%8E%B7%E5%8F%96%E6%A8%A1%E5%9E%8B%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90.png"
+	width="1469"
+	height="755"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/%E8%8E%B7%E5%8F%96%E6%A8%A1%E5%9E%8B%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90_hu13511134822465879213.png 480w, /hugo-stack/p/ai/fish-speech/deploy/%E8%8E%B7%E5%8F%96%E6%A8%A1%E5%9E%8B%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90_hu10141466252694596922.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="194"
+		data-flex-basis="466px"
+	
+></p>
+<ul>
+<li>（2）创建fish-speech的访问令牌</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C.png"
+	width="2420"
+	height="927"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C_hu16937585656473562132.png 480w, /hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C_hu16464747310828605825.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="261"
+		data-flex-basis="626px"
+	
+></p>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C2.png"
+	width="1571"
+	height="608"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C2_hu7424642794354304105.png 480w, /hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C2_hu15903316729291537802.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="258"
+		data-flex-basis="620px"
+	
+></p>
+<ul>
+<li>（3）命令行敲<code>huggingface-cli login</code>，设置访问令牌</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/huggingface%E7%99%BB%E5%BD%95.png"
+	width="1673"
+	height="459"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/huggingface%E7%99%BB%E5%BD%95_hu14882600478418109291.png 480w, /hugo-stack/p/ai/fish-speech/deploy/huggingface%E7%99%BB%E5%BD%95_hu2480284484283500435.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="364"
+		data-flex-basis="874px"
+	
+></p>
+<ul>
+<li>（4）命令行下载模型
+<ul>
+<li><code>huggingface-cli download fishaudio/openaudio-s1-mini --local-dir checkpoints/openaudio-s1-mini</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD.png"
+	width="1712"
+	height="437"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD_hu16160501988607136703.png 480w, /hugo-stack/p/ai/fish-speech/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD_hu16468889532222035467.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="391"
+		data-flex-basis="940px"
+	
+></p>
+<ul>
+<li>（5）运行fish-speech
+<ul>
+<li>fish-speech运行有多种方式，这边推荐使用webui，界面简洁清晰，敲<code>python -m tools.run_webui</code>运行</li>
+</ul>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/web%E7%95%8C%E9%9D%A2.png"
+	width="2291"
+	height="994"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/web%E7%95%8C%E9%9D%A2_hu17275727449670226006.png 480w, /hugo-stack/p/ai/fish-speech/deploy/web%E7%95%8C%E9%9D%A2_hu3655135579545463126.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="230"
+		data-flex-basis="553px"
+	
+></p>
+<hr>
+<h2 id="3-推理加速">3 推理加速
+</h2><blockquote class="alert alert-note">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>启动fish-speech会看到一个<code>CUDA is not available, running on CPU.</code>，因为运行在CPU，所以速度比较满，因此我们需要安装一下CUDA</p>
+</blockquote>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8D%E5%8F%AF%E7%94%A8.png"
+	width="1689"
+	height="301"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8D%E5%8F%AF%E7%94%A8_hu13278481134217167368.png 480w, /hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8D%E5%8F%AF%E7%94%A8_hu3488217969693366202.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="561"
+		data-flex-basis="1346px"
+	
+></p>
+<h3 id="31-cuda安装">3.1 CUDA安装
+</h3><ul>
+<li>（1）前往控制面板，检查CUDA是否已安装（已安装可跳过本内容）</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/%E6%A3%80%E6%9F%A5CUDA%E5%AE%89%E8%A3%85.png"
+	width="1085"
+	height="607"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/%E6%A3%80%E6%9F%A5CUDA%E5%AE%89%E8%A3%85_hu7777130242599413249.png 480w, /hugo-stack/p/ai/fish-speech/deploy/%E6%A3%80%E6%9F%A5CUDA%E5%AE%89%E8%A3%85_hu15211773865739185862.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<ul>
+<li>（2）打开 <strong>NVIDIA Control Panel(英伟达控制面板)</strong> 的系统设置，查看支持的CUDA版本
+<ul>
+<li>这边支持的是13.0.84之前的版本</li>
+</ul>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/CUDA%E6%94%AF%E6%8C%81%E7%89%88%E6%9C%AC.png"
+	width="1112"
+	height="805"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/CUDA%E6%94%AF%E6%8C%81%E7%89%88%E6%9C%AC_hu16051112260216880350.png 480w, /hugo-stack/p/ai/fish-speech/deploy/CUDA%E6%94%AF%E6%8C%81%E7%89%88%E6%9C%AC_hu8728782837778532736.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="138"
+		data-flex-basis="331px"
+	
+></p>
+<ul>
+<li>（3）前往<a class="link" href="https://developer.nvidia.com/cuda-toolkit-archive"  target="_blank" rel="noopener"
+    ><strong>英伟达官网</strong></a>下载适合自己电脑版本的CUDA</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD.png"
+	width="1724"
+	height="880"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD_hu17599259530987249572.png 480w, /hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD_hu10241175567451391587.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="195"
+		data-flex-basis="470px"
+	
+></p>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD2.png"
+	width="2019"
+	height="1049"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD2_hu10581337901936404448.png 480w, /hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD2_hu3027802454748185345.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="192"
+		data-flex-basis="461px"
+	
+></p>
+<ul>
+<li>（4）安装一律默认即可</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85.png"
+	width="892"
+	height="665"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85_hu9016318141693742291.png 480w, /hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85_hu16639092739668047169.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="134"
+		data-flex-basis="321px"
+	
+></p>
+<ul>
+<li>（5）安装完成后，命令行敲击<code>nvcc -V</code>，检查是否安装成功</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85%E6%A3%80%E6%9F%A5.png"
+	width="839"
+	height="210"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85%E6%A3%80%E6%9F%A5_hu18018810333991496639.png 480w, /hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85%E6%A3%80%E6%9F%A5_hu8956736823958548710.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="399"
+		data-flex-basis="958px"
+	
+></p>
+<hr>
+<h3 id="32-更换pytorch版本">3.2 更换pytorch版本
+</h3><ul>
+<li>（1）前往<a class="link" href="https://pytorch.org/"  target="_blank" rel="noopener"
+    ><strong>pytorch官网</strong></a>，查看适合自己cuda版本的pytorch，并敲对应的命令下载，更换版本</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/pytorch%E6%9B%B4%E6%96%B0.png"
+	width="1531"
+	height="592"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/pytorch%E6%9B%B4%E6%96%B0_hu8645082274528720809.png 480w, /hugo-stack/p/ai/fish-speech/deploy/pytorch%E6%9B%B4%E6%96%B0_hu9749496676557500425.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="258"
+		data-flex-basis="620px"
+	
+></p>
+<hr>
+<h2 id="4-fish-speech使用">4 fish-speech使用
+</h2><h3 id="41-基础使用">4.1 基础使用
+</h3><ul>
+<li>（1）准备好一段音频，以及文本（下面以<strong>星穹铁道-三月七</strong>为例）
+<ul>
+<li><code>照片当然不是现实，但如果有足够多的照片，是不是就能更接近现实一些呢？</code></li>
+</ul>
+</li>
+</ul>
+<audio controls>
+  <source src="1.mp3" type="audio/mpeg">
+</audio>
+<ul>
+<li>（2）上传参考音频，填写参考文本</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8.png"
+	width="1162"
+	height="1009"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8_hu4762746031635050233.png 480w, /hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8_hu1586792032427155691.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="115"
+		data-flex-basis="276px"
+	
+></p>
+<ul>
+<li>（3）输入想要的转换的文本，并点击生成</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A82.png"
+	width="2281"
+	height="530"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A82_hu14849625110380473210.png 480w, /hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A82_hu6917090211918113328.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="430"
+		data-flex-basis="1032px"
+	
+></p>
+<audio controls>
+  <source src="三月七-fishspeech.wav" type="audio/mpeg">
+</audio>
+<hr>
+<h3 id="42-references使用">4.2 references使用
+</h3><ul>
+<li>（1）在fish-speech主文件夹下创建<code>references</code>文件夹</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A8.png"
+	width="881"
+	height="495"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A8_hu944912587945688069.png 480w, /hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A8_hu937514076632573491.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="427px"
+	
+></p>
+<ul>
+<li>（2）在references文件夹下创建音频文件夹，并把对应的音频，以及文本放入
+<ul>
+<li>文本以<code>.lab</code>文件名存储</li>
+</ul>
+</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A82.png"
+	width="1033"
+	height="301"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A82_hu16604072842047575109.png 480w, /hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A82_hu17824687401615038347.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="343"
+		data-flex-basis="823px"
+	
+></p>
+<ul>
+<li>（3）在webui的<code>Reference ID</code>中填入对应的音频文件夹名，则可自动导入音频和文本，不用再次上传和填写了</li>
+</ul>
+<p><img src="/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A83.png"
+	width="1178"
+	height="374"
+	srcset="/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A83_hu3573976974350523226.png 480w, /hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A83_hu14177448331872078295.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="314"
+		data-flex-basis="755px"
+	
+></p>
+<hr>
+<h3 id="43-发音调整">4.3 发音调整
+</h3><ul>
+<li>（1）以下面的文本为例
+<ul>
+<li><code>你成功说服了我</code></li>
+</ul>
+</li>
+</ul>
+<audio controls>
+  <source src="多音字1.wav" type="audio/mpeg">
+</audio>
+<ul>
+<li>（2）其中的<strong>说</strong>的发音是<code>shui4</code>，如果调整为<code>shuo1</code>，可以用<code>&lt;|phoneme_start|&gt;拼音&lt;|phoneme_end|&gt;</code>来处理
+<ul>
+<li>例：<code>你成功&lt;|phoneme_start|&gt;shuo1&lt;|phoneme_end|&gt;服了我</code></li>
+</ul>
+</li>
+</ul>
+<audio controls>
+  <source src="多音字2.wav" type="audio/mpeg">
+</audio>
+<hr>
+<h3 id="44-情感语调调整">4.4 情感语调调整
+</h3><ul>
+<li>可以在话语前，添加<code>（标识）</code>来控制这段话的情感or语调，具体可看<a class="link" href="https://docs.fish.audio/emotion-control/tts-emotion-and-control-tags-user-guide-zh"  target="_blank" rel="noopener"
+    ><strong>官方文档</strong></a>
+<ul>
+<li>自己实际使用下来感觉效果不是很明显</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li>（1）没加标识：<code>你竟然敢背叛我！我对你这么信任，你就是这样回报我的吗？</code></li>
+</ul>
+<audio controls>
+  <source src="语调调整1.wav" type="audio/mpeg">
+</audio>
+<ul>
+<li>（2）加了标识：<code>（愤怒）你竟然敢背叛我！（语气激动）我对你这么信任，（大声）你就是这样回报我的吗？</code></li>
+</ul>
+<audio controls>
+  <source src="语调调整2.wav" type="audio/mpeg">
+</audio>
+<hr>
+
+</section>
+
+
+    <footer class="article-footer">
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>根据CC BY-NC-SA 4.0协议授权</span>
+    </section>
+    
+
+</footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/hugo-stack/p/hugo/custom-stack-widget/">
+
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugo/custom-stack-widget/cover.93abe4d43bf1822c867ad6edfefd87b7_hu35489920296379085.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】Stack主题使用自定义widget"
+                        data-key="hugo/custom-stack-widget" 
+                        data-hash="md5-k6vk1DvxgiyGetbt/v2Htw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】Stack主题使用自定义widget
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo-stack/p/hugo/view-count/">
+
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugo/view-count/cover.274092bdc81c36c9bb0b38db9a6be9fa_hu6949047556944337237.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】博客文章浏览数统计"
+                        data-key="hugo/view-count" 
+                        data-hash="md5-J0CSvcgcNsm7Czjbmmvp&#43;g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】博客文章浏览数统计
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo-stack/p/hugo/pjax/">
+
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugo/pjax/cover.d07cbee7b13aafbe03ebf0ee088f569d_hu6578279551130963379.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】PJAX实现无刷新加载页面"
+                        data-key="hugo/pjax" 
+                        data-hash="md5-0Hy&#43;57E6r74D6/DuCI9WnQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】PJAX实现无刷新加载页面
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo-stack/p/hugo/page-loading/">
+
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugo/page-loading/cover.41a89b8c61860f37160490a5d1b4813f_hu6192081206714930127.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】博客引入页面加载动画"
+                        data-key="hugo/page-loading" 
+                        data-hash="md5-QaibjGGGDzcWBJCl0bSBPw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】博客引入页面加载动画
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo-stack/p/hugo/live2d-moc3/">
+
+        
+            <div class="article-image">
+                <img src="/hugo-stack/p/hugo/live2d-moc3/cover.47964cfc431c0005f3c9eb3d99651190_hu4805388833244741341.png"
+                        width="250"
+                        height="150"
+                        loading="lazy"
+                        alt="Featured image of post 【Hugo】博客引入moc3类型的live2d模型"
+                        data-key="hugo/live2d-moc3" 
+                        data-hash="md5-R5ZM/EMcAAXzyes9mWURkA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Hugo】博客引入moc3类型的live2d模型
+            </h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="letere-gzj/hugo-stack"
+    data-repo-id="R_kgDOMXeWfg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOMXeWfs4CheU8"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+    <div id="comment"></div>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 莱特雷-letere
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/hugo-stack/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<div id="custom-footer">
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+    <script src=https://letere-gzj.github.io/hugo-stack/background/particles/particles.js></script>
+
+
+    <link rel="stylesheet" href=https://letere-gzj.github.io/hugo-stack/background/particles/style.css>
+
+
+<div id="particles-js"></div>
+
+<script>
+    
+
+    particlesJS.load('particles-js', "https://letere-gzj.github.io/hugo-stack/background/particles/particlesjs-config.json", function() {
+        console.log('particles.js loaded - callback');
+    });
+</script>
+
+
+
+
+
+
+
+	
+	<script src=https://letere-gzj.github.io/hugo-stack/js/pjax.min.js></script>
+
+
+	<script src=https://letere-gzj.github.io/hugo-stack/js/topbar.js></script>
+
+
+<script>
+	var pjax = new Pjax({
+		elements: "a, form",
+		
+		selectors: [
+			"title",
+			".main-container",
+			".js-Pjax"
+		],
+		cacheBust: false
+	})
+
+	
+	pjax._handleResponse = pjax.handleResponse;
+	pjax.handleResponse = function(responseText, request, href, options) {
+		if (request.responseText.match("<html")) {
+			
+			if (responseText) {
+				let newDoc = new DOMParser().parseFromString(responseText, 'text/html');
+				let bodyClass = newDoc.body.className;
+				document.body.setAttribute("class", bodyClass)
+			}
+			
+			pjax._handleResponse(responseText, request, href, options);
+		} else {
+			window.open(href)
+			topbar.hide();
+		}
+	}
+
+	
+	topbar.config({
+		barColors: {
+			'0': 'rgba(255,  255, 255, 1)',
+			'1.0': 'rgba(0, 149, 234,  1)'
+		}
+	})
+
+	
+	document.addEventListener('pjax:send', () => {
+		
+		topbar.show();
+	})
+
+	
+	document.addEventListener('pjax:complete', () => {
+		
+		window.Stack.init();
+		
+		topbar.hide();
+		
+		
+		
+		initTocHide();
+		
+		initScrollTop();
+		
+		initCodeMoreBox()
+		
+		showWelcomeMessage();
+		
+		renderKaTeX();
+		
+		initFlipClock();
+	})
+</script>
+
+	
+	<script src=https://letere-gzj.github.io/hugo-stack/js/APlayer.min.js></script>
+
+
+<div class="demo">
+	<div id="aplayer"/>
+</div>
+<script>
+	
+	const musicDir = "https://letere-gzj.github.io/hugo-stack/" + 'music/';
+	const songs = [
+		'爱别等-洪卓立',
+		'查无此字-林奕匡',
+		'初初-古巨基',
+		'多此一爱-陈柏宇',
+		'乖乖报到-MC 张天赋',
+		'泼墨桃花-林峯',
+		'摄氏零度-张敬轩',
+		'下一位前度-林家谦',
+		'这个故事教训我们-李克勤',
+		'最后祝福-黄宗泽'
+	];
+	let audios = [];
+	songs.forEach((item) => {
+		const songInfo = item.split('-');
+		audios.push({
+			name: songInfo[0],
+			artist: songInfo[1],
+			url: musicDir + item + '/song.mp3',
+			cover: musicDir + item + '/cover.jpg',
+			lrc: musicDir + item + '/lyric.lrc'
+		});
+	})
+
+	
+	const ap = new APlayer({
+		container: document.getElementById('aplayer'),
+		listFolded: false,
+		listMaxHeight: '160px',
+		lrcType: 3,
+		mutex: true,
+		fixed: true,
+		audio: audios
+	});
+
+	
+
+	window.onload = () => {
+		const playInfo = JSON.parse(localStorage.getItem("playInfo"));
+		
+		if (!playInfo) {
+			return;
+		}
+		ap.list.switch(playInfo.index);
+		setTimeout(() => {
+			ap.seek(playInfo.currentTime);
+			
+			if (!playInfo.paused) {
+				ap.play()
+			}
+		}, 500);
+	};
+
+	
+
+	window.onbeforeunload = () => {
+		const playInfo = {
+			index: ap.list.index,
+			paused: ap.paused,
+			currentTime: ap.audio.currentTime
+		};
+		localStorage.setItem("playInfo", JSON.stringify(playInfo));
+	};
+</script>
+
+
+
+
+	
+    <style>
+        @font-face {
+            font-family: 'ChildFunSans';
+            src: url(https://letere-gzj.github.io/hugo-stack/font/ChildFunSans-Demo.ttf) format('truetype');
+        }
+
+        :root {
+             
+             
+ 
+            --zh-font-family: "ChildFunSans";
+        }
+    </style>
+
+
+	<div class="js-Pjax"><script>
+            (function() {
+                let comment = document.querySelector("#comment")
+                if (comment) {
+                    addCommentScript(comment)
+                }
+            })(document)
+
+            
+            function addCommentScript(comment) {
+                let script = document.createElement('script');
+                script.src = 'https://giscus.app/client.js';
+                script.crossOrigin = 'anonymous';
+                script.setAttribute('data-repo',"letere-gzj/hugo-stack");
+                script.setAttribute('data-repo-id',"R_kgDOMXeWfg");
+                script.setAttribute('data-category',"Announcements"); 
+                script.setAttribute('data-category-id',"DIC_kwDOMXeWfs4CheU8"); 
+                script.setAttribute('data-mapping',"pathname");
+                script.setAttribute('data-strict', 0 );
+                script.setAttribute('data-reactions-enabled', 1 );
+                script.setAttribute('data-emit-metadata', 0 );
+                script.setAttribute('data-input-position',"top");
+                script.setAttribute('data-theme',"light");
+                script.setAttribute('data-lang',"zh-CN");
+                script.setAttribute('data-loading', 'lazy')
+                script.async = true;
+                comment.appendChild(script);
+                initGiscus();
+            }
+
+            function initGiscus() {
+                addEventListener("message", (e) => {
+                    if (event.origin !== "https://giscus.app") return;
+                    handler();
+                });
+                window.addEventListener("onColorSchemeChange", handler);
+
+                function handler() {
+                    if (document.documentElement.dataset.scheme === "light") {
+                        setGiscusTheme('light');
+                    } else {
+                        setGiscusTheme('dark_dimmed');
+                    }
+                }
+            };
+        </script></div>
+
+	<style>
+    #TableOfContents > ul {
+        ul {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+                openUl.forEach((ul) => {
+                    ul.classList.remove("open")
+                })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && ul.localName === 'ul')
+        });
+    }
+    initTocHide()
+    window.initTocHide = initTocHide
+</script>
+
+	<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        transition: transform 0.8s ease-in-out;
+    }
+
+    [data-scheme="light"] {
+        #backTopBtn {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-light.svg);
+        }
+
+         
+          
+         
+    }
+
+    [data-scheme="dark"] {
+        #backTopBtn {
+            background-image: url(https://letere-gzj.github.io/hugo-stack/icons/backTop-dark.svg);
+        }
+
+         
+          
+         
+    }
+
+    #backTopBtn:hover {
+        transform: rotate(360deg)
+         
+    }
+
+    @keyframes wobble {
+        0%, 100% {
+            transform: rotate(0);
+        }
+        25% {
+            transform: rotate(45deg);
+        }
+        65% {
+            transform: rotate(-45deg);
+        }
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+    window.initScrollTop = initScrollTop;
+</script>
+
+	<script>
+    const config = {
+        
+        path: {
+            homePath: "/hugo-stack/",
+            modelPath: "https:\/\/letere-gzj.github.io\/hugo-stack\/" + "live2d-moc3/",
+            cssPath: "https://letere-gzj.github.io/hugo-stack/live2d/waifu.css",
+            tipsJsonPath: "https://letere-gzj.github.io/hugo-stack/live2d/my-waifu-tips.json",
+            tipsJsPath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/waifu-tips.js",
+            live2dCorePath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2dcubismcore.js",
+            live2dSdkPath: "https://letere-gzj.github.io/hugo-stack/live2d-v3/live2d-sdk.js"
+        },
+        
+        tools: ["hitokoto", "asteroids", "express", "photo", "info", "quit"],
+        
+        drag: {
+            enable: false,
+            direction: ["x"]
+        },
+        
+        switchType: "order"
+    }
+
+    
+    if (screen.width >= 768) {
+        Promise.all([
+            loadExternalResource(config.path.cssPath, "css"),
+            loadExternalResource(config.path.live2dCorePath, "js"),
+            loadExternalResource(config.path.live2dSdkPath, "js"),
+            loadExternalResource(config.path.tipsJsPath, "js")
+        ]).then(() => {
+            initWidget({
+                homePath: config.path.homePath,
+                waifuPath: config.path.tipsJsonPath,
+                cdnPath: config.path.modelPath,
+                tools: config.tools,
+                dragEnable: config.drag.enable,
+                dragDirection: config.drag.direction,
+                switchType: config.switchType
+            });
+        });
+    }
+
+    
+    function loadExternalResource(url, type) {
+        return new Promise((resolve, reject) => {
+            let tag;
+            if (type === "css") {
+                tag = document.createElement("link");
+                tag.rel = "stylesheet";
+                tag.href = url;
+            }
+            else if (type === "js") {
+                tag = document.createElement("script");
+                tag.src = url;
+            }
+            if (tag) {
+                tag.onload = () => resolve(url);
+                tag.onerror = () => reject(url);
+                document.head.appendChild(tag);
+            }
+        });
+    }
+</script>
+
+	
+
+
+<div class="js-Pjax">
+    <script>
+        (function() {
+            let script = document.createElement('script');
+            script.defer = true;
+            script.src = "https://cn.vercount.one/js";
+            let footer = document.querySelector("footer")
+            if (footer) {
+                showHideView()
+                footer.appendChild(script);
+            }
+        })(document)
+
+        function showHideView() {
+            let viewCounts = document.querySelectorAll("#viewCount");
+            if (viewCounts) {
+                const style = document.querySelector(".article-page") ? '' : 'none';
+                viewCounts.forEach(ele => {
+                        ele.style.display = style;
+                    }
+                )
+            }
+        }
+    </script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+         
+    }
+
+    .code-more-img {
+         
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+    
+
+    function initCodeMoreBox() {
+        let codeBlocks = document.querySelectorAll(".highlight");
+        if (!codeBlocks) {
+            return;
+        }
+        codeBlocks.forEach(codeBlock => {
+            
+            if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+                return;
+            }
+            
+            
+            let codeMoreBox = document.createElement('div');
+            codeMoreBox.classList.add('code-more-box');
+            
+            let codeMoreBtn = document.createElement('span');
+            codeMoreBtn.classList.add('code-more-btn');
+            codeMoreBtn.addEventListener('click', () => {
+                codeBlock.classList.add('code-show');
+                codeMoreBox.style.display = 'none';
+                
+                window.dispatchEvent(new Event('resize'))
+            })
+            
+            let img = document.createElement('img');
+            img.classList.add('code-more-img');
+            img.src = "https://letere-gzj.github.io/hugo-stack/icons/codeMore.png"
+            
+            codeMoreBtn.appendChild(img);
+            codeMoreBox.appendChild(codeMoreBtn);
+            codeBlock.appendChild(codeMoreBox)
+        })
+    }
+
+    initCodeMoreBox();
+    window.initCodeMoreBox = initCodeMoreBox;
+</script>
+
+	<script>
+    async function renderKaTeX() {
+        let katex = document.querySelector(".math-katex");
+        if (!katex) {
+            return;
+        }
+        
+        while (typeof renderMathInElement !== 'function') {
+            await delay(1000)
+        }
+        
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });
+    }
+
+    function delay(time) {
+        return new Promise(resolve => {
+            setTimeout(resolve, time)
+        })
+    }
+
+    window.renderKaTeX = renderKaTeX;
+</script>
+
+	
+    <script src=https://letere-gzj.github.io/hugo-stack/js/fish.js></script>
+
+
+<div id="jsi-flying-fish-container"></div>
+
+<script>
+    window.onload = () =>{
+        initFish();
+    }
+
+    function initFish() {
+        RENDERER.init();
+    }
+</script>
+
+
+<style>
+    #custom-footer {
+        position: relative;
+    }
+
+    #jsi-flying-fish-container {
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.5;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+    }
+</style>
+	<script>
+    function createDigitElements(digitElement) {
+        const top = document.createElement('div');
+        top.className = 'digit__number top';
+        top.textContent = '0';
+
+        const bottom = document.createElement('div');
+        bottom.className = 'digit__number bottom';
+        bottom.textContent = '0';
+
+        digitElement.appendChild(top);
+        digitElement.appendChild(bottom);
+
+        return { top, bottom };
+    }
+
+    function updateDigit(digit, newValue) {
+        const currentTop = parseInt(digit.top.textContent);
+        if (currentTop === newValue) return;
+
+        const newBottomValue = newValue;
+
+        
+        digit.bottom.textContent = newBottomValue;
+
+        
+        digit.top.parentElement.classList.add('flip');
+
+        
+        setTimeout(() => {
+            digit.top.textContent = newBottomValue;
+            digit.top.parentElement.classList.remove('flip');
+        }, 500); 
+    }
+
+    function updateTime(digits) {
+        const now = new Date();
+        let hours = now.getHours().toString().padStart(2, '0');
+        let minutes = now.getMinutes().toString().padStart(2, '0');
+        let seconds = now.getSeconds().toString().padStart(2, '0');
+
+        
+        updateDigit(digits.hours1, parseInt(hours[0]));
+        updateDigit(digits.hours2, parseInt(hours[1]));
+
+        
+        updateDigit(digits.minutes1, parseInt(minutes[0]));
+        updateDigit(digits.minutes2, parseInt(minutes[1]));
+
+        
+        updateDigit(digits.seconds1, parseInt(seconds[0]));
+        updateDigit(digits.seconds2, parseInt(seconds[1]));
+    }
+
+    function initFlipClock() {
+        const flipClock = document.querySelector('#flip-clock');
+        if (!flipClock) {
+            return
+        }
+        
+        const digits = {};
+        Object.keys({
+            hours1: null,
+            hours2: null,
+            minutes1: null,
+            minutes2: null,
+            seconds1: null,
+            seconds2: null
+        }).forEach(key => {
+            digits[key] = createDigitElements(document.getElementById(key));
+        });
+        
+        updateTime(digits);
+        
+        setInterval(() => updateTime(digits), 1000);
+    }
+
+    window.initFilipClock = initFlipClock;
+</script>
+</div>
+
+    </body>
+</html>

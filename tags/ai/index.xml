@@ -15,6 +15,576 @@
         
         <atom:link href="https://letere-gzj.github.io/hugo-stack/tags/ai/index.xml" rel="self" type="application/rss+xml" />
                 <item>
+                <title>【AI】fish-speech文本转语音项目本地部署</title>
+                <link>https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/</link>
+                <pubDate>Mon, 01 Sep 2025 17:00:27 +0800</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/</guid>
+                <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cover.png" alt="Featured image of post 【AI】fish-speech文本转语音项目本地部署" /&gt;&lt;hr&gt;
+&lt;h2 id=&#34;1-环境准备&#34;&gt;1 环境准备
+&lt;/h2&gt;&lt;h3 id=&#34;11-conda安装&#34;&gt;1.1 conda安装
+&lt;/h3&gt;&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://anaconda.net.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;conda官网&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.anaconda.net.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;conda官方文档&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;（1）下载conda，conda有多个版本，具体版本可以按需下载，这边演示下载miniconda&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%85.png&#34;
+	width=&#34;2154&#34;
+	height=&#34;571&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%85_hu2174013281673136967.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%85_hu10480695839740599082.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;377&#34;
+		data-flex-basis=&#34;905px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%852.png&#34;
+	width=&#34;2174&#34;
+	height=&#34;1050&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%852_hu14083056593100666618.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%852_hu7718241515864750290.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;207&#34;
+		data-flex-basis=&#34;496px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;（2）下载后，除了安装路径按需选择外，其余一路默认安装即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（3）添加conda环境变量&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.png&#34;
+	width=&#34;2322&#34;
+	height=&#34;1193&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu3355112333161292858.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu6774639002376048374.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;194&#34;
+		data-flex-basis=&#34;467px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2.png&#34;
+	width=&#34;826&#34;
+	height=&#34;784&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu14565201788017387200.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu7526012472548818451.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;252px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（4）命令行敲&lt;code&gt;conda -V&lt;/code&gt;，成功显示版本则安装成功&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E6%B5%8B%E8%AF%95.png&#34;
+	width=&#34;511&#34;
+	height=&#34;234&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E6%B5%8B%E8%AF%95_hu7611486596292011314.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E6%B5%8B%E8%AF%95_hu2787131873669345621.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;218&#34;
+		data-flex-basis=&#34;524px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-本地部署&#34;&gt;2 本地部署
+&lt;/h2&gt;&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/fishaudio/fish-speech&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;fish-speech项目&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://speech.fish.audio/zh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;fish-speech部署文档&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;以下内容根据官方文件进行编写，若内容失效，请根据官方最新文档进行部署&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;21-安装&#34;&gt;2.1 安装
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;（1）下载fish-speech项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E4%B8%8B%E8%BD%BD.png&#34;
+	width=&#34;1470&#34;
+	height=&#34;674&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E4%B8%8B%E8%BD%BD_hu6383235579293399642.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E4%B8%8B%E8%BD%BD_hu2720164818683065730.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;218&#34;
+		data-flex-basis=&#34;523px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）安装fish-speech（以conda形式），在解压的fish-speech项目文件夹敲一下命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;conda&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;create&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fish&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speech&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;3.12&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;conda&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;activate&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fish&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speech&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E5%AE%89%E8%A3%85.png&#34;
+	width=&#34;963&#34;
+	height=&#34;758&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E5%AE%89%E8%A3%85_hu17846535565982031955.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E5%AE%89%E8%A3%85_hu1714410311166619252.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;127&#34;
+		data-flex-basis=&#34;304px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;22-推理&#34;&gt;2.2 推理
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;（1）前往&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;huggingface官网&lt;/strong&gt;&lt;/a&gt;获取&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/fishaudio/openaudio-s1-mini&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;fish-speech模型&lt;/strong&gt;&lt;/a&gt;的访问权限
+&lt;ul&gt;
+&lt;li&gt;模型可能会更新，具体最新模型看官方文档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E8%8E%B7%E5%8F%96%E6%A8%A1%E5%9E%8B%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90.png&#34;
+	width=&#34;1469&#34;
+	height=&#34;755&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E8%8E%B7%E5%8F%96%E6%A8%A1%E5%9E%8B%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90_hu13511134822465879213.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E8%8E%B7%E5%8F%96%E6%A8%A1%E5%9E%8B%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90_hu10141466252694596922.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;194&#34;
+		data-flex-basis=&#34;466px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）创建fish-speech的访问令牌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C.png&#34;
+	width=&#34;2420&#34;
+	height=&#34;927&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C_hu16937585656473562132.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C_hu16464747310828605825.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;261&#34;
+		data-flex-basis=&#34;626px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C2.png&#34;
+	width=&#34;1571&#34;
+	height=&#34;608&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C2_hu7424642794354304105.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C2_hu15903316729291537802.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;258&#34;
+		data-flex-basis=&#34;620px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（3）命令行敲&lt;code&gt;huggingface-cli login&lt;/code&gt;，设置访问令牌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/huggingface%E7%99%BB%E5%BD%95.png&#34;
+	width=&#34;1673&#34;
+	height=&#34;459&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/huggingface%E7%99%BB%E5%BD%95_hu14882600478418109291.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/huggingface%E7%99%BB%E5%BD%95_hu2480284484283500435.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;364&#34;
+		data-flex-basis=&#34;874px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（4）命令行下载模型
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;huggingface-cli download fishaudio/openaudio-s1-mini --local-dir checkpoints/openaudio-s1-mini&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD.png&#34;
+	width=&#34;1712&#34;
+	height=&#34;437&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD_hu16160501988607136703.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD_hu16468889532222035467.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;391&#34;
+		data-flex-basis=&#34;940px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（5）运行fish-speech
+&lt;ul&gt;
+&lt;li&gt;fish-speech运行有多种方式，这边推荐使用webui，界面简洁清晰，敲&lt;code&gt;python -m tools.run_webui&lt;/code&gt;运行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/web%E7%95%8C%E9%9D%A2.png&#34;
+	width=&#34;2291&#34;
+	height=&#34;994&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/web%E7%95%8C%E9%9D%A2_hu17275727449670226006.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/web%E7%95%8C%E9%9D%A2_hu3655135579545463126.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;230&#34;
+		data-flex-basis=&#34;553px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-推理加速&#34;&gt;3 推理加速
+&lt;/h2&gt;&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;启动fish-speech会看到一个&lt;code&gt;CUDA is not available, running on CPU.&lt;/code&gt;，因为运行在CPU，所以速度比较满，因此我们需要安装一下CUDA&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8D%E5%8F%AF%E7%94%A8.png&#34;
+	width=&#34;1689&#34;
+	height=&#34;301&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8D%E5%8F%AF%E7%94%A8_hu13278481134217167368.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8D%E5%8F%AF%E7%94%A8_hu3488217969693366202.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;561&#34;
+		data-flex-basis=&#34;1346px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;31-cuda安装&#34;&gt;3.1 CUDA安装
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;（1）前往控制面板，检查CUDA是否已安装（已安装可跳过本内容）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A3%80%E6%9F%A5CUDA%E5%AE%89%E8%A3%85.png&#34;
+	width=&#34;1085&#34;
+	height=&#34;607&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A3%80%E6%9F%A5CUDA%E5%AE%89%E8%A3%85_hu7777130242599413249.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A3%80%E6%9F%A5CUDA%E5%AE%89%E8%A3%85_hu15211773865739185862.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）打开 &lt;strong&gt;NVIDIA Control Panel(英伟达控制面板)&lt;/strong&gt; 的系统设置，查看支持的CUDA版本
+&lt;ul&gt;
+&lt;li&gt;这边支持的是13.0.84之前的版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/CUDA%E6%94%AF%E6%8C%81%E7%89%88%E6%9C%AC.png&#34;
+	width=&#34;1112&#34;
+	height=&#34;805&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/CUDA%E6%94%AF%E6%8C%81%E7%89%88%E6%9C%AC_hu16051112260216880350.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/CUDA%E6%94%AF%E6%8C%81%E7%89%88%E6%9C%AC_hu8728782837778532736.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;138&#34;
+		data-flex-basis=&#34;331px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（3）前往&lt;a class=&#34;link&#34; href=&#34;https://developer.nvidia.com/cuda-toolkit-archive&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;英伟达官网&lt;/strong&gt;&lt;/a&gt;下载适合自己电脑版本的CUDA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD.png&#34;
+	width=&#34;1724&#34;
+	height=&#34;880&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD_hu17599259530987249572.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD_hu10241175567451391587.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;195&#34;
+		data-flex-basis=&#34;470px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD2.png&#34;
+	width=&#34;2019&#34;
+	height=&#34;1049&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD2_hu10581337901936404448.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD2_hu3027802454748185345.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;461px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（4）安装一律默认即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85.png&#34;
+	width=&#34;892&#34;
+	height=&#34;665&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85_hu9016318141693742291.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85_hu16639092739668047169.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;321px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（5）安装完成后，命令行敲击&lt;code&gt;nvcc -V&lt;/code&gt;，检查是否安装成功&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85%E6%A3%80%E6%9F%A5.png&#34;
+	width=&#34;839&#34;
+	height=&#34;210&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85%E6%A3%80%E6%9F%A5_hu18018810333991496639.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85%E6%A3%80%E6%9F%A5_hu8956736823958548710.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;399&#34;
+		data-flex-basis=&#34;958px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;32-更换pytorch版本&#34;&gt;3.2 更换pytorch版本
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;（1）前往&lt;a class=&#34;link&#34; href=&#34;https://pytorch.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;pytorch官网&lt;/strong&gt;&lt;/a&gt;，查看适合自己cuda版本的pytorch，并敲对应的命令下载，更换版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/pytorch%E6%9B%B4%E6%96%B0.png&#34;
+	width=&#34;1531&#34;
+	height=&#34;592&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/pytorch%E6%9B%B4%E6%96%B0_hu8645082274528720809.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/pytorch%E6%9B%B4%E6%96%B0_hu9749496676557500425.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;258&#34;
+		data-flex-basis=&#34;620px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-fish-speech使用&#34;&gt;4 fish-speech使用
+&lt;/h2&gt;&lt;h3 id=&#34;41-基础使用&#34;&gt;4.1 基础使用
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;（1）准备好一段音频，以及文本（下面以&lt;strong&gt;星穹铁道-三月七&lt;/strong&gt;为例）
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;照片当然不是现实，但如果有足够多的照片，是不是就能更接近现实一些呢？&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;audio controls&gt;
+  &lt;source src=&#34;1.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
+&lt;/audio&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）上传参考音频，填写参考文本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8.png&#34;
+	width=&#34;1162&#34;
+	height=&#34;1009&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8_hu4762746031635050233.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8_hu1586792032427155691.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;115&#34;
+		data-flex-basis=&#34;276px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（3）输入想要的转换的文本，并点击生成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A82.png&#34;
+	width=&#34;2281&#34;
+	height=&#34;530&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A82_hu14849625110380473210.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A82_hu6917090211918113328.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;430&#34;
+		data-flex-basis=&#34;1032px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;audio controls&gt;
+  &lt;source src=&#34;三月七-fishspeech.wav&#34; type=&#34;audio/mpeg&#34;&gt;
+&lt;/audio&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;42-references使用&#34;&gt;4.2 references使用
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;（1）在fish-speech主文件夹下创建&lt;code&gt;references&lt;/code&gt;文件夹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A8.png&#34;
+	width=&#34;881&#34;
+	height=&#34;495&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A8_hu944912587945688069.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A8_hu937514076632573491.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;427px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）在references文件夹下创建音频文件夹，并把对应的音频，以及文本放入
+&lt;ul&gt;
+&lt;li&gt;文本以&lt;code&gt;.lab&lt;/code&gt;文件名存储&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A82.png&#34;
+	width=&#34;1033&#34;
+	height=&#34;301&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A82_hu16604072842047575109.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A82_hu17824687401615038347.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;343&#34;
+		data-flex-basis=&#34;823px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（3）在webui的&lt;code&gt;Reference ID&lt;/code&gt;中填入对应的音频文件夹名，则可自动导入音频和文本，不用再次上传和填写了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A83.png&#34;
+	width=&#34;1178&#34;
+	height=&#34;374&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A83_hu3573976974350523226.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A83_hu14177448331872078295.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;314&#34;
+		data-flex-basis=&#34;755px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;43-发音调整&#34;&gt;4.3 发音调整
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;（1）以下面的文本为例
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;你成功说服了我&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;audio controls&gt;
+  &lt;source src=&#34;多音字1.wav&#34; type=&#34;audio/mpeg&#34;&gt;
+&lt;/audio&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）其中的&lt;strong&gt;说&lt;/strong&gt;的发音是&lt;code&gt;shui4&lt;/code&gt;，如果调整为&lt;code&gt;shuo1&lt;/code&gt;，可以用&lt;code&gt;&amp;lt;|phoneme_start|&amp;gt;拼音&amp;lt;|phoneme_end|&amp;gt;&lt;/code&gt;来处理
+&lt;ul&gt;
+&lt;li&gt;例：&lt;code&gt;你成功&amp;lt;|phoneme_start|&amp;gt;shuo1&amp;lt;|phoneme_end|&amp;gt;服了我&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;audio controls&gt;
+  &lt;source src=&#34;多音字2.wav&#34; type=&#34;audio/mpeg&#34;&gt;
+&lt;/audio&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;44-情感语调调整&#34;&gt;4.4 情感语调调整
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;可以在话语前，添加&lt;code&gt;（标识）&lt;/code&gt;来控制这段话的情感or语调，具体可看&lt;a class=&#34;link&#34; href=&#34;https://docs.fish.audio/emotion-control/tts-emotion-and-control-tags-user-guide-zh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;官方文档&lt;/strong&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;自己实际使用下来感觉效果不是很明显&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（1）没加标识：&lt;code&gt;你竟然敢背叛我！我对你这么信任，你就是这样回报我的吗？&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;audio controls&gt;
+  &lt;source src=&#34;语调调整1.wav&#34; type=&#34;audio/mpeg&#34;&gt;
+&lt;/audio&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）加了标识：&lt;code&gt;（愤怒）你竟然敢背叛我！（语气激动）我对你这么信任，（大声）你就是这样回报我的吗？&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;audio controls&gt;
+  &lt;source src=&#34;语调调整2.wav&#34; type=&#34;audio/mpeg&#34;&gt;
+&lt;/audio&gt;
+&lt;hr&gt;
+
+                </description>
+            </item>
+        
+                <item>
                 <title>【AI】MCP初认识</title>
                 <link>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</link>
                 <pubDate>Fri, 16 May 2025 09:23:21 +0800</pubDate>
