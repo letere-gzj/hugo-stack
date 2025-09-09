@@ -21,6 +21,26 @@
                 
                 <guid>https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/</guid>
                 <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cover.png" alt="Featured image of post 【AI】fish-speech文本转语音项目本地部署" /&gt;&lt;hr&gt;
+
+
+
+
+
+
+    
+
+
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1KMYAznEsW&amp;autoplay=0&#34;
+            scrolling=&#34;no&#34;
+            frameborder=&#34;no&#34;
+            framespacing=&#34;0&#34;
+            allowfullscreen=&#34;true&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
 &lt;h2 id=&#34;1-环境准备&#34;&gt;1 环境准备
 &lt;/h2&gt;&lt;h3 id=&#34;11-conda安装&#34;&gt;1.1 conda安装
 &lt;/h3&gt;&lt;blockquote class=&#34;alert alert-note&#34;&gt;
@@ -312,7 +332,7 @@
 
 
 
-    &lt;p&gt;启动fish-speech会看到一个&lt;code&gt;CUDA is not available, running on CPU.&lt;/code&gt;，因为运行在CPU，所以速度比较满，因此我们需要安装一下CUDA&lt;/p&gt;
+    &lt;p&gt;启动fish-speech会看到一个&lt;code&gt;CUDA is not available, running on CPU.&lt;/code&gt;，因为运行在CPU，所以速度比较慢，因此我们需要安装一下CUDA&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8D%E5%8F%AF%E7%94%A8.png&#34;
 	width=&#34;1689&#34;
