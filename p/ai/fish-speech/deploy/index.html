@@ -10,7 +10,7 @@
 <meta property='og:description' content="记录如何在windows部署fish-speech项目">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/'>
 <meta property='og:site_name' content='莱特雷-letere'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='AI' /><meta property='article:published_time' content='2025-09-01T17:00:27&#43;08:00'/><meta property='article:modified_time' content='2025-09-09T14:16:18&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cover.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='AI' /><meta property='article:published_time' content='2025-09-01T17:00:27&#43;08:00'/><meta property='article:modified_time' content='2025-09-12T13:47:55&#43;08:00'/><meta property='og:image' content='https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cover.png' />
 <meta name="twitter:title" content="【AI】fish-speech文本转语音项目本地部署">
 <meta name="twitter:description" content="记录如何在windows部署fish-speech项目"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cover.png' />
@@ -576,7 +576,7 @@
             <div class="article-lastmod">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
                 <time>
-                    2025-09-09
+                    2025-09-12
                 </time>
             </div>
 
@@ -584,7 +584,7 @@
             |
             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-word"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 12l1.333 5l1.667 -4l1.667 4l1.333 -5" /></svg>
             <time class="article-time--reading">
-                1378 字
+                1407 字
             </time>
         </div>
         
@@ -1076,15 +1076,22 @@
 <h2 id="4-fish-speech使用">4 fish-speech使用
 </h2><h3 id="41-基础使用">4.1 基础使用
 </h3><ul>
-<li>（1）准备好一段音频，以及文本（下面以<strong>星穹铁道-三月七</strong>为例）
-<ul>
-<li><code>照片当然不是现实，但如果有足够多的照片，是不是就能更接近现实一些呢？</code></li>
+<li>（1）准备好一段音频，以及文本（下面以<strong>星穹铁道-三月七</strong>为例）</li>
 </ul>
-</li>
-</ul>
-<audio controls>
-  <source src="1.mp3" type="audio/mpeg">
-</audio>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">文本</th>
+          <th style="text-align: center">音频</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>照片当然不是现实，但如果有足够多的照片，是不是就能更接近现实一些呢？</code></td>
+          <td style="text-align: center"><audio controls><source src="1.mp3" type="audio/mpeg"></audio></td>
+      </tr>
+  </tbody>
+</table></div>
 <ul>
 <li>（2）上传参考音频，填写参考文本</li>
 </ul>
@@ -1115,9 +1122,20 @@
 		data-flex-basis="1032px"
 	
 ></p>
-<audio controls>
-  <source src="三月七-fishspeech.wav" type="audio/mpeg">
-</audio>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">文本</th>
+          <th style="text-align: center">音频</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>你好啊，我是三月七，这是我用fish-speech生成的语音，你觉得声音像吗？</code></td>
+          <td style="text-align: center"><audio controls><source src="三月七-fishspeech.wav" type="audio/mpeg"></audio></td>
+      </tr>
+  </tbody>
+</table></div>
 <hr>
 <h3 id="42-references使用">4.2 references使用
 </h3><ul>
@@ -1172,48 +1190,71 @@
 <hr>
 <h3 id="43-发音调整">4.3 发音调整
 </h3><ul>
-<li>（1）以下面的文本为例
+<li>（1）以下面的文本为例</li>
+</ul>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">文本</th>
+          <th style="text-align: center">音频</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>你成功说服了我</code></td>
+          <td style="text-align: center"><audio controls><source src="多音字1.wav" type="audio/mpeg"></audio></td>
+      </tr>
+  </tbody>
+</table></div>
 <ul>
-<li><code>你成功说服了我</code></li>
+<li>（2）其中的<strong>说</strong>的发音是<code>shui4</code>，如果调整为<code>shuo1</code>，可以用<code>&lt;|phoneme_start|&gt;拼音&lt;|phoneme_end|&gt;</code>来处理</li>
 </ul>
-</li>
-</ul>
-<audio controls>
-  <source src="多音字1.wav" type="audio/mpeg">
-</audio>
-<ul>
-<li>（2）其中的<strong>说</strong>的发音是<code>shui4</code>，如果调整为<code>shuo1</code>，可以用<code>&lt;|phoneme_start|&gt;拼音&lt;|phoneme_end|&gt;</code>来处理
-<ul>
-<li>例：<code>你成功&lt;|phoneme_start|&gt;shuo1&lt;|phoneme_end|&gt;服了我</code></li>
-</ul>
-</li>
-</ul>
-<audio controls>
-  <source src="多音字2.wav" type="audio/mpeg">
-</audio>
+<div class="table-wrapper"><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">文本</th>
+          <th style="text-align: center">音频</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>你成功<|phoneme_start|>shuo1<|phoneme_end|>服了我</code></td>
+          <td style="text-align: center"><audio controls><source src="多音字2.wav" type="audio/mpeg"></audio></td>
+      </tr>
+  </tbody>
+</table></div></div>
 <hr>
 <h3 id="44-情感语调调整">4.4 情感语调调整
 </h3><ul>
 <li>可以在话语前，添加<code>（标识）</code>来控制这段话的情感or语调，具体可看<a class="link" href="https://docs.fish.audio/emotion-control/tts-emotion-and-control-tags-user-guide-zh"  target="_blank" rel="noopener"
     ><strong>官方文档</strong></a>
 <ul>
-<li>自己实际使用下来感觉效果不是很明显</li>
+<li>自己实际使用下来感觉<strong>效果不是很明显</strong></li>
 </ul>
 </li>
 </ul>
-<p></p>
-<ul>
-<li>（1）没加标识：<code>你竟然敢背叛我！我对你这么信任，你就是这样回报我的吗？</code></li>
-</ul>
-<audio controls>
-  <source src="语调调整1.wav" type="audio/mpeg">
-</audio>
-<ul>
-<li>（2）加了标识：<code>（愤怒）你竟然敢背叛我！（语气激动）我对你这么信任，（大声）你就是这样回报我的吗？</code></li>
-</ul>
-<audio controls>
-  <source src="语调调整2.wav" type="audio/mpeg">
-</audio>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">文本</th>
+          <th style="text-align: center">音频</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><code>你竟然敢背叛我！我对你这么信任，你就是这样回报我的吗？</code></td>
+          <td style="text-align: center"><audio controls><source src="语调调整1.wav" type="audio/mpeg"></audio></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><code>（愤怒）你竟然敢背叛我！（语气激动）我对你这么信任，（大声）你就是这样回报我的吗？</code></td>
+          <td style="text-align: center"><audio controls><source src="语调调整2.wav" type="audio/mpeg"></audio></td>
+      </tr>
+  </tbody>
+</table></div>
 <hr>
 
 </section>
