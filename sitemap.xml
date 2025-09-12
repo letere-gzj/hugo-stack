@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/</loc>
-    <lastmod>2025-09-12T13:47:55+08:00</lastmod>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/</loc>
+    <lastmod>2025-09-13T00:57:14+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/categories/</loc>
-    <lastmod>2025-09-12T13:47:55+08:00</lastmod>
+    <lastmod>2025-09-13T00:57:14+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/post/</loc>
-    <lastmod>2025-09-12T13:47:55+08:00</lastmod>
+    <lastmod>2025-09-13T00:57:14+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/tags/</loc>
+    <lastmod>2025-09-13T00:57:14+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/</loc>
     <lastmod>2025-09-12T13:47:55+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/p/game/fli/build-share/</loc>

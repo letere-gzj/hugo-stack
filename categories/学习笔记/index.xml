@@ -15,6 +15,292 @@
         
         <atom:link href="https://letere-gzj.github.io/hugo-stack/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
                 <item>
+                <title>【AI】B站开源IndexTTS2使用体验报告</title>
+                <link>https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/</link>
+                <pubDate>Fri, 12 Sep 2025 15:11:05 +0800</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/</guid>
+                <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/cover.png" alt="Featured image of post 【AI】B站开源IndexTTS2使用体验报告" /&gt;&lt;hr&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;&lt;strong&gt;前言：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最近一直在研究文本转语音（TTS: Text To Speech）技术，接触到了fish-speech，但fish-speech情感控制不是很好用&lt;/li&gt;
+&lt;li&gt;刚好最近B站开源的indexTTS出了2，尝试一下&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://indextts.org/zh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;【indexTTS官网】&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/index-tts/index-tts&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;【indexTTS项目】&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://index-tts.github.io/index-tts2.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;【indexTTS2效果演示】&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://indextts.org/zh/playground&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;【indexTTS2在线体验】&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-体验分享&#34;&gt;1 体验分享
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/indexTTS%E7%95%8C%E9%9D%A2.png&#34;
+	width=&#34;2543&#34;
+	height=&#34;1310&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/indexTTS%E7%95%8C%E9%9D%A2_hu2582286806224934194.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/indexTTS%E7%95%8C%E9%9D%A2_hu10732309207585539213.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;194&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在&lt;strong&gt;声音的还原度&lt;/strong&gt;上，indexTTS2相当的好，第一次去去它的演示网站去使用时，我都惊呆了，竟然会这么还原，效果比fish-speech真的要好&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;而且indexTTS2有&lt;strong&gt;丰富的感情控制参数&lt;/strong&gt;调整，发音感情调整起来真的方便非常多，而且效果很不错，这算是indexTTS2非常大的一个优点&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;indexTTS2效果好的代价就是推理的&lt;strong&gt;速度真的慢&lt;/strong&gt;，跟fish-speech比真的要慢多了，即使时使用CUDA加速的情况下，还是慢，对电脑的性能要求较高&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;而且有些功能上没fish-speech好用，就例如fish-speech的&lt;strong&gt;发音调整&lt;/strong&gt;，我觉得是一个很好用的功能，可惜indexTTS2没有&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;总结：&lt;/strong&gt; indexTTS2并不是完全意义上的fish-speech的上位替代，算是各有春秋，但使用体验上，应该是indexTTS2更胜一筹&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-效果演示分享&#34;&gt;2 效果演示分享
+&lt;/h2&gt;&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;&lt;ul&gt;
+&lt;li&gt;因为indexTTS2最大的特点就是&lt;strong&gt;丰富的情感控制&lt;/strong&gt;，这边也着重去演示语音情感&lt;/li&gt;
+&lt;li&gt;下面以&lt;strong&gt;鸣潮-今汐&lt;/strong&gt;的音频来演示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;文本&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;音频&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;一个人走虽然更快，一群人才能走得更远。未来的路，我会和大家，会和你一起走下去。&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;今汐.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;21-与音色参考音频相同&#34;&gt;2.1 与音色参考音频相同
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E9%9F%B3%E8%89%B2%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91.png&#34;
+	width=&#34;1288&#34;
+	height=&#34;219&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E9%9F%B3%E8%89%B2%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91_hu9239971983528956550.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E9%9F%B3%E8%89%B2%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91_hu15775888275128682803.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;588&#34;
+		data-flex-basis=&#34;1411px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;音色参考音频的情感是怎样的，生成音频情感也是怎样的
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;你和钱，对我都不重要。没有你，对我很重要。&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;音色参考音频&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;生成音频&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;今汐.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;1-1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;今汐2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;1-2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;22-使用情感参考音频&#34;&gt;2.2 使用情感参考音频
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91.png&#34;
+	width=&#34;1995&#34;
+	height=&#34;860&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91_hu18156650023188602110.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91_hu8929193015897346827.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;231&#34;
+		data-flex-basis=&#34;556px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在音色音频的基础上，额外再上传一个情感参考音频，来生成对应音色对应情感的音频
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;你给我翻译翻译，什么他妈的是他妈的惊喜&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;情感&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;情感参考音频&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;生成音频&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;生气&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;angry.aac&#34; type=&#34;audio/aac&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;2-1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;伤心&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;cry.aac&#34; type=&#34;audio/aac&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;2-2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;23-使用情感向量控制&#34;&gt;2.3 使用情感向量控制
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%90%91%E9%87%8F.png&#34;
+	width=&#34;2007&#34;
+	height=&#34;865&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%90%91%E9%87%8F_hu9754804241407354231.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%90%91%E9%87%8F_hu6236007415992211027.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;232&#34;
+		data-flex-basis=&#34;556px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以调整下方的情况变量来实现自己想要的效果，可以组合使用
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;酒要一口一口喝，步要一步一步走，步子迈大了，容易扯着蛋&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;情感向量&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;生成音频&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;喜 0.6&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;3-1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;哀 0.6&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;3-2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;24-使用情感描述文本控制&#34;&gt;2.4 使用情感描述文本控制
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E6%8F%8F%E8%BF%B0%E6%96%87%E6%9C%AC.png&#34;
+	width=&#34;2000&#34;
+	height=&#34;558&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E6%8F%8F%E8%BF%B0%E6%96%87%E6%9C%AC_hu12846293442091974661.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E6%8F%8F%E8%BF%B0%E6%96%87%E6%9C%AC_hu17215571603160065642.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;358&#34;
+		data-flex-basis=&#34;860px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以文字输入描述情感的文本来控制（实际体验下来不是很好用，容易情绪占比过重导致&lt;strong&gt;音色发生改变&lt;/strong&gt;）
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;你带着老婆，出了城，吃着火锅还唱着歌，突然就被麻匪劫了&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;情感描述文本&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;生成音频&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;非常生气&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;4-1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;非常伤心&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;4-2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+
+                </description>
+            </item>
+        
+                <item>
                 <title>【AI】MCP初认识</title>
                 <link>https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/</link>
                 <pubDate>Fri, 16 May 2025 09:23:21 +0800</pubDate>
