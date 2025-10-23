@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/</loc>
-    <lastmod>2025-09-13T00:57:14+08:00</lastmod>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/game/rf3/end-guide/</loc>
+    <lastmod>2025-10-23T18:26:46+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/categories/</loc>
-    <lastmod>2025-09-13T00:57:14+08:00</lastmod>
+    <lastmod>2025-10-23T18:26:46+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/post/</loc>
-    <lastmod>2025-09-13T00:57:14+08:00</lastmod>
+    <lastmod>2025-10-23T18:26:46+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/tags/</loc>
+    <lastmod>2025-10-23T18:26:46+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/</loc>
     <lastmod>2025-09-13T00:57:14+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/</loc>
@@ -100,6 +103,9 @@
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/tags/python/</loc>
     <lastmod>2025-05-14T15:52:42+08:00</lastmod>
+  </url><url>
+    <loc>https://letere-gzj.github.io/hugo-stack/tags/%E7%AC%A6%E6%96%87%E5%B7%A5%E6%88%BF/</loc>
+    <lastmod>2025-10-23T18:26:46+08:00</lastmod>
   </url><url>
     <loc>https://letere-gzj.github.io/hugo-stack/update-log/</loc>
     <lastmod>2025-05-23T17:49:25+08:00</lastmod>
