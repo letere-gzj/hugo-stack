@@ -14,8 +14,416 @@
             <copyright>莱特雷-letere</copyright>
         
         
-            <lastBuildDate>Wed, 22 Oct 2025 10:15:45 +0800</lastBuildDate>
+            <lastBuildDate>Fri, 13 Mar 2026 04:55:11 +0800</lastBuildDate>
         <atom:link href="https://letere-gzj.github.io/hugo-stack/post/index.xml" rel="self" type="application/rss+xml" />
+                <item>
+                <title>【AI】faster-whisper字幕工具本地部署</title>
+                <link>https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/</link>
+                <pubDate>Fri, 13 Mar 2026 04:55:11 +0800</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/</guid>
+                <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cover.png" alt="Featured image of post 【AI】faster-whisper字幕工具本地部署" /&gt;&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/SYSTRAN/faster-whisper&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;【faster-whisper】&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-环境准备&#34;&gt;1 环境准备
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Python安装&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/python/build-env&#34; &gt;&lt;strong&gt;【Python】Windows搭建Python环境&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;注意：&lt;/strong&gt; 目前需python版本 &lt;strong&gt;3.9&lt;/strong&gt; 以上，具体可看官方文档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/python%E5%AE%89%E8%A3%851.png&#34;
+	width=&#34;1360&#34;
+	height=&#34;522&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/python%E5%AE%89%E8%A3%851_hu17617628836399726656.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/python%E5%AE%89%E8%A3%851_hu16485915509140918585.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;260&#34;
+		data-flex-basis=&#34;625px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-faster-whisper安装&#34;&gt;2 faster-whisper安装
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;（1）前往 &lt;a class=&#34;link&#34; href=&#34;https://github.com/SYSTRAN/faster-whisper&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;faster-whisper&lt;/strong&gt;&lt;/a&gt; ，选择 &lt;strong&gt;tags&lt;/strong&gt; ，下载对应的版本，这边以最新版本 &lt;strong&gt;v1.2.1&lt;/strong&gt; 为例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD1.png&#34;
+	width=&#34;1458&#34;
+	height=&#34;699&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD1_hu15691028636013309497.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD1_hu3862620919221707233.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;208&#34;
+		data-flex-basis=&#34;500px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD2.png&#34;
+	width=&#34;1371&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD2_hu16883273254291524230.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD2_hu16768422250262428359.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;247&#34;
+		data-flex-basis=&#34;592px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）解压并打开文件夹，地址栏输入 &lt;code&gt;cmd&lt;/code&gt; ，打开命令行，输入命令 &lt;code&gt;pip install faster-whisper&lt;/code&gt; 进行安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E5%AE%89%E8%A3%851.png&#34;
+	width=&#34;1148&#34;
+	height=&#34;500&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E5%AE%89%E8%A3%851_hu15667246768211963407.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E5%AE%89%E8%A3%851_hu17993382624593805657.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;229&#34;
+		data-flex-basis=&#34;551px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-模型下载&#34;&gt;3 模型下载
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;（1）前往 &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/collections/Systran/faster-whisper&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;【Hugging Face】&lt;/strong&gt;&lt;/a&gt; 下载模型，推荐下载 &lt;strong&gt;faster-whisper-large-v3&lt;/strong&gt; ，效果最好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD1.png&#34;
+	width=&#34;1304&#34;
+	height=&#34;740&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD1_hu14519354078154639367.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD1_hu13597984713229711532.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;422px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）将 &lt;strong&gt;.bin&lt;/strong&gt; ，&lt;strong&gt;.json&lt;/strong&gt; 文件下载，放到同一个文件夹下，文件夹路径随意&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD2.png&#34;
+	width=&#34;1408&#34;
+	height=&#34;840&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD2_hu7101668399180602166.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD2_hu5172865939788551522.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;167&#34;
+		data-flex-basis=&#34;402px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD3.png&#34;
+	width=&#34;949&#34;
+	height=&#34;474&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD3_hu8268798424950758048.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD3_hu7285127834384247604.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;200&#34;
+		data-flex-basis=&#34;480px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-gpu推理加速可选&#34;&gt;4 GPU推理加速（可选）
+&lt;/h2&gt;&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;需安装 &lt;strong&gt;CUDA 12&lt;/strong&gt; ， &lt;strong&gt;cuDNN 9&lt;/strong&gt;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/GPU%E6%8E%A8%E7%90%861.png&#34;
+	width=&#34;869&#34;
+	height=&#34;235&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/GPU%E6%8E%A8%E7%90%861_hu6387258901327487425.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/GPU%E6%8E%A8%E7%90%861_hu9990684940956711206.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;369&#34;
+		data-flex-basis=&#34;887px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CUDA安装需要看电脑支持的版本，若不支持安装12或11，只能放弃GPU加速&lt;/li&gt;
+&lt;li&gt;CUDA版本为11，或cuDNN版本为8，需对&lt;code&gt;ctranslate2&lt;/code&gt;降级，使用指令&lt;code&gt;pip install --force-reinstall ctranslate2==4.4.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;CUDA11 + cuDNN8 降级至 &lt;strong&gt;3.24.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;CUDA12 + cuDNN8 降级至 &lt;strong&gt;4.4.0&lt;/strong&gt;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E9%99%8D%E7%BA%A7.png&#34;
+	width=&#34;1320&#34;
+	height=&#34;283&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E9%99%8D%E7%BA%A7_hu6025054631571934743.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E9%99%8D%E7%BA%A7_hu7125913147349397463.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;466&#34;
+		data-flex-basis=&#34;1119px&#34;
+	
+&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;41-cuda安装&#34;&gt;4.1 CUDA安装
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;具体看 &lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/#3-%e6%8e%a8%e7%90%86%e5%8a%a0%e9%80%9f&#34; &gt;&lt;strong&gt;【推理加速】&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;42-cudnn安装&#34;&gt;4.2 cuDNN安装
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;（1）前往 &lt;a class=&#34;link&#34; href=&#34;https://developer.nvidia.com/cudnn-archive&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;【cuDNN Archive】&lt;/strong&gt;&lt;/a&gt;，选择版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD1.png&#34;
+	width=&#34;1553&#34;
+	height=&#34;717&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD1_hu4093929093310275455.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD1_hu7529382464338997406.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;519px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）按照自己电脑实际情况，下载安装包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD2.png&#34;
+	width=&#34;1971&#34;
+	height=&#34;821&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD2_hu2203285445417853121.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD2_hu6841141601692213965.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;240&#34;
+		data-flex-basis=&#34;576px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（3）安装默认下一步即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-运行&#34;&gt;5 运行
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;（1）新建后缀名 &lt;strong&gt;.py&lt;/strong&gt; 的文件，复制下面内容进去，并按实际情况修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;faster_whisper&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;WhisperModel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 模型文件夹路径&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;model_size_or_path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:/Tools/faster-whisper-1.2.1/models/faster-whisper-large-v3&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 以GPU形式运行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;WhisperModel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model_size_or_path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;device&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;cuda&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;compute_type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;float16&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 以CPU形式运行 (未安装CUDA选择此方式运行)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# model = WhisperModel(model_size_or_path, device=&amp;#34;cpu&amp;#34;, compute_type=&amp;#34;int8&amp;#34;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 音频文件路径按实际情况修改(目前是在py文件的当前文件夹下)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;segments&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;info&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;transcribe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;audio.mp3&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;beam_size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Detected language &amp;#39;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%s&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#39; with probability &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;info&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;language&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;info&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;language_probability&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;segment&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;segments&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;[&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%.2f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;s -&amp;gt; &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%.2f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;s] &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%s&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;segment&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;segment&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;end&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;segment&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;（2）运行命令&lt;code&gt;python xxx.py&lt;/code&gt;，来执行上面创建的py文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-效果演示&#34;&gt;6 效果演示
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;（1）&lt;strong&gt;歌曲转歌词&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;有不准确的地方，但整体的准确率挺高，不准确的地方后期靠手动修正即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;歌曲信息&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;音频&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;徐洁儿 - 错误的相遇&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;徐洁儿 - 错误的相遇.mp3&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:&lt;span class=&#34;se&#34;&gt;\U&lt;/span&gt;sers&lt;span class=&#34;se&#34;&gt;\l&lt;/span&gt;etere&lt;span class=&#34;se&#34;&gt;\D&lt;/span&gt;esktop&lt;span class=&#34;se&#34;&gt;\p&lt;/span&gt;y&amp;gt;python test.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Detected language &lt;span class=&#34;s1&#34;&gt;&amp;#39;zh&amp;#39;&lt;/span&gt; with probability 0.992188
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;0.00s -&amp;gt; 1.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 作词作曲 李宗盛
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1.00s -&amp;gt; 2.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 作词 李宗盛
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;2.00s -&amp;gt; 16.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 作曲 李宗盛
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;16.00s -&amp;gt; 23.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 睁开眼 我的天空 一片星海
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;23.00s -&amp;gt; 31.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 还以为 这里就是 爱你的未来
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;31.00s -&amp;gt; 38.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 为什么 黑暗之中 充满期待
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;38.00s -&amp;gt; 46.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 却传来 更多沉默的无奈
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;46.00s -&amp;gt; 53.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 忘不了 爱只剩下手心里的温度
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;53.00s -&amp;gt; 60.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 爱知道 幸福只是短暂的幻影
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;60.00s -&amp;gt; 63.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 我走在 迷雾花园里
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;63.00s -&amp;gt; 67.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 寻找爱走过的记忆
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;67.00s -&amp;gt; 75.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 半清醒 半迷醉 来去的痕迹
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;75.00s -&amp;gt; 78.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 梦醒 突然发现
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;78.00s -&amp;gt; 82.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 已经不是原来自己
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;82.00s -&amp;gt; 89.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 一颗星途 留下 错误的相遇
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;89.00s -&amp;gt; 92.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 落花又移 泪水太无情
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;92.00s -&amp;gt; 96.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 又远相遇 擦身又分离
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;96.00s -&amp;gt; 100.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 琴声悠悠 辗转到天里
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;100.00s -&amp;gt; 104.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 最爱的人 你在哪里
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;112.00s -&amp;gt; 121.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 你还在哪里
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;121.00s -&amp;gt; 128.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 为什么 黑暗之中 充满期待
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;128.00s -&amp;gt; 135.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 却传来 更多沉默的无奈
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;135.00s -&amp;gt; 141.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 忘不了 爱只剩下手心里的温度
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;142.00s -&amp;gt; 150.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 才知道 幸福只是短暂的幻影
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;150.00s -&amp;gt; 153.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 我走在 迷雾花园里
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;153.00s -&amp;gt; 157.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 寻找爱走过的记忆
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;157.00s -&amp;gt; 165.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 半清醒 半迷醉 来去的痕迹
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;165.00s -&amp;gt; 168.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 梦醒 突然发现
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;168.00s -&amp;gt; 171.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 已经不是原来自己
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;172.00s -&amp;gt; 180.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 一颗星途 留下 错误的相遇
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;180.00s -&amp;gt; 183.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 我走在 迷雾花园里
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;183.00s -&amp;gt; 187.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 寻找爱走过的记忆
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;187.00s -&amp;gt; 195.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 半清醒 半迷醉 来去的痕迹
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;195.00s -&amp;gt; 198.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 梦醒 突然发现
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;198.00s -&amp;gt; 201.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 已经不是原来自己
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;202.00s -&amp;gt; 209.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 一颗星途 留下 错误的相遇
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;209.00s -&amp;gt; 213.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 落花有意 留谁太无情
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;213.00s -&amp;gt; 216.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 永远相遇 擦身又分离
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;216.00s -&amp;gt; 220.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 琴声悠悠 辗转到天明
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;220.00s -&amp;gt; 224.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 最爱的人 留在哪里
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;224.00s -&amp;gt; 227.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 落花有意 留谁太无情
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;227.00s -&amp;gt; 230.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 最爱的人
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;230.00s -&amp;gt; 236.00s&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 你在哪里
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+                </description>
+            </item>
+        
                 <item>
                 <title>【RF3】符文工房3毕业攻略</title>
                 <link>https://letere-gzj.github.io/hugo-stack/p/game/rf3/end-guide/</link>
