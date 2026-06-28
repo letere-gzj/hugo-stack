@@ -15,6 +15,326 @@
         
         <atom:link href="https://letere-gzj.github.io/hugo-stack/index.xml" rel="self" type="application/rss+xml" />
                 <item>
+                <title>【PS】斜纹镂空艺术字实现方式</title>
+                <link>https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/</link>
+                <pubDate>Sat, 27 Jun 2026 17:49:56 +0800</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/</guid>
+                <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/cover.png" alt="Featured image of post 【PS】斜纹镂空艺术字实现方式" /&gt;&lt;hr&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;&lt;ul&gt;
+&lt;li&gt;玩《明日方舟：终末地》，发现它们挺常用斜纹镂空字体当背景，而且还挺好看的，于是想用PhotoShop复刻一下同款字体
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E7%BB%88%E6%9C%AB%E5%9C%B0%E5%AD%97%E4%BD%93.png&#34;
+	width=&#34;2204&#34;
+	height=&#34;724&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E7%BB%88%E6%9C%AB%E5%9C%B0%E5%AD%97%E4%BD%93_hu17511690462854301425.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E7%BB%88%E6%9C%AB%E5%9C%B0%E5%AD%97%E4%BD%93_hu8985171635348920201.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;304&#34;
+		data-flex-basis=&#34;730px&#34;
+	
+&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-斜纹制作可选&#34;&gt;1. 斜纹制作（可选）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;（1）PS新建空白画布&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）选择&lt;strong&gt;直线工具&lt;/strong&gt;，按住键盘&lt;kbd&gt;shift&lt;/kbd&gt;，水平绘画一条直线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C2.png&#34;
+	width=&#34;438&#34;
+	height=&#34;384&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C2_hu9071105374421656710.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C2_hu12569796072633994931.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;114&#34;
+		data-flex-basis=&#34;273px&#34;
+	
+&gt;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C3.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C3_hu17968302427834513962.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C3_hu18393986816827974399.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（3）键盘&lt;kbd&gt;crtl&lt;/kbd&gt; + &lt;kbd&gt;j&lt;/kbd&gt;复制图层，并调整&lt;strong&gt;属性&lt;/strong&gt;中的&lt;strong&gt;Y&lt;/strong&gt;值，调整条纹的间隔&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C4.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C4_hu17764361937504837969.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C4_hu18148080085395118535.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（4）键盘&lt;kbd&gt;crtl&lt;/kbd&gt; + &lt;kbd&gt;shift&lt;/kbd&gt; + &lt;kbd&gt;alt&lt;/kbd&gt; + &lt;kbd&gt;t&lt;/kbd&gt;，等距离复制直线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C5.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C5_hu2852115981838297245.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C5_hu9754403280600096445.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（5）合并两装图层，并&lt;strong&gt;属性&lt;/strong&gt;调整角度-45度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C6.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C6_hu18023580584946875834.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C6_hu3165979948648884093.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C7.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C7_hu15367503093448825884.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C7_hu8501564502410498143.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（6）&lt;strong&gt;裁剪工具&lt;/strong&gt;裁剪成只剩斜纹的背景&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C8.png&#34;
+	width=&#34;1734&#34;
+	height=&#34;1257&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C8_hu17465141540160896639.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C8_hu10446625992150933824.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;137&#34;
+		data-flex-basis=&#34;331px&#34;
+	
+&gt;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C9.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C9_hu2151855884137967969.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C9_hu12466394722325979308.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-字体制作&#34;&gt;2. 字体制作
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;（1）准备一张斜纹镂空图片，可以按上述方法手动制作，或者使用下面我制作好的图片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E7%BB%88%E6%9C%AB%E5%9C%B045%E5%BA%A6%E6%96%9C%E7%BA%BF.png&#34;
+	width=&#34;2400&#34;
+	height=&#34;1010&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E7%BB%88%E6%9C%AB%E5%9C%B045%E5%BA%A6%E6%96%9C%E7%BA%BF_hu15352555470979965353.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E7%BB%88%E6%9C%AB%E5%9C%B045%E5%BA%A6%E6%96%9C%E7%BA%BF_hu15308693044092876697.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;237&#34;
+		data-flex-basis=&#34;570px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）文字工具输入想要的文字，调整图层位置，斜纹镂空图片在上，文字在下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C1.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C1_hu15382521388297922970.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C1_hu11004086656269029304.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（3）斜纹镂空图片右键创建剪贴蒙版&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C2.png&#34;
+	width=&#34;551&#34;
+	height=&#34;599&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C2_hu18285608913521648413.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C2_hu10727906397327464418.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;91&#34;
+		data-flex-basis=&#34;220px&#34;
+	
+&gt;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C3.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C3_hu13653533431794641938.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C3_hu8978930395977686935.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（4）双击文字图层，&lt;code&gt;混合选项 -&amp;gt; 高级混合 -&amp;gt; 填充不透明度&lt;/code&gt;调整为0，并取消勾选&lt;strong&gt;将剪贴图层混合成组&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C4.png&#34;
+	width=&#34;1181&#34;
+	height=&#34;800&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C4_hu4421617764596197585.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C4_hu4335785325154501361.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;354px&#34;
+	
+&gt;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C5.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C5_hu4840034302564534307.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C5_hu795395029208783066.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%88%90%E5%93%81.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%88%90%E5%93%81_hu678484405008414946.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%88%90%E5%93%81_hu11787433295841578293.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;成品&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-颜色修改&#34;&gt;3. 颜色修改
+&lt;/h2&gt;&lt;blockquote class=&#34;alert alert-tip&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;图片中的线条默认为灰色，若想要更改为其他颜色，可按下面方式进行修改&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;（1）双击文字图层，&lt;code&gt;颜色叠加 -&amp;gt; 混合模式&lt;/code&gt;修改为&lt;strong&gt;叠加&lt;/strong&gt;，旁边选择自己想要的颜色即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E9%A2%9C%E8%89%B2%E4%BF%AE%E6%94%B91.png&#34;
+	width=&#34;843&#34;
+	height=&#34;567&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E9%A2%9C%E8%89%B2%E4%BF%AE%E6%94%B91_hu11266177524965827418.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E9%A2%9C%E8%89%B2%E4%BF%AE%E6%94%B91_hu4488076535929910089.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;356px&#34;
+	
+&gt;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E9%A2%9C%E8%89%B2%E4%BF%AE%E6%94%B92.png&#34;
+	width=&#34;2118&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E9%A2%9C%E8%89%B2%E4%BF%AE%E6%94%B92_hu6261650534911150389.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E9%A2%9C%E8%89%B2%E4%BF%AE%E6%94%B92_hu5114216921904871534.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;175&#34;
+		data-flex-basis=&#34;422px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%88%90%E5%93%812.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%88%90%E5%93%812_hu2976815179071305976.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%88%90%E5%93%812_hu3185356274748462555.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+                </description>
+            </item>
+        
+                <item>
                 <title>【AI】faster-whisper字幕工具本地部署</title>
                 <link>https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/</link>
                 <pubDate>Fri, 13 Mar 2026 04:55:11 +0800</pubDate>

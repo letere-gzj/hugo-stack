@@ -14,7 +14,7 @@
             <copyright>莱特雷-letere</copyright>
         
         
-            <lastBuildDate>Fri, 13 Mar 2026 04:55:11 +0800</lastBuildDate>
+            <lastBuildDate>Sat, 27 Jun 2026 17:49:56 +0800</lastBuildDate>
         <atom:link href="https://letere-gzj.github.io/hugo-stack/tags/index.xml" rel="self" type="application/rss+xml" />
                 <item>
                 <title>AI</title>
@@ -42,6 +42,16 @@
                 <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
                 
                 <guid>https://letere-gzj.github.io/hugo-stack/tags/java/</guid>
+                <description>
+                </description>
+            </item>
+        
+                <item>
+                <title>PhotoShop</title>
+                <link>https://letere-gzj.github.io/hugo-stack/tags/photoshop/</link>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/tags/photoshop/</guid>
                 <description>
                 </description>
             </item>
