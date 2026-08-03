@@ -14,8 +14,469 @@
             <copyright>莱特雷-letere</copyright>
         
         
-            <lastBuildDate>Sat, 27 Jun 2026 17:49:56 +0800</lastBuildDate>
+            <lastBuildDate>Sun, 02 Aug 2026 15:28:31 +0800</lastBuildDate>
         <atom:link href="https://letere-gzj.github.io/hugo-stack/post/index.xml" rel="self" type="application/rss+xml" />
+                <item>
+                <title>【Taiko】3DS太鼓达人汉化资源分享</title>
+                <link>https://letere-gzj.github.io/hugo-stack/p/taiko/3ds_chinese_game/share/</link>
+                <pubDate>Sun, 02 Aug 2026 15:28:31 +0800</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/p/taiko/3ds_chinese_game/share/</guid>
+                <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/taiko/3ds_chinese_game/share/cover.png" alt="Featured image of post 【Taiko】3DS太鼓达人汉化资源分享" /&gt;&lt;hr&gt;
+&lt;h2 id=&#34;1-资源分享&#34;&gt;1 资源分享
+&lt;/h2&gt;&lt;style&gt;
+.game-card {
+    width: 100%;
+    max-width: 750px;
+    background: #ffffff;
+    border-radius: 16px; /* 圆角大小 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+.card-row {
+    display: flex;
+    padding: 14px 18px;
+    gap: 16px;
+}
+.cover-area {
+    width: 250px;
+    flex-shrink: 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow: hidden;
+}
+.cover-area img {
+    width: 100%;
+
+    border-radius: 8px;
+    object-fit: cover;
+}
+.info-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.game-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+.meta-line {
+    display: flex;
+    gap: 30px;
+    color: #555;
+    font-size: 14px;
+}
+.desc-text {
+    color: #444;
+    line-height: 1.6;
+}
+.download-bar {
+    padding: 14px 18px;
+    background-color: #f7f8fa;
+    border-top: 1px solid #eee;
+}
+.download-bar a {
+    color: #1677ff;
+    text-decoration: none;
+}
+.download-bar a:hover {
+    text-decoration: underline;
+}
+&lt;/style&gt;
+&lt;div class=&#34;game-card&#34;&gt;
+    &lt;!-- 封面+信息区域 --&gt;
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            &lt;!-- 替换src为游戏封面图片 --&gt;
+            &lt;img src=&#34;Taiko_no_Tatsujin_3DS.webp&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;太鼓达人：小龙与神秘宝珠&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2012年7月&lt;/span&gt;
+                &lt;span&gt;汉化：Advance汉化组&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：本作为首次登陆3DS平台的作品，支持触屏操作与3D立体演出。游戏在传统演奏模式基础上新增冒险模式“小龙和神秘宝珠”，玩家需与伙伴小龙穿越七大幻想世界，通过演奏作战击败魔王，夺回被抢走的七个歌声宝珠。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 下载栏 --&gt;
+    &lt;div class=&#34;download-bar&#34;&gt;
+        下载地址：&lt;a href=&#34;https://pan.baidu.com/s/12MQNAcEbM01sW51h7sO2Tg?pwd=v3hc&#34; target=&#34;_blank&#34;&gt;百度网盘&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;game-card&#34;&gt;
+    &lt;!-- 封面+信息区域 --&gt;
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            &lt;!-- 替换src为游戏封面图片 --&gt;
+            &lt;img src=&#34;Taiko_no_Tatsujin_3DS_2.webp&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;太鼓达人：咚和咔的时空大冒险&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2014年6月&lt;/span&gt;
+                &lt;span&gt;汉化：猫梨汉化组&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：本作以时空冒险为主题，并在音乐游戏中融合了RPG及怪兽养成元素，玩家所扮演的咚酱与咔酱可以在多个不同的时代和国度中来回穿梭展开冒险，并将太鼓的演奏化为力量，逐步收集、组建和培养属于自己的怪兽队伍，最终阻止坏人们的阴谋，保护时空和平。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 下载栏 --&gt;
+    &lt;div class=&#34;download-bar&#34;&gt;
+        下载地址：&lt;a href=&#34;https://pan.baidu.com/s/17ROzIzdy3JcuAsTNDSvn5Q?pwd=nvvj&#34; target=&#34;_blank&#34;&gt;百度网盘&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;game-card&#34;&gt;
+    &lt;!-- 封面+信息区域 --&gt;
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            &lt;!-- 替换src为游戏封面图片 --&gt;
+            &lt;img src=&#34;Taiko_no_Tatsujin_3DS_3.webp&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;太鼓达人：咚咔！神秘大冒险&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2016年6月&lt;/span&gt;
+                &lt;span&gt;汉化：叶海晨星-B站Up&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：本作融合节奏音游与RPG冒险玩法，讲述咚酱、咔酱与蒂亚娜周游世界各地遗迹，夺回宝物欧帕兹、阻止反派阴谋的故事。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 下载栏 --&gt;
+    &lt;div class=&#34;download-bar&#34;&gt;
+        下载地址：&lt;a href=&#34;https://pan.baidu.com/s/1YBeajbxQrZ7wcTWt-A2pOA?pwd=devi&#34; target=&#34;_blank&#34;&gt;百度网盘&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-使用注意&#34;&gt;2 使用注意
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;（1）&lt;strong&gt;汉化&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;非中文系统的机器，汉化需搭配使用&lt;a class=&#34;link&#34; href=&#34;https://github.com/dnasdw/SharedFontTool/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;【ACG SharedFontTool】&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;使用方式：&lt;kbd&gt;十字键-右&lt;/kbd&gt;切换中文字库，&lt;kbd&gt;select&lt;/kbd&gt;恢复原本字库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）&lt;strong&gt;DLC&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;非日版机器，会出现DLC无法使用情况，需搭配工具&lt;a class=&#34;link&#34; href=&#34;https://github.com/OasisAkari/LumaLocaleSwitcher_Reworked_zh_hans/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;【LumaLocaleSwitcher】&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;使用方式：打开应用，将对应的游戏的区域改为日本，语言改为日语&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+                </description>
+            </item>
+        
+                <item>
+                <title>【PS】斜纹镂空艺术字实现方式</title>
+                <link>https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/</link>
+                <pubDate>Sat, 27 Jun 2026 17:49:56 +0800</pubDate>
+                
+                <guid>https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/</guid>
+                <description>&lt;img src="https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/cover.png" alt="Featured image of post 【PS】斜纹镂空艺术字实现方式" /&gt;&lt;hr&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;&lt;ul&gt;
+&lt;li&gt;玩《明日方舟：终末地》，发现它们挺常用斜纹镂空字体当背景，而且还挺好看的，于是想用PhotoShop复刻一下同款字体
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E7%BB%88%E6%9C%AB%E5%9C%B0%E5%AD%97%E4%BD%93.png&#34;
+	width=&#34;2204&#34;
+	height=&#34;724&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E7%BB%88%E6%9C%AB%E5%9C%B0%E5%AD%97%E4%BD%93_hu17511690462854301425.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E7%BB%88%E6%9C%AB%E5%9C%B0%E5%AD%97%E4%BD%93_hu8985171635348920201.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;304&#34;
+		data-flex-basis=&#34;730px&#34;
+	
+&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-斜纹制作可选&#34;&gt;1. 斜纹制作（可选）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;（1）PS新建空白画布&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）选择&lt;strong&gt;直线工具&lt;/strong&gt;，按住键盘&lt;kbd&gt;shift&lt;/kbd&gt;，水平绘画一条直线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C2.png&#34;
+	width=&#34;438&#34;
+	height=&#34;384&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C2_hu9071105374421656710.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C2_hu12569796072633994931.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;114&#34;
+		data-flex-basis=&#34;273px&#34;
+	
+&gt;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C3.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C3_hu17968302427834513962.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C3_hu18393986816827974399.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（3）键盘&lt;kbd&gt;crtl&lt;/kbd&gt; + &lt;kbd&gt;j&lt;/kbd&gt;复制图层，并调整&lt;strong&gt;属性&lt;/strong&gt;中的&lt;strong&gt;Y&lt;/strong&gt;值，调整条纹的间隔&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C4.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C4_hu17764361937504837969.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C4_hu18148080085395118535.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（4）键盘&lt;kbd&gt;crtl&lt;/kbd&gt; + &lt;kbd&gt;shift&lt;/kbd&gt; + &lt;kbd&gt;alt&lt;/kbd&gt; + &lt;kbd&gt;t&lt;/kbd&gt;，等距离复制直线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C5.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C5_hu2852115981838297245.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C5_hu9754403280600096445.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（5）合并两装图层，并&lt;strong&gt;属性&lt;/strong&gt;调整角度-45度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C6.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C6_hu18023580584946875834.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C6_hu3165979948648884093.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C7.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C7_hu15367503093448825884.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C7_hu8501564502410498143.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（6）&lt;strong&gt;裁剪工具&lt;/strong&gt;裁剪成只剩斜纹的背景&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C8.png&#34;
+	width=&#34;1734&#34;
+	height=&#34;1257&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C8_hu17465141540160896639.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C8_hu10446625992150933824.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;137&#34;
+		data-flex-basis=&#34;331px&#34;
+	
+&gt;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C9.png&#34;
+	width=&#34;2040&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C9_hu2151855884137967969.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%96%9C%E7%BA%B9%E5%88%B6%E4%BD%9C9_hu12466394722325979308.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-字体制作&#34;&gt;2. 字体制作
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;（1）准备一张斜纹镂空图片，可以按上述方法手动制作，或者使用下面我制作好的图片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E7%BB%88%E6%9C%AB%E5%9C%B045%E5%BA%A6%E6%96%9C%E7%BA%BF.png&#34;
+	width=&#34;2400&#34;
+	height=&#34;1010&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E7%BB%88%E6%9C%AB%E5%9C%B045%E5%BA%A6%E6%96%9C%E7%BA%BF_hu15352555470979965353.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E7%BB%88%E6%9C%AB%E5%9C%B045%E5%BA%A6%E6%96%9C%E7%BA%BF_hu15308693044092876697.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;237&#34;
+		data-flex-basis=&#34;570px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）文字工具输入想要的文字，调整图层位置，斜纹镂空图片在上，文字在下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C1.png&#34;
+	width=&#34;1793&#34;
+	height=&#34;989&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C1_hu16782138957320025299.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C1_hu13901043881077233122.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（3）斜纹镂空图片右键创建剪贴蒙版&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C2.png&#34;
+	width=&#34;551&#34;
+	height=&#34;599&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C2_hu18285608913521648413.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C2_hu10727906397327464418.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;91&#34;
+		data-flex-basis=&#34;220px&#34;
+	
+&gt;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C3.png&#34;
+	width=&#34;1666&#34;
+	height=&#34;874&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C3_hu4703456954382491970.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C3_hu17592904647782709060.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;190&#34;
+		data-flex-basis=&#34;457px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（4）双击文字图层，&lt;code&gt;混合选项 -&amp;gt; 高级混合 -&amp;gt; 填充不透明度&lt;/code&gt;调整为0，并取消勾选&lt;strong&gt;将剪贴图层混合成组&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C4.png&#34;
+	width=&#34;1181&#34;
+	height=&#34;800&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C4_hu4421617764596197585.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E5%AD%97%E4%BD%93%E5%88%B6%E4%BD%9C4_hu4335785325154501361.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;354px&#34;
+	
+&gt;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%BC%94%E7%A4%BA1.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%BC%94%E7%A4%BA1_hu17237107639981038564.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%BC%94%E7%A4%BA1_hu462482782051083375.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-颜色修改&#34;&gt;3. 颜色修改
+&lt;/h2&gt;&lt;blockquote class=&#34;alert alert-tip&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;图片中的线条默认为灰色，若想要更改为其他颜色，可按下面方式进行修改&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;（1）双击文字图层，&lt;code&gt;颜色叠加 -&amp;gt; 混合模式&lt;/code&gt;修改为&lt;strong&gt;叠加&lt;/strong&gt;，旁边选择自己想要的颜色即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E9%A2%9C%E8%89%B2%E4%BF%AE%E6%94%B91.png&#34;
+	width=&#34;843&#34;
+	height=&#34;567&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E9%A2%9C%E8%89%B2%E4%BF%AE%E6%94%B91_hu11266177524965827418.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E9%A2%9C%E8%89%B2%E4%BF%AE%E6%94%B91_hu4488076535929910089.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;356px&#34;
+	
+&gt;
+&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%BC%94%E7%A4%BA2.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%BC%94%E7%A4%BA2_hu17980664513785190615.png 480w, https://letere-gzj.github.io/hugo-stack/p/ps/striped-perforated-font/make/%E6%BC%94%E7%A4%BA2_hu17635496038621391976.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+                </description>
+            </item>
+        
                 <item>
                 <title>【AI】faster-whisper字幕工具本地部署</title>
                 <link>https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/</link>
