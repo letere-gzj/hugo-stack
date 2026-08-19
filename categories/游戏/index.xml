@@ -329,6 +329,118 @@
     
     
 &lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e6%b3%a2%e5%a5%87%e4%b8%8e%e8%80%80%e8%a5%bf%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;波奇与耀西的毛线世界&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2017年1月&lt;/span&gt;
+                &lt;span&gt;汉化：FlameBeam&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：Good‑Feel开发，WiiU版《耀西的毛线世界》的3DS移植加强版，完整收录原作全部关卡，新增波奇冲刺小游戏、31段耀西定格动画剧场，保留毛线编织美术风格，耀西吞敌制作毛线球进行攻击解谜，支持Amiibo解锁耀西花纹，是耀西系列创意横版平台代表作。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://tieba.baidu.com/p/5255544103&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;c&#34;&gt;C
+&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e9%a9%ac%e9%87%8c%e5%a5%a53d%e5%a4%a7%e9%99%86%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;超级马力欧：3D大陆&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2012年12月&lt;/span&gt;
+                &lt;span&gt;汉化：官方中文&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：任天堂为3DS打造的首款掌机原生3D马里奥作品，巧妙融合2D横版闯关逻辑与裸眼3D空间玩法，狸猫马里奥回归，总计96个关卡，收集星币解锁特殊世界，通过擦肩通信交换神秘关卡，是3DS平台标志性的平台动作游戏。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e8%b6%85%e7%ba%a7%e9%a9%ac%e9%87%8c%e5%a5%a5%e5%88%b6%e9%80%a0%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;超级马力欧制造 for 3DS&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2016年12月&lt;/span&gt;
+                &lt;span&gt;汉化：官方中文&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：WiiU《超级马里奥制造》的3DS移植作品，支持四种经典马里奥游戏风格自由创作关卡，内置大量官方挑战关卡，受机能限制无法线上上传关卡，只能通过擦肩、本地联机交换自制关卡，是掌机端唯一的马里奥关卡创作游戏。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+&lt;/div&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;d&#34;&gt;D
 &lt;/h2&gt;
 
@@ -440,7 +552,7 @@
             &lt;div class=&#34;game-title&#34;&gt;第七龙神3：CODE:VFD&lt;/div&gt;
             &lt;div class=&#34;meta-line&#34;&gt;
                 &lt;span&gt;发售时间：2015年10月&lt;/span&gt;
-                &lt;span&gt;汉化：“闲墨酱”为主的临时汉化组&lt;/span&gt;
+                &lt;span&gt;汉化：“闲墨酱”等人（无名汉化组）&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;desc-text&#34;&gt;
                 游戏简介：本作是第七龙神系列最终作，讲述人类对抗7头真龙、阻止第七真龙VFD毁灭世界的故事。故事跨越过去、现代、未来三个时代穿梭冒险，解开龙灾起源真相。
@@ -464,6 +576,50 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;e&#34;&gt;E
 &lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e6%81%b6%e9%ad%94%e9%ab%98%e6%a0%a1dxd%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;恶魔高校 D×D&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2013年12月&lt;/span&gt;
+                &lt;span&gt;汉化：偷乐小神仙、画外之音-旁白&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：角川游戏推出的改编自高人气轻小说《恶魔高校 D×D》的冒险AVG，玩家化身兵藤一诚体验驹王学园的校园日常与恶魔战斗，包含原作主要角色，穿插剧情选项与简易战斗系统，拥有游戏原创剧情与换装要素，完整的角色配音。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://www.bilibili.com/video/BV17SG66LEa2&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
 
 
 
@@ -1088,6 +1244,50 @@
     &lt;div class=&#34;card-row&#34;&gt;
         &lt;div class=&#34;cover-area&#34;&gt;
             
+            &lt;img src=&#34;%e8%8a%82%e5%a5%8f%e5%a4%a9%e5%9b%bd%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;节奏天国：经典荟萃&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2015年6月&lt;/span&gt;
+                &lt;span&gt;汉化：超巨星汉化组 &amp;amp; 不知名网友&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：本作收录前作七十余款经典小游戏外加三十余种全新关卡，合计超百种节奏挑战，可按键或触屏操作，围绕送蒂比回归故乡展开趣味故事模式，搭配魔性音效与搞怪画风，同时支持一卡多玩，最多四人联机同乐，凭借简单易懂又充满魔性的节奏玩法带来轻松欢乐的游玩体验。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://www.bilibili.com/video/BV1YvK1zmEPr&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
             &lt;img src=&#34;%e7%a6%81%e5%bf%8c%e7%9a%84%e7%8e%9b%e5%8f%a4%e9%82%a3%20cover.jpg&#34; alt=&#34;游戏封面&#34;&gt;
         &lt;/div&gt;
         &lt;div class=&#34;info-wrap&#34;&gt;
@@ -1116,8 +1316,483 @@
     
 &lt;/div&gt;
 &lt;hr&gt;
+&lt;h2 id=&#34;l&#34;&gt;L
+&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e8%b7%af%e6%98%93%e9%ac%bc%e5%b1%8b%20cover.jpg&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;路易吉洋馆&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2018年11月&lt;/span&gt;
+                &lt;span&gt;汉化：Xzonn&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：GameCube初代的3DS重制作品，路易吉意外中奖获得一座闹鬼洋馆，使用鬼怪吸尘器抓捕幽灵寻找失踪的马里奥，完整复刻原版关卡，新增双人傀易吉协作模式与成就系统。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://xzonn.top/LuigiMansion/&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e8%b7%af%e6%98%93%e9%ac%bc%e5%b1%8b2%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;路易吉洋馆2&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2013年3月&lt;/span&gt;
+                &lt;span&gt;汉化：官方中文&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：路易吉洋馆系列正统续作，月亮碎片四散导致幽灵躁动，路易前往多座风格迥异的洋馆完成任务，新增闪光灯眩晕机制，支持多人幽灵乱斗。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+&lt;/div&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;m&#34;&gt;M
 &lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e9%a9%ac%e9%87%8c%e5%a5%a5%e6%b4%be%e5%af%b9%e7%8e%af%e5%b2%9b%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;马力欧派对：环岛之旅&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2014年3月&lt;/span&gt;
+                &lt;span&gt;汉化：超巨星汉化组&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：NDcube开发的3DS首款马里奥派对作品，众人收到神秘气泡信件来到派对群岛，7张规则各不相同的游戏棋盘主打竞速冲终点，包含81款适配3DS机能的迷你游戏，支持一卡多人下载游玩，还有库巴之塔闯关模式与擦肩迷你游戏，小库巴也首次作为可操控角色登场。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://tieba.baidu.com/p/5900108910&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e9%a9%ac%e9%87%8c%e5%a5%a5%e6%b4%be%e5%af%b9%e7%be%a4%e6%98%9f%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;马力欧派对：群星冲刺&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2016年10月&lt;/span&gt;
+                &lt;span&gt;汉化：91wii汉化组&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：NDcube开发的3DS马里奥派对作品，取消回合轮流掷骰子，全部玩家同时行动，主打「奇诺比奥大混战」模式，操控不同颜色奇诺比奥在棋盘上招募马里奥系列角色，挑战BOSS获取星星，收录53款迷你游戏，支持一卡多人下载游玩，支持Amiibo解锁额外内容，节奏轻快，更适配掌机联机游玩。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://tieba.baidu.com/p/5496662725&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e9%a9%ac%e9%87%8c%e5%a5%a5%e6%b4%be%e5%af%b9100%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;马力欧派对：最佳100小游戏&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2017年12月&lt;/span&gt;
+                &lt;span&gt;汉化：超巨星汉化组&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：NDcube 开发的迷你游戏合集，从N64、NGC时代前十部马里奥派对中精选重制100款迷你游戏，取消传统棋盘地图，主打迷你游戏岛、十项全能等模式，支持一卡多人下载游玩，兼容Amiibo，是3DS平台马里奥派对系列收官作品。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://tieba.baidu.com/p/6027967038&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e9%a9%ac%e9%87%8c%e5%a5%a5%e8%b5%9b%e8%bd%a67%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;马力欧赛车7&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2011年12月&lt;/span&gt;
+                &lt;span&gt;汉化：官方中文&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：任天堂3DS平台的马里奥赛车系列作品，首次加入水下赛道与滑翔机制，卡丁车支持车身、轮胎、滑翔翼自定义改装，包含大量新旧赛道，支持本地8人联机、擦肩通信与线上对战，裸眼3D带来立体竞速体验。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e9%a9%ac%e9%87%8c%e5%a5%a5%e7%bd%91%e7%90%83%20cover.jpg&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;马力欧网球：公开赛&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2012年5月&lt;/span&gt;
+                &lt;span&gt;汉化：官方中文 &amp;amp; DNAsdw&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：Camelot开发的3DS马里奥网球作品，支持按键、触屏、陀螺仪竖握三种操作方式，包含锦标赛、表演赛、特殊小游戏，支持本地4人对战与线上联机，Mii角色可参战，拥有海量球拍与服装解锁。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://tieba.baidu.com/p/3565588850&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e9%a9%ac%e9%87%8c%e5%a5%a5%e5%8c%bb%e7%94%9f%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;马力欧医生：逆转！特效药 &amp;amp; 细菌扑灭&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2015年5月&lt;/span&gt;
+                &lt;span&gt;汉化：超巨星汉化组&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：Arika开发3DS纯数字版独占消除游戏，可操控马里奥医生、路易吉医生，经典胶囊消除病毒玩法，新增「特效药」必杀技能，包含单人实验室、自定义诊所，支持本地一卡多玩、线上联机对战。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://tieba.baidu.com/p/6027972125&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e9%a9%ac%e9%87%8c%e5%a5%a5RPG%e7%ba%b8%e9%a9%ac%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;马力欧＆路易吉RPG：纸片马力欧MIX&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2015年12月&lt;/span&gt;
+                &lt;span&gt;汉化：ACG汉化组&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：AlphaDream开发的跨界RPG，路易吉不慎打翻神秘古书，纸片世界的居民涌入蘑菇王国，马里奥、路易吉与纸片马里奥三人组队冒险，对抗本体库巴与纸片库巴两股势力，战斗支持三人联动组合招式，加入巨型纸工艺BOSS战，体验两个世界交融带来的趣味剧情与即时指令回合战斗。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://3g.ali213.net/hanhua/malrpgpmjchs.html&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;game-card&#34;&gt;
+    &lt;!-- 封面+信息区域 --&gt;
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            &lt;!-- 替换src为游戏封面图片 --&gt;
+            &lt;img src=&#34;马里奥RPG1 cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;马力欧＆路易吉RPG1 DX 【两个版本】&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2017年10月&lt;/span&gt;
+                &lt;span&gt;汉化：ACG汉化组 | 超巨星汉化组&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：GBA初代《马里奥与路易 RPG》的3DS高清重制作品，女巫卡库莱塔盗走碧琪公主的嗓音，马里奥兄弟前往豆豆王国展开冒险，保留原作经典即时指令回合战斗，画面全面重制，新增独立模式「库巴手下团」，以酷栗宝队长视角讲述库巴军团的支线故事，还加入诸多便利游玩功能与Amiibo支持。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 下载栏 --&gt;
+    &lt;div class=&#34;download-bar&#34;&gt;
+        &lt;div class=&#34;download&#34;&gt;&lt;/div&gt;
+        &lt;div class=&#34;release&#34;&gt;
+            &lt;a href=&#34;https://zland.club/archives/4930&#34; target=&#34;_blank&#34; style=&#34;margin-right: 10px&#34;&gt;汉化发布地址1（ACG） &lt;/a&gt;
+            &lt;a href=&#34;https://tieba.baidu.com/p/5539156760&#34; target=&#34;_blank&#34;&gt;汉化发布地址2（超巨星）&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class=&#34;game-card&#34;&gt;
+    &lt;!-- 封面+信息区域 --&gt;
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            &lt;!-- 替换src为游戏封面图片 --&gt;
+            &lt;img src=&#34;马里奥RPG3 cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;马力欧＆路易吉RPG3 DX 【两个版本】&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2018年12月&lt;/span&gt;
+                &lt;span&gt;汉化：3DS汉化吧汉化组 | 超巨星汉化组&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：AlphaDream制作的NDS名作重制，蘑菇王国爆发膨胀怪病，马里奥兄弟被库巴吞入体内，在库巴身体内部冒险，同时可操控库巴在外部世界行动，保留原作精彩即时指令回合战斗，高清化画面，追加全新独立剧情模式「小库巴的旅途」，讲述小库巴率领手下军团的冒险故事。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 下载栏 --&gt;
+    &lt;div class=&#34;download-bar&#34;&gt;
+        &lt;div class=&#34;download&#34;&gt;&lt;/div&gt;
+        &lt;div class=&#34;release&#34;&gt;
+            &lt;a href=&#34;https://tieba.baidu.com/p/6024305501&#34; target=&#34;_blank&#34; style=&#34;margin-right: 10px&#34;&gt;汉化发布地址1（3DS汉化吧） &lt;/a&gt;
+            &lt;a href=&#34;https://tieba.baidu.com/p/6024921465&#34; target=&#34;_blank&#34;&gt;汉化发布地址2（超巨星）&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e9%a9%ac%e9%87%8c%e5%a5%a5RPG4%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;马力欧＆路易吉RPG4：梦境冒险&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2013年7月&lt;/span&gt;
+                &lt;span&gt;汉化：ACG汉化组&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：AlphaDream 开发的马里奥&amp;amp;路易吉系列第四部作品，马里奥兄弟前往皮伊洛岛度假，借助枕头门户进入路易吉的梦境世界，现实与梦境双线冒险，梦境中可生成成千上万个路易吉分身，搭配丰富的兄弟组合招式，回合制即时战斗，拯救被反派安塔斯玛掳走的碧琪公主与皮伊洛一族。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://tieba.baidu.com/p/4803424901&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
 
 
 
@@ -1470,6 +2145,51 @@
     
 &lt;/div&gt;
 &lt;hr&gt;
+&lt;h2 id=&#34;o&#34;&gt;O
+&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e5%81%b6%e6%b4%bb%e5%ad%a6%e9%99%a2%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;偶活学园：我的最棒舞台&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2015年11月&lt;/span&gt;
+                &lt;span&gt;汉化：“索马宝可”等人（无名汉化组）&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：万代南梦宫推出的《偶像活动》改编3DS节奏游戏，以动画第三季内容为背景，在顶点偶像之路模式中可从二十余名偶像里挑选角色，通过节奏演出积累人气、参与各类偶像大赛，收录多首系列经典曲目与原创歌曲，新增特色卡拉OK演唱玩法，搭配华丽的换装系统，向着顶尖偶像的舞台发起挑战。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://www.bilibili.com/opus/1230836665300287521&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;s&#34;&gt;S
 &lt;/h2&gt;
 
@@ -1769,48 +2489,32 @@
     
 &lt;/div&gt;
 &lt;p&gt;&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
 &lt;div class=&#34;game-card&#34;&gt;
-    
+    &lt;!-- 封面+信息区域 --&gt;
     &lt;div class=&#34;card-row&#34;&gt;
         &lt;div class=&#34;cover-area&#34;&gt;
-            
+            &lt;!-- 替换src为游戏封面图片 --&gt;
             &lt;img src=&#34;Taiko_no_Tatsujin_3DS_3.png&#34; alt=&#34;游戏封面&#34;&gt;
         &lt;/div&gt;
         &lt;div class=&#34;info-wrap&#34;&gt;
-            &lt;div class=&#34;game-title&#34;&gt;太鼓达人：咚咔！神秘冒险记&lt;/div&gt;
+            &lt;div class=&#34;game-title&#34;&gt;太鼓达人：咚咔！神秘冒险记 【两个版本】&lt;/div&gt;
             &lt;div class=&#34;meta-line&#34;&gt;
                 &lt;span&gt;发售时间：2016年6月&lt;/span&gt;
-                &lt;span&gt;汉化：叶海晨星-B站Up&lt;/span&gt;
+                &lt;span&gt;汉化：叶海晨星 | 猫梨汉化组&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;desc-text&#34;&gt;
                 游戏简介：本作融合节奏音游与RPG冒险玩法，讲述咚酱、咔酱与提雅周游世界各地遗迹，夺回宝物欧帕兹、阻止反派阴谋的故事。
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    
-    
-        &lt;div class=&#34;download-bar&#34;&gt;
-            &lt;div class=&#34;download&#34;&gt;
-                
-            &lt;/div&gt;
-            
-            &lt;div class=&#34;release&#34;&gt;
-                &lt;a href=&#34;https://www.bilibili.com/video/BV1Tp4y1s7Ui&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
-            &lt;/div&gt;
-            
+    &lt;!-- 下载栏 --&gt;
+    &lt;div class=&#34;download-bar&#34;&gt;
+        &lt;div class=&#34;download&#34;&gt;&lt;/div&gt;
+        &lt;div class=&#34;release&#34;&gt;
+            &lt;a href=&#34;https://www.bilibili.com/video/BV1Tp4y1s7Ui&#34; target=&#34;_blank&#34; style=&#34;margin-right: 10px&#34;&gt;汉化发布地址1（叶海晨星） &lt;/a&gt;
+            &lt;a href=&#34;https://tieba.baidu.com/p/7224465908&#34; target=&#34;_blank&#34;&gt;汉化发布地址2（猫梨）&lt;/a&gt;
         &lt;/div&gt;
-    
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;w&#34;&gt;W
@@ -1860,6 +2564,127 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;x&#34;&gt;X
 &lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e6%96%b0%e7%88%b1%e7%9b%b8%e9%9a%8f&amp;#43;%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;新·爱相随&amp;#43;&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2014年3月&lt;/span&gt;
+                &lt;span&gt;汉化：洗衣机翻汉化组 &amp;amp; YuriYuriLove&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：本作是NDS《爱相随&amp;#43;》强化作品，围绕十羽野高校的日常，与高岭爱花、小早川凛子、姊崎宁宁三位少女相遇相恋，告别告白即结局的传统玩法，主打真实时间同步的恋人陪伴体验，新增箱根、日光旅行约会。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://www.bilibili.com/video/BV1pK3i6NEE6&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e6%96%b0%e8%b6%85%e7%ba%a7%e9%a9%ac%e9%87%8c%e5%a5%a5%e5%85%84%e5%bc%9f2%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;新·超级马力欧兄弟2&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2012年7月&lt;/span&gt;
+                &lt;span&gt;汉化：官方中文&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：马里奥2D横版闯关作品，以收集金币为核心主题，马里奥与路易吉踏上冒险营救碧琪公主，新增黄金花变身黄金马里奥，可将砖块、敌人化为金币，拥有百万金币挑战目标与金币冲刺模式。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e6%96%b0%e5%85%89%e7%a5%9e%e8%af%9d%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;新·光神话：帕尔缇娜之镜&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2012年3月&lt;/span&gt;
+                &lt;span&gt;汉化：翌山河汉化组&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：由樱井政博带领Project Sora开发的动作射击大作，天使皮特为对抗复活的美杜莎踏上冒险，融合空中空战与地面近身战斗，支持海量神器自定义，单机剧情全程风趣配音，还支持最多6人本地联机对战，是3DS平台极具代表性的原创硬核动作游戏。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://tieba.baidu.com/p/9993704115&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
 
 
 
@@ -1941,6 +2766,50 @@
             
             &lt;div class=&#34;release&#34;&gt;
                 &lt;a href=&#34;https://www.bilibili.com/video/BV1kbuV6AELF&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e6%96%b0%e8%80%80%e8%a5%bf%e5%b2%9b%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;新·耀西岛&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2014年7月&lt;/span&gt;
+                &lt;span&gt;汉化：FlameBeam&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：Arzest开发的耀西岛续作，剧情承接SFC耀西岛，耀西背着宝宝马里奥闯关，保留吐舌吞敌、投掷恐龙蛋的经典玩法，新增巨型破坏蛋、铁蛋等机制，搭配多样变身，利用3DS裸眼3D呈现手绘童话风格的横版平台关卡。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://tieba.baidu.com/p/5266556858&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
             &lt;/div&gt;
             
         &lt;/div&gt;
@@ -2251,6 +3120,83 @@
             
             &lt;div class=&#34;release&#34;&gt;
                 &lt;a href=&#34;https://www.bilibili.com/read/cv37105399&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;%e7%ba%b8%e7%89%87%e9%a9%ac%e9%87%8c%e5%a5%a5%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;纸片马力欧：贴纸之星&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2012年12月&lt;/span&gt;
+                &lt;span&gt;汉化：官方中文&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：纸片马里奥系列首款掌机作品，贴纸嘉年华上库巴击碎贴纸彗星，六枚皇家贴纸散落世界各地，马里奥与贴纸精灵琪斯蒂结伴踏上冒险，本作取消传统经验升级系统，战斗和解谜全部依靠消耗一次性贴纸，借助 “纸片化” 能力改造环境破解机关，活用3DS裸眼3D呈现纸艺绘本般的奇妙世界，穿梭六大舞台回收皇家贴纸，阻止库巴的阴谋。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;game-card&#34;&gt;
+    
+    &lt;div class=&#34;card-row&#34;&gt;
+        &lt;div class=&#34;cover-area&#34;&gt;
+            
+            &lt;img src=&#34;fc%e6%b8%b8%e6%88%8f%e5%90%88%e9%9b%86%20cover.png&#34; alt=&#34;游戏封面&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;info-wrap&#34;&gt;
+            &lt;div class=&#34;game-title&#34;&gt;终极FC名作合集&lt;/div&gt;
+            &lt;div class=&#34;meta-line&#34;&gt;
+                &lt;span&gt;发售时间：2015年8月&lt;/span&gt;
+                &lt;span&gt;汉化：超巨星汉化组&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;desc-text&#34;&gt;
+                游戏简介：indieszero开发的FC经典挑战合集，移植自WiiU《FC Remix》1&amp;#43;2精华内容，收录16部任天堂FC名作的碎片化挑战关卡，包含混搭Remix魔改关卡、高速马里奥兄弟、冠军模式，支持线上排行。
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+        &lt;div class=&#34;download-bar&#34;&gt;
+            &lt;div class=&#34;download&#34;&gt;
+                
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;release&#34;&gt;
+                &lt;a href=&#34;https://tieba.baidu.com/p/6027979988&#34; target=&#34;_blank&#34;&gt;汉化发布地址&lt;/a&gt;
             &lt;/div&gt;
             
         &lt;/div&gt;
