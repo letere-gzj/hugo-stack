@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-player/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.18a38bd29afb7bfc96b3935b1626d4063e7c6e989bdb5158fc0f365afd1ae390.css"><meta property='og:title' content="【Hugo】APlayer + PJAX 引入音乐播放放器并实现音乐不中断功能">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.3903cfb228dc9a3060bdfcddc86eb0761c3c3abafb90b996e766d0368839a876.css"><meta property='og:title' content="【Hugo】APlayer + PJAX 引入音乐播放放器并实现音乐不中断功能">
 <meta property='og:description' content="通过Aplayer引入音乐播放器，再使用PJAX不刷新加载技术，实现页面切换不中断音乐播放">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-player/'>
 <meta property='og:site_name' content='莱特雷-letere'>
@@ -524,8 +524,8 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/hugo-stack/p/hugo/custom-player/">
-                <img src="/hugo-stack/p/hugo/custom-player/cover_hu454567211822913746.png"
-                        srcset="/hugo-stack/p/hugo/custom-player/cover_hu454567211822913746.png 800w, /hugo-stack/p/hugo/custom-player/cover_hu11112295512375788358.png 1600w"
+                <img src="/hugo-stack/p/hugo/custom-player/cover_hu_ad81d3bd6cc5c610.png"
+                        srcset="/hugo-stack/p/hugo/custom-player/cover_hu_ad81d3bd6cc5c610.png 800w, /hugo-stack/p/hugo/custom-player/cover_hu_d7632c39fa6f042e.png 1600w"
                         width="800" 
                         height="250" 
                         loading="lazy"
@@ -656,7 +656,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51.png"
 	width="746"
 	height="258"
-	srcset="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51_hu10317444502684034872.png 480w, /hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51_hu17426180531872676584.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51_hu_93abfd9b26ba481b.png 480w, /hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A51_hu_b5f7788c4188f621.png 1024w"
 	loading="lazy"
 	
 	
@@ -701,7 +701,7 @@
 </div><p><img src="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52.png"
 	width="918"
 	height="250"
-	srcset="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52_hu3693182200761264452.png 480w, /hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52_hu1493159388977510959.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52_hu_7c36f0745d352707.png 480w, /hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A52_hu_1913c513e55a47f7.png 1024w"
 	loading="lazy"
 	
 	
@@ -725,14 +725,14 @@
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">ap</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">APlayer</span><span class="p">({</span>
 </span></span><span class="line"><span class="cl">    <span class="p">...,</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// 吸底模式
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">fixed</span><span class="o">:</span> <span class="kc">true</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nx">fixed</span><span class="o">:</span> <span class="kc">true</span>
 </span></span><span class="line"><span class="cl"><span class="p">});</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><img src="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53.png"
 	width="454"
 	height="143"
-	srcset="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53_hu13505605207614654053.png 480w, /hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53_hu16720848264225798807.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53_hu_4a2a7582de7e313b.png 480w, /hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A53_hu_af220f8f86f841f1.png 1024w"
 	loading="lazy"
 	
 	
@@ -784,14 +784,14 @@
 </span></span><span class="line"><span class="cl">    <span class="nx">audio</span><span class="o">:</span> <span class="p">[</span>
 </span></span><span class="line"><span class="cl">        <span class="p">{</span>
 </span></span><span class="line"><span class="cl">             <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="c1">// 歌名
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>             <span class="nx">artist</span><span class="o">:</span> <span class="s1">&#39;artist&#39;</span><span class="p">,</span> <span class="c1">// 歌手
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>             <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;url.mp3&#39;</span><span class="p">,</span> <span class="c1">// 歌曲路径
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>             <span class="nx">cover</span><span class="o">:</span> <span class="s1">&#39;cover.jpg&#39;</span><span class="p">,</span> <span class="c1">// 封面路径
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>             <span class="nx">lrc</span><span class="o">:</span> <span class="s1">&#39;lrc.lrc&#39;</span><span class="p">,</span> <span class="c1">// 歌词路径
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">},</span>
+</span></span></span><span class="line"><span class="cl">             <span class="nx">artist</span><span class="o">:</span> <span class="s1">&#39;artist&#39;</span><span class="p">,</span> <span class="c1">// 歌手
+</span></span></span><span class="line"><span class="cl">             <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;url.mp3&#39;</span><span class="p">,</span> <span class="c1">// 歌曲路径
+</span></span></span><span class="line"><span class="cl">             <span class="nx">cover</span><span class="o">:</span> <span class="s1">&#39;cover.jpg&#39;</span><span class="p">,</span> <span class="c1">// 封面路径
+</span></span></span><span class="line"><span class="cl">             <span class="nx">lrc</span><span class="o">:</span> <span class="s1">&#39;lrc.lrc&#39;</span><span class="p">,</span> <span class="c1">// 歌词路径
+</span></span></span><span class="line"><span class="cl">        <span class="p">},</span>
 </span></span><span class="line"><span class="cl">        <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 本地路径引入写法（有子目录就在staticDir后面继续拼接）
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">artist</span><span class="o">:</span> <span class="s1">&#39;artist&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">url</span><span class="o">:</span> <span class="nx">staticDir</span> <span class="o">+</span> <span class="s1">&#39;url.mp3&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">cover</span><span class="o">:</span> <span class="nx">staticDir</span> <span class="o">+</span> <span class="s1">&#39;cover.jpg&#39;</span><span class="p">,</span>
@@ -804,7 +804,7 @@
 </div><p><img src="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54.png"
 	width="612"
 	height="387"
-	srcset="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54_hu10176643709612842252.png 480w, /hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54_hu7197864985454459645.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54_hu_7de5d6659ce8aca3.png 480w, /hugo-stack/p/hugo/custom-player/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%BC%95%E5%85%A54_hu_45faf227d7260d48.png 1024w"
 	loading="lazy"
 	
 	
@@ -832,7 +832,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21.png"
 	width="551"
 	height="274"
-	srcset="/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21_hu12775702124180168874.png 480w, /hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21_hu15542514798368264731.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21_hu_769a926b0412c815.png 480w, /hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A21_hu_625d4f05b2221997.png 1024w"
 	loading="lazy"
 	
 	
@@ -880,7 +880,7 @@
 </div><p><img src="/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22.png"
 	width="468"
 	height="323"
-	srcset="/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22_hu4274941461021639034.png 480w, /hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22_hu13976550532823293038.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22_hu_bfd95ad38ea3ee6e.png 480w, /hugo-stack/p/hugo/custom-player/%E6%92%AD%E6%94%BE%E5%99%A8%E6%A0%B7%E5%BC%8F%E5%88%87%E6%8D%A22_hu_97727a51498f39ca.png 1024w"
 	loading="lazy"
 	
 	
@@ -905,7 +905,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61.png"
 	width="802"
 	height="434"
-	srcset="/hugo-stack/p/hugo/custom-player/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61_hu12558172965125632703.png 480w, /hugo-stack/p/hugo/custom-player/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61_hu14637747725732503343.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61_hu_9b1cba136d672cae.png 480w, /hugo-stack/p/hugo/custom-player/%E4%BF%9D%E7%95%99%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A61_hu_21282f629a82dd2d.png 1024w"
 	loading="lazy"
 	
 	
@@ -981,7 +981,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">window</span><span class="p">.</span><span class="nx">onbeforeunload</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 将播放信息用对象封装，并存入到localStorage中
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kr">const</span> <span class="nx">playInfo</span> <span class="o">=</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">playInfo</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">index</span><span class="o">:</span> <span class="nx">ap</span><span class="p">.</span><span class="nx">list</span><span class="p">.</span><span class="nx">index</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">currentTime</span><span class="o">:</span> <span class="nx">ap</span><span class="p">.</span><span class="nx">audio</span><span class="p">.</span><span class="nx">currentTime</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">paused</span><span class="o">:</span> <span class="nx">ap</span><span class="p">.</span><span class="nx">paused</span>
@@ -994,18 +994,18 @@
 </span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 从localStorage取出播放信息
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kr">const</span> <span class="nx">playInfo</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&#34;playInfo&#34;</span><span class="p">));</span>
+</span></span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">playInfo</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&#34;playInfo&#34;</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">playInfo</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 切换歌曲
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">ap</span><span class="p">.</span><span class="nx">list</span><span class="p">.</span><span class="k">switch</span><span class="p">(</span><span class="nx">playInfo</span><span class="p">.</span><span class="nx">index</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">        <span class="nx">ap</span><span class="p">.</span><span class="nx">list</span><span class="p">.</span><span class="k">switch</span><span class="p">(</span><span class="nx">playInfo</span><span class="p">.</span><span class="nx">index</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 等待500ms再执行下一步(切换歌曲需要点时间，不能立马调歌曲进度条)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">        <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 调整时长
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">ap</span><span class="p">.</span><span class="nx">seek</span><span class="p">(</span><span class="nx">playInfo</span><span class="p">.</span><span class="nx">currentTime</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">ap</span><span class="p">.</span><span class="nx">seek</span><span class="p">(</span><span class="nx">playInfo</span><span class="p">.</span><span class="nx">currentTime</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 是否播放
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">playInfo</span><span class="p">.</span><span class="nx">paused</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">playInfo</span><span class="p">.</span><span class="nx">paused</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="nx">ap</span><span class="p">.</span><span class="nx">play</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="p">},</span> <span class="mi">500</span><span class="p">);</span>
@@ -1032,12 +1032,11 @@
 
 
 
-    <p><ul>
+    <ul>
 <li>PJAX已单独创建到一篇新的文章上 <a class="link" href="/hugo-stack/p/hugo/pjax" ><strong>【Hugo】PJAX实现无刷新加载页面</strong></a></li>
 <li>后续相关问题将在新文章中更新，不会在此文章进行更新</li>
 <li>⚠️<strong>建议直接看新文章来引入PJAX</strong></li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <h3 id="41-基本引入">4.1 基本引入
 </h3><ul>
 <li>
@@ -1054,7 +1053,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A51.png"
 	width="1647"
 	height="758"
-	srcset="/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A51_hu13984116907559513140.png 480w, /hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A51_hu15037190329864402283.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A51_hu_cfa0b1fa0c618e8a.png 480w, /hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A51_hu_84c8772292558c74.png 1024w"
 	loading="lazy"
 	
 	
@@ -1069,7 +1068,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A52.png"
 	width="687"
 	height="376"
-	srcset="/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A52_hu11515734280235833246.png 480w, /hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A52_hu10046222914869022645.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A52_hu_ec6653d66f5cc3dd.png 480w, /hugo-stack/p/hugo/custom-player/PJAX%E5%BC%95%E5%85%A52_hu_5b8eaccda9a12a56.png 1024w"
 	loading="lazy"
 	
 	
@@ -1118,7 +1117,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1.png"
 	width="1019"
 	height="784"
-	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1_hu6496149302952570041.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1_hu13780798210921933270.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1_hu_3fbe4aa3b0f33319.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D1_hu_10878c658cc9d3f1.png 1024w"
 	loading="lazy"
 	
 	
@@ -1133,7 +1132,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2.png"
 	width="554"
 	height="335"
-	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2_hu11435257031448315109.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2_hu16465063641175909278.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2_hu_57235bd9e2f28567.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E4%BF%AE%E5%A4%8D2_hu_19fe55648f2f7a22.png 1024w"
 	loading="lazy"
 	
 	
@@ -1185,16 +1184,16 @@
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">responseText</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s2">&#34;&lt;html&#34;</span><span class="p">))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">responseText</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="c1">// 将新页面的html字符串解析成DOM对象
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="kd">let</span> <span class="nx">newDom</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DOMParser</span><span class="p">().</span><span class="nx">parseFromString</span><span class="p">(</span><span class="nx">responseText</span><span class="p">,</span> <span class="s1">&#39;text/html&#39;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">                <span class="kd">let</span> <span class="nx">newDom</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DOMParser</span><span class="p">().</span><span class="nx">parseFromString</span><span class="p">(</span><span class="nx">responseText</span><span class="p">,</span> <span class="s1">&#39;text/html&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">                <span class="c1">// 获取新页面中body的className，并设置回当前页面
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="kd">let</span> <span class="nx">bodyClass</span> <span class="o">=</span> <span class="nx">newDom</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">className</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">                <span class="kd">let</span> <span class="nx">bodyClass</span> <span class="o">=</span> <span class="nx">newDom</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">className</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">                <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&#34;class&#34;</span><span class="p">,</span> <span class="nx">bodyClass</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                <span class="c1">// 放行，交给pjax自己处理
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">pjax</span><span class="p">.</span><span class="nx">_handleResponse</span><span class="p">(</span><span class="nx">responseText</span><span class="p">,</span> <span class="nx">request</span><span class="p">,</span> <span class="nx">href</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">                <span class="nx">pjax</span><span class="p">.</span><span class="nx">_handleResponse</span><span class="p">(</span><span class="nx">responseText</span><span class="p">,</span> <span class="nx">request</span><span class="p">,</span> <span class="nx">href</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// handle non-HTML response here
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
@@ -1208,7 +1207,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1.png"
 	width="688"
 	height="347"
-	srcset="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1_hu5229097294674614917.png 480w, /hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1_hu7541949670541231125.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1_hu_461a44c251cf980b.png 480w, /hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D1_hu_d12d5a31e10fd51c.png 1024w"
 	loading="lazy"
 	
 	
@@ -1223,7 +1222,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2.png"
 	width="760"
 	height="533"
-	srcset="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2_hu3659339438047739286.png 480w, /hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2_hu15612737854347973718.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2_hu_182b2027ed180f28.png 480w, /hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D2_hu_cafd36ffe524384d.png 1024w"
 	loading="lazy"
 	
 	
@@ -1242,7 +1241,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3.png"
 	width="626"
 	height="366"
-	srcset="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3_hu17510256541488001342.png 480w, /hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3_hu14342275243428319843.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3_hu_f3b7365d81beef34.png 480w, /hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D3_hu_53d4973055f514ba.png 1024w"
 	loading="lazy"
 	
 	
@@ -1254,7 +1253,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4.png"
 	width="525"
 	height="196"
-	srcset="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4_hu5382124042963801288.png 480w, /hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4_hu11408407249359434399.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4_hu_ea8b1c2b239a725.png 480w, /hugo-stack/p/hugo/custom-player/%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%BF%AE%E5%A4%8D4_hu_db5e672dfa74f0b3.png 1024w"
 	loading="lazy"
 	
 	
@@ -1285,7 +1284,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">...</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;pjax:complete&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// Stack脚本初始化
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nb">window</span><span class="p">.</span><span class="nx">Stack</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl">        <span class="nb">window</span><span class="p">.</span><span class="nx">Stack</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">    <span class="p">})</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
@@ -1299,7 +1298,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1.png"
 	width="815"
 	height="375"
-	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1_hu5923900623225254529.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1_hu15213815273594980075.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1_hu_b8069b6944c4507f.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D1_hu_3fe07ba70f61c647.png 1024w"
 	loading="lazy"
 	
 	
@@ -1314,7 +1313,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2.png"
 	width="705"
 	height="531"
-	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2_hu13957798718846057667.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2_hu2235126424913485663.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2_hu_32e9bd9b1a8f0374.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D2_hu_977514f1be90a877.png 1024w"
 	loading="lazy"
 	
 	
@@ -1329,7 +1328,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3.png"
 	width="967"
 	height="402"
-	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3_hu4982972655848362456.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3_hu10575550925341558171.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3_hu_cc4da9b4fbd7954b.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D3_hu_ae40f158681ec162.png 1024w"
 	loading="lazy"
 	
 	
@@ -1425,7 +1424,7 @@
 </span></span><span class="line"><span class="cl">    <span class="nx">init</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="p">...</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 调用search脚本初始化方法
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">searchInit</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl">        <span class="nx">searchInit</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -1435,7 +1434,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4.png"
 	width="862"
 	height="142"
-	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4_hu9523300484787436676.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4_hu1305163993592567261.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4_hu_801f9e6b108f75d1.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D4_hu_a71d832d459749c4.png 1024w"
 	loading="lazy"
 	
 	
@@ -1447,7 +1446,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5.png"
 	width="747"
 	height="117"
-	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5_hu16025596555305159424.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5_hu6049477854951056670.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5_hu_82b94f90464cf14c.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D5_hu_33ab7b936803807a.png 1024w"
 	loading="lazy"
 	
 	
@@ -1460,7 +1459,7 @@
 <p><img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6.png"
 	width="765"
 	height="583"
-	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6_hu6878696442146111979.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6_hu2286289730422645644.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6_hu_220c4a576cf1286e.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E6%90%9C%E7%B4%A2%E4%BF%AE%E5%A4%8D6_hu_e7f912139d5d2671.png 1024w"
 	loading="lazy"
 	
 	
@@ -1481,7 +1480,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1.png"
 	width="888"
 	height="361"
-	srcset="/hugo-stack/p/hugo/custom-player/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1_hu9574366060500127333.png 480w, /hugo-stack/p/hugo/custom-player/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1_hu2854418771149339604.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1_hu_8ef68ddfaff5e5f2.png 480w, /hugo-stack/p/hugo/custom-player/%E6%90%9C%E7%B4%A2%E5%86%85%E5%AE%B9%E8%B7%B3%E8%BD%AC%E4%BF%AE%E5%A4%8D1_hu_fc491b12ff06909e.png 1024w"
 	loading="lazy"
 	
 	
@@ -1538,7 +1537,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1.png"
 	width="870"
 	height="697"
-	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1_hu5809293150230507459.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1_hu410654423696599295.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1_hu_7d8d53cb023b1221.png 480w, /hugo-stack/p/hugo/custom-player/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E4%BF%AE%E5%A4%8D1_hu_3f4df59947478d2c.png 1024w"
 	loading="lazy"
 	
 	
@@ -1590,13 +1589,13 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;js-Pjax&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// TODO: 判断当前是否是文档，且是否开启评论功能
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 将对应评论的脚本内容填进去
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>             <span class="nx">script</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">             <span class="nx">script</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="p">...</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 寻找合适的元素，添加脚本进去
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;xxx&#39;</span><span class="p">).</span><span class="nx">appendchild</span><span class="p">(</span><span class="nx">script</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;xxx&#39;</span><span class="p">).</span><span class="nx">appendchild</span><span class="p">(</span><span class="nx">script</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">})(</span><span class="nb">document</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -1615,7 +1614,7 @@
 <img src="/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11.png"
 	width="531"
 	height="196"
-	srcset="/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11_hu17479662426839587091.png 480w, /hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11_hu7219304278610830220.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11_hu_a08e9f890dc9e4f1.png 480w, /hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A11_hu_cc798190bf14af5e.png 1024w"
 	loading="lazy"
 	
 	
@@ -1667,22 +1666,22 @@
 </span></span><span class="line"><span class="cl">{{ end }}
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// 修改进度条颜色
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">topbar</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nx">topbar</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">barColors</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="s1">&#39;0&#39;</span><span class="o">:</span> <span class="s1">&#39;rgba(255,  255, 255, 1)&#39;</span><span class="p">,</span> <span class="c1">// 进度0%白色
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="s1">&#39;1.0&#39;</span><span class="o">:</span> <span class="s1">&#39;rgba(0, 149, 234,  1)&#39;</span> <span class="c1">// 进度100%蓝色
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">            <span class="s1">&#39;1.0&#39;</span><span class="o">:</span> <span class="s1">&#39;rgba(0, 149, 234,  1)&#39;</span> <span class="c1">// 进度100%蓝色
+</span></span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">})</span>
 </span></span><span class="line"><span class="cl">	
 </span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;pjax:send&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 显示顶部进度条
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">topbar</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl">        <span class="nx">topbar</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">    <span class="p">})</span>
 </span></span><span class="line"><span class="cl">	
 </span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;pjax:complete&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="p">....</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 隐藏顶部进度条
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">topbar</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl">        <span class="nx">topbar</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">    <span class="p">})</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
@@ -1690,7 +1689,7 @@
 </div><p><img src="/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12.png"
 	width="769"
 	height="108"
-	srcset="/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12_hu9200277858795958785.png 480w, /hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12_hu2188347930935890096.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12_hu_fb3ba6bbc139b21d.png 480w, /hugo-stack/p/hugo/custom-player/%E5%BC%95%E5%85%A5%E8%BF%9B%E5%BA%A6%E6%9D%A12_hu_4ba7a3cf01e598c3.png 1024w"
 	loading="lazy"
 	
 	
@@ -1742,7 +1741,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/view-count/cover.274092bdc81c36c9bb0b38db9a6be9fa_hu6949047556944337237.png"
+                <img src="/hugo-stack/p/hugo/view-count/cover.274092bdc81c36c9bb0b38db9a6be9fa_hu_df784c314dd4380a.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1767,7 +1766,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/pjax/cover.d07cbee7b13aafbe03ebf0ee088f569d_hu6578279551130963379.png"
+                <img src="/hugo-stack/p/hugo/pjax/cover.d07cbee7b13aafbe03ebf0ee088f569d_hu_2dc7df6cc5c10d64.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1792,7 +1791,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/page-loading/cover.41a89b8c61860f37160490a5d1b4813f_hu6192081206714930127.png"
+                <img src="/hugo-stack/p/hugo/page-loading/cover.41a89b8c61860f37160490a5d1b4813f_hu_35c47a69e84d5bd6.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1817,7 +1816,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/live2d-moc3/cover.47964cfc431c0005f3c9eb3d99651190_hu4805388833244741341.png"
+                <img src="/hugo-stack/p/hugo/live2d-moc3/cover.47964cfc431c0005f3c9eb3d99651190_hu_dca9e853be76833c.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1842,7 +1841,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/custom-background/cover.53b9d140b749b00db6ff535e59062b87_hu8671535214065020568.png"
+                <img src="/hugo-stack/p/hugo/custom-background/cover.53b9d140b749b00db6ff535e59062b87_hu_178ca23f1960a612.png"
                         width="250"
                         height="150"
                         loading="lazy"

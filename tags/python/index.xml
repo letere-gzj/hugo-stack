@@ -41,8 +41,7 @@
 &lt;ul&gt;
 &lt;li&gt;个人喜好问题，软件的安装不喜欢用exe安装，更喜欢用压缩包形式进行安装，这样方便管理，也方便卸载&lt;/li&gt;
 &lt;li&gt;所以下面的python也是以压缩包形式进行搭建，也就是&lt;strong&gt;免安装&lt;/strong&gt;或&lt;strong&gt;绿色版&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-python安装&#34;&gt;1 Python安装
 &lt;/h2&gt;&lt;ul&gt;
@@ -52,7 +51,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD1.png&#34;
 	width=&#34;1350&#34;
 	height=&#34;535&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD1_hu5555568738207442362.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD1_hu15234259659145039565.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD1_hu_cb3d5cda31c92c41.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD1_hu_59cad6c824f65be5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -67,7 +66,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD2.png&#34;
 	width=&#34;1340&#34;
 	height=&#34;504&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD2_hu669687186614799334.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD2_hu5339246725101096413.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD2_hu_13efe55c734a9d86.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD2_hu_4c7dca5a7e28a5ed.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -82,7 +81,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD3.png&#34;
 	width=&#34;875&#34;
 	height=&#34;483&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD3_hu3177232495211463377.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD3_hu9455462449350410125.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD3_hu_9920cfd036f410cd.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E4%B8%8B%E8%BD%BD3_hu_ad60f5542a0b3984.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -102,7 +101,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE1.png&#34;
 	width=&#34;1271&#34;
 	height=&#34;656&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE1_hu6923260931511668893.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE1_hu12057450863988303937.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE1_hu_c8f4b3f5bbfb9fcf.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE1_hu_b46cf8c3e18e1c71.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -114,7 +113,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2.png&#34;
 	width=&#34;527&#34;
 	height=&#34;563&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu16328763852489462966.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu15698168266117394990.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu_ddda1375de10a980.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu_e0dd130a6c8a1e97.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -129,7 +128,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95.png&#34;
 	width=&#34;423&#34;
 	height=&#34;166&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu13290024271973948077.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu11885443784938959301.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu_300f08b0ed44b6c7.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/python%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu_a982c1f6370c74d9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -156,12 +155,11 @@
 
 
 
-    &lt;p&gt;&lt;ul&gt;
+    &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;pip&lt;/strong&gt;是Python官方提供的包管理工具，用于安装Python第三方库，&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;pip&lt;/strong&gt;安装包后，可以不用再下载安装包，直接使用命令行安装，方便管理，也方便卸载&lt;/li&gt;
 &lt;li&gt;所以搭建python环境基本都要安装pip&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;(1) 前往&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/pip/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;Pypi&lt;/strong&gt;&lt;/a&gt;，下载&lt;strong&gt;get-pip.py&lt;/strong&gt;文件(&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;S&lt;/kbd&gt;保存)
@@ -173,7 +171,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD.png&#34;
 	width=&#34;944&#34;
 	height=&#34;659&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD_hu12648631603669106140.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD_hu6569780432046611905.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD_hu_248264a13a4f72c1.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD_hu_f91090cc51071b8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -185,7 +183,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD2.png&#34;
 	width=&#34;917&#34;
 	height=&#34;554&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD2_hu11489025882399472246.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD2_hu1136306123010289467.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD2_hu_ba400eb68c1e029e.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E4%B8%8B%E8%BD%BD2_hu_6422c3bcdf6a6fd7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -200,7 +198,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85.png&#34;
 	width=&#34;929&#34;
 	height=&#34;340&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85_hu17564093063608403168.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85_hu5619660392491308176.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85_hu_35da8f38bc52ce84.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85_hu_f6cbe82e93ce6f46.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -219,7 +217,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%852.png&#34;
 	width=&#34;663&#34;
 	height=&#34;455&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%852_hu5387804586641296204.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%852_hu5148449657674300684.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%852_hu_65590beac13aff14.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%852_hu_e86101d224427960.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -234,7 +232,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.png&#34;
 	width=&#34;949&#34;
 	height=&#34;568&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu11309827044125026175.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu10221373135494075502.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu_1eb320becb48331e.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu_ac00b46deace83d5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -249,7 +247,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95.png&#34;
 	width=&#34;861&#34;
 	height=&#34;195&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu8876805099299470519.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu1958704254797024362.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu_e916082db00f464f.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95_hu_271996f52340e579.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -276,13 +274,12 @@
 
 
 
-    &lt;p&gt;&lt;ul&gt;
+    &lt;ul&gt;
 &lt;li&gt;默认安装的pip使用的是Pypi官方源，速度很慢&lt;/li&gt;
 &lt;li&gt;为了保证下载速度，推荐将镜像源修改为国内镜像源&lt;/li&gt;
 &lt;li&gt;这边推荐的镜像源为&lt;strong&gt;阿里云&lt;/strong&gt;(&lt;a class=&#34;link&#34; href=&#34;https://mirrors.aliyun.com/pypi/simple/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://mirrors.aliyun.com/pypi/simple/&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;运行命令&lt;code&gt;pip config set global.index-url 镜像源地址&lt;/code&gt;
 &lt;ul&gt;
@@ -293,7 +290,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B91.png&#34;
 	width=&#34;796&#34;
 	height=&#34;227&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B91_hu11593978755733577885.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B91_hu1024332580400867734.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B91_hu_ebb0e8ce9a790dbc.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B91_hu_69176c545e56c93.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -305,7 +302,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B92.png&#34;
 	width=&#34;481&#34;
 	height=&#34;138&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B92_hu670897785293588120.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B92_hu15887387325732744368.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B92_hu_6b5895e8db4d16e4.png 480w, https://letere-gzj.github.io/hugo-stack/p/python/build-env/pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%9B%B4%E6%94%B92_hu_6ce32a8abac14f42.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugo/view-count/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.18a38bd29afb7bfc96b3935b1626d4063e7c6e989bdb5158fc0f365afd1ae390.css"><meta property='og:title' content="【Hugo】博客文章浏览数统计">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.3903cfb228dc9a3060bdfcddc86eb0761c3c3abafb90b996e766d0368839a876.css"><meta property='og:title' content="【Hugo】博客文章浏览数统计">
 <meta property='og:description' content="引入第三方组件，来给博客文章统计浏览数">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/view-count/'>
 <meta property='og:site_name' content='莱特雷-letere'>
@@ -512,8 +512,8 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/hugo-stack/p/hugo/view-count/">
-                <img src="/hugo-stack/p/hugo/view-count/cover_hu8122300096112104175.png"
-                        srcset="/hugo-stack/p/hugo/view-count/cover_hu8122300096112104175.png 800w, /hugo-stack/p/hugo/view-count/cover_hu10311177041975852923.png 1600w"
+                <img src="/hugo-stack/p/hugo/view-count/cover_hu_9c858b3dcc903b66.png"
+                        srcset="/hugo-stack/p/hugo/view-count/cover_hu_9c858b3dcc903b66.png 800w, /hugo-stack/p/hugo/view-count/cover_hu_7c044385136118b8.png 1600w"
                         width="800" 
                         height="250" 
                         loading="lazy"
@@ -637,8 +637,7 @@
 <li><strong>不蒜子</strong>比较老，但很稳定，到现在仍然可以使用，没有停服</li>
 <li><strong>vercount</strong>则比较新，并做了一些代码优化</li>
 <li>两种使用都基本一样，差别不大，看自己喜好，下面的教程是以<strong>vercount</strong>来举例，用不蒜子的话，就把对应的脚本和元素标签替换一下就好</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <hr>
 <h2 id="1-基本引入">1 基本引入
 </h2><ul>
@@ -703,7 +702,7 @@
 <p><img src="/hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E5%B1%95%E7%A4%BA.png"
 	width="1569"
 	height="689"
-	srcset="/hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E5%B1%95%E7%A4%BA_hu6733452518166102905.png 480w, /hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E5%B1%95%E7%A4%BA_hu15316285119266919813.png 1024w"
+	srcset="/hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E5%B1%95%E7%A4%BA_hu_75e47cf4f48aaea0.png 480w, /hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E5%B1%95%E7%A4%BA_hu_977be970927c4164.png 1024w"
 	loading="lazy"
 	
 	
@@ -724,7 +723,7 @@
 <p><img src="/hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E4%BF%AE%E5%A4%8D1.png"
 	width="1912"
 	height="928"
-	srcset="/hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E4%BF%AE%E5%A4%8D1_hu3509928501500563800.png 480w, /hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E4%BF%AE%E5%A4%8D1_hu12303777583539549023.png 1024w"
+	srcset="/hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E4%BF%AE%E5%A4%8D1_hu_93fe8d90dc2e9ada.png 480w, /hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E4%BF%AE%E5%A4%8D1_hu_6b59951e7ca7953f.png 1024w"
 	loading="lazy"
 	
 	
@@ -782,10 +781,10 @@
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">showHideView</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 判断是否存在vercount标签
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">viewCounts</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&#34;#viewCount&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">viewCounts</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&#34;#viewCount&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">viewCounts</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 判断是否为文章页
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">article</span> <span class="o">=</span>  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.article-page&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nx">article</span> <span class="o">=</span>  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.article-page&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">article</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="nx">viewCounts</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">ele</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                    <span class="nx">ele</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span>
@@ -815,15 +814,14 @@
 
 
 
-    <p><ul>
+    <ul>
 <li>如果嫌麻烦，浏览数统计可以和更新时间一样，放到文章末尾就好，就不会显示到首页上了</li>
 <li>具体修改<code>layouts/partials/article/footer.html</code>就好，看个人喜好吧</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <p><img src="/hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E9%A1%B5%E8%84%9A%E6%98%BE%E7%A4%BA.png"
 	width="1138"
 	height="509"
-	srcset="/hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E9%A1%B5%E8%84%9A%E6%98%BE%E7%A4%BA_hu4497550635205642066.png 480w, /hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E9%A1%B5%E8%84%9A%E6%98%BE%E7%A4%BA_hu16509545522891784232.png 1024w"
+	srcset="/hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E9%A1%B5%E8%84%9A%E6%98%BE%E7%A4%BA_hu_637ad130176cb95c.png 480w, /hugo-stack/p/hugo/view-count/%E7%BB%9F%E8%AE%A1%E9%A1%B5%E8%84%9A%E6%98%BE%E7%A4%BA_hu_e0b5ece5221a345a.png 1024w"
 	loading="lazy"
 	
 	
@@ -874,7 +872,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/pjax/cover.d07cbee7b13aafbe03ebf0ee088f569d_hu6578279551130963379.png"
+                <img src="/hugo-stack/p/hugo/pjax/cover.d07cbee7b13aafbe03ebf0ee088f569d_hu_2dc7df6cc5c10d64.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -899,7 +897,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/page-loading/cover.41a89b8c61860f37160490a5d1b4813f_hu6192081206714930127.png"
+                <img src="/hugo-stack/p/hugo/page-loading/cover.41a89b8c61860f37160490a5d1b4813f_hu_35c47a69e84d5bd6.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -924,7 +922,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/live2d-moc3/cover.47964cfc431c0005f3c9eb3d99651190_hu4805388833244741341.png"
+                <img src="/hugo-stack/p/hugo/live2d-moc3/cover.47964cfc431c0005f3c9eb3d99651190_hu_dca9e853be76833c.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -949,7 +947,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/custom-background/cover.53b9d140b749b00db6ff535e59062b87_hu8671535214065020568.png"
+                <img src="/hugo-stack/p/hugo/custom-background/cover.53b9d140b749b00db6ff535e59062b87_hu_178ca23f1960a612.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -974,7 +972,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/custom-stack-theme/cover.552d684dee02b994c1b7efde44f1cb0d_hu5530006314175102094.png"
+                <img src="/hugo-stack/p/hugo/custom-stack-theme/cover.552d684dee02b994c1b7efde44f1cb0d_hu_ba3dfcfa61194a7a.png"
                         width="250"
                         height="150"
                         loading="lazy"

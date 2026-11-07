@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugo/page-loading/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.18a38bd29afb7bfc96b3935b1626d4063e7c6e989bdb5158fc0f365afd1ae390.css"><meta property='og:title' content="【Hugo】博客引入页面加载动画">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.3903cfb228dc9a3060bdfcddc86eb0761c3c3abafb90b996e766d0368839a876.css"><meta property='og:title' content="【Hugo】博客引入页面加载动画">
 <meta property='og:description' content="博客刷新加载时引入加载动画，功能性一般般，但非常的酷炫">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/page-loading/'>
 <meta property='og:site_name' content='莱特雷-letere'>
@@ -527,8 +527,8 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/hugo-stack/p/hugo/page-loading/">
-                <img src="/hugo-stack/p/hugo/page-loading/cover_hu4343042323150005332.png"
-                        srcset="/hugo-stack/p/hugo/page-loading/cover_hu4343042323150005332.png 800w, /hugo-stack/p/hugo/page-loading/cover_hu5407512056760554781.png 1600w"
+                <img src="/hugo-stack/p/hugo/page-loading/cover_hu_bbc4fdede1ded388.png"
+                        srcset="/hugo-stack/p/hugo/page-loading/cover_hu_bbc4fdede1ded388.png 800w, /hugo-stack/p/hugo/page-loading/cover_hu_856544c8afe0c221.png 1600w"
                         width="800" 
                         height="250" 
                         loading="lazy"
@@ -653,11 +653,10 @@
 
 
 
-    <p><ul>
+    <ul>
 <li>这边先介绍如何引入本博客的加载动画，直接复制就能实现，适用于代码二次开发能力不强的用户</li>
 <li>&ldquo;<strong>授人以鱼不如授人以渔</strong>&quot;，后面会教大家如何引入自己想要的加载动画</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <h3 id="11-基本引入">1.1 基本引入
 </h3><ul>
 <li>将以下代码复制进<code>layouts/partials/head/custom.html</code>(文件不存在则自行创建)</li>
@@ -954,10 +953,10 @@
 </span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">loading</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.loading&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 本地页面加载速度快，可自行使用setTimeout()来进行延迟，体验加载动画效果
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">// 执行加载完成动画
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">loadFinish</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl">            <span class="c1">// 执行加载完成动画
+</span></span></span><span class="line"><span class="cl">            <span class="nx">loadFinish</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 延迟1.5s，待加载完成动画执行结束
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="nx">loading</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="p">},</span> <span class="mi">1500</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">});</span>
@@ -965,10 +964,10 @@
 </span></span><span class="line"><span class="cl">	
 </span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">loadFinish</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 暂停动画
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">sharingon</span><span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.sharingon&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">sharingon</span><span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.sharingon&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">sharingon</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&#34;animated-stop&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 放大并渐变到透明
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">loading</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.loading&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">loading</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.loading&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">loading</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&#34;scaleAndFadeout&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">	
@@ -994,11 +993,10 @@
 
 
 
-    <p><ul>
+    <ul>
 <li>每次切换页面都播放一次加载动画，这种看个人喜欢。</li>
 <li>我个人是不太喜欢的，我只希望第一次打开这页面的时候加载一下就好</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <h4 id="121-pjax">1.2.1 PJAX
 </h4><ul>
 <li>如果你博客引入了PJAX功能，基本是不会出现这情况了。因为页头页脚一般不是PJAX会刷新的地方，所以页面切换时不会重复执行加载动画脚本</li>
@@ -1065,9 +1063,9 @@
 </span></span><span class="line"><span class="cl">            <span class="nx">loading</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s2">&#34;flex&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="c1">// 执行加载完成动画
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">loadFinish</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl">                <span class="nx">loadFinish</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">                <span class="c1">// 延迟1.5s，待加载完成动画执行结束
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">                <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                    <span class="nx">loading</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">                <span class="p">},</span> <span class="mi">1500</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;visited&#39;</span><span class="p">,</span> <span class="s1">&#39;true&#39;</span><span class="p">);</span>
@@ -1090,7 +1088,7 @@
 <p><img src="/hugo-stack/p/hugo/page-loading/uiverse.png"
 	width="1330"
 	height="721"
-	srcset="/hugo-stack/p/hugo/page-loading/uiverse_hu17156948676691080230.png 480w, /hugo-stack/p/hugo/page-loading/uiverse_hu7449830171440858061.png 1024w"
+	srcset="/hugo-stack/p/hugo/page-loading/uiverse_hu_584d5aa7e295992.png 480w, /hugo-stack/p/hugo/page-loading/uiverse_hu_9d998cd6725b05b.png 1024w"
 	loading="lazy"
 	
 	
@@ -1164,7 +1162,7 @@
 </span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">loading</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.loading&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 本地页面加载速度快，可自行使用setTimeout()来进行延迟，体验加载动画效果
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">loading</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">loading</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">});</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
@@ -1193,11 +1191,10 @@
 
 
 
-    <p><ul>
+    <ul>
 <li>因为每个人的加载动画都不一致，这边只分享一下可能会用到的css样式，实际情况还需自己自行适配</li>
 <li>也可以参考上面的写轮眼动画的写法，来模仿写法</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <ul>
 <li>CSS样式</li>
 </ul>
@@ -1351,7 +1348,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/view-count/cover.274092bdc81c36c9bb0b38db9a6be9fa_hu6949047556944337237.png"
+                <img src="/hugo-stack/p/hugo/view-count/cover.274092bdc81c36c9bb0b38db9a6be9fa_hu_df784c314dd4380a.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1376,7 +1373,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/pjax/cover.d07cbee7b13aafbe03ebf0ee088f569d_hu6578279551130963379.png"
+                <img src="/hugo-stack/p/hugo/pjax/cover.d07cbee7b13aafbe03ebf0ee088f569d_hu_2dc7df6cc5c10d64.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1401,7 +1398,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/live2d-moc3/cover.47964cfc431c0005f3c9eb3d99651190_hu4805388833244741341.png"
+                <img src="/hugo-stack/p/hugo/live2d-moc3/cover.47964cfc431c0005f3c9eb3d99651190_hu_dca9e853be76833c.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1426,7 +1423,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/custom-background/cover.53b9d140b749b00db6ff535e59062b87_hu8671535214065020568.png"
+                <img src="/hugo-stack/p/hugo/custom-background/cover.53b9d140b749b00db6ff535e59062b87_hu_178ca23f1960a612.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1451,7 +1448,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/custom-stack-theme/cover.552d684dee02b994c1b7efde44f1cb0d_hu5530006314175102094.png"
+                <img src="/hugo-stack/p/hugo/custom-stack-theme/cover.552d684dee02b994c1b7efde44f1cb0d_hu_ba3dfcfa61194a7a.png"
                         width="250"
                         height="150"
                         loading="lazy"

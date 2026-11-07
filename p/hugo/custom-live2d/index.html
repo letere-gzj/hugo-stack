@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-live2d/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.18a38bd29afb7bfc96b3935b1626d4063e7c6e989bdb5158fc0f365afd1ae390.css"><meta property='og:title' content="【Hugo】Live2d-widget 给博客引入萌萌的看板娘">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.3903cfb228dc9a3060bdfcddc86eb0761c3c3abafb90b996e766d0368839a876.css"><meta property='og:title' content="【Hugo】Live2d-widget 给博客引入萌萌的看板娘">
 <meta property='og:description' content="通过Live2d-widget引入live2d模型，并修改自定义参数来适配自己的主题">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/custom-live2d/'>
 <meta property='og:site_name' content='莱特雷-letere'>
@@ -530,8 +530,8 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/hugo-stack/p/hugo/custom-live2d/">
-                <img src="/hugo-stack/p/hugo/custom-live2d/cover_hu13232774557383858670.png"
-                        srcset="/hugo-stack/p/hugo/custom-live2d/cover_hu13232774557383858670.png 800w, /hugo-stack/p/hugo/custom-live2d/cover_hu16740847764044889372.png 1600w"
+                <img src="/hugo-stack/p/hugo/custom-live2d/cover_hu_a36f8e90f2072219.png"
+                        srcset="/hugo-stack/p/hugo/custom-live2d/cover_hu_a36f8e90f2072219.png 800w, /hugo-stack/p/hugo/custom-live2d/cover_hu_b5d7897b9f40b0b7.png 1600w"
                         width="800" 
                         height="250" 
                         loading="lazy"
@@ -673,7 +673,7 @@
 <p><img src="/hugo-stack/p/hugo/custom-live2d/live2d%E5%BC%95%E5%85%A51.png"
 	width="855"
 	height="579"
-	srcset="/hugo-stack/p/hugo/custom-live2d/live2d%E5%BC%95%E5%85%A51_hu11699885325694569873.png 480w, /hugo-stack/p/hugo/custom-live2d/live2d%E5%BC%95%E5%85%A51_hu9350893187745269249.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-live2d/live2d%E5%BC%95%E5%85%A51_hu_cc8fdb567b5aa100.png 480w, /hugo-stack/p/hugo/custom-live2d/live2d%E5%BC%95%E5%85%A51_hu_ddfdad91fc3bc73.png 1024w"
 	loading="lazy"
 	
 	
@@ -700,8 +700,7 @@
 
 
 
-    <p>看板娘是已经引入好了，但是显示在左下角，跟我当前的主题非常的不搭，需要对看板娘进行自定义，来适配主题</p>
-</blockquote>
+    <p>看板娘是已经引入好了，但是显示在左下角，跟我当前的主题非常的不搭，需要对看板娘进行自定义，来适配主题</p></blockquote>
 <h3 id="21-抽离autoloadjs">2.1 抽离autoload.js
 </h3><ul>
 <li>(1) 前往【<a class="link" href="https://github.com/stevenjoezhang/live2d-widget"  target="_blank" rel="noopener"
@@ -710,7 +709,7 @@
 <p><img src="/hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs1.png"
 	width="948"
 	height="654"
-	srcset="/hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs1_hu4116551679071180038.png 480w, /hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs1_hu1504599173053339036.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs1_hu_eb5e9daeda74cf6d.png 480w, /hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs1_hu_6572388556e97e8b.png 1024w"
 	loading="lazy"
 	
 	
@@ -722,7 +721,7 @@
 <p><img src="/hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs2.png"
 	width="614"
 	height="185"
-	srcset="/hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs2_hu7757436184522422918.png 480w, /hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs2_hu4325862114188955926.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs2_hu_41703f3ed7a26ba2.png 480w, /hugo-stack/p/hugo/custom-live2d/%E6%8A%BD%E7%A6%BBjs2_hu_40b81cec9c6c2bd0.png 1024w"
 	loading="lazy"
 	
 	
@@ -786,13 +785,13 @@
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 【custom.html】 --&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// 获取博客本地资源地址
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">cssPath</span> <span class="o">=</span> <span class="p">{{</span> <span class="p">(</span><span class="nx">resources</span><span class="p">.</span><span class="nx">Get</span> <span class="s2">&#34;waifu/waifu.css&#34;</span><span class="p">).</span><span class="nx">Permalink</span> <span class="p">}}</span>
+</span></span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">cssPath</span> <span class="o">=</span> <span class="p">{{</span> <span class="p">(</span><span class="nx">resources</span><span class="p">.</span><span class="nx">Get</span> <span class="s2">&#34;waifu/waifu.css&#34;</span><span class="p">).</span><span class="nx">Permalink</span> <span class="p">}}</span>
 </span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">tipsJsonPath</span> <span class="o">=</span> <span class="p">{{</span> <span class="p">(</span><span class="nx">resources</span><span class="p">.</span><span class="nx">Get</span> <span class="s2">&#34;waifu/waifu-tips.json&#34;</span><span class="p">).</span><span class="nx">Permalink</span> <span class="p">}}</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// live2d_path 参数建议使用绝对路径
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">live2d_path</span> <span class="o">=</span> <span class="s2">&#34;https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/&#34;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">live2d_path</span> <span class="o">=</span> <span class="s2">&#34;https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">// 封装异步加载资源的方法
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">function</span> <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nx">tag</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&#34;css&#34;</span><span class="p">)</span> <span class="p">{</span>
@@ -813,14 +812,14 @@
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">// 加载 waifu.css live2d.min.js waifu-tips.js
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;=</span> <span class="mi">768</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;=</span> <span class="mi">768</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">cssPath</span><span class="p">,</span> <span class="s2">&#34;css&#34;</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">live2d_path</span> <span class="o">+</span> <span class="s2">&#34;live2d.min.js&#34;</span><span class="p">,</span> <span class="s2">&#34;js&#34;</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">live2d_path</span> <span class="o">+</span> <span class="s2">&#34;waifu-tips.js&#34;</span><span class="p">,</span> <span class="s2">&#34;js&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">]).</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 配置选项的具体用法见 README.md
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">initWidget</span><span class="p">({</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">initWidget</span><span class="p">({</span>
 </span></span><span class="line"><span class="cl">                <span class="nx">waifuPath</span><span class="o">:</span> <span class="nx">tipsJsonPath</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">                <span class="nx">cdnPath</span><span class="o">:</span> <span class="s2">&#34;https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">                <span class="nx">tools</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;hitokoto&#34;</span><span class="p">,</span> <span class="s2">&#34;asteroids&#34;</span><span class="p">,</span> <span class="s2">&#34;switch-model&#34;</span><span class="p">,</span> <span class="s2">&#34;switch-texture&#34;</span><span class="p">,</span> <span class="s2">&#34;photo&#34;</span><span class="p">,</span> <span class="s2">&#34;info&#34;</span><span class="p">,</span> <span class="s2">&#34;quit&#34;</span><span class="p">]</span>
@@ -911,7 +910,7 @@
 <p><img src="/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4css1.png"
 	width="629"
 	height="401"
-	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4css1_hu18120271209873172884.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4css1_hu15247650076209271601.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4css1_hu_b257b48f214b35c4.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4css1_hu_528c6924bf3e6e40.png 1024w"
 	loading="lazy"
 	
 	
@@ -933,7 +932,7 @@
 <p><img src="/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD1.png"
 	width="995"
 	height="374"
-	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD1_hu12524649210065853399.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD1_hu18406233360388810405.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD1_hu_2bc5fe4f62fee5df.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD1_hu_f8f415fc5a233475.png 1024w"
 	loading="lazy"
 	
 	
@@ -948,7 +947,7 @@
 <p><img src="/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD2.png"
 	width="698"
 	height="547"
-	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD2_hu2463675216799207983.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD2_hu10702125778130372780.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD2_hu_9e35b3a94bc60128.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD2_hu_68f1c3ff09ae8165.png 1024w"
 	loading="lazy"
 	
 	
@@ -961,9 +960,9 @@
 <li>(4) 这样当我们鼠标移动到对应的元素之后，看板娘就会有对应的提示语</li>
 </ul>
 <p><img src="/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3.gif"
-	width="2560"
-	height="1440"
-	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3_hu7929714314688086124.gif 480w, /hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3_hu15904829133514768322.gif 1024w"
+	width="480"
+	height="270"
+	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3_hu_bd0b12a43cae261.gif 480w, /hugo-stack/p/hugo/custom-live2d/%E8%B0%83%E6%95%B4%E6%8F%90%E7%A4%BA%E8%AF%AD3_hu_d2bb0cd769443339.gif 1024w"
 	loading="lazy"
 	
 	
@@ -994,7 +993,7 @@
 <p><img src="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1.png"
 	width="575"
 	height="223"
-	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu3026801339791019489.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu7082330083530701100.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu_eb13778c23277929.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu_6b30436aa9ac2924.png 1024w"
 	loading="lazy"
 	
 	
@@ -1009,7 +1008,7 @@
 <p><img src="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B2.png"
 	width="1278"
 	height="488"
-	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B2_hu10531032458095924358.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B2_hu4094684735325559998.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B2_hu_5c9b36238f7faa8f.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B2_hu_3caa48728e2afa3a.png 1024w"
 	loading="lazy"
 	
 	
@@ -1049,7 +1048,7 @@
 </span></span><span class="line"><span class="cl">            <span class="nx">initWidget</span><span class="p">({</span>
 </span></span><span class="line"><span class="cl">                <span class="p">...</span>
 </span></span><span class="line"><span class="cl">                <span class="c1">// 有文件夹就在后面拼文件夹路径
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">cdnPath</span><span class="o">:</span> <span class="s2">&#34;https://cdn.jsdelivr.net/gh/{用户名}/{仓库名}@{标签名}/&#34;</span><span class="p">,</span>
+</span></span></span><span class="line"><span class="cl">                <span class="nx">cdnPath</span><span class="o">:</span> <span class="s2">&#34;https://cdn.jsdelivr.net/gh/{用户名}/{仓库名}@{标签名}/&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">                <span class="p">...</span>
 </span></span><span class="line"><span class="cl">            <span class="p">});</span>
 </span></span><span class="line"><span class="cl">        <span class="p">});</span>
@@ -1078,12 +1077,11 @@
 
 
 
-    <p>如果你 <strong>model_list.json</strong> 中的 <strong>live2d模型分组</strong> 只有一组的时候，会存在bug，导致加载不出模型，需要进行修复</p>
-</blockquote>
+    <p>如果你 <strong>model_list.json</strong> 中的 <strong>live2d模型分组</strong> 只有一组的时候，会存在bug，导致加载不出模型，需要进行修复</p></blockquote>
 <p><img src="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BBug1.png"
 	width="511"
 	height="306"
-	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BBug1_hu12560959488098848732.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BBug1_hu5651054310968206641.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BBug1_hu_f4a77ba34fd29530.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BBug1_hu_9227570e60aaa37d.png 1024w"
 	loading="lazy"
 	
 	
@@ -1095,7 +1093,7 @@
 <p><img src="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug2.png"
 	width="770"
 	height="273"
-	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug2_hu17123432380749284147.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug2_hu16709974159330286376.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug2_hu_c9ae2e6ff0c7df50.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug2_hu_2c6a4b01b436aca9.png 1024w"
 	loading="lazy"
 	
 	
@@ -1150,7 +1148,7 @@
 <p><img src="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug3.png"
 	width="812"
 	height="596"
-	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug3_hu4291967012580399561.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug3_hu13917885585910285053.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug3_hu_6d1596335c455d87.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug3_hu_abb9e82d362b0c73.png 1024w"
 	loading="lazy"
 	
 	
@@ -1165,7 +1163,7 @@
 <p><img src="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug4.png"
 	width="766"
 	height="378"
-	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug4_hu15516648925241172240.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug4_hu9654690787445098143.png 1024w"
+	srcset="/hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug4_hu_8c7b2b572888d8f3.png 480w, /hugo-stack/p/hugo/custom-live2d/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8Bbug4_hu_7c612852b0379527.png 1024w"
 	loading="lazy"
 	
 	
@@ -1233,9 +1231,9 @@
 <li>(3) 这样就能切换这些看板娘的皮肤了</li>
 </ul>
 <p><img src="/hugo-stack/p/hugo/custom-live2d/%E7%9A%AE%E8%82%A4%E5%88%87%E6%8D%A2.gif"
-	width="2560"
-	height="1440"
-	srcset="/hugo-stack/p/hugo/custom-live2d/%E7%9A%AE%E8%82%A4%E5%88%87%E6%8D%A2_hu15709790727812461766.gif 480w, /hugo-stack/p/hugo/custom-live2d/%E7%9A%AE%E8%82%A4%E5%88%87%E6%8D%A2_hu9660268217645380957.gif 1024w"
+	width="480"
+	height="270"
+	srcset="/hugo-stack/p/hugo/custom-live2d/%E7%9A%AE%E8%82%A4%E5%88%87%E6%8D%A2_hu_7d6109c64870fdaf.gif 480w, /hugo-stack/p/hugo/custom-live2d/%E7%9A%AE%E8%82%A4%E5%88%87%E6%8D%A2_hu_265820a14abf2c15.gif 1024w"
 	loading="lazy"
 	
 	
@@ -1325,7 +1323,7 @@
 </span></span><span class="line"><span class="cl">        <span class="p">]).</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="p">...</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 初始化看板娘鼠标监听事件
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">initWaifuMouseEvent</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">initWaifuMouseEvent</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">        <span class="p">});</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">	
@@ -1337,22 +1335,22 @@
 </span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">waifuTop</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">mouseTop</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 鼠标点击监听
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">waifu</span><span class="p">.</span><span class="nx">onmousedown</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">        <span class="nx">waifu</span><span class="p">.</span><span class="nx">onmousedown</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">isDown</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 记录x轴
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">waifuLeft</span> <span class="o">=</span> <span class="nx">waifu</span><span class="p">.</span><span class="nx">offsetLeft</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">waifuLeft</span> <span class="o">=</span> <span class="nx">waifu</span><span class="p">.</span><span class="nx">offsetLeft</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">mouseLeft</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">clientX</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// 记录y轴
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">waifuTop</span> <span class="o">=</span> <span class="nx">waifu</span><span class="p">.</span><span class="nx">offsetTop</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">waifuTop</span> <span class="o">=</span> <span class="nx">waifu</span><span class="p">.</span><span class="nx">offsetTop</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">mouseTop</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">clientY</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 鼠标移动监听
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nb">window</span><span class="p">.</span><span class="nx">onmousemove</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">        <span class="nb">window</span><span class="p">.</span><span class="nx">onmousemove</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isDown</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// x轴移动
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">currentLeft</span> <span class="o">=</span> <span class="nx">waifuLeft</span> <span class="o">+</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">clientX</span> <span class="o">-</span> <span class="nx">mouseLeft</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nx">currentLeft</span> <span class="o">=</span> <span class="nx">waifuLeft</span> <span class="o">+</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">clientX</span> <span class="o">-</span> <span class="nx">mouseLeft</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">currentLeft</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="nx">currentLeft</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">currentLeft</span> <span class="o">&gt;</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span> <span class="o">-</span> <span class="mi">300</span><span class="p">)</span> <span class="p">{</span>
@@ -1360,7 +1358,7 @@
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">waifu</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="nx">currentLeft</span>  <span class="o">+</span> <span class="s2">&#34;px&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// y轴移动
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">currentTop</span> <span class="o">=</span> <span class="nx">waifuTop</span> <span class="o">+</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">clientY</span> <span class="o">-</span> <span class="nx">mouseTop</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nx">currentTop</span> <span class="o">=</span> <span class="nx">waifuTop</span> <span class="o">+</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">clientY</span> <span class="o">-</span> <span class="nx">mouseTop</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">currentTop</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="nx">currentTop</span> <span class="o">=</span> <span class="mi">30</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">currentTop</span> <span class="o">&gt;</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span> <span class="o">-</span> <span class="mi">290</span><span class="p">)</span> <span class="p">{</span>
@@ -1369,7 +1367,7 @@
 </span></span><span class="line"><span class="cl">            <span class="nx">waifu</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">top</span> <span class="o">=</span> <span class="nx">currentTop</span> <span class="o">+</span> <span class="s2">&#34;px&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 鼠标点击松开监听
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nb">window</span><span class="p">.</span><span class="nx">onmouseup</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">        <span class="nb">window</span><span class="p">.</span><span class="nx">onmouseup</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">isDown</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
@@ -1380,9 +1378,9 @@
 <li>(3) 这样就可以随意拖拽看板娘了（如果是没有腿的模型，建议把y轴移动的代码注释掉）</li>
 </ul>
 <p><img src="/hugo-stack/p/hugo/custom-live2d/%E7%9C%8B%E6%9D%BF%E5%A8%98%E6%8B%96%E6%8B%BD.gif"
-	width="2560"
-	height="1440"
-	srcset="/hugo-stack/p/hugo/custom-live2d/%E7%9C%8B%E6%9D%BF%E5%A8%98%E6%8B%96%E6%8B%BD_hu1407825209830676737.gif 480w, /hugo-stack/p/hugo/custom-live2d/%E7%9C%8B%E6%9D%BF%E5%A8%98%E6%8B%96%E6%8B%BD_hu3220978026979702407.gif 1024w"
+	width="480"
+	height="270"
+	srcset="/hugo-stack/p/hugo/custom-live2d/%E7%9C%8B%E6%9D%BF%E5%A8%98%E6%8B%96%E6%8B%BD_hu_28efa11d385f261b.gif 480w, /hugo-stack/p/hugo/custom-live2d/%E7%9C%8B%E6%9D%BF%E5%A8%98%E6%8B%96%E6%8B%BD_hu_adc9f9630bb5f08d.gif 1024w"
 	loading="lazy"
 	
 	
@@ -1433,7 +1431,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/custom-stack-widget/cover.93abe4d43bf1822c867ad6edfefd87b7_hu35489920296379085.png"
+                <img src="/hugo-stack/p/hugo/custom-stack-widget/cover.93abe4d43bf1822c867ad6edfefd87b7_hu_d01fb4c00e3a2225.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1458,7 +1456,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/ps/striped-perforated-font/make/cover.b5a5e1987ee433fe7d8fe4253c3feac7_hu14700954207319752805.png"
+                <img src="/hugo-stack/p/ps/striped-perforated-font/make/cover.b5a5e1987ee433fe7d8fe4253c3feac7_hu_d1592ab6e8e27e8.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1483,7 +1481,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/ai/faster-whisper/deploy/cover.975ce7277b55cc0ba16002e9c1be265e_hu2563915321903799143.png"
+                <img src="/hugo-stack/p/ai/faster-whisper/deploy/cover.975ce7277b55cc0ba16002e9c1be265e_hu_be3c715b655bce6d.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1508,7 +1506,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/ai/fish-speech/deploy/cover.d1f25a86cd50c3c4b9f7b1524b2fb3a0_hu12446753006214389387.png"
+                <img src="/hugo-stack/p/ai/fish-speech/deploy/cover.d1f25a86cd50c3c4b9f7b1524b2fb3a0_hu_5b33d4bcb929379b.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1533,7 +1531,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/view-count/cover.274092bdc81c36c9bb0b38db9a6be9fa_hu6949047556944337237.png"
+                <img src="/hugo-stack/p/hugo/view-count/cover.274092bdc81c36c9bb0b38db9a6be9fa_hu_df784c314dd4380a.png"
                         width="250"
                         height="150"
                         loading="lazy"

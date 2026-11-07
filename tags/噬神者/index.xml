@@ -44,8 +44,7 @@
 &lt;li&gt;汉化教程原文：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/opus/929171060171997206&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;【STEAM】噬神者1+2卡加载以及汉化补丁安装教程（包含steamdeck）&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;本文只是个人汉化过程的一个记录，仅自用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-汉化&#34;&gt;1 汉化
 &lt;/h2&gt;&lt;ul&gt;
@@ -63,7 +62,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E4%B8%8B%E8%BD%BD.png&#34;
 	width=&#34;1930&#34;
 	height=&#34;1011&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E4%B8%8B%E8%BD%BD_hu2289380322684728380.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E4%B8%8B%E8%BD%BD_hu3844254014548516716.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E4%B8%8B%E8%BD%BD_hu_aefe46d1a923da13.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E4%B8%8B%E8%BD%BD_hu_8afb8c4efafeb8a5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -85,7 +84,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E8%A7%A3%E5%8E%8B.png&#34;
 	width=&#34;1186&#34;
 	height=&#34;836&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E8%A7%A3%E5%8E%8B_hu18170131770934419777.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E8%A7%A3%E5%8E%8B_hu13230033654750033077.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E8%A7%A3%E5%8E%8B_hu_fc474c0e1a70e5a4.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E8%A1%A5%E4%B8%81%E8%A7%A3%E5%8E%8B_hu_eb2024c73ee45ca8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -104,7 +103,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B6.png&#34;
 	width=&#34;1232&#34;
 	height=&#34;837&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B6_hu5898039570320940564.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B6_hu10771373317669621956.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B6_hu_29578d3c4e56b892.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B6_hu_358475e0ec01702b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -116,7 +115,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B62.png&#34;
 	width=&#34;1215&#34;
 	height=&#34;782&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B62_hu16693382632954262980.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B62_hu14317698424602744690.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B62_hu_72749d8e8478d8b2.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%89%93%E5%BC%80%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B62_hu_750e4bfa0c2b8d9a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -135,7 +134,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%B1%89%E5%8C%96%E6%BC%94%E7%A4%BA.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%B1%89%E5%8C%96%E6%BC%94%E7%A4%BA_hu13365983568161475254.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%B1%89%E5%8C%96%E6%BC%94%E7%A4%BA_hu17861624341462762829.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%B1%89%E5%8C%96%E6%BC%94%E7%A4%BA_hu_35fdbc386879353b.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%B1%89%E5%8C%96%E6%BC%94%E7%A4%BA_hu_94b2e927da2d739e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -152,7 +151,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF1.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF1_hu8137704225518952574.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF1_hu4828308122823439308.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF1_hu_32e0a1e88bf0baa8.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF1_hu_8bc585bb067637b8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -167,7 +166,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF2.png&#34;
 	width=&#34;2010&#34;
 	height=&#34;799&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF2_hu2100138042415703988.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF2_hu15737305886647673757.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF2_hu_ffd179247e3b4ab6.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF2_hu_e39ebe716513673.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -179,7 +178,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF3.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF3_hu8377195877980320129.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF3_hu2565631616737945443.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF3_hu_102f6349c2734027.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E5%9B%BE%E6%A0%87%E9%94%99%E8%AF%AF3_hu_86c4067ad4fb6cd4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -197,7 +196,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%8C%89%E9%92%AE%E5%9B%BE%E6%A0%87%E7%BC%BA%E5%A4%B1.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%8C%89%E9%92%AE%E5%9B%BE%E6%A0%87%E7%BC%BA%E5%A4%B1_hu16979977273592453686.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%8C%89%E9%92%AE%E5%9B%BE%E6%A0%87%E7%BC%BA%E5%A4%B1_hu9132411851853379548.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%8C%89%E9%92%AE%E5%9B%BE%E6%A0%87%E7%BC%BA%E5%A4%B1_hu_fbdb19dc5ccf0ae2.png 480w, https://letere-gzj.github.io/hugo-stack/p/game/ge2rb-chinese/%E6%8C%89%E9%92%AE%E5%9B%BE%E6%A0%87%E7%BC%BA%E5%A4%B1_hu_480b274136652b7e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

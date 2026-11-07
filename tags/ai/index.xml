@@ -36,16 +36,15 @@
 
 
 
-    &lt;p&gt;&lt;ul&gt;
+    &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/SYSTRAN/faster-whisper&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;【faster-whisper】&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;1-环境准备&#34;&gt;1 环境准备
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Python安装&lt;/strong&gt;：
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/hugo-stack/python/build-env&#34; &gt;&lt;strong&gt;【Python】Windows搭建Python环境&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/python/build-env&#34; &gt;&lt;strong&gt;【Python】Windows搭建Python环境&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;注意：&lt;/strong&gt; 目前需python版本 &lt;strong&gt;3.9&lt;/strong&gt; 以上，具体可看官方文档&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -53,7 +52,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/python%E5%AE%89%E8%A3%851.png&#34;
 	width=&#34;1360&#34;
 	height=&#34;522&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/python%E5%AE%89%E8%A3%851_hu17617628836399726656.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/python%E5%AE%89%E8%A3%851_hu16485915509140918585.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/python%E5%AE%89%E8%A3%851_hu_5eaba5e302d43afe.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/python%E5%AE%89%E8%A3%851_hu_7faf73a11c24c451.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -71,7 +70,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD1.png&#34;
 	width=&#34;1458&#34;
 	height=&#34;699&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD1_hu15691028636013309497.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD1_hu3862620919221707233.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD1_hu_c4df748607473f77.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD1_hu_ac90b9e42365bbeb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -83,7 +82,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD2.png&#34;
 	width=&#34;1371&#34;
 	height=&#34;555&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD2_hu16883273254291524230.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD2_hu16768422250262428359.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD2_hu_98ebb9890f108be4.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E4%B8%8B%E8%BD%BD2_hu_df91bb9850420f6f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -98,7 +97,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E5%AE%89%E8%A3%851.png&#34;
 	width=&#34;1148&#34;
 	height=&#34;500&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E5%AE%89%E8%A3%851_hu15667246768211963407.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E5%AE%89%E8%A3%851_hu17993382624593805657.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E5%AE%89%E8%A3%851_hu_3574441368d5a2ad.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/faster-whisper%E5%AE%89%E8%A3%851_hu_5bde0e9d1be59e4f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -116,7 +115,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD1.png&#34;
 	width=&#34;1304&#34;
 	height=&#34;740&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD1_hu14519354078154639367.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD1_hu13597984713229711532.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD1_hu_357eef29369f5c61.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD1_hu_7bf994e310828803.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -131,7 +130,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD2.png&#34;
 	width=&#34;1408&#34;
 	height=&#34;840&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD2_hu7101668399180602166.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD2_hu5172865939788551522.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD2_hu_b66f0271651f5d7e.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD2_hu_83dd1f8a35ea67ab.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -143,7 +142,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD3.png&#34;
 	width=&#34;949&#34;
 	height=&#34;474&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD3_hu8268798424950758048.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD3_hu7285127834384247604.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD3_hu_5365fa5e0fe612a0.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD3_hu_954f1925093217ff.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -170,13 +169,13 @@
 
 
 
-    &lt;p&gt;&lt;ul&gt;
+    &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;需安装 &lt;strong&gt;CUDA 12&lt;/strong&gt; ， &lt;strong&gt;cuDNN 9&lt;/strong&gt;
 &lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/GPU%E6%8E%A8%E7%90%861.png&#34;
 	width=&#34;869&#34;
 	height=&#34;235&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/GPU%E6%8E%A8%E7%90%861_hu6387258901327487425.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/GPU%E6%8E%A8%E7%90%861_hu9990684940956711206.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/GPU%E6%8E%A8%E7%90%861_hu_ca7fd026681ead04.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/GPU%E6%8E%A8%E7%90%861_hu_30d11b3861da0aa7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -196,7 +195,7 @@
 &lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E9%99%8D%E7%BA%A7.png&#34;
 	width=&#34;1320&#34;
 	height=&#34;283&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E9%99%8D%E7%BA%A7_hu6025054631571934743.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E9%99%8D%E7%BA%A7_hu7125913147349397463.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E9%99%8D%E7%BA%A7_hu_54bd71536605376c.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E9%99%8D%E7%BA%A7_hu_856fbc44bfb4d6d7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -207,8 +206,7 @@
 &gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;41-cuda安装&#34;&gt;4.1 CUDA安装
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;具体看 &lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/#3-%e6%8e%a8%e7%90%86%e5%8a%a0%e9%80%9f&#34; &gt;&lt;strong&gt;【推理加速】&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
@@ -222,7 +220,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD1.png&#34;
 	width=&#34;1553&#34;
 	height=&#34;717&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD1_hu4093929093310275455.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD1_hu7529382464338997406.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD1_hu_474faf5cab1a41f0.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD1_hu_90d6deb6a2a67925.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -237,7 +235,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD2.png&#34;
 	width=&#34;1971&#34;
 	height=&#34;821&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD2_hu2203285445417853121.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD2_hu6841141601692213965.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD2_hu_b32742ade3cc0607.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/faster-whisper/deploy/cudnn%E4%B8%8B%E8%BD%BD2_hu_64bf00d528eec79c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -309,18 +307,18 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;歌曲信息&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;音频&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;徐洁儿 - 错误的相遇&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;徐洁儿 - 错误的相遇.mp3&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;歌曲信息&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;音频&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;徐洁儿 - 错误的相遇&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;徐洁儿 - 错误的相遇.mp3&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -457,14 +455,13 @@
     &gt;&lt;strong&gt;【indexTTS2效果演示】&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://indextts.org/zh/playground&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;【indexTTS2在线体验】&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-体验分享&#34;&gt;1 体验分享
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/indexTTS%E7%95%8C%E9%9D%A2.png&#34;
 	width=&#34;2543&#34;
 	height=&#34;1310&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/indexTTS%E7%95%8C%E9%9D%A2_hu2582286806224934194.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/indexTTS%E7%95%8C%E9%9D%A2_hu10732309207585539213.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/indexTTS%E7%95%8C%E9%9D%A2_hu_ffa17dfb18e1b160.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/indexTTS%E7%95%8C%E9%9D%A2_hu_378658067b0fa417.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -508,31 +505,30 @@
 
 
 
-    &lt;p&gt;&lt;ul&gt;
+    &lt;ul&gt;
 &lt;li&gt;因为indexTTS2最大的特点就是&lt;strong&gt;丰富的情感控制&lt;/strong&gt;，这边也着重去演示语音情感&lt;/li&gt;
 &lt;li&gt;下面以&lt;strong&gt;鸣潮-今汐&lt;/strong&gt;的音频来演示&lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;文本&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;音频&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;一个人走虽然更快，一群人才能走得更远。未来的路，我会和大家，会和你一起走下去。&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;今汐.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/blockquote&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;文本&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;音频&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;一个人走虽然更快，一群人才能走得更远。未来的路，我会和大家，会和你一起走下去。&lt;/code&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;今汐.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;21-与音色参考音频相同&#34;&gt;2.1 与音色参考音频相同
 &lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E9%9F%B3%E8%89%B2%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91.png&#34;
 	width=&#34;1288&#34;
 	height=&#34;219&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E9%9F%B3%E8%89%B2%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91_hu9239971983528956550.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E9%9F%B3%E8%89%B2%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91_hu15775888275128682803.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E9%9F%B3%E8%89%B2%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91_hu_7fbff7e826b9ac6d.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E9%9F%B3%E8%89%B2%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91_hu_b531bd8be1e5834d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -549,33 +545,33 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;音色参考音频&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;生成音频&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;今汐.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;1-1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;今汐2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;1-2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;音色参考音频&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;生成音频&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;今汐.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;1-1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;今汐2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;1-2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;22-使用情感参考音频&#34;&gt;2.2 使用情感参考音频
 &lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91.png&#34;
 	width=&#34;1995&#34;
 	height=&#34;860&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91_hu18156650023188602110.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91_hu8929193015897346827.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91_hu_c5b258d5c697088e.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%8F%82%E8%80%83%E9%9F%B3%E9%A2%91_hu_416a92f51846c4ca.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -592,37 +588,37 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;情感&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;情感参考音频&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;生成音频&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;生气&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;angry.aac&#34; type=&#34;audio/aac&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;2-1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;伤心&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;cry.aac&#34; type=&#34;audio/aac&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;2-2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;情感&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;情感参考音频&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;生成音频&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;生气&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;angry.aac&#34; type=&#34;audio/aac&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;2-1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;伤心&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;cry.aac&#34; type=&#34;audio/aac&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;2-2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;23-使用情感向量控制&#34;&gt;2.3 使用情感向量控制
 &lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%90%91%E9%87%8F.png&#34;
 	width=&#34;2007&#34;
 	height=&#34;865&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%90%91%E9%87%8F_hu9754804241407354231.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%90%91%E9%87%8F_hu6236007415992211027.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%90%91%E9%87%8F_hu_bf52303843600df6.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E5%90%91%E9%87%8F_hu_4ff87ca9dba2f96b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -639,33 +635,33 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;情感向量&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;生成音频&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;喜 0.6&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;3-1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;哀 0.6&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;3-2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;情感向量&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;生成音频&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;喜 0.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;3-1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;哀 0.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;3-2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;24-使用情感描述文本控制&#34;&gt;2.4 使用情感描述文本控制
 &lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E6%8F%8F%E8%BF%B0%E6%96%87%E6%9C%AC.png&#34;
 	width=&#34;2000&#34;
 	height=&#34;558&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E6%8F%8F%E8%BF%B0%E6%96%87%E6%9C%AC_hu12846293442091974661.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E6%8F%8F%E8%BF%B0%E6%96%87%E6%9C%AC_hu17215571603160065642.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E6%8F%8F%E8%BF%B0%E6%96%87%E6%9C%AC_hu_b6cf7ab240e09949.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/indextts/try-report/%E6%83%85%E6%84%9F%E6%8F%8F%E8%BF%B0%E6%96%87%E6%9C%AC_hu_1950c147865ac8b4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -682,26 +678,26 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;情感描述文本&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;生成音频&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;非常生气&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;4-1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;非常伤心&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;4-2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;情感描述文本&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;生成音频&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;非常生气&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;4-1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;非常伤心&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;4-2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
 
@@ -753,20 +749,19 @@
 
 
 
-    &lt;p&gt;&lt;ul&gt;
+    &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://anaconda.net.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;conda官网&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.anaconda.net.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;conda官方文档&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;（1）下载conda，conda有多个版本，具体版本可以按需下载，这边演示下载miniconda&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%85.png&#34;
 	width=&#34;2154&#34;
 	height=&#34;571&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%85_hu2174013281673136967.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%85_hu10480695839740599082.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%85_hu_9343ad67682f7e2d.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%85_hu_9b655adf399a469f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -778,7 +773,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%852.png&#34;
 	width=&#34;2174&#34;
 	height=&#34;1050&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%852_hu14083056593100666618.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%852_hu7718241515864750290.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%852_hu_d6457a5c972d83d2.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E5%AE%89%E8%A3%852_hu_960476bfa9396312.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -798,7 +793,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.png&#34;
 	width=&#34;2322&#34;
 	height=&#34;1193&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu3355112333161292858.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu6774639002376048374.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu_f78c5d483016a5b4.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE_hu_d50e61d223ef81ee.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -810,7 +805,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2.png&#34;
 	width=&#34;826&#34;
 	height=&#34;784&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu14565201788017387200.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu7526012472548818451.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu_6d9c1f79a32483d1.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE2_hu_f2c970b5f8dacddb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -825,7 +820,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E6%B5%8B%E8%AF%95.png&#34;
 	width=&#34;511&#34;
 	height=&#34;234&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E6%B5%8B%E8%AF%95_hu7611486596292011314.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E6%B5%8B%E8%AF%95_hu2787131873669345621.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E6%B5%8B%E8%AF%95_hu_fc48e6692338e2c7.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/conda%E6%B5%8B%E8%AF%95_hu_dccce91d361ee0ba.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -852,14 +847,13 @@
 
 
 
-    &lt;p&gt;&lt;ul&gt;
+    &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/fishaudio/fish-speech&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;fish-speech项目&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://speech.fish.audio/zh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;fish-speech部署文档&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;以下内容根据官方文件进行编写，若内容失效，请根据官方最新文档进行部署&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;21-安装&#34;&gt;2.1 安装
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;（1）下载fish-speech项目&lt;/li&gt;
@@ -867,7 +861,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E4%B8%8B%E8%BD%BD.png&#34;
 	width=&#34;1470&#34;
 	height=&#34;674&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E4%B8%8B%E8%BD%BD_hu6383235579293399642.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E4%B8%8B%E8%BD%BD_hu2720164818683065730.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E4%B8%8B%E8%BD%BD_hu_945959013115afaa.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E4%B8%8B%E8%BD%BD_hu_9f40c7121d2c8889.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -896,7 +890,7 @@
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E5%AE%89%E8%A3%85.png&#34;
 	width=&#34;963&#34;
 	height=&#34;758&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E5%AE%89%E8%A3%85_hu17846535565982031955.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E5%AE%89%E8%A3%85_hu1714410311166619252.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E5%AE%89%E8%A3%85_hu_ecbd5704d8885883.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/fish-speech%E5%AE%89%E8%A3%85_hu_c2561e17539eccde.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -919,7 +913,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E8%8E%B7%E5%8F%96%E6%A8%A1%E5%9E%8B%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90.png&#34;
 	width=&#34;1469&#34;
 	height=&#34;755&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E8%8E%B7%E5%8F%96%E6%A8%A1%E5%9E%8B%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90_hu13511134822465879213.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E8%8E%B7%E5%8F%96%E6%A8%A1%E5%9E%8B%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90_hu10141466252694596922.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E8%8E%B7%E5%8F%96%E6%A8%A1%E5%9E%8B%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90_hu_475ec2dfc6decbe7.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E8%8E%B7%E5%8F%96%E6%A8%A1%E5%9E%8B%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90_hu_478022263b3e999.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -934,7 +928,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C.png&#34;
 	width=&#34;2420&#34;
 	height=&#34;927&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C_hu16937585656473562132.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C_hu16464747310828605825.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C_hu_43cdc1c079a90264.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C_hu_554df1a41fe9014.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -946,7 +940,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C2.png&#34;
 	width=&#34;1571&#34;
 	height=&#34;608&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C2_hu7424642794354304105.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C2_hu15903316729291537802.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C2_hu_62ca5ab5bfd3c99c.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%88%9B%E5%BB%BA%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C2_hu_3129835114330054.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -961,7 +955,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/huggingface%E7%99%BB%E5%BD%95.png&#34;
 	width=&#34;1673&#34;
 	height=&#34;459&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/huggingface%E7%99%BB%E5%BD%95_hu14882600478418109291.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/huggingface%E7%99%BB%E5%BD%95_hu2480284484283500435.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/huggingface%E7%99%BB%E5%BD%95_hu_4b856de58bc15c3d.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/huggingface%E7%99%BB%E5%BD%95_hu_5b67c51b1dadd40a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -980,7 +974,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD.png&#34;
 	width=&#34;1712&#34;
 	height=&#34;437&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD_hu16160501988607136703.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD_hu16468889532222035467.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD_hu_bb61aeafd4e63015.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD_hu_6398cfecddc9e7ac.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -999,7 +993,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/web%E7%95%8C%E9%9D%A2.png&#34;
 	width=&#34;2291&#34;
 	height=&#34;994&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/web%E7%95%8C%E9%9D%A2_hu17275727449670226006.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/web%E7%95%8C%E9%9D%A2_hu3655135579545463126.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/web%E7%95%8C%E9%9D%A2_hu_407d164df000bfdf.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/web%E7%95%8C%E9%9D%A2_hu_c51d3fa31d91f2ff.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1026,12 +1020,11 @@
 
 
 
-    &lt;p&gt;启动fish-speech会看到一个&lt;code&gt;CUDA is not available, running on CPU.&lt;/code&gt;，因为运行在CPU，所以速度比较慢，因此我们需要安装一下CUDA&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;p&gt;启动fish-speech会看到一个&lt;code&gt;CUDA is not available, running on CPU.&lt;/code&gt;，因为运行在CPU，所以速度比较慢，因此我们需要安装一下CUDA&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8D%E5%8F%AF%E7%94%A8.png&#34;
 	width=&#34;1689&#34;
 	height=&#34;301&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8D%E5%8F%AF%E7%94%A8_hu13278481134217167368.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8D%E5%8F%AF%E7%94%A8_hu3488217969693366202.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8D%E5%8F%AF%E7%94%A8_hu_9466fea83c76cec1.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8D%E5%8F%AF%E7%94%A8_hu_68512edfd80f01fb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1047,7 +1040,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A3%80%E6%9F%A5CUDA%E5%AE%89%E8%A3%85.png&#34;
 	width=&#34;1085&#34;
 	height=&#34;607&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A3%80%E6%9F%A5CUDA%E5%AE%89%E8%A3%85_hu7777130242599413249.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A3%80%E6%9F%A5CUDA%E5%AE%89%E8%A3%85_hu15211773865739185862.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A3%80%E6%9F%A5CUDA%E5%AE%89%E8%A3%85_hu_d982c5b8264bcfa6.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E6%A3%80%E6%9F%A5CUDA%E5%AE%89%E8%A3%85_hu_72430f809ffe81e4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1066,7 +1059,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/CUDA%E6%94%AF%E6%8C%81%E7%89%88%E6%9C%AC.png&#34;
 	width=&#34;1112&#34;
 	height=&#34;805&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/CUDA%E6%94%AF%E6%8C%81%E7%89%88%E6%9C%AC_hu16051112260216880350.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/CUDA%E6%94%AF%E6%8C%81%E7%89%88%E6%9C%AC_hu8728782837778532736.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/CUDA%E6%94%AF%E6%8C%81%E7%89%88%E6%9C%AC_hu_39ee597c7a4eca10.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/CUDA%E6%94%AF%E6%8C%81%E7%89%88%E6%9C%AC_hu_1fcfd566a0b6f941.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1082,7 +1075,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD.png&#34;
 	width=&#34;1724&#34;
 	height=&#34;880&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD_hu17599259530987249572.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD_hu10241175567451391587.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD_hu_f7026681ed0bcd11.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD_hu_12eb51db5312bc2c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1094,7 +1087,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD2.png&#34;
 	width=&#34;2019&#34;
 	height=&#34;1049&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD2_hu10581337901936404448.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD2_hu3027802454748185345.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD2_hu_8676a045334e692d.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E4%B8%8B%E8%BD%BD2_hu_d8f9e59de1fb38ca.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1109,7 +1102,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85.png&#34;
 	width=&#34;892&#34;
 	height=&#34;665&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85_hu9016318141693742291.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85_hu16639092739668047169.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85_hu_acd10e7edaddaa1f.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85_hu_2aad30622674efeb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1124,7 +1117,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85%E6%A3%80%E6%9F%A5.png&#34;
 	width=&#34;839&#34;
 	height=&#34;210&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85%E6%A3%80%E6%9F%A5_hu18018810333991496639.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85%E6%A3%80%E6%9F%A5_hu8956736823958548710.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85%E6%A3%80%E6%9F%A5_hu_cdf3f43086567f84.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/cuda%E5%AE%89%E8%A3%85%E6%A3%80%E6%9F%A5_hu_d77c2c8e5669683b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1142,7 +1135,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/pytorch%E6%9B%B4%E6%96%B0.png&#34;
 	width=&#34;1531&#34;
 	height=&#34;592&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/pytorch%E6%9B%B4%E6%96%B0_hu8645082274528720809.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/pytorch%E6%9B%B4%E6%96%B0_hu9749496676557500425.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/pytorch%E6%9B%B4%E6%96%B0_hu_f679fdf103ecc79.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/pytorch%E6%9B%B4%E6%96%B0_hu_337cce1b64ff2ac0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1158,18 +1151,18 @@
 &lt;li&gt;（1）准备好一段音频，以及文本（下面以&lt;strong&gt;星穹铁道-三月七&lt;/strong&gt;为例）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;文本&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;音频&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;照片当然不是现实，但如果有足够多的照片，是不是就能更接近现实一些呢？&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;1.mp3&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;文本&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;音频&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;照片当然不是现实，但如果有足够多的照片，是不是就能更接近现实一些呢？&lt;/code&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;1.mp3&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;ul&gt;
 &lt;li&gt;（2）上传参考音频，填写参考文本&lt;/li&gt;
@@ -1177,7 +1170,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8.png&#34;
 	width=&#34;1162&#34;
 	height=&#34;1009&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8_hu4762746031635050233.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8_hu1586792032427155691.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8_hu_b5bad06ac613938a.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8_hu_b8822d3ab9fd5e19.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1192,7 +1185,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A82.png&#34;
 	width=&#34;2281&#34;
 	height=&#34;530&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A82_hu14849625110380473210.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A82_hu6917090211918113328.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A82_hu_daf93d6b6935dce4.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A82_hu_7d78c0e94295eb32.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1202,18 +1195,18 @@
 	
 &gt;&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;文本&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;音频&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;你好啊，我是三月七，这是我用fish-speech生成的语音，你觉得声音像吗？&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;三月七-fishspeech.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;文本&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;音频&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;你好啊，我是三月七，这是我用fish-speech生成的语音，你觉得声音像吗？&lt;/code&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;三月七-fishspeech.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;42-references使用&#34;&gt;4.2 references使用
@@ -1223,7 +1216,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A8.png&#34;
 	width=&#34;881&#34;
 	height=&#34;495&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A8_hu944912587945688069.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A8_hu937514076632573491.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A8_hu_a368d4dd5ca92db0.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A8_hu_8a72063166cfd26f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1242,7 +1235,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A82.png&#34;
 	width=&#34;1033&#34;
 	height=&#34;301&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A82_hu16604072842047575109.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A82_hu17824687401615038347.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A82_hu_62736cdc6c0da4bc.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A82_hu_5536035696c69d15.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1257,7 +1250,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A83.png&#34;
 	width=&#34;1178&#34;
 	height=&#34;374&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A83_hu3573976974350523226.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A83_hu14177448331872078295.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A83_hu_1dae1abff345e0e7.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/fish-speech/deploy/references%E4%BD%BF%E7%94%A83_hu_ebe6a79f60527af.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1272,18 +1265,18 @@
 &lt;li&gt;（1）以下面的文本为例&lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;文本&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;音频&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;你成功说服了我&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;多音字1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;文本&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;音频&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;你成功说服了我&lt;/code&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;多音字1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;ul&gt;
 &lt;li&gt;（2）其中的&lt;strong&gt;说&lt;/strong&gt;的发音是&lt;code&gt;shui4&lt;/code&gt;，如果调整为&lt;code&gt;shuo1&lt;/code&gt;，可以用&lt;code&gt;&amp;lt;|phoneme_start|&amp;gt;拼音&amp;lt;|phoneme_end|&amp;gt;&lt;/code&gt;来处理&lt;/li&gt;
@@ -1313,26 +1306,26 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;文本&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;音频&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;你竟然敢背叛我！我对你这么信任，你就是这样回报我的吗？&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;语调调整1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;（愤怒）你竟然敢背叛我！（语气激动）我对你这么信任，（大声）你就是这样回报我的吗？&lt;/code&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;语调调整2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;文本&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;音频&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;你竟然敢背叛我！我对你这么信任，你就是这样回报我的吗？&lt;/code&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;语调调整1.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;（愤怒）你竟然敢背叛我！（语气激动）我对你这么信任，（大声）你就是这样回报我的吗？&lt;/code&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;audio controls&gt;&lt;source src=&#34;语调调整2.wav&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
 
@@ -1366,8 +1359,7 @@
 &lt;ul&gt;
 &lt;li&gt;AI技术迅速发展，各种新技术层出不重，作为开发者应主动了解这些技术，以免被市场淘汰&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;MCP&lt;/strong&gt;算是AI辅助代码开发中比较重要的一项技术&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-mcp介绍&#34;&gt;1 MCP介绍
 &lt;/h2&gt;&lt;ul&gt;
@@ -1400,8 +1392,7 @@
 &lt;li&gt;MCP服务 = 鼠标，键盘等外设&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;2-mcp使用&#34;&gt;2 MCP使用
 &lt;/h2&gt;&lt;h3 id=&#34;21-使用场景准备&#34;&gt;2.1 使用场景准备
@@ -1438,7 +1429,7 @@
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81.png&#34;
 	width=&#34;534&#34;
 	height=&#34;635&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu16051579982529800285.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu15761362870951001377.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu_fa797fb3a092fe05.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/ai%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81_hu_578b63ac01f2539b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1480,8 +1471,7 @@
     &gt;&lt;strong&gt;mcp.so&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.modelscope.cn/mcp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;ModelScope&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;(1) 根据上面的需求，需要一个能操作本地系统文件的MCP服务，这边选择的是&lt;a class=&#34;link&#34; href=&#34;https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;Filesystem&lt;/strong&gt;&lt;/a&gt;
@@ -1495,7 +1485,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851.png&#34;
 	width=&#34;1098&#34;
 	height=&#34;381&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu12400468924744860481.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu8884379790382067544.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu_91bbbf5531c48f19.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%851_hu_b446c638c809189b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1514,7 +1504,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852.png&#34;
 	width=&#34;1093&#34;
 	height=&#34;345&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu8059125951367273534.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu6940551785252208720.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu_753f0975df10a47e.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%852_hu_f641afecd9e58983.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1526,7 +1516,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853.png&#34;
 	width=&#34;557&#34;
 	height=&#34;201&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu3328535034608254016.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu5499105473676982018.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu_792aaa92aef071d2.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%853_hu_3623b93e9b5b71c7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1541,7 +1531,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854.png&#34;
 	width=&#34;523&#34;
 	height=&#34;502&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu3894597563050294522.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu13590490386471086619.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu_8bde255d9a4419b1.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%854_hu_9b35520acc4f581.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1560,7 +1550,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855.png&#34;
 	width=&#34;538&#34;
 	height=&#34;442&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu1351744071634018108.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu10887468920110777535.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu_52bf6979d17190cf.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%855_hu_5d26eaf8b08a0d8b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1575,7 +1565,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856.png&#34;
 	width=&#34;534&#34;
 	height=&#34;403&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu1216865244556104265.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu17990218548616656080.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu_31c234c0491178ea.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp-filesystem%E5%AE%89%E8%A3%856_hu_daccfc9251d1d816.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1592,7 +1582,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951.png&#34;
 	width=&#34;531&#34;
 	height=&#34;418&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu7060540861615635445.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu12684457575657985896.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu_719b21628dbe3e42.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%951_hu_7e94f0fa7c16de94.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1607,7 +1597,7 @@
 &lt;p&gt;&lt;img src=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952.png&#34;
 	width=&#34;543&#34;
 	height=&#34;611&#34;
-	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu2052040905295521314.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu1577831713169465734.png 1024w&#34;
+	srcset=&#34;https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu_f54b95233806e1ec.png 480w, https://letere-gzj.github.io/hugo-stack/p/ai/mcp-learn/mcp%E6%B5%8B%E8%AF%952_hu_c54ed468ecbf3acc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

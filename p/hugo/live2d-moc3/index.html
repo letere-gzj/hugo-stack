@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/hugo/live2d-moc3/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.18a38bd29afb7bfc96b3935b1626d4063e7c6e989bdb5158fc0f365afd1ae390.css"><meta property='og:title' content="【Hugo】博客引入moc3类型的live2d模型">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.3903cfb228dc9a3060bdfcddc86eb0761c3c3abafb90b996e766d0368839a876.css"><meta property='og:title' content="【Hugo】博客引入moc3类型的live2d模型">
 <meta property='og:description' content="介绍如何给博客引入moc3类型的live2d模型">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/hugo/live2d-moc3/'>
 <meta property='og:site_name' content='莱特雷-letere'>
@@ -529,8 +529,8 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/hugo-stack/p/hugo/live2d-moc3/">
-                <img src="/hugo-stack/p/hugo/live2d-moc3/cover_hu14942052002960624914.png"
-                        srcset="/hugo-stack/p/hugo/live2d-moc3/cover_hu14942052002960624914.png 800w, /hugo-stack/p/hugo/live2d-moc3/cover_hu7046213731131460790.png 1600w"
+                <img src="/hugo-stack/p/hugo/live2d-moc3/cover_hu_78d652f85872b70e.png"
+                        srcset="/hugo-stack/p/hugo/live2d-moc3/cover_hu_78d652f85872b70e.png 800w, /hugo-stack/p/hugo/live2d-moc3/cover_hu_c3765da0423bb629.png 1600w"
                         width="800" 
                         height="250" 
                         loading="lazy"
@@ -659,8 +659,7 @@
 <li>于是个人基于 <a class="link" href="https://github.com/stevenjoezhang/live2d-widget"  target="_blank" rel="noopener"
     >live2d-widget</a> 框架，对moc3类型的模型进行适配，诞生了此项目 <a class="link" href="https://github.com/letere-gzj/live2d-widget-v3"  target="_blank" rel="noopener"
     >live2d-widget-v3</a></li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <hr>
 <h2 id="1-基本引入">1 基本引入
 </h2><ul>
@@ -742,7 +741,7 @@
 </span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">cdnPath</span> <span class="o">=</span> <span class="s2">&#34;https://cdn.jsdelivr.net/gh/letere-gzj/live2d-widget-v3@main&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// 资源路径
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">path</span><span class="o">:</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nx">path</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">homePath</span><span class="o">:</span> <span class="s2">&#34;/&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">modelPath</span><span class="o">:</span> <span class="nx">cdnPath</span> <span class="o">+</span> <span class="s2">&#34;/Resources/&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">cssPath</span><span class="o">:</span> <span class="nx">cdnPath</span> <span class="o">+</span> <span class="s2">&#34;/waifu.css&#34;</span><span class="p">,</span>
@@ -752,18 +751,18 @@
 </span></span><span class="line"><span class="cl">      <span class="nx">live2dSdkPath</span><span class="o">:</span> <span class="nx">cdnPath</span> <span class="o">+</span> <span class="s2">&#34;/live2d-sdk.js&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// 工具栏
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">tools</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;hitokoto&#34;</span><span class="p">,</span> <span class="s2">&#34;asteroids&#34;</span><span class="p">,</span> <span class="s2">&#34;express&#34;</span><span class="p">,</span> <span class="s2">&#34;switch-model&#34;</span><span class="p">,</span> <span class="s2">&#34;switch-texture&#34;</span><span class="p">,</span> <span class="s2">&#34;photo&#34;</span><span class="p">,</span> <span class="s2">&#34;info&#34;</span><span class="p">,</span> <span class="s2">&#34;quit&#34;</span><span class="p">],</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nx">tools</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;hitokoto&#34;</span><span class="p">,</span> <span class="s2">&#34;asteroids&#34;</span><span class="p">,</span> <span class="s2">&#34;express&#34;</span><span class="p">,</span> <span class="s2">&#34;switch-model&#34;</span><span class="p">,</span> <span class="s2">&#34;switch-texture&#34;</span><span class="p">,</span> <span class="s2">&#34;photo&#34;</span><span class="p">,</span> <span class="s2">&#34;info&#34;</span><span class="p">,</span> <span class="s2">&#34;quit&#34;</span><span class="p">],</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// 模型拖拽
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">drag</span><span class="o">:</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nx">drag</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">enable</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">direction</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;x&#34;</span><span class="p">,</span> <span class="s2">&#34;y&#34;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// 模型切换(order: 顺序切换，random: 随机切换)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">switchType</span><span class="o">:</span> <span class="s2">&#34;order&#34;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nx">switchType</span><span class="o">:</span> <span class="s2">&#34;order&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1">// 加载资源并初始化
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;=</span> <span class="mi">768</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;=</span> <span class="mi">768</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">cssPath</span><span class="p">,</span> <span class="s2">&#34;css&#34;</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">live2dCorePath</span><span class="p">,</span> <span class="s2">&#34;js&#34;</span><span class="p">),</span>
@@ -782,7 +781,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1">// 异步加载资源
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">function</span> <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nx">loadExternalResource</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="kd">let</span> <span class="nx">tag</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&#34;css&#34;</span><span class="p">)</span> <span class="p">{</span>
@@ -810,7 +809,7 @@
 <p><img src="/hugo-stack/p/hugo/live2d-moc3/%E5%9F%BA%E6%9C%AC%E5%BC%95%E5%85%A51.png"
 	width="490"
 	height="444"
-	srcset="/hugo-stack/p/hugo/live2d-moc3/%E5%9F%BA%E6%9C%AC%E5%BC%95%E5%85%A51_hu3699129196796394785.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E5%9F%BA%E6%9C%AC%E5%BC%95%E5%85%A51_hu10597847308421648605.png 1024w"
+	srcset="/hugo-stack/p/hugo/live2d-moc3/%E5%9F%BA%E6%9C%AC%E5%BC%95%E5%85%A51_hu_24eff0cbfeb0db15.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E5%9F%BA%E6%9C%AC%E5%BC%95%E5%85%A51_hu_bf342aca2246e976.png 1024w"
 	loading="lazy"
 	
 	
@@ -829,7 +828,7 @@
 <p><img src="/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%891.png"
 	width="852"
 	height="388"
-	srcset="/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%891_hu8334561162213298298.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%891_hu16647429193501388759.png 1024w"
+	srcset="/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%891_hu_f8dc91fb51eb671.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%891_hu_53f535a9ab5da7fb.png 1024w"
 	loading="lazy"
 	
 	
@@ -848,7 +847,7 @@
 <p><img src="/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%892.png"
 	width="773"
 	height="315"
-	srcset="/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%892_hu9698367118476443868.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%892_hu11521109069997175448.png 1024w"
+	srcset="/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%892_hu_37cc42f4e6eb3984.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%892_hu_7a8d3560d394dc82.png 1024w"
 	loading="lazy"
 	
 	
@@ -871,7 +870,7 @@
 <p><img src="/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1.png"
 	width="330"
 	height="375"
-	srcset="/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu6265983430155059033.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu4869504311962086212.png 1024w"
+	srcset="/hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu_d811dc81203a8d72.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B1_hu_d966b189582e4b1e.png 1024w"
 	loading="lazy"
 	
 	
@@ -912,7 +911,7 @@
 </div><p><img src="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41.png"
 	width="475"
 	height="197"
-	srcset="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41_hu7162332327257526066.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41_hu3106954491439025332.png 1024w"
+	srcset="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41_hu_e4f45f49df7b6d00.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B41_hu_e09fa8a3aff29b69.png 1024w"
 	loading="lazy"
 	
 	
@@ -929,7 +928,7 @@
 <p><img src="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42.png"
 	width="547"
 	height="453"
-	srcset="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42_hu865528068069803678.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42_hu1366849209553501859.png 1024w"
+	srcset="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42_hu_d168b0b65eac18ba.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B42_hu_2a4b44ca766d60f5.png 1024w"
 	loading="lazy"
 	
 	
@@ -974,7 +973,7 @@
 </div><p><img src="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43.png"
 	width="586"
 	height="568"
-	srcset="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43_hu8102967777702742708.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43_hu888501432401326176.png 1024w"
+	srcset="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43_hu_bb433cc02e7272e4.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B43_hu_eca04cac25010cfd.png 1024w"
 	loading="lazy"
 	
 	
@@ -989,7 +988,7 @@
 <p><img src="/hugo-stack/p/hugo/live2d-moc3/%E8%A1%A8%E6%83%85%E5%88%87%E6%8D%A2.gif"
 	width="1024"
 	height="576"
-	srcset="/hugo-stack/p/hugo/live2d-moc3/%E8%A1%A8%E6%83%85%E5%88%87%E6%8D%A2_hu4041891454558155399.gif 480w, /hugo-stack/p/hugo/live2d-moc3/%E8%A1%A8%E6%83%85%E5%88%87%E6%8D%A2_hu372672823737886989.gif 1024w"
+	srcset="/hugo-stack/p/hugo/live2d-moc3/%E8%A1%A8%E6%83%85%E5%88%87%E6%8D%A2_hu_6c6bbac3196ecb45.gif 480w, /hugo-stack/p/hugo/live2d-moc3/%E8%A1%A8%E6%83%85%E5%88%87%E6%8D%A2_hu_1bce593ad441dbfc.gif 1024w"
 	loading="lazy"
 	
 	
@@ -1006,7 +1005,7 @@
 <p><img src="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44.png"
 	width="529"
 	height="478"
-	srcset="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44_hu587005784032521022.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44_hu5012321822840937685.png 1024w"
+	srcset="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44_hu_aa70370109330254.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B44_hu_8e3d31558197187f.png 1024w"
 	loading="lazy"
 	
 	
@@ -1069,7 +1068,7 @@
 </div><p><img src="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45.png"
 	width="636"
 	height="398"
-	srcset="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45_hu8940765428483735333.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45_hu6564659672653254400.png 1024w"
+	srcset="/hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45_hu_97dfd934afcadaf.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E6%A8%A1%E5%9E%8B%E8%B0%83%E6%95%B45_hu_63c3fce12e08530.png 1024w"
 	loading="lazy"
 	
 	
@@ -1084,7 +1083,7 @@
 <p><img src="/hugo-stack/p/hugo/live2d-moc3/%E7%82%B9%E5%87%BB%E5%8A%A8%E4%BD%9C.gif"
 	width="1280"
 	height="720"
-	srcset="/hugo-stack/p/hugo/live2d-moc3/%E7%82%B9%E5%87%BB%E5%8A%A8%E4%BD%9C_hu7133905328938138698.gif 480w, /hugo-stack/p/hugo/live2d-moc3/%E7%82%B9%E5%87%BB%E5%8A%A8%E4%BD%9C_hu6398600253560736685.gif 1024w"
+	srcset="/hugo-stack/p/hugo/live2d-moc3/%E7%82%B9%E5%87%BB%E5%8A%A8%E4%BD%9C_hu_bbaa6aef827484aa.gif 480w, /hugo-stack/p/hugo/live2d-moc3/%E7%82%B9%E5%87%BB%E5%8A%A8%E4%BD%9C_hu_e0c555070413810.gif 1024w"
 	loading="lazy"
 	
 	
@@ -1104,7 +1103,7 @@
 <p><img src="/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp1.png"
 	width="678"
 	height="192"
-	srcset="/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp1_hu11958732251395545840.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp1_hu13128823962066910427.png 1024w"
+	srcset="/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp1_hu_e890a2d595430e39.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp1_hu_ca0730b9475fb32e.png 1024w"
 	loading="lazy"
 	
 	
@@ -1119,7 +1118,7 @@
 <p><img src="/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp2.png"
 	width="561"
 	height="245"
-	srcset="/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp2_hu10829808436984738940.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp2_hu3673437887931515338.png 1024w"
+	srcset="/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp2_hu_e2661535c0736256.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp2_hu_b3ef3d70d0f6def4.png 1024w"
 	loading="lazy"
 	
 	
@@ -1134,7 +1133,7 @@
 <p><img src="/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp3.png"
 	width="798"
 	height="550"
-	srcset="/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp3_hu17633319253363787813.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp3_hu3040850138834790454.png 1024w"
+	srcset="/hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp3_hu_21fb26e457bb1ab7.png 480w, /hugo-stack/p/hugo/live2d-moc3/%E8%BD%ACwebp3_hu_946bb5b9aac048e7.png 1024w"
 	loading="lazy"
 	
 	
@@ -1185,7 +1184,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/view-count/cover.274092bdc81c36c9bb0b38db9a6be9fa_hu6949047556944337237.png"
+                <img src="/hugo-stack/p/hugo/view-count/cover.274092bdc81c36c9bb0b38db9a6be9fa_hu_df784c314dd4380a.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1210,7 +1209,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/pjax/cover.d07cbee7b13aafbe03ebf0ee088f569d_hu6578279551130963379.png"
+                <img src="/hugo-stack/p/hugo/pjax/cover.d07cbee7b13aafbe03ebf0ee088f569d_hu_2dc7df6cc5c10d64.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1235,7 +1234,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/page-loading/cover.41a89b8c61860f37160490a5d1b4813f_hu6192081206714930127.png"
+                <img src="/hugo-stack/p/hugo/page-loading/cover.41a89b8c61860f37160490a5d1b4813f_hu_35c47a69e84d5bd6.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1260,7 +1259,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/custom-background/cover.53b9d140b749b00db6ff535e59062b87_hu8671535214065020568.png"
+                <img src="/hugo-stack/p/hugo/custom-background/cover.53b9d140b749b00db6ff535e59062b87_hu_178ca23f1960a612.png"
                         width="250"
                         height="150"
                         loading="lazy"
@@ -1285,7 +1284,7 @@
 
         
             <div class="article-image">
-                <img src="/hugo-stack/p/hugo/custom-stack-theme/cover.552d684dee02b994c1b7efde44f1cb0d_hu5530006314175102094.png"
+                <img src="/hugo-stack/p/hugo/custom-stack-theme/cover.552d684dee02b994c1b7efde44f1cb0d_hu_ba3dfcfa61194a7a.png"
                         width="250"
                         height="150"
                         loading="lazy"

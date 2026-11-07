@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://letere-gzj.github.io/hugo-stack/p/java/java-log/'>
 
-<link rel="stylesheet" href="/hugo-stack/scss/style.min.18a38bd29afb7bfc96b3935b1626d4063e7c6e989bdb5158fc0f365afd1ae390.css"><meta property='og:title' content="【Java】Java开发代码记录">
+<link rel="stylesheet" href="/hugo-stack/scss/style.min.3903cfb228dc9a3060bdfcddc86eb0761c3c3abafb90b996e766d0368839a876.css"><meta property='og:title' content="【Java】Java开发代码记录">
 <meta property='og:description' content="记录工作中个人觉得比较有用的代码">
 <meta property='og:url' content='https://letere-gzj.github.io/hugo-stack/p/java/java-log/'>
 <meta property='og:site_name' content='莱特雷-letere'>
@@ -594,9 +594,9 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// 获取泛型Class</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Type</span><span class="w"> </span><span class="n">genericSuperclass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">getGenericSuperclass</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ParameterizedType</span><span class="w"> </span><span class="n">parameterizedType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ParameterizedType</span><span class="p">)</span><span class="w"> </span><span class="n">genericSuperclass</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tClass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="n">parameterizedType</span><span class="p">.</span><span class="na">getActualTypeArguments</span><span class="p">()</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Type</span><span class="w"> </span><span class="n">genericSuperclass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">getGenericSuperclass</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">ParameterizedType</span><span class="w"> </span><span class="n">parameterizedType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ParameterizedType</span><span class="p">)</span><span class="w"> </span><span class="n">genericSuperclass</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tClass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="n">parameterizedType</span><span class="p">.</span><span class="na">getActualTypeArguments</span><span class="p">()</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -691,7 +691,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">field</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">field</span><span class="p">.</span><span class="na">getAnnotation</span><span class="p">(</span><span class="n">ExcelProperty</span><span class="p">.</span><span class="na">class</span><span class="p">))</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div>
